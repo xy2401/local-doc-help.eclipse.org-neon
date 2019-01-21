@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/Zest/Zest.html" label="GEF4 Zest Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Zest.FX" label="Zest.FX">
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#.7BRoot.7D" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestFxModule" label="ZestFxModule"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestProperties" label="ZestProperties"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Behaviors" label="Behaviors">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior" label="AbstractLayoutBehavior, GraphLayoutBehavior, NodeLayoutBehavior, EdgeLayoutBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior" label="AbstractHidingBehavior, NodeHidingBehavior, EdgeHidingBehavior, EdgeLabelHidingBehavior"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Models" label="Models">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#HidingModel" label="HidingModel"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#NavigationModel" label="NavigationModel"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Operations" label="Operations">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#HideOperation.2C_ShowHiddenNeighboursOperation" label="HideOperation, ShowHiddenNeighboursOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#NavigateOperation" label="NavigateOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ChangeAttributesOperation" label="ChangeAttributesOperation"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Parts" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestFxRootPart" label="ZestFxRootPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory" label="GraphPart, NodePart, NodeLabelPart, EdgePart, EdgeLabelPart, ZestFxContentPartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#HideHoverHandlePart.2C_ShowHiddenNeighborsHoverHandlePart.2C_ZestFxHoverHandlePartFactory" label="HideHoverHandlePart, ShowHiddenNeighborsHoverHandlePart, ZestFxHoverHandlePartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#HiddenNeighborsFeedbackPart" label="HiddenNeighborsFeedbackPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestFxSelectionHandlePartFactory" label="ZestFxSelectionHandlePartFactory"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Policies" label="Policies">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy" label="HidePolicy, ShowHiddenNeighborsPolicy, HideOnTypePolicy, ShowHiddenNeighborsOnTypePolicy, HideFirstAnchorageOnClickPolicy, ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#TransformLabelPolicy.2C_TranslateSelectedAndRelocateLabelsOnDragPolicy" label="TransformLabelPolicy, TranslateSelectedAndRelocateLabelsOnDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy" label="SemanticZoomPolicy, OpenNestedGraphOnDoubleClickPolicy, OpenParentGraphOnDoubleClickPolicy"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Providers" label="Providers">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#NodePartAnchorProvider" label="NodePartAnchorProvider"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Zest.FX.JFace" label="Zest.FX.JFace">
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#.7BRoot.7D_2" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestContentViewer" label="ZestContentViewer"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#IGraphContentProvider" label="IGraphContentProvider"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#IGraphAttributesProvider" label="IGraphAttributesProvider"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Zest.FX.UI" label="Zest.FX.UI">
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#.7BRoot.7D_3" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestFxUiModule" label="ZestFxUiModule"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Parts_2" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#ZestFxUiView" label="ZestFxUiView"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Migration_from_Zest_1.x_to_GEF4_Zest" label="Migration from Zest 1.x to GEF4 Zest">
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Migration_from_Zest_1.x_Core_to_GEF4_Zest.FX" label="Migration from Zest 1.x Core to GEF4 Zest.FX">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Customizing_Styles" label="Customizing Styles"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Customizing_Visualizations" label="Customizing Visualizations"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Modifying_graphs" label="Modifying graphs"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Layout_filter" label="Layout filter"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Migration_from_Zest_1.x_JFace_to_GEF4_Zest.FX.JFace" label="Migration from Zest 1.x JFace to GEF4 Zest.FX.JFace">
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Content_Providers" label="Content Providers"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Label_Providers" label="Label Providers"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Dedicated_Providers_for_Styles.2C_Tooltip.2C_Colors.2C_Fonts" label="Dedicated Providers for Styles, Tooltip, Colors, Fonts"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Zest/Zest.html#Zooming" label="Zooming"></topic>
+		</topic>
+	</topic>
+</toc>

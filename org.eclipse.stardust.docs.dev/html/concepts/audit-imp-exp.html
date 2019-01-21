@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Importing and Exporting Audit Trail Information</title>
+<link rel="stylesheet" type="text/css" href="../styles/carnot.css"
+    title="Style">
+<script src="../styles/naviLine.js"
+   type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+   writeNavigation("Federated Document Repositories",
+      "multi-model/multi-model.html","repository-storage.html",
+      "key-concepts.html","Concepts");
+ -->
+</script>
+<h1>Importing and Exporting Audit Trail Information (Technology Preview)</h1>
+<p>Archiving the Audit Trail for production environments is a mandatory task that needs to
+be done on a regular basis to guarantee a long term well performing Stardust runtime.
+Stardust provides an enhanced archiving functionality including export, import, 
+unload and load of Audit Trail information.</p>
+<ul>
+   <li><a href="#config">Required Configuration</a></li>
+   <li><a href="#adv">Advantages of the Stardust Audit Trail Archive Functionality</a></li>
+   <li><a href="#export">Exporting Process Instances from an Audit Trail</a></li>
+   <li><a href="#import">Importing Process Instances from an Audit Trail</a></li>
+   <li><a href="#uuid">UUIDs Generation</a></li>
+<!--    <li><a href="#portal">Managing Archives in the Stardust Portal</a></li> -->
+<!--    <li class="ipp"><a href="#sched">Scheduling Archives</a></li> -->
+   <li><a href="#usecase">Use Cases</a></li>
+</ul>
+<p class="note"><strong>Note</strong><br>
+This feature is customer technology preview only. It may not be functionally complete and
+is not intended for production use.</p>
+<h2 id="config">Configuration of the ZIP Archiver</h2>
+<p>To enable the functionality, you have to configure the ZIP archiver by adding the
+following the files at <code>engine-core/meta-inf/services</code>:</p>
+<ul>
+   <li>FileName: <code>org.eclipse.stardust.engine.core.persistence.archive.IArchiveReader</code><br>
+      Content: <code>org.eclipse.stardust.engine.core.persistence.archive.ZipArchiveReader</code></li>
+   <li>FileName: <code>org.eclipse.stardust.engine.core.persistence.archive.IArchiveWriter</code><br>
+   Content: <code>org.eclipse.stardust.engine.core.persistence.archive.ZipArchiveWriter</code></li>
+</ul>
+<h2 id="adv">Advantages of the Stardust Audit Trail Archive Functionality</h2>
+<p>The Stardust archive functionality has the following advantages:</p>
+<ul>
+   <li>Active Audit Trail can be kept small in order to keep performance on a
+      stable good level.</li>
+   <li>It is possible to temporarily load previously unloaded Audit Trail
+      information for revision checks or trouble shooting issues.</li>
+   <li>If you are a Cloud customer, you can be provided an Audit Trail extract
+      (partly / complete).</li>
+   <li>If you are a Cloud customer, you can more easily migrate to newer version
+      (different runtimes).</li>
+   <li>Audit Trail archives require less disk space which better supporting long
+      term retention needs.</li>
+</ul>
+<h2 id="export">Exporting Process Instances from an Audit Trail</h2>
+<p>The export functionality transfers process instances into a specific location and 
+format. It can be used to archive or dump Audit Trail information.</p>
+<ul>
+   <li><a href="#var">Variants of Exporting Audit Trail Information</a></li>
+   <li><a href="#extools">Provided Tools for Exporting Audit Trail Information</a>
+   <li><a href="#exfil">Export Filtering</a></li>
+   <li><a href="#exdoc">Exporting Documents</a></li>
+   <li><a href="#compl">Exporting Process Instances on Completion</a></li>
+</ul>
+<p>An export/unload of process instances can be done:</p>
+<ul>
+   <li>completely (per partition)</li>
+   <li>by business identifier (unique primitive key descriptor)</li>
+   <li>by from/to filter</li>
+   <li>immediate on process completion</li>
+</ul>
+<h3 id="var">Variants of Exporting Audit Trail Information</h3>
+<p>The following two variants of exporting process instances from an Audit Trail can
+be used:</p>
+<ul>
+   <li><a href="#exarch">Archiving Audit Trail Information</a></li>
+   <li><a href="#Dump">Dumping Audit Trail Information</a></li>
+</ul>
+<p>Note that active process instances can only be dumped. They are not considered for a 
+backup or archive runs.</p>
+<h4 id="exarch">Archiving Audit Trail Information</h4>
+<p>When exporting via the archive variant, Audit Trail information is extracted from the 
+database and stored in an archive structure, which could be a file system or database. 
+Hereby Audit Trail information is 
+<strong>deleted</strong> from the database. A UUID is generated which uniquely identifies
+the exported process instance (see <a href="#pid">Process Instance UUID</a>) and stored 
+in the index.</p>
+<p>Archives are structured by timestamps (completion / last modification timestamps folders).
+Each backup or archive run creates at least one ZIP file. For backups or archive on 
+process completion a different approach is taken.
+All dependent entities of a root process instance (complete process closure) are archived.
+Transient process data (data that is available as long as process instances are active) 
+will not be archived.</p>
+<p>An Stardust archive can be exported completely (dump also includes active process instances) or partially
+<h4 id="Dump">Dumping Audit Trail Information</h4>
+<p>By exporting via dump, Process instances are extracted from the database and stored in
+an archive structure (file system) to be specified via parameter. This is the location 
+where to dump the extracted data. Hereby Audit Trail information is <strong>not deleted</strong>
+from the database. A UUID is generated which uniquely identifies the exported process 
+instance (see <a href="#pid">Process Instance UUID</a>) and stored in the index. Dumping Audit Trail 
+information is only supported for file-based Archive Manager. The dump process is not 
+incremental. A dump will include previously exported process instances. 
+If a dump operation is run more than once, previously exported and dumped processes will 
+be included again.</p>
+<h3 id="extools">Provided Tools for Exporting Audit Trail Information</h3>
+<p>The export can be triggered via one of the following tools:</p>
+<ul>
+   <li>Console Command</li>
+   <li>API</li>
+<!--   <li class="ipp">Scheduler (Process Portal)</li> -->
+</ul>
+<h3 id="exfil">Export Filtering</h3>
+<p>On export data can be filtered by the following criteria:</p>
+<ul>
+   <li><strong>modelOids</strong>: List of process models OIDs</li>
+   <li><strong>models</strong>: List of process model IDs</li>
+   <li><strong>processOids</strong>: List of process instance OIDs</li>
+   <li><strong>processes</strong>: List of process definition IDs</li>
+   <li><strong>fromData</strong>: Date representing the process instance termination date
+   if use case is <code>archive</code>. It represents the process instance starting date 
+   if the use case is <code>dump</code>.</li>
+   <li><strong>toDate</strong>: Date representing the process instance termination date 
+   if use case is <code>archive</code>. It represents the process instance starting date
+   if the use case is <code>dump</code>.</li>
+   <li><strong>data</strong>: Map that contains key/value pairs of process descriptors</li>
+</ul>
+<h3 id="exdoc">Exporting Documents</h3>
+<p>Optionally documents attached to process instances can be exported together with the 
+process instances they belong to.
+Only documents with process context are considered for an export, e.g.
+DocumentType and Process Attachments.</p>
+<p>The document lookup is done after the process instance has been stored in the archive.
+Meta information are separately stored with the document.</p>
+<p>It is possible to export the latest document version only or all revisions. 
+Note that only those revisions that existed when the process instance was started, activated 
+and finally terminated are exported!</p> 
+<p>The documents are deleted from the Jackrabbit repository for the archive use case and 
+kept there for the dump use case.</p>
+<h3 id="compl">Exporting Process Instances on Completion</h3>
+<p>The export of process instances on completion is only supported for the archive use 
+case. That means on process instance completion the process instance is moved into the 
+archive and deleted from the active Audit Trail.</p>
+<p>The automatic archive on complete is only happening if the root process instance 
+completes. It does not have any effect on sub-process instance completion.</p>
+<!--  not implemented yet -->
+<!-- <h4>Configuration</h4> -->
+<!-- <p>The Eclipse modeler as well as the Modeling perspective can be configured via a checkbox -->
+<!-- for archiving process instances on completion.</p> -->
+<!-- <p>If this checkbox is selected the process instance will automatically be archived in  -->
+<!-- the following cases:</p> -->
+<!-- <ul> -->
+<!--    <li>it is a root process instance</li> -->
+<!--    <li>it is not transient</li> -->
+<!--    <li>a proper archive manager is configured</li> -->
+<!-- </ul> -->
+
+<h2 id="import">Importing Process Instances from an Audit Trail</h2>
+<p>The Import functionality can be used to import processes from a dump or an archive
+into any compatible environment. A compatible environment has the same Stardust
+version installed and the same set of models deployed.</p>
+<p>If a process instance is imported that already exists, e.g. its process instance UUID 
+(ExportProcessID) exists in the database, it will be ignored from the import.</p>
+<p>An import of process instances can be done:</p>
+<ul>
+   <li>completely (into a partition)</li>
+   <li>by root process instance OID</li>
+   <li>by business identifier (unique primitive key descriptor)</li>
+   <li>by from/to filter</li>
+</ul>
+<p>Process instances loaded from an Stardust archive back into an existing Audit
+Trail are marked as archived by assigning a unique ID. This mechanism is the same when 
+exporting process instances without deleting them from the Audit Trail database, as
+described in the previous section.</p>
+<p>Marked process instances are ignored on recurring backup or archive runs. An archive
+would delete the instance from the Audit Trail database though.
+If a dump is imported, the process instances are handled as if they would have never been
+exported before. Common use cases are migration or de-provisioning.</p>
+<p>Documents can be optionally restored together with the process instances they are
+attached to.</p>
+<ul>
+<!--    <li><a href="#var">Variants of Exporting Audit Trail Information</a></li> -->
+<!--    <li><a href="#extools">Provided Tools for Exporting Audit Trail Information</a> -->
+   <li><a href="#impfil">Import Filtering</a></li>
+   <li><a href="#impdoc">Importing Documents</a></li>
+</ul>
+<h3 id="impfil">Import Filtering</h3>
+<p>By default all exported processes of an archive will be imported. Imports can further 
+be filtered by the following parameter:</p>
+<ul>
+   <li><strong>models</strong>: List of process model IDs</li>
+   <li><strong>processOids</strong>: List of process instance OIDs</li>
+   <li><strong>processes</strong>: List of process definition IDs</li>
+   <li><strong>fromData</strong>: Date representing the process instance start date</li>
+   <li><strong>toDate</strong>: Date representing the process instance start date</li>
+   <li><strong>data</strong>: Map that contains key/value pairs of process descriptors</li>
+</ul>
+<p>If filter criteria are provided and no process instances are found matching this 
+criteria nothing will be imported.</p>
+<p>In case no filter criteria is provided then all process instances for the current 
+partition will be imported.</p>
+<h3 id="impdoc">Importing Documents</h3>
+<p>If documents have been exported into the archive it is possible to import 
+documents/revisions together with the import of process instances. Hereby, after each 
+import of a process instance, its documents are moved into the JCR under the same folder 
+structure it was stored before. It will be checked first, if the document already exists.
+If it exists, the document will not be imported again.</p>
+<h2 id="uuid">UUIDs Generation</h2>
+<ul>
+   <li><a href="#rtid">Runtime UUID</a></li>
+   <li><a href="#pid">Process Instance UUID</a></li>
+   <li><a href="#pid">Process Instance UUID</a></li>
+</ul>
+<h3 id="rtid">Runtime UUID</h3>
+<p>Each runtime (Audit Trail of a Stardust installation) gets a UUID assigned. 
+This UUID is generated on the first archive run and stored in the property table.</p>
+<h3 id="pid">Process Instance UUID</h3>
+<p>Each exported process instance gets a UUID assigned. The UUID consists of a runtime 
+UUID, the process instance OID and the model UUID. The UUID is generated on archive and 
+stored as process instance property (ExportProcessID) in the index and when imported again.</p> 
+<h3 id="modid">Model UUID</h3>
+<p>The model UUID correlates to the MD5 String of the XPDL. It will be calculated when
+the model is bootstrapped and hold in memory (ModelManager) at runtime. The XPDL
+representation of a model gets extracted once the first process instance of a model
+is exported. The XPDL is extracted from the Audit Trail (CLOB_DATA) and stored
+in the archive folder under its MD5 value as name.</p>
+<p>Each model variant that has been
+deployed into the Audit Trail can be exported that way, even in scenarios where a
+model has been overridden. Since the MD5 value is calculated on model bootstrap and
+stored in the ModelManager at runtime, the lookup if a model has been exported or not
+should be fast.</p>
+<h4>Model UUID Example</h4> 
+<p>The following example demonstrates a Model UUID scenario.</p>
+<ol>
+   <li>Model A is deployed in the Audit Trail</li>
+   <li>PI1 based on Model A is exported</li>
+   <li>Model A is extracted from CLOB_TABLE and stored in the root folder of the archive 
+   (e.g. 7e716d0e702df0505fc72e2b89467910.xpdl)</li>
+   <li>Model A gets overridden by
+   Model A'</li>
+   <li>PI2 based on Model A' is exported</li>
+   <li>Model A' is extracted from CLOB_TABLE and
+   stored in the root folder of the archive (e.g.
+   7e716d0e702df0505fc72e2b89467910_NEW.xpdl)</li>
+</ol>
+<p>The MD5 Spring is generated on basis of the exported XPDL. This MD5 String should be
+part of the UUID assigned to each
+exported process instance (see <a href="#pid">Process Instance UUID</a>). The MD5 String
+is also the UUID of the model itself.</p>
+<p>This way each process instance can be exactly associated
+to a model and be evaluated against during import. An import will fail if the
+destination Audit Trail does not contain the model with the model UUID of the
+process instance to be imported. Storing the XPDLs in the archive would also allow
+to automatically deploy models during process instance import.</p>
+<!-- not implemented yet
+<h2 id="portal">Managing Archives in the Stardust Portal</h2>
+<p>The Stardust Portal provides an Archive Manager component that creates and 
+maintains Audit Trail archives.</p>
+<p>An Audit Trail is bound to only one archive managed by the Archive Manager. The 
+Archive Manager has a unique ID, which will be generated 
+(<a href="#rtid">Runtime UUID</a>) or manually assigned (overridden).
+There are two types of Archive Managers:</p>
+<ul>
+   <li><a href="#filebd">File-based Archive Manager (ZIP Archive)</a></li>
+   <li><a href="#dbbd">Database Archive Manager</a></li>
+</ul>
+<p>A custom Archive Manager can be implemented and plugged into Stardust via 
+a <code>META-INF/service</code> contract.</p>
+<p>For details please refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/">TODO</a>
+in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a> documentation.</p>
+<h3 id="filebd">File-based Archive Manager (ZIP Archive)</h3>
+<p>The file-based manager exports process instances into ZIP files stored in the file 
+system in a folder structure organized by partition and date. The granularity of the 
+folder structure can be changed depending on the size of the Audit Trail respectively the
+rate with which new process instances are created.</p>
+<h3 id="dbbd">Database Archive Manager</h3>
+<p>The database archive manager exports process instances into CLOB/BLOB tables of a 
+database.</p>-->
+<!--
+<div class="ipp">
+<h2 id="sched">Scheduling Archives</h2>
+<p>The scheduling of an archive or dump run can be done via the Calendar functionality.                                                                                                       
+An Archive Calendar is available allowing the administrator to define various Audit Trail 
+Export events. Please refer to chapter
+<a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/business-calendar/manage-events.html">Managing Events</a>
+of the 
+<a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/business-calendar/introduction.html">Working with Calendars</a>
+documentation for details on this functionality.</p>
+</div>-->
+<!-- ?? Index File Structure (see CRNT-35612)-->
+<h2 id="usecase">Use Cases</h2>
+<ul>
+   <li><a href="#rootproc">Exporting Root Process Instances by OID into a File</a></li>
+   <li><a href="#unload">Unloading Process Instances by OID into a File</a></li>
+   <li><a href="#ident">Exporting Process Instance(s) by Business Identifier to the File System</a></li>
+   <li><a href="#impid">Importing Process Instance(s) by Business Identifier from the File System</a></li>
+</ul>
+<h3 id="rootproc">Exporting Root Process Instances by OID into a File</h3>
+<p>If Audit Trail information is exported the original information stays in the Audit 
+Trail. In case the process instance is exported in order to backup it, the instance will 
+be marked with a unique ID that indicates into which archive the instance has been backed 
+up to.</p>
+<p>The unique ID will be stored in the 
+<a href="../handbooks/operation/audit-trail/ag-appendix-audittrail-1.htm#procinst_prop">PROC_INST_PROPERTY</a>
+table. It contains the archive ID as well as an UUID that would identify the instance 
+globally. The ID will also be stored in the archive.</p>
+<p>Process instances with an ID are not considered for backup jobs again if the archive
+IDs are matching.</p>
+<h3 id="unload">Unloading Process Instances by OID into a File</h3>
+<p>An unload of process instances deletes the corresponding Audit Trail information from 
+the database.</p>
+<p>On unload the process instance gets a unique ID which contains the archive ID as well 
+as a UUID that would identify the instance globally. Since the process instance is deleted
+from the Audit Trail, the ID is only stored in the archive.</p>
+<h3 id="ident">Exporting Process Instance(s) by Business Identifier to the File System</h3>
+<p>You have the option to export/unload Audit Trail information by business identifier 
+such as Contract ID or Customer ID, etc.</p>
+<p>Example use cases are the following:</p>
+<ul>
+   <li>Export all processes of customer ABC</li>
+   <li>Export all processes that belong to contract XYZ</li>
+</ul>
+<p>Key descriptors can be set in order to find exported Audit Trail information by 
+business identifier. The business identifier can be set as export filter.</p>
+<p>For example, you can use the filter in the command line tool:</p> 
+<pre>-user motu -password motu export -keyDescriptor customerID=XYZ</pre>
+<p>The filter by key descriptor can be used alone or in combination of other filters such 
+as model or data range filter.</p>
+<!-- <h3 id="date">Exporting Process Instance(s) by Date Range into a File</h3> -->
+<!-- <h3 id="part">Exporting Process Instance(s) by Partition into a File</h3> -->
+<!-- <h3 id="complfs">Exporting Root Process Instance(s) on Completion to the File System</h3> -->
+<h3 id="impid">Importing Process Instance(s) by Business Identifier from the File System</h3>
+<p>You can import/load Audit Trail information by business identifier such as the 
+Contract ID or Customer ID, etc.</p>
+<p>Example use cases are:</p>
+<ul>
+   <li>Import all processes of customer ABC</li>
+   <li>Import all processes that belong to contract XYZ</li>
+</ul>
+<p>On export key descriptors are added to the index in order to find the exported Audit 
+Trail information by business identifier. This index allows to find all instances 
+with a certain business identifier value on import.</p>
+<p>The export API / command line allows to use business identifier as export filter, for
+example:</p>
+<pre>-user motu -password motu import -keyDescriptor customerID=XYZ</pre>
+<p>The filter by key descriptor can be used alone or in combination of other filters such 
+as model or data range filter.</p>
+
+
+
+
+
+
+
+<!-- <h3 id="archive">Archive</h3> -->
+<!-- <p>The archive use case corresponds to the <code>archive</code> operation on sysconsole  -->
+<!-- command line. Hereby Audit Trail information is moved from the active Audit  -->
+<!-- Trail database into an passive Audit Trail archive. -->
+<!--  (keywords: unload / Audit Trail bound to archive / unique ID).</p> -->
+<!-- <h4 id="archform">Archive Format</h4> -->
+<!-- <p>Audit Trail information is compressed and stored in one of the following two variants:</p> -->
+<!-- <ol> -->
+<!--    <li>in a flat database</li> -->
+<!--    <li>in the file system</li> -->
+<!-- </ol> -->
+<!-- <p>This is more efficient than moving Audit Trail information one-to-one into a dedicated -->
+<!-- schema.</p> -->
+<!-- <p>Instead of moving Audit Trail information  the data  -->
+<!-- should be compressed first and stored in the file system or a flat database table.</p> -->
+
+<!-- <p>Archiving the Audit Trail into the file system is less expensive when it comes to -->
+<!-- long term data retention, maintenance and backup. In addition to this the data would -->
+<!-- be database system agnostic. The same is valid for storing the data in a flat -->
+<!-- database table.</p> -->
+<!-- <p>Storing the data in a flat database table allows the usage of Oracle  -->
+<!-- partitioning for easier data retention and backup strategy. The archives are structured  -->
+<!-- by timestamp (completion / last modification timestamp folders). Each backup/archive run  -->
+<!-- creates at least one ZIP file.  -->
+<!-- For backups / archive on process completion a different approach is used. Usually all  -->
+<!-- dependent entities of a root process instance (complete process closure) are archived.  -->
+<!-- Transient process data (data that is -->
+<!-- available as long as process instances are active) will not be archived. Any documents -->
+<!-- attached to process instances can be optionally archived along with the process -->
+<!-- instances.</p> -->
+<!-- <h3 id="backup">Backup</h3> -->
+<!-- <p>The Backup use case is similar to the <a href="#archive">Archive</a> use case whereas  -->
+<!-- the Audit Trail information is not deleted from the active Audit Trail. -->
+<!-- <!-- (keywords: export/ Audit Trail bound to archive / unique ID). </p> -->
+<!-- <h3 id="dump">Dump</h3> -->
+<!-- <p>The Dump use case is similar to <a href="#backup">Backup</a> whereas no unique IDs are  -->
+<!-- generated. -->
+<!-- <!-- (keywords: export / Audit Trail not bound to archive / no unique ID) </p> -->
+<!-- <h3 id="migration">Migration</h3> -->
+<!-- <p>The Migration use case is a complete dump of Audit Trail. -->
+<!-- <!-- (keywords: export / Audit Trail not bound to archive / no unique ID). </p> -->
+<!-- Export/Unload IPP Archive -->
+<!-- An IPP archive can be exported completely (dump also including active process instances) or partially (dump only including completed root process instances). -->
+<!-- If Audit Trail information is exported the original information stays in the Audit Trail. If the process instance is exported in order to backup it, the instance will be marked with a unique ID that indicates into which archive the instance has been backed up. -->
+<!-- If process instances are exported in order to create a dump (partial / full), the instances in the Audit Trail are not marked with a unique ID. -->
+<!-- An unload of process instances deletes the corresponding Audit Trail information from the database. The Audit Trail is bound to the archive into which the process instance are unloaded. Process instances that would match criteria of an unload job are just deleted if they have a unique ID. Those instance have been previously exported or loaded again. -->
+<!-- Note: Active process instances can only be dumped. They are not considered for a backup or archive runs. -->
+<!-- An export/unload of process instances can be done.. -->
+<!--    <li>completely (per partition)  -->
+<!--    <li>by root process instance OID -->
+<!--    <li>by business identifier (unique primitive key descriptor) -->
+<!--    <li>by from/to filter -->
+<!--    <li>immediate on process completion (Write Behind / automatic archive/backup) -->
+<!-- Import/Load IPP Archive -->
+<!-- It should be possible to fully/partially restore an IPP archive into an active/passive Audit Trail for analysis and reporting purposes. -->
+<!-- An import / load of process instances can be done ... -->
+<!--    <li>completely (into a partition) -->
+<!--    <li>by root process instance OID -->
+<!--    <li>by business identifier (unique primitive key descriptor) -->
+<!--    <li>by from/to filter -->
+<!-- Process instance loaded from an IPP archive back into an existing Audit Trail are marked as archived by assigning a unique ID (same mechanism when exporting process instances without deleting them from the Audit Trail database). Marked process instances are ignored on recurring backup or archive runs. An archive (unload) would delete the instance from the Audit Trail database though. -->
+<!-- If a dump is imported, the process instances are handled as if they would have never been exported before (use case: Migration / De-Provisioning). -->
+<!-- Documents can be optionally restored together with the process instances they are attached to. -->
+<!-- Archive Tooling -->
+<!-- It should be possible to trigger an Audit Trail export/import from within the Administration Portal or by using the sysconsole command line tool. Hereby an asynchronous process is kicked off that performs the export/import. It's completion is indicated by an event (log_entry) for which an e-mail is optionally sent to Administrator users. -->
+<!-- It should also be possible to schedule archive / backup jobs that would run on a regular basis from within the Administration Portal (use case: job 1 - backup everything that is older than 1 week / archive everything that is older than 1 month). -->
+<!-- IPP archives need to be upgraded to newer IPP versions via sysconsole command line tool if the target IPP version is higher than the archive. -->
+<!-- IPP archives can be bound and/or unbound from within the Administration Portal / sysconosle command line tool. The upgrade job should utilize existing upgrade job (in memory). -->
+
+<script type="text/javascript">
+<!--
+writeFooter();
+-->
+</script>
+</body>
+</html>

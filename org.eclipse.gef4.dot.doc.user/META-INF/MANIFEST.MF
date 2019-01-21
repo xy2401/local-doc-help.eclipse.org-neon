@@ -1,0 +1,79 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.gef4.dot.doc.user;singleton:=true
+Bundle-Name: GEF4 DOT User Guide
+Bundle-Version: 1.0.1.201609060946
+Archiver-Version: Plexus Archiver
+Built-By: genie.gef
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse/gef.git;p
+ ath="org.eclipse.gef4.dot.doc.user";commitId=2e7aef9b83773b0a0b3459a8
+ ccf61e26c064db1c
+Bundle-Vendor: Eclipse GEF
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_51
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Dot_editor_error_d
+ etection.png
+SHA-256-Digest: iQUHaSMk/RB42CL66gm9S83AnN/31jeiN3AsHrrZk7E=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Graphviz_preferenc
+ e_page1.png
+SHA-256-Digest: lduTBRfwQIC5F4I5md8A2AOnuIEP3VDi/WlyViWOFtM=
+
+Name: about.properties
+SHA-256-Digest: XHAPXDoRq8tSAn1sllvMlWiJJVgydLGGKHhyawUF6+k=
+
+Name: about.html
+SHA-256-Digest: 31Y4uaBtOphfTgcHob0hh1CKroOIWaMaM86u24L7ZN8=
+
+Name: plugin.xml
+SHA-256-Digest: jOQWTP6g4EQyUQnWYsEw+3wQKac0ex0cW80NnG4nfOw=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Embedded_emulated.
+ png
+SHA-256-Digest: 8wR974JBnEzDJoWPXmNbo+HmzHTjLUGPcewDITU3hws=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Dot_editor_warning
+ _detection.png
+SHA-256-Digest: ZdP+f7WZFafGr/XBETB/1n2hWK3zKuYUucByU4SAhOc=
+
+Name: about.mappings
+SHA-256-Digest: 0F3mV2dv9Daevc93sj1+ytSebEPeEcVrRct5knSUoUU=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/User-Guide.html
+SHA-256-Digest: hUXhdr6Li5iRo2/IQEXaPtf3Xw+C3UEY88XYb0tQsPk=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/DotEditor.png
+SHA-256-Digest: GpnsOTkiNEiWghkRar9WLtf20JdtnV7+p7ChK3U80DM=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/DotZestM2Rendered.
+ png
+SHA-256-Digest: 5kYd44QngJWUkcKSHgq/UrrjfcUl2pFjjNfaSucf0Pw=
+
+Name: about.ini
+SHA-256-Digest: dJnpCx3Bbij7WuygdxEHHHdTDeteCiPLA3svbr565Tw=
+
+Name: toc.xml
+SHA-256-Digest: xcIjkfjKvdSbGl1Pt+TYiDRwVvDKr9YPqDGTRZT/hCc=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Tree_native.png
+SHA-256-Digest: isUqP0k9PIxxIpd4xvIOqI/eSbAvxw/RNwm/kLG3VD4=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/DOT_Graph_view_nat
+ ive.jpg
+SHA-256-Digest: 1ZS7s44Uvr44qED685VoNFQZuRkHbou93rphT4QlTt4=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/DOT_Graph_view_emu
+ lated.jpg
+SHA-256-Digest: lo3oHc5mAWGO6nZLypNR5CnBSNGWCiGBeRWwyx8uses=
+
+Name: gef_eclipse_logo_32.png
+SHA-256-Digest: 3gjt8pGYyF7O9G8DmyVCJGnZ0uzj6jfJwG5MgJjWJoQ=
+
+Name: reference/wiki/GEF/GEF4/DOT/User Guide/images/Graphviz_preferenc
+ e_page2.png
+SHA-256-Digest: +xQCUVfSYjXZpNt2TxT0mcs5upbyG11Vku8gJ58SkHU=
+
+Name: reference/wiki/GEF-GEF4-DOT-User-Guide-toc.xml
+SHA-256-Digest: Amhhuce49k0VAs5Ac2C94e/8xid4ZP3apeuMtA8N5mI=
+

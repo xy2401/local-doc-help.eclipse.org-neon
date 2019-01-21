@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Adding Process Data Paths</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Adding Gateways - AND, XOR and OR",
+	      "tut-chap-9.htm","tut-chap-11.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Adding Process Data Paths</h1>
+<p>Let's add process data paths to our Support Case Management process, which we can use to create 
+correspondence in the Stardust portal later.
+</p>
+<h2 id="cn">Creating a Data Path - CustomerName</h2>
+<p>To create a data path:</p>
+<ol>
+	<li>Open properties of the <strong>Support Case Management</strong> process definition.</li>
+	<li>Click the Data Path icon <img src="images/dp.png"> on the left side of the properties panel of a process.</li>
+	<li>Click the Add <img src="images/addp.png"> icon below the Data Path list. A new data path with a default name is created. </li>
+	<li>Specify <strong>CustomerName</strong> in the <strong>Name</strong> field.</li>
+	<li>Ensure that <strong>Direction</strong> is <strong>In</strong> and <strong>Type</strong> is <strong>Standard</strong>.</li>
+	<li>Select <strong>Support Case Data</strong> from the <strong>Data</strong> drop-down list.</li>
+	<li>Select <strong>Name</strong> from the <strong>Path</strong> drop-down list.
+	<p class="image"><img src="images/custnamedp.png" alt=""> <br>
+	<strong>Figure:</strong> Data Path - CustomerName</p></li>
+</ol>
+<h2 id="pn">Creating a Data Path - ProductName</h2>
+<p>To create a data path:</p>
+<ol>
+	<li>Click the Add <img src="images/addp.png"> icon.</li>
+	<li>Specify <strong>ProductName</strong> in the <strong>Name</strong> field.</li>
+	<li>Ensure that <strong>Direction</strong> is <strong>In</strong> and <strong>Type</strong> is <strong>Standard</strong>.</li>
+	<li>Select <strong>Support Case Data</strong> from the <strong>Data</strong> drop-down list.</li>
+	<li>Select <strong>Product</strong> from the <strong>Path</strong> drop-down list.</li>
+	<li>Add <strong>dot</strong> in front of the <strong>Product</strong> path. The populated list displays fields in the Product data. 
+	
+	<p class="image"><img src="images/pop-pro.png" alt=""> <br>
+	<strong>Figure:</strong> Product - Populated List</p>
+	</li>
+	<li>Select <strong>Name</strong> from the populated list.
+	<p class="image"><img src="images/prod-dp.png" alt=""> <br>
+	<strong>Figure:</strong> ProductName</p></li>
+
+</ol>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

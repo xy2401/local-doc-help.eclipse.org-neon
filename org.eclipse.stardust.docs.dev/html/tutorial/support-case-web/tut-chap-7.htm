@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Creating Applications</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Adding Activities in Swim Lanes",
+	      "tut-chap-6.htm","tut-chap-8.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Creating Applications</h1>
+<p>The web-based modeler supports a set of applications to perform certain operations. You can model 
+using both manual task and tasks supported by applications in the Web-based modeler.
+In this tutorial, we are using Script Invocation application to initiate data and Email application to  notify customer.
+ </p>
+<h2 id="script">Creating Script Invocation Application - SupportCaseFactory</h2>
+<p>To create script application:</p>
+<ol>
+	<li>In the My Process Models panel, expand the model</li>
+	<li>Right-click the <strong>Applications</strong> node and select the <strong>Script Invocation</strong> option
+	<p class="image"><img src="images/cr-script-app.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Create Application - Script Invocation</p>
+	The Script Invocation 1 is created.
+	
+	</li>
+	<li>In the Application Name text box, type <strong>SupportCaseFactory</strong></li>
+	<li>In the <strong>Parameters</strong> tab, click 
+	the <strong>Add</strong> <img src="images/add-field.png"> icon to add Out parameters</li>
+	<li>Type <strong>CustomerOutData</strong> in the Name field</li>
+	<li>Select <strong>Out</strong> from the Direction drop-down list</li>
+	<li>Select <strong>Structured Data</strong> from the Data Type drop-down list</li>
+	<li>Select <strong>Customer</strong> from the Structured Type drop-down list
+	
+	<p class="image"><img src="images/script-param.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Script Invocation - Parameters</p>
+	
+	</li>
+</ol>
+<h3 id="config">Configuration</h3>
+<p>To configure the script application, we are using Javascript.</p>
+<ol>
+	<li>Open the <strong>Configuration</strong> tab</li>
+	<li>Select the <strong>JavaScript</strong> option from the drop-down list</li>
+	<li>In the Script Code editor, add the following script:
+	<pre>CustomerOutData.Id=0;
+CustomerOutData.Name="";
+CustomerOutData.Email="";
+CustomerOutData.Product.Name="";
+CustomerOutData.Product.Synopsis="";
+CustomerOutData.Product.State="O";
+CustomerOutData.Product.Analysis="";</pre>
+<p class="image"><img src="images/script-config.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Script Invocation - Configuration</p>
+
+</li>
+</ol>
+<h2 id="email">Creating Email Application - Notify Customer</h2>
+
+<ol>
+<li>In the My Process Models panel, expand the model</li>
+	<li>Right-click the <strong>Applications</strong> node and select the <strong>E-Mail Send/Receive </strong> option
+	<p class="image"><img src="images/cr-emailt-app.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Create Application - E-mail Send Receive</p>
+	The E-Mail Send/Receive 1 is created.	
+	</li>
+	<li>In the Application Name text box, type <strong>NotifyCustomer</strong></li>
+	<li>In the <strong>Configuration</strong> tab, specify the following details to configure the email application</li>
+	<li>Protocol - Select <strong>SMTP</strong> from the drop-down list</li>
+	<li>Subject - Specify subject as <strong>Product {{customer.Product.Name}} Rejected</strong>. Configuration variable
+	is used for the subject line. 
+	 </li>
+	<li>Mail Sever - Specify <strong>localhost</strong> as your e-mail server</li>
+	<li>Format - Format should be <strong>Text only</strong></li>
+	<li>From - In the From text box, specify email ID as <strong>admin@localhost</strong></li>
+	<li>User - Specify user as <strong>testuser</strong></li>
+	<li>To - Specify configuration variable as <strong>{{customer.Email}}</strong></li>
+	<li>Password - Specify password</li>
+	<p class="image"><img src="images/email-config.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Email Configuration</p>
+	
+	
+	<li>Template Source - Source should be <strong>Embedded</strong></li>
+	<li>Specify the following message in the email editor:<br>
+	<tt>
+	&lt;p&gt;Hello {{customer.Name}},&lt;/p&gt;<br>
+&lt;p&gt;Your Product {{customer.Product.Name}} has been rejected due to some reasons.&lt;/p&gt;<br>
+&lt;p&gt;Sorry for inconvenience.&lt;/p&gt;<br>
+&lt;p&gt;-ACME Team&lt;/p&gt;
+	</tt>
+	<p class="image"><img src="images/email-template.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Email Message</p>
+		</li>
+	<li>Open the <strong>Parameters</strong> tab. Note that some default parameters are already added.</li>
+	
+	<li>Click the <strong>Add</strong> <img src="images/add-field.png"> icon to add In parameter</li>
+	<li>Specify <strong>customer</strong> in the Name field</li>
+	<li>Select <strong>In</strong> from the Direction drop-down list</li>
+	<li>Select <strong>Structured Data</strong> from the Data Type drop-down list</li>
+	<li>Select <strong>Customer</strong> from the Structured Type drop-down list
+		<p class="image"><img src="images/email-param.png" alt="Script Invocation"> <br>
+<strong>Figure:</strong> Email Parameters</p>
+	
+	</li>
+</ol>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

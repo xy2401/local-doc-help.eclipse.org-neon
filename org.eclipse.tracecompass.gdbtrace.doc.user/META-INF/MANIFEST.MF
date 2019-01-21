@@ -1,0 +1,122 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.tracecompass.gdbtrace.doc.user;single
+ ton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.tracecompass
+Require-Bundle: org.eclipse.help
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:git://git.eclipse.org/gitroot/tracec
+ ompass/org.eclipse.tracecompass.git;path="doc/org.eclipse.tracecompas
+ s.gdbtrace.doc.user";commitId=57af348944e77d3adcdc63075b6d2695ba37491
+ e
+Bundle-Vendor: %Bundle-Vendor
+Bundle-Name: %Bundle-Name
+Bundle-Version: 2.3.0.201703072250
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+
+Name: index/segments_1
+SHA-256-Digest: VafzlT/7yZUVuAiAEwJaDnb0xP6tufnkE/k6H9AmSH4=
+
+Name: plugin.xml
+SHA-256-Digest: w+Bqi50HZUlzQaKVdIOmW71zkNVHznAVyEqOTSIhbSs=
+
+Name: doc/Importing-Tracepoint-Data.html
+SHA-256-Digest: 7ghzqpck7wcr3+UiOmM9kJBOCUfnWVtufHpT1Qblwuw=
+
+Name: index/indexed_docs
+SHA-256-Digest: 9WMPqY3nQW9AiNqAxM40v7x1mHU/hDiISI7h2+2CAMg=
+
+Name: index/_0.tis
+SHA-256-Digest: cvzzPW0769I4CXyoCJlcSK4d7LStH2z3sFPUVexSAg8=
+
+Name: doc/images/home.gif
+SHA-256-Digest: 4cB3uzSzawBtPtcQboiWU16+RMytdhxFuZZGzwENCF8=
+
+Name: doc/Collecting-Tracepoint-Data.html
+SHA-256-Digest: DWyd1rF3JjaraxqLuTRWyZbxgtrXd36/cnLSu01v7Pg=
+
+Name: doc/images/gdb_icon16.png
+SHA-256-Digest: T5c7B2Z97Y+3t4GPWKutPe6tb3HRcCkB2ygLpg4DE2k=
+
+Name: doc/User-Guide.html
+SHA-256-Digest: MSTMtI0ZOpgK3nE4VIIh4Qv5DULMCvtdp19i/RQnrHM=
+
+Name: index/_0.tii
+SHA-256-Digest: d+JaTTJS/hqW7x3xWDVhpKtcst7/uiH7a2AtZT1vRo0=
+
+Name: META-INF/maven/org.eclipse.tracecompass/org.eclipse.tracecompass
+ .gdbtrace.doc.user/pom.properties
+SHA-256-Digest: JBaBqFQxec0JKI4wM7d0t9/FYIP+cM/GDKm/omoiYy0=
+
+Name: book.css
+SHA-256-Digest: UCuR8Qyhx1o7HqT9o8lvZb2d5k/w0hlkeZGQT0LLn0Y=
+
+Name: plugin.properties
+SHA-256-Digest: 3Kkc/AQKn/dLwcCrsYiHv0T57RetTddokMLmcMHD3Ik=
+
+Name: doc/images/next.gif
+SHA-256-Digest: IFqoxpwo9EXNAc2xh0M2KmlZWC1RBMxv8nWCwhMwRtI=
+
+Name: doc/User-Guide-toc.xml
+SHA-256-Digest: X/xWQ6WYBTTXBGk+QEq/21Siva3OFRsQDdTbOsqixUU=
+
+Name: index/_0.fdx
+SHA-256-Digest: 5gvj/hStS/QQ0942OVBxVSWgdERe9jnQ9UJ9IKZKD9U=
+
+Name: doc/Getting-Started.html
+SHA-256-Digest: OQ7wPqh2vE7IiocjJHES0wmA5rCaNPRcC08lTQc5cMA=
+
+Name: about.html
+SHA-256-Digest: 1fuYr0bu6NsJZCAmSom5QtnvnV0Cg8DwLn77Dd1Ql24=
+
+Name: index/segments.gen
+SHA-256-Digest: ZJch/0VemxAOaRo4V2ljUOFDZAKcNMlDirPqlmXJEpI=
+
+Name: doc/User-Guide.mediawiki
+SHA-256-Digest: i7tXYualACOJ2SRiuF5Hekrp8SKLEZg4upeK33bXsf8=
+
+Name: META-INF/maven/org.eclipse.tracecompass/org.eclipse.tracecompass
+ .gdbtrace.doc.user/pom.xml
+SHA-256-Digest: mSNKurwA1bZqHKfNeauBcxH5peoDemPTKHib8RLUHpU=
+
+Name: doc/images/GDBTracePerspective.png
+SHA-256-Digest: UjPaIio3SH4+9wxAEGyiuP+fFoaaF5NFp3w/oFPx0dk=
+
+Name: index/_0.fdt
+SHA-256-Digest: rtooP20ZW5LCY6kylbf7Q5A9H/wngLHHs1uTt7G6N7c=
+
+Name: index/_0.prx
+SHA-256-Digest: jOama9iS3rudv7l3LRO088WWcqGhAednGeBHNW1pd0s=
+
+Name: doc/References.html
+SHA-256-Digest: CIRc60AdjAjmsmF00QxMCziDvudNIx/k8xPsgnzX06o=
+
+Name: doc/GDB-Trace-Perspective.html
+SHA-256-Digest: Y18rQ9RnVhl9m+0ChpfHMdtV6XVBRjQO4IXRUz1ZrfI=
+
+Name: index/_0.nrm
+SHA-256-Digest: gch6lOacATLnkiMzQRKwAaBzQlNTd5MHK+KCO8NPBPo=
+
+Name: index/indexed_dependencies
+SHA-256-Digest: bAEX0IqJdr5E0NhFqv+KW53C6+xv+zoinNqb4gjon3U=
+
+Name: index/indexed_contributions
+SHA-256-Digest: KF0jkLh6zuuRBcQm0FoKNDRTiUlYCPM7SfEADt8bz2E=
+
+Name: doc/Overview.html
+SHA-256-Digest: XRRO5C7Q4of7GOTvzbOS4P3e55pZFCdjCrGd/0SgN50=
+
+Name: doc/images/prev.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: doc/Visualizing-Tracepoint-Data.html
+SHA-256-Digest: 9D8IS8EHwZ3+oKhmrNs/k3yOaq2E0pjYgqFLk9ZQ2Bo=
+
+Name: index/_0.frq
+SHA-256-Digest: Ehw4GNARXF0239hFz3RAHqMdIFBvaIN2gFcY/UHtMKs=
+
+Name: index/_0.fnm
+SHA-256-Digest: +lAR8gmMzmLkYceBNnpJcd+8J1sFSVOhWLUxuCyMoro=
+

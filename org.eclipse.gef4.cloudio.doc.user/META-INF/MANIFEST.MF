@@ -1,0 +1,121 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.gef4.cloudio.doc.user;singleton:=true
+Bundle-Name: GEF4 Cloudio User Guide
+Bundle-Version: 1.0.1.201609060946
+Archiver-Version: Plexus Archiver
+Built-By: genie.gef
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:https://github.com/eclipse/gef.git;p
+ ath="org.eclipse.gef4.cloudio.doc.user";commitId=2e7aef9b83773b0a0b34
+ 59a8ccf61e26c064db1c
+Bundle-Vendor: Eclipse GEF
+Created-By: Apache Maven 3.1.1
+Build-Jdk: 1.8.0_51
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4-Cloudio-T
+ agCloud.png
+SHA-256-Digest: yCerH1UJWL2LrQlBAYUy1+Ws1pmZw4utBXS97ssqOL0=
+
+Name: about.properties
+SHA-256-Digest: BHPbZ+uk4Sp1npCMTNRDU/BERkD46lPGpwxVPd7awM0=
+
+Name: plugin.xml
+SHA-256-Digest: EKEXhGorcQjEKvlHhFxeG04IkS/XG1jkCsgKFN/jTpY=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_Cloudio.p
+ ng
+SHA-256-Digest: cnlEDnx0i7HDMc4mxkRW/r2MkY7I61oZ0JoVs9huzes=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 3_improved_clipping.png
+SHA-256-Digest: acAbqzgwQNDuqENbW6udFya59OoFtfAjygx4+TzS2+8=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 13_scale_linear.png
+SHA-256-Digest: +nTGnIC/AFMeyL2zBeOGwMfF8Bs6/a56CSYVuyf16P8=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 5.png
+SHA-256-Digest: nQ3YFXzid30PGgXNkIKP4c0CMXciBjT8LjqKj4iJF8U=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 1.png
+SHA-256-Digest: dnRjgI68w1gDwOsH/POmCld3UyvWYskYsiC60Wm4kmQ=
+
+Name: about.mappings
+SHA-256-Digest: 0F3mV2dv9Daevc93sj1+ytSebEPeEcVrRct5knSUoUU=
+
+Name: about.ini
+SHA-256-Digest: dJnpCx3Bbij7WuygdxEHHHdTDeteCiPLA3svbr565Tw=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 6_angles_horizontal_only.png
+SHA-256-Digest: GwQ3yRZboE+pJo+21Rz42Jqqi0ug5UJOoIzz1ZmvlCQ=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 4.png
+SHA-256-Digest: zWMfSBL2lUJSl3hRkeqItRXc7yDz2uAxNFPGgbRpZzI=
+
+Name: reference/wiki/GEF-GEF4-Cloudio-User-Guide-toc.xml
+SHA-256-Digest: NeKsl5VRjb5S11HUm1ovZV/qsWD2hk1/QkJVqlw5mII=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/User-Guide.html
+SHA-256-Digest: K6R1fUyw590zXfix3OGxs9LiA1HU1RWZMwP1p9I+6Uc=
+
+Name: gef_eclipse_logo_32.png
+SHA-256-Digest: 3gjt8pGYyF7O9G8DmyVCJGnZ0uzj6jfJwG5MgJjWJoQ=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 9_angles_45_degrees_mostly_horizontal.png
+SHA-256-Digest: N3kMHX6BNQ6DGg3Yz6PEfyCHFDNS+FQN3mskJCMGp4s=
+
+Name: about.html
+SHA-256-Digest: 31Y4uaBtOphfTgcHob0hh1CKroOIWaMaM86u24L7ZN8=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/Zest_cloudio_n
+ ietzsche.png
+SHA-256-Digest: B8m4+PcC3Y3C/SQGpKiqdUUOHe0ajeeH9U0n9AdePaE=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/Zest_cloudio_w
+ innetou.png
+SHA-256-Digest: TXZSoO6h8+4rcu8BFX/nAwxmJWZIkGRXGAXMBe4jrOo=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 7_angles_vertical_only.png
+SHA-256-Digest: f3/TrAUoWSVY0xuswJoL5owfPf4/EjXgJzUreT8bJO8=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/Zest_cloudio_w
+ oyzeck_cluster.png
+SHA-256-Digest: QGrp8XnyRtwPG4fUZ37fGZZgg+tY5CpA7lpy8E9RC2I=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_Mask_Imag
+ e.png
+SHA-256-Digest: cjqkuD/GOarVW1kzCSI1FIFTf8yyrsMoUxnt3FELBe4=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 8_angles_horizontal_and_vertical.png
+SHA-256-Digest: 3fqCwq7+Vb+nOwT+G1b658/M+BFS2BXzarj+UvKWNNc=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 10_angles_45_degrees.png
+SHA-256-Digest: JOkMRh2erl3QL8wYUMT4QnuCMSJQ++CPwwgu3l6b8Uo=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 12_scale_logaritmic.png
+SHA-256-Digest: 7SvkZEOZTEcfqAWkFhLPufEEWrPNHfxzHHtXZmA1W+8=
+
+Name: toc.xml
+SHA-256-Digest: GIzDW3Sojunqbo8kp9yH79cWPy8agPqbtyOJNNagIm4=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/Zest_cloudio_w
+ oyzeck.png
+SHA-256-Digest: 11vbYAXQseUrEQUq2cjpOpIRRFVL+IifrOJzshPqHtI=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 11_angles_random.png
+SHA-256-Digest: EJ6MtcEmJ99FAlLYRz2yM4ru53ddbymBQiO60Rerfxo=
+
+Name: reference/wiki/GEF/GEF4/Cloudio/User Guide/images/GEF4_TagCloud_
+ 2.png
+SHA-256-Digest: fZyc9GiwEmjj998iqcyUAEigsl8hBbAWMv3AjwcpxCU=
+

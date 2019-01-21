@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Adding Gateways - AND, XOR and OR</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Adding a Start Event",
+	      "tut-chap-10.htm","tut-chap-12.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Adding Gateways - AND, XOR and OR</h1>
+<p>While creating a worklfow process of an organization, you need to take into account that
+workflow or activities are not necessarily sequential. At some step, decisions taken would direct the workflow and
+hence the workflow becomes linear. To create such workflows, you need to add gateways of different types.</p>
+<p>As mentioned, our sequence of activities is not a linear structure. The activity <strong>Notify Customer</strong> 
+has not yet been defined as a successor activity of any other activity. The organization wants to differentiate between two paths 
+in the process definition:</p>
+<ul>
+	<li>If the case solution has been found, a patch should be sent to the customer having reported the problem.</li>
+	<li>If the analysis of the software problem for some reason leads to a case rejection, the customer should be notified.</li>
+</ul>
+<p>
+Which path the process goes depends on the state of the support case. If the activity <strong>Analyze To Solve</strong> set this 
+variable to "C" which stands for the CLOSED state, the first option is realized. If the same variable has been 
+set to "R", standing for REJECTED, the activity Notify Customer follows. This means that processing of the 
+support case needs to be split into two branches at activity <strong>Analyze To Solve</strong>. Our process diagram 
+should reflect this.
+</p>
+<h2 id="join">Adding a Join Gateway</h2>
+<p>To add a Join gateway, perform the following steps:</p>
+<ol>
+	<li>Hover the mouse over <strong>Enter Data</strong> activity and click the <strong>Gateway</strong> icon
+	<p class="image"><img src="images/enter-gate.png" alt=""> <br>
+<strong>Figure:</strong> Enter Data -  Click Gateway Icon</p>
+	</li>
+	<li>Drop the gateway in proximity of the <strong>Analyze to Solve</strong> activity and inside the 
+	<strong>Analyze Issues</strong> lane.
+	<p class="image"><img src="images/join.png" alt=""> <br>
+<strong>Figure:</strong> Join Gateway</p>
+	</li>
+	<li>Open the properties of the newly added gateway.</li>
+	<li>In the <strong>Name</strong> field, specify name as <strong>Join</strong>.</li>
+	<li>Ensure that <strong>Gateway Type</strong> is <strong>XOR</strong>.
+	<p class="image"><img src="images/join-gate.png" alt=""> <br>
+<strong>Figure:</strong> Gateway Properties</p>
+	</li>
+	<li>Hover the mouse over the <strong>Join</strong> gateway and click the <strong>Sequence Flow</strong> icon
+	<p class="image"><img src="images/join-seq.png" alt=""> <br>
+<strong>Figure:</strong> Join Gateway - Click Sequence Flow Icon</p>
+	
+	</li>
+	<li>Connect the <strong>Analyze to Solve</strong> activity with Join Gateway
+	<p class="image"><img src="images/join-analyze.png" alt=""> <br>
+<strong>Figure:</strong> Join Gateway - Analyze to Solve</p>
+	</li>
+	
+</ol>
+<h2 id="secondjoin">Adding a Split Gateway</h2>
+<p>In case the Analyze to Solve activity decision states that you need to Notify Customer if the Product State is Rejected. 
+If the Product State is Closed then the flow should go to Deliver Patch activity. To handle this flow,
+you need to add one more split gateway from Analyze to Solve activity.</p>
+<p>To add split gateway, perform the following steps:</p>
+<ol>
+	<li>Hover the mouse over the <strong>Analyze to Solve</strong> activity and click the <strong>Gateway</strong> icon
+	<p class="image"><img src="images/ana-sequence.png" alt=""> <br>
+<strong>Figure:</strong> Analyze to Solve - Click Sequence Flow Icon</p>
+	
+	</li>
+	<li>Drop the gateway in proximity of the <strong>Join</strong> gateway and in the <strong>Analyze Issues</strong> lane.
+	<p class="image"><img src="images/ana-gateway.png" alt=""> <br>
+<strong>Figure:</strong>   Gateway</p>
+	</li>
+	<li>Open the properties of the newly added gateway.</li>
+	<li>In the <strong>Name</strong> field, specify name as <strong>Split</strong>.</li>
+	<li>Ensure that <strong>Gateway Type</strong> is <strong>XOR</strong>.
+	<p class="image"><img src="images/split-gate.png" alt=""> <br>
+<strong>Figure:</strong>  Gateway Properties</p>
+	</li>
+	<li>Hover the mouse over the <strong>Split</strong> gateway and click the <strong>Sequence Flow</strong> icon.
+	<p class="image"><img src="images/split-seq-one.png" alt=""> <br>
+<strong>Figure:</strong>  Split Gateway - Sequence</p>	
+	</li>
+	<li>Connect the <strong>Notify Customer</strong> activity with the split gateway.
+	<p class="image"><img src="images/notify.png" alt=""> <br>
+<strong>Figure:</strong> Connect Split Gateway with Notify Customer</p>	
+	</li>
+	<li>Hover the mouse over the <strong>Split</strong> gateway and click the <strong>Sequence Flow</strong> icon.
+	<p class="image"><img src="images/split-seq-one.png" alt=""> <br>
+<strong>Figure:</strong>  Split Gateway - Sequence</p>	
+	</li>
+	<li>Connect the <strong>Deliver Patch</strong> activity with the split gateway.
+	<p class="image"><img src="images/del.png" alt=""> <br>
+<strong>Figure:</strong> Connect Split Gateway with Deliver Patch</p>
+	</li>
+</ol>
+<h3 id="cond">Adding Conditions</h3>
+
+<p>We need to add conditions based on the Product State. Perform the following steps:</p>
+<ol>
+	<li>Select the sequence flow from the <strong>Split</strong> gateway to the <strong>Notify Customer</strong> activity.
+	The <strong>Conditional Sequence Flow</strong> properties are displayed.
+	<p class="image"><img src="images/sel-note.png" alt=""> <br>
+<strong>Figure:</strong> Sequence Flow and Conditional Sequence Flow Properties</p>
+	
+	</li>
+	<li>In the <strong>Condition Expression</strong> editor, specify condition as 
+	<strong>SupportCaseData.Product.State=="R"</strong>.
+	<p class="image"><img src="images/note-condition.png" alt=""> <br>
+<strong>Figure:</strong> Conditional Sequence Flow - Condition Expression</p></li>
+	<li>Similarly, add condition <strong>SupportCaseData.Product.State=="C"</strong> for the sequence flow from the <strong>Split</strong> gateway
+	to the <strong>Deliver Patch</strong> activity. 
+	<p class="image"><img src="images/del-condexp.png" alt=""> <br>
+<strong>Figure:</strong> Conditional Sequence Flow - Condition Expression</p>
+	</li>
+</ol>
+<h2>Adding Default Flow</h2>
+<p>If both the conditions added at split gateway are evaluated as false then the repeat loop needs to be added for 
+the Analyze to Solve activity. This will cause the transition to only evaluate to true. To do that, you need
+to add transition from the Split gateway to the Join gateway as Default. Perform the following steps:</p>
+<ol>
+	<li>Connect the <strong>Split</strong> gateway with the <strong>Join</strong> gateway
+	
+	<p class="image"><img src="images/split-join.png" alt=""> <br>
+<strong>Figure:</strong> Conditional Sequence Flow - Condition Expression</p>
+	</li>
+	<li>Select the added sequence flow.</li>
+	<li>In the <strong>Conditional Sequence Flow</strong> property panel, select the <strong>Default Flow</strong> 
+	check box.
+	<p class="image"><img src="images/default-flow.png" alt=""> <br>
+<strong>Figure:</strong> Select Default Flow</p>
+	</li>
+	<li>Note that a slash through is added to the sequence flow.
+	<p class="image"><img src="images/slash.png" alt=""> <br>
+<strong>Figure:</strong> Default Flow - Slash through</p>
+	 </li>
+
+</ol>
+<p>The process flow diagram would look like as shown in the following screenshot:</p>
+<p class="image"><a href="images/final-diag_Orgsize.png" alt="Process Flow">
+<img src="images/final-dialog.png"></a>
+ <br>
+<strong>Figure:</strong> Process Flow</p>
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

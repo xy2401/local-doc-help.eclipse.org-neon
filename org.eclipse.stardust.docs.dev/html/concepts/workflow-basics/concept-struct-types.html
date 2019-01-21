@@ -1,0 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Structured Data Types</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Participants and Users",
+      "mg-basics-8.htm","mg-basics-9.htm",
+		"../key-concepts.html","Concepts","mg-basics-preface.htm","Workflow Basics");
+ -->
+</script>
+<h1>Structured Data Types</h1>
+<p>This chapter describes the specific data type for structured data.</p>
+<ul>
+   <li><a href="#back">Background</a></li>
+   <li><a href="#xsdMapping">Mapping XSD Types</a></li>
+   <li><a href="#xpdl">XPDL Representation of Structured Data Types</a></li>
+</ul>
+<h2 id="back">Background</h2>
+<p>To describe structured data - e.g. a person with a first name, a last name 
+  and an address, while the address has a street name, a number a city and a ZIP 
+  code -, a data technology using one of the other provided data types can be used. 
+  However all these technologies require additional programming skills in Java or XML.</p>
+<p>Structured data types provide mechanisms to define and work with structured 
+  data without programming skills in Stardust.</p>
+<p>Having defined such data types in the modeling environment of Stardust,
+ these can be used for data definitions and Stardust will take care of their 
+ persistence in and their efficient retrieval from the Audit Trail database.</p>
+<p>Please refer to chapters
+<a href="../../handbooks/modelling/data-integration/struct-data-preface.html">Structured Data Type</a>
+of the 
+<a href="../../handbooks/modelling/mg-preface.htm">Modeling Handbook</a>
+and
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-struct-type.htm">
+Working with Structured Types</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>
+respectively for details on how to use this type in our provided modelers.</p>
+<h2 id="xsdMapping">Mapping XSD Types</h2>
+<p>Some XSD types specified in structured data will be converted
+to JavaScript types when used for 
+<a href="../../handbooks/modelling/integration/messages/message-transformation-appl.html">Message Transformation applications</a>
+or in <a href="mg-basics-6.htm#transcond">transition conditions</a>. For Java representations like Map, List or Object,
+they have to be converted to Java types. The following table displays the mapping performed
+for the XSD types:</p>
+<table class="autoWidth" id='id'>
+	<tr><th>XSD Type</th><th>Java type</th><th>JavaScript type</th></tr>
+	<tr><td>anySimpleType</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>anyURI</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>anyType</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>base64Binary</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>boolean</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>byte</td><td>java.lang.Byte</td><td>Number</td></tr>
+	<tr><td>date</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>dateTime</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>decimal</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>double</td><td>java.lang.Double</td><td>Number</td></tr>
+	<tr><td>duration</td><td>org.eclipse.stardust.common.Period</td><td>String</td></tr>
+	<tr><td>ENTITIES</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>ENTITY</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>float</td><td>java.lang.Float</td><td>Number</td></tr>
+	<tr><td>gDay</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>gMonth</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>gMonthDay</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>gYear</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>gYearMonth</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>hexBinary</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>ID</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>IDREF</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>IDREFS</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>int</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>integer</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>language</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>long</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>Name</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>NCName</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>negativeInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>NMTOKEN</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>NMTOKENS</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>nonNegativeInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>nonPositiveInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>normalizedString</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>NOTATION</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>positiveInteger</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>QName</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>short</td><td>java.lang.Short</td><td>Number</td></tr>
+	<tr><td>string</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>time</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>token</td><td>java.lang.String</td><td>String</td></tr>
+	<tr><td>unsignedByte</td><td>java.lang.Byte</td><td>Number</td></tr>
+	<tr><td>unsignedInt</td><td>java.lang.Integer</td><td>Number</td></tr>
+	<tr><td>unsignedLong</td><td>java.lang.Long</td><td>Number</td></tr>
+	<tr><td>unsignedShort</td><td>java.lang.Short</td><td>Number</td></tr>
+</table>
+<ul>
+   <li><a href="#any">XSD:anyType</a></li>
+   <li><a href="#dateconv">Converting XSD:date Fields</a></li>
+   <li><a href="#xsddste">Viewing XSD:date Fields in different Time Zones</a></li>
+   <li><a href="#comp">Comparing Decimal XSD Types</a></li>
+</ul>
+<h3 id="any">XSD:anyType</h3>
+<p>If the actual type is not defined for any element or attribute, 
+the <code>xsd:anyType</code> is set as default type. The values for elements or attributes of 
+type <code>xsd:anyType</code> are persisted with the Java type String. If the value of an 
+<code>xsd:anyType</code> element is another element, the persisted value is the corresponding 
+xml fragment as String. For example:</p>
+<pre>&lt;some_element&gt;...content (can be mixed - complex element)...&lt;/some_element&gt;</pre>
+<p>Serialization of a structured data containing <code>xsd:anyType</code> elements 
+via MessageSerializationApplication creates a valid xml with the xml 
+fragment correctly embedded in the document.</p>
+<h3 id="dateconv">Converting XSD:date Fields</h3>
+<p>The <code>Date</code> xsd type may include a time zone component. If these kind of values are
+converted to Java types, they are converted to a <code>java.util.Calendar</code> object having 
+the time component set to the beginning of the day (00:00:00,000) and a time zone equivalent to the
+one specified by the xsd value.</p>
+<p>This allows data mappings between primitive values of type <code>Calendar</code> and xsd Date values, with the
+restriction that the <code>Calendar</code> primitive values must have the time
+component set to <code>00:00:00,000</code>. Attempts to map a <code>Calendar</code> primitive
+value that has a non zero time component to an xsd Date will throw a conversion exception.</p>
+<h3 id="xsddste">Viewing XSD:date Fields in different Time Zones</h3>
+<p><tt>XSD:date</tt> fields are not localized, as the server time zone and client time zone may not match. 
+If you map an <tt>XSD:date</tt> field and try to view it in the Stardust Portal, the date value is 
+displayed irrespective of the client time zone.
+To view date and time, use the <tt>XSD:dateTime</tt> field instead.</p>
+<h3 id="comp">Comparing Decimal XSD Types</h3> 
+<p>Please note that decimal xsd types are mapped as String values and thus are compared
+like Strings in transition conditions. To avoid this, use a Number typecast,
+e.g.:</p>
+<pre>Number(<i>StructData1.decimal</i>)&nbsp;&gt;&nbsp;Number(<i>StructData2.decimal</i>)</pre>
+<p class="image"><img src="images/data-mapping-casting.png" alt=""></p>
+<h2 id="xpdl">XPDL Representation of Structured Data Types</h2>
+<p>Structured data are stored in the <tt>TypeDeclarations</tt> section of an XPDL 
+  file according to the XPDL standard. </p>
+<pre>
+&lt;xpdl:TypeDeclaration xmlns:xpdl=&quot;http://www.wfmc.org/2008/XPDL2.1&quot; Id=&quot;Person&quot; Name=&quot;Person&quot;&gt;
+   &lt;xpdl:ExtendedAttributes&gt;
+      &lt;xpdl:ExtendedAttribute Name=&quot;carnot:engine:visibility&quot; Value=&quot;Public&quot;/&gt;
+   &lt;/xpdl:ExtendedAttributes&gt;
+   &lt;xpdl:SchemaType&gt;
+      &lt;xsd:schema xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; 
+            xmlns:add1=&quot;http://www.infinity.com/bpm/model/NewWorkflowModel/Address&quot; 
+            xmlns:per1=&quot;http://www.infinity.com/bpm/model/NewWorkflowModel/Person&quot; 
+            targetNamespace=&quot;http://www.infinity.com/bpm/model/NewWorkflowModel/Person&quot;&gt;
+         &lt;xsd:import namespace=&quot;http://www.infinity.com/bpm/model/NewWorkflowModel/Address&quot; 
+            schemaLocation=&quot;urn:internal:Address&quot;/&gt;
+         &lt;xsd:complexType name=&quot;Person&quot;&gt;
+            &lt;xsd:sequence&gt;
+               &lt;xsd:element name=&quot;Firstname&quot; type=&quot;xsd:string&quot;/&gt;
+               &lt;xsd:element name=&quot;Lastname&quot; type=&quot;xsd:string&quot;/&gt;
+               &lt;xsd:element name=&quot;DateOfBirth&quot; type=&quot;xsd:date&quot;/&gt;
+               &lt;xsd:element name=&quot;Address&quot; type=&quot;add1:Address&quot;/&gt;
+               &lt;xsd:element name=&quot;ID&quot; type=&quot;xsd:short&quot;/&gt;
+            &lt;/xsd:sequence&gt;
+         &lt;/xsd:complexType&gt;
+         &lt;xsd:element name=&quot;Person&quot; type=&quot;per1:Person&quot;/&gt;
+      &lt;/xsd:schema&gt;
+   &lt;/xpdl:SchemaType&gt;
+&lt;/xpdl:TypeDeclaration&gt;
+</pre>
+<ul>
+	<li><a href="#xsdValidation">XSD Schema Validation</a></li>
+	<li><a href="#vol">Extended Attribute for Data marked as volatile</a></li>
+	<li><a href="#repr">XPDL/XSD Representation of Annotations</a></li>
+	<li><a href="#ext">Adding Annotations and Categories via Extension Points</a></li>   
+</ul>
+<h3 id="xsdValidation">XSD Schema Validation</h3>
+<p>Per default, a strict xpath validation will be performed on XSD schemas. To change
+the validation behavior, you can set 
+the property <tt>XPath.StrictEvaluation</tt> in your <tt>carnot.properties</tt> file.</p>
+<p>If this property is set to <tt>true</tt>, which is the default value, strict XPath
+evaluation will be performed. The following error is thrown in that case:</p>
+<pre>IllegalOperationException: MDL01123 - XPath 'FullName' is not defined.</pre>
+<p>If the property is set to <tt>false</tt>, a warning is logged. Dereferentiation paths on 
+structured data are invoked, even if the XSD schema
+has changed, provided the path is still compatible with the new schema. Otherwise invocation
+fails.</p>
+<h3 id="vol">Extended Attribute for Data marked as volatile</h3>
+<p>In case a structured data is marked as volatile, the following extended attribute will
+be serialized into the XPDL:</p>
+<pre>&lt;carnot:Attribute Name="carnot:engine:volatile" Value="true"/&gt;</pre>
+<h3 id="repr">XPDL/XSD Representation of Annotations</h3>
+<p>Global annotations are stored as XSD annotations in the following structure:</p>
+<pre>
+&lt;xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:infinity="..."&gt;
+   &lt;xsd:element name="customer" type="Customer"&gt; &lt;xsd:annotation&gt;
+   &lt;xsd:complexType&gt;
+    &lt;xsd:sequence minOccurs="0"&gt;
+     &lt;xsd:element name="someString" type="xsd:string" maxOccurs="unbounded"&gt;
+      &lt;xsd:annotation&gt;
+       &lt;xsd:appinfo&gt;
+        &lt;infinity:storage&gt;
+         &lt;infinity:indexed&gt;false&lt;/infinity:indexed&gt;
+         &lt;infinity:persistent&gt;false&lt;/infinity:persistent&gt;
+        &lt;/infinity:storage&gt;
+       &lt;/xsd:appinfo&gt;
+      &lt;/xsd:annotation&gt;
+     &lt;/xsd:element&gt;
+    &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+</pre>
+<p>Other formats may specify how to store their annotations in a corresponding 
+<!-- commented out not yet existing link
+ XSD structure in the implementation of the <a href="">Message Format extension point</a>. -->
+XSD structure in the implementation of the Message Format extension point. 
+For example combining upcoming SWIFT standards and global annotations from the
+Process Workbench, an XSD representation of a data structure definition would look like:</p>
+<pre>
+&lt;xs:annotation&gt;
+   &lt;xs:appinfo&gt;
+      &lt;info:FinFormat value="16c"/&gt;
+   &lt;/xs:appinfo&gt;
+&lt;/xs:annotation&gt;
+
+&lt;xsd:schema xmlns:xsd=http://www.w3.org/2001/XMLSchema xmlns:infinity="http://www.carnot.ag/xpdl/3.1"&gt;
+   &lt;xsd:element name="customer" type="Customer"&gt;
+   &lt;xsd:complexType&gt;
+    &lt;xsd:sequence minOccurs="0"&gt;
+     &lt;xsd:element name="someString" type="xsd:string" maxOccurs="unbounded"&gt;
+      &lt;xsd:annotation&gt;
+       &lt;xsd:appinfo&gt;
+
+     &lt;!--Stardust global annotations--&gt;
+        &lt;infinity:storage&gt; 
+         &lt;infinity:indexed&gt;false&lt;/infinity:indexed&gt;
+         &lt;infinity:persistent&gt;false&lt;/infinity:persistent&gt;
+        &lt;/infinity:storage&gt;
+       &lt;/xsd:appinfo&gt;
+      &lt;/xsd:annotation&gt;
+     &lt;/xsd:element&gt;
+    &lt;/xsd:sequence&gt;
+   &lt;/xsd:complexType&gt;
+  &lt;/xsd:element&gt;
+&lt;/xsd:schema&gt;
+</pre>
+<h4>&lt;infinity:indexed&gt;false&lt;/infinity:indexed&gt;</h4>
+<p>Indexed fields store a separate copy of data that is used by the query 
+API to perform filtering/sorting/grouping based on these fields.
+If the structure type element is marked as non-index (Index=False), 
+then the data value row in database table does not get added.</p>
+<h4>&lt;infinity:persistent&gt;false&lt;/infinity:persistent&gt;</h4>
+<p>The persistent property allows you to select which fields you want to store and which not. 
+If Persistence is True then the data value persist in process instance event if it 
+is not indexed in database.
+If False, data value does not persist with data.</p>
+<h3 id="ext">Adding Annotations and Categories via Extension Points</h3>
+<p>Annotations and categories can be dynamically added to the modeling environment
+with an Eclipse extension point, which:</p>
+<ul>
+    <li>defines a category for the annotation editor (e.g. SWIFT),</li>
+    <li>parses annotations for all relevant nodes of an XSD tree 
+    and creates annotation objects for the internal data structure model.</li>
+    <li>generates annotations for all relevant nodes of an XSD
+    tree based on the internal data structure model.</li>
+    <li>defines label providers and optionally in-place editors for all 
+    annotations in the category specified by the extension type.</li>
+</ul>
+<!--<p>Select the following link to view the schema description of the 
+<strong>applicationInfo</strong> extension 
+point:
+<a href="../../../reference/extensions/ag_carnot_bpm_modeling_data_structured_applicationInfo.html">
+    applicationInfo schema</a></p>-->
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

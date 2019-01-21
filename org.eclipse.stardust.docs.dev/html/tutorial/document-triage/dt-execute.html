@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="STYLESHEET" href="../../styles/carnot.css" type="text/css">
+<title>Performing the Document Triage</title>
+<script src="../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+writeNavigation("",
+   "dt-workflow.html","",
+   "../tut-preface.htm","Tutorials",
+   "doc-triage.html","Document Triage Tutorial");
+-->
+</script>
+<h1>Performing the Document Triage</h1>
+<p>Now we execute the example to start the Document Triage with documents that we upload
+to the <strong>Loan Applicant</strong> process and data we enter to our Business Object.
+To start deploy models <strong>DocumentRequestPredefined.xpdl</strong> and <strong>DocumentTriageExample.xpdl</strong>. 
+Then proceed with the instructions in the following sections:</p>
+<ul>
+   <li><a href="#startappl">Starting the Loan Application process</a></li>
+   <li><a href="#startdt">Starting the Document Triage process</a></li>
+   <li><a href="#hist">Viewing details on the Loan Application process</a></li>
+   <li><a href="#drag">Dragging documents to the Pending Document Request node</a></li>
+   <li><a href="#compl">Completing the Pending Document Request</a></li>
+   <li><a href="#cont">Continuing with the Loan Review activity</a></li>
+</ul>
+<h2 id="startappl">Starting the Loan Application process</h2>
+<p>Start the <strong>Loan Application</strong> process:</p>
+<ol>
+   <li>Click the <strong>Loan Application</strong> process in the
+   Workflow Execution perspective.
+   <p><img src="images/start-loan-proc.png" alt="Start Loan Application Process"></p></li>
+   <li>Enter values in the data fields for your structured data and complete the activity.
+   <p><img src="images/enter-loan-appl-data.png" alt="Enter Values"></p></li>
+   <li>The subsequent Document rendezvous activity is hibernated waiting for the incoming 
+   documents.</li>
+</ol>
+<h2 id="startdt">Starting the Document Triage process</h2>
+<p>Now start the <strong>Document Triage</strong> process:</p>
+<ol>
+   <li>Click the <strong>Document Triage</strong> process in the
+   Workflow Execution perspective.
+   <p><img src="images/start-dt-proc.png" alt="Start Loan Application Process"></p></li>
+   <li>Attach some documents to the Document Upload activity including one Tiff document containing
+   several pages and complete it.
+   <p><img src="images/dt-ex-attac-docs.png" alt=""></p></li>
+   <li>The Document Request panel opens for Document Triage.</li>
+   <li>Select the Business Object
+   <p><img src="images/dt-ex-select-bo.png" alt=""></p></li>
+   <li>The Data Panel opens. In the Business Object table select the Business Object instance.
+   <p><a href="images/dt-ex-index-screen_orgsize.png" target="_blank">
+   <img src="images/dt-ex-index-screen.png" alt="Example Index Screen"></a></p></li>
+   <li>The pending <strong>Loan Application</strong> process is displayed in the 
+   <strong>Pending Processes</strong> tree accordingly.
+   <p><img src="images/dt-ex-pending-procs.png" alt="Pending Processes"></p></li>
+</ol>
+<h2 id="hist">Viewing details on the Loan Application process</h2>
+<p>To view details on the process history of the Loan Application process,
+click the Info icon on the right side of the <strong>Loan Application</strong> node.</p>
+<p class="image"><img src="images/dt-ex-proc-info.png" alt="Open the Process History"><br>
+<strong>Figure:</strong> Open the Process History of the Loan Application</p>
+<p>The Process Details view opens. Expand the <strong>Process History</strong> panel. In 
+the Activity table, you see that the <strong>Document Rendezvous - Loan</strong> activity 
+has the status <code>Hibernated</code>.</p>
+<p class="image"><a href="images/dt-ex-proc-details_orgsize.png" target="_blank">
+<img src="images/dt-ex-proc-details.png" alt="Process History"></a><br>
+<strong>Figure:</strong> Viewing the Process History Activity Table</p>
+<!-- <p>In the <strong>Process Documents</strong> section, you can see that no documents -->
+<!-- are attached.</p> -->
+<!-- <p class="image"><img src="images/dt-ex-details-docs.png" alt="Process Documents Details"><br> -->
+<!-- <strong>Figure:</strong> Process Documents Details</p> -->
+<h2 id="drag">Dragging documents to the Pending Document Request node</h2>
+<p>To complete the Document rendezvous, we drag required documents to the
+nodes for requested documents of the Pending Document Request node.</p>
+<ol>
+   <li>Drag a document from the Document panel to the <strong>PaySlip</strong> 
+   node of the Pending Document Request node.
+   <p><img src="images/dt-ex-drag-doc.png" alt=""></p></li>
+   <li>Expand the Tiff document that contains several pages. Select one of the pages
+   and drag it to the <strong>ID</strong> node of the Pending Document Request node.
+   <p><img src="images/dt-ex-split-doc.png" alt=""></p></li>
+   <li>A confirmation dialog opens to confirm the creation of a new document with
+   the dragged page. <!-- Do not select to delete the selected page from the original 
+   document. -->
+   <p><img src="images/dt-ex-confirm-split.png" alt="Split Confirmation Dialog"></p></li>
+   <li>Now the document icons beside the Pending Document Request sub-nodes are indicated
+   as filled.
+   <p><img src="images/dt-ex-docs-dragged.png" alt=""></p></li>
+   <li>In the tooltip of the <strong>ID</strong> node, you can see the name of the
+   newly created document.
+   <p><img src="images/dt-ex-tooltip.png" alt="Tooltip"></p></li>
+ </ol>
+<h2 id="compl">Completing the Pending Document Request</h2>
+<p>Now that the required documents are uploaded, the Pending Document Rendezvous
+can be completed. Click the icon on the right side of the Pending Document Request
+node to complete it.</p>
+<p class="image"><img src="images/dt-ex-complete-proc.png" alt="Complete the Document Rendezvous"><br>
+<strong>Figure:</strong> Complete the Document Rendezvous</p>
+<p>The process is now removed from the Pending Processes tree.</p>
+<h2 id="cont">Continuing with the Loan Review activity</h2>
+<p>Viewing the Process History of the <strong>Loan Application</strong> again,
+we see that activity <strong>Document Rendezvous - Loan</strong> now is completed and
+activity <strong>Loan Review</strong> suspended.</p>
+<p class="image"><a href="images/dt-ex-proc-details-new_orgsize.png" target="_blank">
+<img src="images/dt-ex-proc-details-new.png" alt="Process History"></a><br>
+<strong>Figure:</strong> Viewing the Process History Activity Table</p>
+<p>In the <strong>Process Documents</strong> section, you see the documents that were
+attached during the Document Triage:</p>
+<p class="image"><img src="images/dt-ex-proc-attached.png" alt="Process Attachments"><br>
+<strong>Figure:</strong> Process Attachments</p>
+<p>In the Workflow Execution perspective open the user worklist.</p>
+<p class="image"><img src="images/dt-ex-worklist.png" alt="Worklist"><br>
+<strong>Figure:</strong> Loan Review activity is available in worklist</p>
+<p>Start the <strong>Loan Review</strong> activity.</p>
+<p class="image"><img src="images/dt-ex-review-start.png" alt="Start the Loan Review activity"><br>
+<strong>Figure:</strong> Start the Loan Review activity</p>
+<p>The activity displays the entered Business Object values.</p>
+<p class="image"><img src="images/dt-ex-review.png" alt="Loan Review"><br>
+<strong>Figure:</strong> Loan Review</p>
+<p>If you select the <strong>Show Completed</strong> checkbox in the
+Document Triage Pending Processes screen, the completed <strong>Loan Application</strong>
+process is displayed.</p>
+<p class="image"><img src="images/dt-ex-completed.png" alt="Completed Process displayed in Document Triage screen"><br>
+<strong>Figure:</strong> Completed Process displayed in Document Triage screen</p>
+
+
+<script type="text/javascript">
+<!--
+writeFooter();
+-->
+</script>
+</body>
+</html>

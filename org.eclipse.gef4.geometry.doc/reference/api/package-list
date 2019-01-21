@@ -1,0 +1,5 @@
+org.eclipse.gef4.geometry.convert.awt
+org.eclipse.gef4.geometry.euclidean
+org.eclipse.gef4.geometry.internal.utils
+org.eclipse.gef4.geometry.planar
+org.eclipse.gef4.geometry.projective

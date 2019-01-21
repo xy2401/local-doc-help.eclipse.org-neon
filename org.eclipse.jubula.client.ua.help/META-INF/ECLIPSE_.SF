@@ -1,0 +1,3170 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: f+Lul7ADOEGzMJbLEk+0R07dh2Vsw
+ Hv11w03i9cChng=
+SHA-256-Digest-Manifest: xO/gOphspYyl3KG0wUM7QWHEelIqNGRe6ZaRkeB2Da4=
+Created-By: 1.8.0_102 (Oracle Corporation)
+
+Name: content/html/reference/parameters/methodName.html
+SHA-256-Digest: TTljI6DO2LIXTgS2m2pMEpWlezYorTjaOouSFKly7PA=
+
+Name: content/html/userManual/tasks/objectMapping/collecting-component
+ s-technical-names-from-the-aut.html
+SHA-256-Digest: iQmyU9Bl1KKxXgABQcZf5UqIQYnh604174S/dfVrbPk=
+
+Name: content/html/reference/parameters/label.html
+SHA-256-Digest: QnPgAVIbTTAjUplD9vFV/eaZf9fCphsxkjo30lInGns=
+
+Name: content/html/developerManual/toolkitExtension/iteExtension.html
+SHA-256-Digest: Bv5h6ZDXoKNeEL50d/NDuiRunMPy3KYRJ6qAOijbSds=
+
+Name: content/html/userManual/userInterface/views/the-search-result-vi
+ ew.html
+SHA-256-Digest: rW614CNKQxkvRsfmzhgDZcPsewzc+kcmeSyoTH1az+o=
+
+Name: content/html/userManual/images/ChangeTrackingPropView.png
+SHA-256-Digest: oek/HxpxO9FcwymIuaF5qMS8FocA0iQmVdxKt22Glm8=
+
+Name: content/html/reference/parameters/x_position.html
+SHA-256-Digest: Jf5Qcc2fTYJYPSVGV8xGwv0RJ9yvYP3Snnorzhkf818=
+
+Name: content/html/reference/parameters/parameters.html
+SHA-256-Digest: uinSFDwB/Mfax/kJwlZPM0h0QpxmzDddSqWGcKg401c=
+
+Name: content/html/reference/actions/specificToHTMLApps/forSynchroniza
+ tion/wait/actionWaitForComponent.html
+SHA-256-Digest: ujYJU2l5kM48HSOR7uLrP1vKXUvcPyHujlKB57WxHrY=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForEnablement/actionWaitForEnablement.html
+SHA-256-Digest: Ldxw71q65mariT8HKKU3kQjZBFI5SS2KRrpr4APt104=
+
+Name: content/html/reference/parameters/locator.html
+SHA-256-Digest: bxU1ZT3PuYytaaJsTmDyGsbvUYQBEAHnzA3GOm8quZw=
+
+Name: content/html/userManual/tasks/workWithTestCases/opening-existing
+ -test-cases.html
+SHA-256-Digest: GZBeQy4x/NFthOA3LIVmtUV2tdNWH+tP30UHvhMNIJI=
+
+Name: content/html/userManual/tasks/objectMapping/object-mapping-edito
+ r.html
+SHA-256-Digest: ifoO4GAqFMzpKmtUFTUej+xpVylBH+WYAyFNlcwxBgI=
+
+Name: content/html/developerManual/index.html
+SHA-256-Digest: HO+jZxBQUrHIT0lTRd1dplw5ZSRl2HqdEMOX0NTYgiw=
+
+Name: content/html/reference/parameters/variable_name.html
+SHA-256-Digest: 588+U8/Q3YfHQ2QJPnNf07yFzAhS0ID93KGRhmwAfW8=
+
+Name: content/html/userManual/tasks/workWithEditors/deleting-items-fro
+ m-editors.html
+SHA-256-Digest: Fg2OKlg11XTgk1NB8wl2Q/ueEEZlB/oZW21TVJJP6/E=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkEditability/actionCheckEditabilityTreeTables.html
+SHA-256-Digest: DWYaVG9ozCHD0n8sQoZ5uNypzRl4BQFRXuqXCP5mNjU=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/wait/actionWait.html
+SHA-256-Digest: tE+97suYTBri59oX9+4ZEF2moHTwUyZRLTfMV4SajyA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkPosition/actionCheckPositionSlider.html
+SHA-256-Digest: IGcVJIvQ8bGAaODFQ9A4+wKKOIiC+zrosCJkxbfy8/o=
+
+Name: content/html/userManual/tasks/troubleshooting/troublerdesktop.ht
+ ml
+SHA-256-Digest: HNP+c32xUQnuUaiXRyTl83D65uKRqRu/W6Cv6kN7vkY=
+
+Name: content/html/developerManual/images/api-idea.png
+SHA-256-Digest: L78faoIl4W8s/y6BrRSRfA7KLObPmoGTCv54mNzNSwA=
+
+Name: content/html/userManual/concepts/testing/understanding-how-the-i
+ te-and-test-execution-work.html
+SHA-256-Digest: oJoyO99dz4KQ81hj0XjeKIpam338VtwUucSvV41y3CM=
+
+Name: content/html/userManual/concepts/testHierarchy/test-suites.html
+SHA-256-Digest: CJxKojbYGWCFKnDX6IH6fvwlQOm2Y5CY7vnK5bkk0Yg=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkXPathCount/actionCheckXPathCount.html
+SHA-256-Digest: AVp3DYu6f5H0PwAVYNRMYB6DkVI9b8Dlt85B7bNq7GY=
+
+Name: content/html/userManual/images/warning.png
+SHA-256-Digest: /+j1alfsSaRblIQXIMjvPMlziUi+7Sgbrq6X7V6oJgQ=
+
+Name: content/html/userManual/tasks/workWithCategories/intro-categorie
+ s.html
+SHA-256-Digest: +rQ8H6FEgXJUyI4Z03zNtUFv/9ok6bL14OjXIT2myjk=
+
+Name: content/html/userManual/tasks/workWithProjects/projectversion.ht
+ ml
+SHA-256-Digest: cgNmhyUbHIwFHg7MVDClnSjWtHeZ1k0+Guiyta9Bz6A=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/toggleCheckbox/actionToggleCheckboxTrees.html
+SHA-256-Digest: MKlXHxQoin9wynv27+PGMWpTs02tSK5MuZ1pM7Yxepk=
+
+Name: content/html/reference/parameters/position.html
+SHA-256-Digest: 4qdZy7ZvxtdAJDDjK3OKqoepKr+TrUA6i6nlgNUutPA=
+
+Name: content/html/userManual/tasks/workWithData/using-functions-as-da
+ ta-for-test-cases.html
+SHA-256-Digest: 4yZnEDHvgG4iETrK4P0QSoakvR4+ohudZHJ2/akoDuQ=
+
+Name: content/html/userManual/tasks/configurePrefs/help-preferences.ht
+ ml
+SHA-256-Digest: 1nEEvg2FbYqbeh7HepC9qIKEyMGxOWJKi6ulpe6fM9E=
+
+Name: content/html/reference/toolkits/ch02s04.html
+SHA-256-Digest: aR1oM/nZlKKcrjuk/r4MUKQDdYBuYbiAsrUZoPi8Kys=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkSelection/actionCheckSelectionJavaFX.html
+SHA-256-Digest: oyF6Wb5Ye0wQkEX7vF9krlr3bEA5IiB5D9t59BxoHA4=
+
+Name: content/html/userManual/tasks/useTestExec/parameters-for-the-tes
+ t-executor.html
+SHA-256-Digest: co/vwhDsGqebSDbFSzN6nBZYGRJ6RgHyQQxzg07Tx1U=
+
+Name: content/html/reference/images/component/concrete/textInputCompon
+ ent.png
+SHA-256-Digest: a3yuwF9PUknqP8xpQNGAYFOoLkaUXweQNLmpar34W7o=
+
+Name: content/html/reference/parameters/margin_bottom.html
+SHA-256-Digest: t6rJHSyTM8BiBnd26wbIhWv5pLOxCjN14W3IVu2Lllw=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/viewing-t
+ he-code-coverage-for-a-test-run.html
+SHA-256-Digest: JLvFiCfXdHadRfqZGsRMqLtQQXbYCt/mPDigm/WiEMk=
+
+Name: content/html/userManual/concepts/databaseStructure/multi-user.ht
+ ml
+SHA-256-Digest: 8U+gmAatAv1E2EBCFsXSw+rKWHAybnYFQcoLu4D77Sg=
+
+Name: content/html/reference/parameters/file_access.html
+SHA-256-Digest: KuNaXdyAXfV8YPLXjtOJpqRJ/d8rmtIyiskQiQwK8UA=
+
+Name: content/html/userManual/tasks/dealWithErrors/intro-event-handler
+ s.html
+SHA-256-Digest: HaR27u3DN849l6LX4iv7oWdxPNLzSAcxl1hbXUGLKVk=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkCSSPathCount/actionCheckCSSPathCount.html
+SHA-256-Digest: DlkzW46Mtvi+bGKqzqRTu1d33YWabvC/FePpmpGLA98=
+
+Name: content/html/userManual/images/probview.png
+SHA-256-Digest: e8rdXaMGIPUmZkfsK3weTa1VRh1oGc15vU/swiQDWv8=
+
+Name: content/html/userManual/tasks/workWithTeststyleGuidelines/workin
+ g-with-the-problems-view-to-view-and-fix-teststyle-problems.html
+SHA-256-Digest: 2wvXawe1LifUzpGJoscEtCa3sEIKWEeE1w7XRbMoGRQ=
+
+Name: content/html/userManual/tasks/objectMapping/object-mapping-and-a
+ ut-changes.html
+SHA-256-Digest: qtwMr1vwkB0GlPHyojDUWtulhbbwutZU8/C+8nJVp14=
+
+Name: content/html/reference/parameters/pattern.html
+SHA-256-Digest: xMifZNojpXPLk09I6lc5cXPyMT506mdIDNDM4ng2wJ4=
+
+Name: content/html/userManual/userInterface/statusbar/the-status-bar.h
+ tml
+SHA-256-Digest: x8SNuEMPgh8vWMAA06ZC5sUrB8bUSC6QwCwCpE6ut4I=
+
+Name: content/html/userManual/tasks/startAndConnectAUTAgent/start-aut-
+ agent.html
+SHA-256-Digest: muHrMf+tlykSbEHc2/Vc+8QyJlgyP14F7XHvM1XdEm8=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/intro-cod
+ e-coverage.html
+SHA-256-Digest: Nqd089krrVflIJd1qh3Wrya2lQBtcgEAR8SFST/czQ0=
+
+Name: content/html/userManual/tasks/workWithEditors/opening-items-in-e
+ ditors.html
+SHA-256-Digest: 6rnV8SGJ0jy4RfF2fr9GxeQpPgEcOhE3qgUGsscWP/8=
+
+Name: content/html/reference/parameters/modifier_keys.html
+SHA-256-Digest: 9QVRhD6tweIz3mLUGulQMxm67m0Ypf3KcA8HPXtiwrQ=
+
+Name: content/html/developerManual/clientAPI/ch02s05.html
+SHA-256-Digest: aC8fzcBgwxTlO5Ol9Us+reA3QP4xIG/XqtRJ+lgJ0P4=
+
+Name: content/html/userManual/images/startOM.png
+SHA-256-Digest: ywLQhFZ4x96BWh5pPHwROmBGpGKjcHZw4fovh22ylrI=
+
+Name: content/html/userManual/tasks/useMatchingAndRegex/regex.html
+SHA-256-Digest: R9RLBGBPHYEcdKgNlHEdzioxKqn07mCqMSSfA53PKxw=
+
+Name: content/html/reference/parameters/y_position.html
+SHA-256-Digest: 1bp3OAIbTQl/+Cv+awzAhkAyMkERE0yDQMmXYkzLAa0=
+
+Name: content/html/userManual/images/attributes.png
+SHA-256-Digest: vlpdd8rEsPCP+Cf7vx4b55ZyJej/0XkwgSxD4Xlm+LQ=
+
+Name: content/html/userManual/tasks/launchConfig/requirements.html
+SHA-256-Digest: +dgKJkKQUQ/STvCditllvevCLO8L8cSHBNEh9yIxxmQ=
+
+Name: content/html/developerManual/toolkitExtension/toolkitExtension.h
+ tml
+SHA-256-Digest: ubfc5X8qAH2QloTmDKCvZw2iDETePiOXB3GxsODETbk=
+
+Name: content/html/reference/parameters/key.html
+SHA-256-Digest: 17GieqXT8Vzm2aEfrgD5PbHJ3gRF+ws44AaBMwgDH0Y=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkTextAlert/actionCheckTextAlert.html
+SHA-256-Digest: aNmkyR/e9Yk05/RQTmRnHJ9I9ZNQVJXikqPkuvIX2rY=
+
+Name: content/html/reference/parameters/directory.html
+SHA-256-Digest: H13P+QLEjGgYBijxP466GIDAsKgUUryIjXuplBQbCDE=
+
+Name: content/html/userManual/images/TableViewGrouped.png
+SHA-256-Digest: AAz9eT3sldsywKBQYZTo/wLjp75K7jMNuZxSINik2Cc=
+
+Name: content/html/userManual/tasks/startITE/windows-users-1.html
+SHA-256-Digest: g9n6BtNIq4OOwUPEjfwnmfS6chyBWv4DsgzNlkr4pK0=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/configuri
+ ng-code-coverage-for-an-aut.html
+SHA-256-Digest: 5hA02HTwhNmELXAgoxFgapLSFx3qtcZ5RQq+7VSxtRw=
+
+Name: content/html/userManual/tasks/workWithComponentNames/entering-an
+ d-reassigning-component-names-in-the-component-names-view.html
+SHA-256-Digest: aj9N80/BKOZjlclzOqn0mqcDozPMwytp4upR8WunDyk=
+
+Name: content/html/userManual/tasks/workWithBrowsers/opening-the-test-
+ case-browser-multiple-times.html
+SHA-256-Digest: XhhcTeXrAoZDSIaJAwlntLr1bhLucc6VPJOSTq016r8=
+
+Name: content/html/userManual/tasks/workWithProjects/saveproject.html
+SHA-256-Digest: Y/QpZabsQg+OBuTlRWvakcYsKgr2NXDeklwVSJ+5FQo=
+
+Name: content/html/reference/components/abstractToolkit/buttonComponen
+ t/abstractToolkitButtonComponent.html
+SHA-256-Digest: RScGXNzKi+ZDCBcfoiDivACLyNgFZu3lhO5QQMtRL6Y=
+
+Name: content/html/developerManual/clientAPI/creating-cap-instances.ht
+ ml
+SHA-256-Digest: p4oU5RCX1ZALwowUkxgONh4BJwtwNh1xIyQcEt56tHM=
+
+Name: content/html/developerManual/functions/functions.html
+SHA-256-Digest: PfSS43zAqY4vyLT5J9yIsw67cMuU6lMDJ1EqRLVrw1k=
+
+Name: content/html/userManual/tasks/adaptUI/resizing-in-the-user-inter
+ face.html
+SHA-256-Digest: B4t/WXZf9u1rB4NCDSUClHloJlSdD3mZ6tNd0FBZCkw=
+
+Name: content/html/userManual/introduction/howTo/about-the-help.html
+SHA-256-Digest: FzXfxikqbOIelIFP6bPm6aTLBZI9dpI2TSIxObrB+l8=
+
+Name: content/html/userManual/tasks/troubleshooting/general-help.html
+SHA-256-Digest: 91jjOyYI2uxm7mreGJbXv5KKibLN/C6JZ6yRT73hp5Q=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/select/actionSelectSWTToolbarItems.html
+SHA-256-Digest: HK1I6eRVe81ryb6Z2yFGb9IuJZqfym/cvcwmN432lqA=
+
+Name: content/html/reference/parameters/margin_left.html
+SHA-256-Digest: 9JppNmKMM2sSvMApfD5TsfUZwi4f3MBRu2GmoGSF8Cg=
+
+Name: content/html/userManual/images/exportplugin.png
+SHA-256-Digest: GiwwSDJ6DUWhih4qdiIp88ngxTgAB87a4OeA79Lo4RA=
+
+Name: content/html/userManual/tasks/useDBToolClient/intro-dbtool.html
+SHA-256-Digest: WWQTcT/wUnKwscBWl+DzqUKZN2gOnuq05wfURFcOOjg=
+
+Name: content/html/userManual/userInterface/views/the-navigation-view.
+ html
+SHA-256-Digest: W/wgUntWYYRPpw/yutuu1189vtvpL38joY2ZOwj0rYc=
+
+Name: content/html/userManual/concepts/approaches/approaches-to-testin
+ g.html
+SHA-256-Digest: 1YUIC7GbqK9d8ycqeTOTjKpqSBmVC64SwK1LL6Mx7Ho=
+
+Name: content/html/userManual/tasks/searching/searching-for-and-openin
+ g-the-original-specification-of-a-test-case-or-test-suite.html
+SHA-256-Digest: wtIlokfhBhIMYQDfKavlGN7/7zwG91cYj0aCvDR3jXc=
+
+Name: content/html/userManual/tasks/startITE/working-with-the-aut-agen
+ t-and-client-on-one-machine.html
+SHA-256-Digest: mj8GZCY0qLdz9zo1JamPPpHfb/uLFVnJjq04BrX9wnY=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionCheckTextTableComponents.html
+SHA-256-Digest: sOFaRi2GCzSlVRHtO+SCCc8IbQj4Jral5mdw5wpv4vM=
+
+Name: content/html/reference/parameters/timeout_in_millisecs.html
+SHA-256-Digest: kDMVatJoVN1nLAmUwqw1//rdnm8W0t+nhSWqAZDbjpI=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionComboComponents.html
+SHA-256-Digest: QbtvsDLDgre13HFBVJlG//BUfATqoCLUPq54xb07S/g=
+
+Name: content/html/userManual/tasks/testExec/starting-stopping-and-pau
+ sing-test-suites-and-test-jobs.html
+SHA-256-Digest: p2WgNF3H0mMj+Q4es+nRNX8qMvvwiESj6TFPsPiiu5c=
+
+Name: content/html/reference/images/component/SWT/treeTable.png
+SHA-256-Digest: 4+eNYS5xgVtDTX0QNMIBORL9CkEX4dbxYvSHuZbp/eU=
+
+Name: content/html/userManual/images/obsprefsjava.png
+SHA-256-Digest: 5MSxuiNr8Sx3ccQetvJSV2Y405OKjSTAVgfPOpdeij0=
+
+Name: content/html/api-comparison/changes/8.1_to_8.2.0.html
+SHA-256-Digest: hN/O3Af3OTzim/kPMS/UbCgNq1XG9hbHZy1pQQEbxLQ=
+
+Name: content/html/reference/parameters/command.html
+SHA-256-Digest: yA0B/VKqCW1z0CWzI9bFnBOXz613oT9elZN3XT1tQNY=
+
+Name: content/html/userManual/samples/exapleProject/intro-example-proj
+ ect.html
+SHA-256-Digest: WQGoCmypKKObRfP3bcsU5Oprzq+YQ1G2k2X91+cR9to=
+
+Name: content/html/userManual/tasks/testExec/testexec.html
+SHA-256-Digest: PFGHFz8A2BuX6VVynSIOHmBt86cQ8tAabhAs6QLnPpU=
+
+Name: content/html/userManual/tasks/workWithCategories/working-with-ca
+ tegories-in-the-browsers-and-editors.html
+SHA-256-Digest: p60rmwQYDeFxPSz98Us+bVsugh1Jbs34v5IsK3fQDkQ=
+
+Name: content/html/userManual/userInterface/editors/editors.html
+SHA-256-Digest: wGQTKuv1leWab8wpNXdWo/Fvlz1q5MkJ35mgP1Ind+I=
+
+Name: content/html/userManual/concepts/reusability/intro-reusability.h
+ tml
+SHA-256-Digest: uCr6FSvR7f6aIjxMKHjd5PMIenPthTtlxJ3exOH+p8s=
+
+Name: content/html/reference/actions/specificToJavaFXApps/forStoringPr
+ operties/actionForStoringPropertiesTreeTables.html
+SHA-256-Digest: YfneL5tCp/+yzBc5jLBHDzGsSgSD4nqwMSQU2KIssYo=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectMenuBarComponents.html
+SHA-256-Digest: M7c0kl1Rh9xxXh9jIebwfR8tjUGqd1BOMlI7Ri9yAHc=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionCheckTextTooltip.html
+SHA-256-Digest: gxiwaXmDmyuvBWV05s9o3tolisNUbifXjdm37vuY18c=
+
+Name: content/html/userManual/images/compnamesbrowser.png
+SHA-256-Digest: SJh/Pk4mor2dKSc8mV6uDo7B15cBZxZakL1Yask7yK4=
+
+Name: content/html/reference/parameters/timer_value_variable_name.html
+SHA-256-Digest: WSNLeHEUunhLFolrIA5hzSZUerTjteKuEXOXOLHUpYo=
+
+Name: content/html/reference/parameters/value_1.html
+SHA-256-Digest: 3jCsmgHmXEGzc/NotCDqDlvDjbiV9+Ezz42ZiGBB0+w=
+
+Name: content/html/userManual/tasks/workWithComponentNames/propagating
+ -component-names.html
+SHA-256-Digest: 2qMiWySyv6akwuOX4bebxBIauql7Dm4sDNU0iL5ETe4=
+
+Name: content/html/developerManual/introduction/introduction.html
+SHA-256-Digest: BNHT8yOvHy5nQwqG/BNeaus47hD2z+INaZ/EY11TePE=
+
+Name: content/html/developerManual/clientAPI/converter.html
+SHA-256-Digest: oVlsM+p1DA3Ajtatk3FmMBXdYK5EWDTeF5y+53Of33w=
+
+Name: content/html/userManual/userInterface/browsers/the-test-suite-br
+ owser.html
+SHA-256-Digest: FGQse5G/7amKht4PA3G6UtJLL/bhjkWmMOPqh+VckgY=
+
+Name: content/html/userManual/images/createBirtReport.png
+SHA-256-Digest: UwQ9EtwHLhp/iOKjBA0CzELsU5lB/+PTZOVeIy7wL3I=
+
+Name: content/html/userManual/concepts/reusability/summary.html
+SHA-256-Digest: xvK/jDOFsbn+Cey2XMFIreYbl8+xBNlh4vMRtDOx/xY=
+
+Name: content/html/userManual/toolkit/gefTest/using-the-gef-inspector.
+ html
+SHA-256-Digest: 3fz4alw40xT7yeuGHqabBC1gtzLtFEV6nou73TzEBMo=
+
+Name: content/html/userManual/tasks/workWithData/using-central-data-se
+ ts.html
+SHA-256-Digest: QE9skUqqSyt5eW+Cwb+giYDXq+1Upp8FEdoMZtm+Azg=
+
+Name: content/html/userManual/toolkit/rcpAUT/rcp-component-name-genera
+ tion.html
+SHA-256-Digest: a4DFIoQArUwoP1USv5lzuD6l5OsfReI0d3GpOqJUKCQ=
+
+Name: content/html/reference/images/component/SWT/tree.png
+SHA-256-Digest: 8ylYWjxa9OvTzAIJNvDdCXN3ermo8c1YxkS1m98kpvA=
+
+Name: content/html/userManual/tasks/workWithSuites/creating-a-test-sui
+ te.html
+SHA-256-Digest: C+ylBLx/N26fWaaPAaOiq3i0omoYZyiFzQHThPbMctI=
+
+Name: content/html/userManual/tasks/workWithTestCases/replacing-a-spec
+ ific-test-case-at-places-where-it-has-been-reused.html
+SHA-256-Digest: saMS3zXn7w+jpLqExJcShrYSntOtGkb8PThVykgQuYI=
+
+Name: content/html/userManual/tasks/workWithProjects/reuseproject.html
+SHA-256-Digest: Vxsq29VMxt8wkToiPP6cMfGZUQ5bzRO/INqA47FTmA0=
+
+Name: content/html/userManual/concepts/reusability/ConceptsAbstractCom
+ ps.html
+SHA-256-Digest: KMijP2z7JgU15XYfrtrm9VJ3gMfPE3Mh9nZzSxL4KSs=
+
+Name: content/html/userManual/samples/dvd/sample-2.2-testing-trees.htm
+ l
+SHA-256-Digest: /q4TEab23v/a0MhpgMPEB4iB5tJOJQNTk6F6FgSssL8=
+
+Name: content/html/userManual/images/Import.png
+SHA-256-Digest: TmXbBP9YWnXv2ch2NlotN4PMVTekmeLfnYZezM2Da7g=
+
+Name: content/html/userManual/toolkit/gefTest/intro-gef-aut.html
+SHA-256-Digest: M+eIG7Sgey6/XxyqN6/RuCQW6bRZh/x9jjQU7tVv7nA=
+
+Name: content/html/userManual/tasks/workWithSuites/working-with-suites
+ .html
+SHA-256-Digest: dzrnZnEeFI4gKQGNqgFF1YEN/mtax8fgfq4rEMWmnYU=
+
+Name: content/html/developerManual/images/start-aut.png
+SHA-256-Digest: kp6US5yDRseM4kLky8A30iRYIW67ADGHPtg10Mmwq5Y=
+
+Name: content/html/userManual/images/teststyle.png
+SHA-256-Digest: 1o5rf98DLSUpnb+w9KioJVH38SHWV8YWX44aLNH0XHE=
+
+Name: content/html/userManual/tasks/adaptUI/adapting-the-user-interfac
+ e.html
+SHA-256-Digest: K8Wo0y9TuYdZqyGwbdSKPreDj/vaI9q/0xuKaYCRUjQ=
+
+Name: content/html/userManual/tasks/workWithComponentNames/working-wit
+ h-component-names.html
+SHA-256-Digest: 3IZ6q3Vfhw9A/tMJqHA+4RVgkUcxu7DbGIOBMFs5BYc=
+
+Name: content/html/userManual/tasks/workWithData/using-the-data-sets-v
+ iew.html
+SHA-256-Digest: 79hhx8fAivCmB/lqVUNhfrFXsTEkIdSIKjWwSqTUvwg=
+
+Name: content/html/userManual/tasks/workWithProjects/intro-projects.ht
+ ml
+SHA-256-Digest: JJZJ3hfw1/QDGUCeow6i4iyI0wpLi957IWHLXAvfEdo=
+
+Name: content/html/userManual/concepts/testHierarchy/projects.html
+SHA-256-Digest: 3zAbOg+qGEwpEXx6triCIfOjbusFGpKjhRhgK98XKx8=
+
+Name: content/html/userManual/tasks/troubleshooting/troublelocked.html
+SHA-256-Digest: 5qEKBDXZb1Wm93H0FtnXfcDsiPRZuOrebebOlB63GZ8=
+
+Name: content/html/userManual/userInterface/views/the-running-auts-vie
+ w.html
+SHA-256-Digest: FGtw4w8pneUv3Ovr8DQTaaomP94DWe3oJV8LjfcEPok=
+
+Name: content/html/userManual/concepts/testHierarchy/test-hierarchy.ht
+ ml
+SHA-256-Digest: s5wk6rK6+JTAJIKZvWrXpZf9cYGHizmUEwnKaLGWbes=
+
+Name: content/html/userManual/tasks/observing/observing-tests-in-java-
+ auts.html
+SHA-256-Digest: kfct+EwL9oUcMmjYlNwOL3rVLRVehDJNfknBnnZk+zI=
+
+Name: content/html/userManual/userInterface/views/the-description-view
+ .html
+SHA-256-Digest: FtjOLPRQFhvjoH9Bh7VmOpJpYI6wf3Ce8pWn4caVKAk=
+
+Name: content/html/userManual/concepts/concepts.html
+SHA-256-Digest: pGYtVhV4y1/I0w9ZKuW9gLNpwN48mqPYrYe5J5hdwpY=
+
+Name: content/html/userManual/images/ReplaceTC_ChooseTC.png
+SHA-256-Digest: 7e6qZbgg4xZHgLUuAfXvphoGiTPWWrzR3OM8xqYGyUc=
+
+Name: content/html/reference/components/javaFXToolkit/treeTable/JavaFX
+ TreeTable.html
+SHA-256-Digest: TuocpqQh61cxkNP454JZOS13EqqN3GKAXvKWPQJz+fc=
+
+Name: content/html/userManual/tasks/useTestExec/using-a-config-file.ht
+ ml
+SHA-256-Digest: x1oveuAwdy55UFJmrR8FsDegiAfALKib3GJtQn0j6kI=
+
+Name: content/html/userManual/tasks/workWithComponentNames/renaming-co
+ mponent-names.html
+SHA-256-Digest: FelFuaNsmsTLI2eFVlRYSBe9WghDACwL823zuCDDKlM=
+
+Name: META-INF/maven/org.eclipse.jubula/org.eclipse.jubula.client.ua.h
+ elp/pom.properties
+SHA-256-Digest: s4DKNtz3hTLqQ1c3hW0binqhLAgRYC7GIfsXBgK8lTI=
+
+Name: content/html/userManual/tasks/workWithComponentNames/understandi
+ ng-the-component-hierarchy.html
+SHA-256-Digest: SLW4r8uxqCgtCyfX42tusslMk8KMFaRHVquCL9Ljb0Q=
+
+Name: content/html/userManual/images/overwrittenData.png
+SHA-256-Digest: WX993t/Z+1gHRomyApspS2t/sWLcomQSLR5AO8/LmeY=
+
+Name: content/html/userManual/tasks/launchConfig/additional-informatio
+ n-for-rcp-auts.html
+SHA-256-Digest: s2zmqAy/1B+ut1dRpA64q3fe1L5kTwNz7YDi/1w3cY8=
+
+Name: content/html/userManual/tasks/workWithProblemsView/the-problems-
+ view.html
+SHA-256-Digest: 08bDHeeEgnHLw2jMP/LiyuziWj6sKhmELu/23wknuww=
+
+Name: content/html/userManual/images/newtestcaseinbrowser.png
+SHA-256-Digest: GdLx7VxHQuoFUwIzIloF48wvtbkSduEx165jGuxj/U4=
+
+Name: content/html/userManual/tasks/workWithData/using-the-edit-parame
+ ters-dialog-to-add-edit-and-delete-references.html
+SHA-256-Digest: LxgrFGHqApHFdatS7dRUEuEqh/Bg9jM+QGwcEV3LqQ4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/actionToggleCheckboxInTableComponents.html
+SHA-256-Digest: 0jhE8TBSPt9q27GAlbqRPCRsYVw1IuS2dK/Ug9J4/Us=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatExecuteBehavior/dragAndDrop/actionDragAndDrop
+ GEF.html
+SHA-256-Digest: WtIhLB1STNvD+vVTvo8keMqXDN5nM45sk4sK2U2242Y=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/troublesh
+ ooting-code-coverage.html
+SHA-256-Digest: jSSOLCykP9ekIZQx2T5G4JZwnv6QvekopNktPzJmn0k=
+
+Name: content/html/reference/parameters/start_time_variable_name.html
+SHA-256-Digest: pznFXs7xW2tS49wrZGwk0PXlBMJ0+QWU8lWCd3lXzHA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectTableComponents.html
+SHA-256-Digest: A0GdzoRxOFWAnXorYnHSZUkbeb+p+5k6AtWqNhuavyY=
+
+Name: content/html/userManual/tasks/workWithCategories/creating-a-cate
+ gory.html
+SHA-256-Digest: P5v2Gj/KH0D1W3qQVqTseszqIEWeEq4BDK+WCtpmB1o=
+
+Name: content/html/reference/parameters/delay.html
+SHA-256-Digest: LJ9IEczz8P6Wt7mesQ6pou49EHwrAnCaj/XY5ECxVC4=
+
+Name: content/html/userManual/tasks/startITE/help-system.html
+SHA-256-Digest: Vb+fAx65C0Tgr+dNncrtwLoEMDTlGowi2qaUv+Q6tos=
+
+Name: content/html/reference/parameters/property_name.html
+SHA-256-Digest: NGNiXx5mh1GljrZx+EzWZ+fhBcyVeYsH+zlcKKZ1N2w=
+
+Name: content/html/userManual/tasks/workWithData/working-with-data.htm
+ l
+SHA-256-Digest: dwUuAJEkMWXNeiM109PCFzTT/3W2itranFrZqRy78n4=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/clickLocator/actionClickLocator.html
+SHA-256-Digest: oDPOXMqTTAv0sun3ihgg2OzOOLpTo8LRTZVkBEpWh74=
+
+Name: content/html/userManual/userInterface/perspectives/the-specifica
+ tion-perspective.html
+SHA-256-Digest: dTz4eQjjunvYypPnZh66euPxUJkPHVDk1bbQQLytNUo=
+
+Name: content/html/userManual/tasks/testExec/prerequisites-for-test-ex
+ ecution.html
+SHA-256-Digest: 3Cnbb4ukXrXeRrSvezBiazLgMrW7SuekRaw2TOwoq2A=
+
+Name: content/html/reference/parameters/number_of_nodes.html
+SHA-256-Digest: CQ2vxGRMwmk7JOPBY9d+TOEL9Bl2YvmiIhb3u3rVTEk=
+
+Name: content/html/userManual/tasks/searching/searching-for-places-whe
+ re-a-central-test-data-set-has-been-used.html
+SHA-256-Digest: 4NgBhIF7Yn/vDmkgQYl2DsbQvIiJRrjUrt7KVjAKahQ=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/resetting
+ -and-accumulating-code-coverage.html
+SHA-256-Digest: 3HpqPaH9AYlduhriFugkyfQitWOn+0CgC+ffR11nhJw=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/actionsThatExecuteBehaviorHTML.html
+SHA-256-Digest: Bcw3cTThRMz50gbfUKNfhhMIO88693BhzEf6EUiT1QM=
+
+Name: content/html/reference/parameters/environment.html
+SHA-256-Digest: prq/FfJ/8xrFSxFBFtHpnguuD/v+kDbKmVUBhOlUAB0=
+
+Name: content/html/reference/parameters/column_operator.html
+SHA-256-Digest: u4k8xmelBbmhzBFMucjXo2pShGJ1zKIhBR83+q8UGeI=
+
+Name: content/html/reference/parameters/x_units.html
+SHA-256-Digest: Gf+L+ZQXbngmLWOi/2tWjPYw1O76sqi8Ms8DCm+tEfQ=
+
+Name: content/html/reference/parameters/anchor_type.html
+SHA-256-Digest: l3A0SNhK0PL8R3Ri6/QEwmNMEQp8AreaX35MZRhjlhg=
+
+Name: content/html/userManual/concepts/architecture/ite.html
+SHA-256-Digest: Ou6DmhA2veBiIit4kq3VGjWumVu8Bn0hc6WvdJVd0Wo=
+
+Name: content/html/userManual/samples/dvd/sample-2.3-testing-tables.ht
+ ml
+SHA-256-Digest: Xr/X1ctFDvCHvcc2MfFWh3kVrbU+WM5Nro21Nz0EVRk=
+
+Name: content/html/userManual/tasks/workWithBrowsers/opening-the-task-
+ editor-for-items-in-browsers.html
+SHA-256-Digest: vMJDMKFIaKoIqgvZ2W0lGPBmWHsA/W109BVNWSRYDqQ=
+
+Name: content/html/reference/parameters/value_operator.html
+SHA-256-Digest: QF+iSzM4sB8CktM3uG1swkS6Po+cx/fnoPbc5c1BD2s=
+
+Name: content/html/userManual/concepts/databaseStructure/supported-sys
+ tems.html
+SHA-256-Digest: JSlhuO1T7KsdCTJlgCkFuYdF29J9fwUOQ6rC86pMhw8=
+
+Name: content/html/userManual/userInterface/views/the-progress-view.ht
+ ml
+SHA-256-Digest: aEwJuHWUaIbd27d9UZssXnOrMuKery/f7KM82LgfvP4=
+
+Name: content/html/userManual/images/redborders.png
+SHA-256-Digest: 4CgoyUNGThCiECF7EeIbu/dkQx0zsAsa8xTDFyVzxP8=
+
+Name: content/html/reference/actions/specificToJavaFXApps/forStoringVa
+ lues/actionForStoringValuesTreeTables.html
+SHA-256-Digest: tb/2MH34wQGY+d46Tk1RbXJKyulrz/IWmM9Sv4/4ykw=
+
+Name: content/html/userManual/userInterface/views/the-problems-view-1.
+ html
+SHA-256-Digest: rwamRiIjkUhxpapkritwmX/HR/aR18aGnVtX6JhBVxw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionsCheckSelection.html
+SHA-256-Digest: cRr+96Zz+x3AKQj0l1dZ4yj6/QxVlGcHp5rS2C8mDHQ=
+
+Name: content/html/reference/parameters/identifier.html
+SHA-256-Digest: LF/Qp76IAvQ81wnUTmWYe9VmluQCpsbPJ1J9mWB7v/k=
+
+Name: content/html/reference/parameters/y_units.html
+SHA-256-Digest: ax6o2bcVYNHLCD77SLLh9DXQnerI5Et2rAtoiX+zBys=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionCheckTextTabComponents.html
+SHA-256-Digest: fsZH+iOYBXiZYDF/ISpjxWyyyTRNRZxZ3GDKPoN2Xg4=
+
+Name: content/html/userManual/tasks/workWithComponentNames/deleting-un
+ used-component-names.html
+SHA-256-Digest: UwHnJeh0/w4nU9L9Rj61tUdqgOXJp3zSXYfIAeCFIDw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/actionsThatPerformChecks.html
+SHA-256-Digest: FDVv5BPF6BwEtfZq0evS36JHjyr3Q8Ds8ZUJi8rNT6A=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForWindow/actionWaitForWindow.html
+SHA-256-Digest: Q+HmbKbnzMAdGr2udaaTAqtwKovZu++zWcLr8rziPa4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectTreeComponents.html
+SHA-256-Digest: MTmbLvXkYTJMgg0/RKF/3Z1zH/HwC7Fr5bGeyJ7N5y8=
+
+Name: content/html/userManual/tasks/workWithALM/working-on-tasks-in-th
+ e-ite-contexts.html
+SHA-256-Digest: 9t+5cQDMq1/UGJ62BsUbWSGhAZOUKJ6jMl5HguyaWno=
+
+Name: content/html/userManual/toolkit/webAUT/webaut.html
+SHA-256-Digest: quTCHNfYIlAjvl/q8FuNxoI8EFQS6tqpAelc2ScNvTE=
+
+Name: content/html/reference/components/swtToolkit/tree/SWTToolkitTree
+ .html
+SHA-256-Digest: CxzJ1JTanWuepZiRxVT1C7ts7zqmKz7lJB0HzH55S+c=
+
+Name: content/html/reference/images/component/concrete/application_wit
+ h_window_in_foreground.png
+SHA-256-Digest: wYLOIKPRE/8FDXWY/79P8iJAyhF5kmPTJc0GNjuK/w4=
+
+Name: content/html/developerManual/clientAPI/clientAPI.html
+SHA-256-Digest: aa7vdR3kKt8QZfvjPoVKkKgpdoaY3TmePvVp3r8342Y=
+
+Name: content/html/userManual/concepts/testing/testing.html
+SHA-256-Digest: KliG4DRzzSPypSEnXMrKvomQie6TaS8JA+Nhy5u8GGc=
+
+Name: content/html/reference/components/htmlToolkit/browser/HTMLToolki
+ tBrowser.html
+SHA-256-Digest: 34tak9jH9556MbjKAILmcW+qmODPcUuOiT5ygtyEmjQ=
+
+Name: content/html/reference/actions/usableOnMostApps/forStoringValues
+ /actionsForStoringValues.html
+SHA-256-Digest: b5L6S7a8D5JHuPO5nUR8FUPK7TtQwVGd8uumqvJsioQ=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkPosition/actionCheckPosition.html
+SHA-256-Digest: 51Y+VFFmPM25nzjNvtAUZhENEw46nFgWswLJiq2gxjE=
+
+Name: content/html/userManual/tasks/workWithEditors/saving-test-cases-
+ from-an-editor-as-a-new-test-case.html
+SHA-256-Digest: WQfVWa/KnNOBr2A038xeTs+EQlBlbfK4yf7gAamwv4Y=
+
+Name: content/html/reference/parameters/value.html
+SHA-256-Digest: +9EYyayr/Ggg8/ufSCXKQSg6yIFvbDDAIOJjQuQcCZI=
+
+Name: content/html/userManual/userInterface/views/the-component-names-
+ view.html
+SHA-256-Digest: Wc1gfLqXFZHLusLbC0Nay35FVQYQeF+qGOZs3KfpnB4=
+
+Name: content/html/reference/parameters/fullyQualifiedClassName.html
+SHA-256-Digest: rwn7jEaHmQawRREcVh7gAKH5++mUlasKARwpLZWa738=
+
+Name: content/html/userManual/tasks/workWithBrowsers/intro-browsers.ht
+ ml
+SHA-256-Digest: 6KzjN7DRb09Mk0jwNta2iEtWeCLJq4YVcfr93B2hsX4=
+
+Name: content/html/userManual/concepts/eventHandlers/event-handlers-co
+ ncept.html
+SHA-256-Digest: uaoAeyGJDu5rC3gUWYCxq0MmDTOFXgf0GzY9Y3o36Q4=
+
+Name: content/html/reference/components/concreteToolkit/comboComponent
+ /ConcreteToolkitComboComponent.html
+SHA-256-Digest: qNnIrjn0BYC0CzsS/rbZgeHzRYbIDWvYXCvjgPIJxpo=
+
+Name: content/html/userManual/userInterface/views/the-log-view.html
+SHA-256-Digest: 1J3RoHJ/TBL/cO9dPeqhhxaQUikQtxVY3MIkludQFN0=
+
+Name: content/html/reference/components/javaFXToolkit/javaFXToolkitCom
+ ponentOverview.html
+SHA-256-Digest: lw6F4GhXvDel2i2XVhsTfv98diIyq7/EUPSvYGCdq1E=
+
+Name: content/html/developerManual/clientAPI/ch02s07s03.html
+SHA-256-Digest: +uj4Eweuy3YBaPTxP2C4TAZwTC9ti5rpemEuJ1Qjl6M=
+
+Name: content/html/reference/parameters/has_focus.html
+SHA-256-Digest: gd8smAjFXX1RDEm7Z5aeKyuTgDyxnwpEjLJblC3KmJw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionsCheckSelectionGeneral.html
+SHA-256-Digest: CHva0nnN5HdTOwyBUlQlEk82Y59wcTynXhBTm0fM3+o=
+
+Name: content/html/reference/actions/usableOnMostApps/thatSendKeyboard
+ Interaction/actionsThatSendKeyboardInteraction.html
+SHA-256-Digest: jpC+lHy1X6LnJyy9HWzGVnvM0b+Z9OKLGYnXywuj2KE=
+
+Name: content/html/reference/parameters/delay_after_visibility.html
+SHA-256-Digest: cSXaKx27uh6Xdb6pJ1aS64/P5+zZZm5VFBcJazjQJ48=
+
+Name: content/html/userManual/tasks/workWithEditors/replacing-test-cas
+ es-in-editors-refactoring.html
+SHA-256-Digest: ArDm1/cE63SsZ6SAaNMV61beQI29mAE+nP/9ajkljeM=
+
+Name: content/html/developerManual/images/tk-factories.png
+SHA-256-Digest: LD6h+HVjxS04CataO8XWkmoCbXZarfHomtFlezRUDtg=
+
+Name: content/html/userManual/tasks/useDBToolClient/parameters-for-the
+ -dbtool.html
+SHA-256-Digest: o2Q9PZX5WDWTO5NdFxstmDr0OI/TPzjgqwwAMiB3VcY=
+
+Name: content/html/developerManual/images/test-execution.png
+SHA-256-Digest: ZOjDwpubjlEA3wxRvokgN6R3A89FYNYd3Jv0ckjDzrE=
+
+Name: content/html/userManual/introduction/comparison/comparison-to-ot
+ her-testing-approaches.html
+SHA-256-Digest: iT7L6hTfI2tAHdP/YUSd49ANOE77QwDwOppL6VzuSiw=
+
+Name: content/html/userManual/tasks/startAndConnectAUTAgent/starting-a
+ nd-connecting-aut-agent.html
+SHA-256-Digest: RNRMXfhNuXLNuHT1nQ0SMwdhaA3craneKEDH9Er7NqU=
+
+Name: content/html/userManual/tasks/logInAndSwitchDB/logging-into-and-
+ switching-databases.html
+SHA-256-Digest: ZTy70iRQmpkwgfL1+DRSRaE+xCrm6rwam+buj/lOEt4=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatPerformChecks/checkConnection/actionCheckAnch
+ orHasConnectionGEF.html
+SHA-256-Digest: 4aS6apxzu3Q5v70yTObzbS0ood7KxmcU5/u9cYnE/Zc=
+
+Name: content/html/userManual/tasks/objectMapping/component-specific-p
+ rofile.html
+SHA-256-Digest: c5vDONH0O1LxZyFZoFPH61mKNT4wed9QUNYhGalShJg=
+
+Name: content/html/userManual/images/factory.png
+SHA-256-Digest: nXgr4Kko3ym26B2tqxXQ1Fhi1uxjzqhselsp+eHJFNg=
+
+Name: content/html/userManual/images/reuseproject.png
+SHA-256-Digest: XSKbVzj9tvudYBLfbw2x9iZj61XOoA3RrNYGzu2K+h4=
+
+Name: content/html/userManual/images/Switch.png
+SHA-256-Digest: OHmzsAyFzn5YH6cycisZqKP7xRUIL2c/7KDqAl/X0kY=
+
+Name: content/html/userManual/tasks/searching/using-the-search-result-
+ view.html
+SHA-256-Digest: CLlZfQpN8Yk8dTqprFm+gCHW/iWsdZxkesEnnnpx1yI=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/starting-jav
+ a-auts.html
+SHA-256-Digest: utOUVFd6/cc34PkZfrW/z2nvHkwIJN4vwMajFqzLXQI=
+
+Name: content/html/reference/components/concreteToolkit/sliderComponen
+ t/ConcreteToolkitSliderComponent.html
+SHA-256-Digest: fzyCoby81T6QePK9qBRMZmqkYD/K/z9IxX+7KqRCuAs=
+
+Name: content/html/userManual/tasks/useDBToolClient/using-the-dbtool-c
+ lient-to-import-delete-and-export-from-the-command-line.html
+SHA-256-Digest: 2VfOUBUpnCFG/q0DcjRMOjEHTsOHX21wWLJkDPaI9H4=
+
+Name: content/html/userManual/concepts/objectMapping/component-names.h
+ tml
+SHA-256-Digest: MI21CHkCHWNg0WxURnAMOR6JiK5xW69I675f2ZeSnCY=
+
+Name: content/html/userManual/tasks/workWithTestResults/working-with-t
+ est-results.html
+SHA-256-Digest: +UHoqvO8u6vSsFdAPu0D/0nIzEQca7VpyBJTo1gaOJQ=
+
+Name: content/html/developerManual/clientAPI/ch02s03.html
+SHA-256-Digest: cWNr/WjwrD8sSHc9MOAAnzrYCfmS0faTxSNG9//f19Y=
+
+Name: content/html/userManual/tasks/objectMapping/deleting-from-the-ob
+ ject-mapping-editor.html
+SHA-256-Digest: 5Fa5Bf5+PIz0EpIYgANprzx5nwHCrnXT+UDqLRCLXcQ=
+
+Name: content/html/userManual/concepts/approaches/choosing-a-method.ht
+ ml
+SHA-256-Digest: W6s5sNXtnrF/dgFSQCJ+dw4KLl1foojtWm7Nwo104+g=
+
+Name: content/html/reference/actions/usableOnMostApps/forComparingValu
+ es/checkNumericValues/actionCheckNumericValues.html
+SHA-256-Digest: elrnn9LaF6JtVmjbZUqNwgi5Z3rqhViWovEgOV1iNBQ=
+
+Name: content/html/userManual/tasks/workWithData/concatenating-combini
+ ng-parameters.html
+SHA-256-Digest: ZiQ5JqcCEj2pnu9MTRLTPJwi//DJBLWx6OYE5EBzWcY=
+
+Name: content/html/reference/components/concreteToolkit/concreteToolki
+ tComponentOverview.html
+SHA-256-Digest: fnH2pPwmaA4f+CzJ9y2naCFRAxGmmPyQ0ZeaVndvI2w=
+
+Name: content/html/userManual/tasks/troubleshooting/log-file-locations
+ .html
+SHA-256-Digest: ed7lE6Nd/vPbdQrUje5pSXXt8+8iohwivTHvAADGNdI=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/inputTextAlert/actionInputTextAlert.html
+SHA-256-Digest: EQy8dDDGvWQBzDXWGLDgoxX/jLtLWhIR/2QUUYlUfUA=
+
+Name: content/html/reference/parameters/value_2.html
+SHA-256-Digest: fT1kvXkfiFrxHXc2GEVN4epZtAZpd+31b1ScdPw6L3U=
+
+Name: content/html/reference/index.html
+SHA-256-Digest: KQP5NVkyf3JipwwBMdLjN1kmPcoWHWr2EXfaOPjZp0I=
+
+Name: content/html/userManual/toolkit/swingAUT/design-for-testability-
+ in-swing.html
+SHA-256-Digest: VrKQOT9uUd5ceBFBQP7cv6rS7RiR8DJcTXf9PFOK4B8=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/setPosition/actionSetPosition.html
+SHA-256-Digest: a/TnsICBbr6+Trncbyn5g+pGzELuafi1X+p1ozOArmk=
+
+Name: content/html/reference/parameters/index.html
+SHA-256-Digest: 9X6yu9SFm0E867Hm4t2qAedbGZQtj+Rgk1x00gpbdDg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/dragAndDrop/actionDragAndDrop.html
+SHA-256-Digest: JrPxujcdWHb7SkfXev2ajJEVXsx/313psy9a4v5XCy0=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/moveInTablesAndTrees/actionMoveInTablesAndTreesTableComponent.htm
+ l
+SHA-256-Digest: 5sQAcaoW808Y6nXZDli3FrJnlizhfvzYl/NJCd7MeAI=
+
+Name: content/html/reference/parameters/local.html
+SHA-256-Digest: yatm61PFOEJyjS7BM9BK8KurA3UUfsD/r4+tvKf61Z4=
+
+Name: content/html/userManual/tasks/infoTestSteps/information-on-test-
+ steps.html
+SHA-256-Digest: YgnbzRJaUV3bOAmqjs/vSfAc+sf47qPnNf+uHZ1XWA8=
+
+Name: content/html/userManual/tasks/dealWithErrors/dealing-with-errors
+ -in-tests.html
+SHA-256-Digest: a2Y5FGStldsxHw/dGHBFeyL9Bbz3+e7HvGs574l7684=
+
+Name: content/html/userManual/concepts/eventHandlers/how-event-handler
+ s-work.html
+SHA-256-Digest: ls7p5hEnHvy8L49bQKzafFU/A14YwietqXgQWSaQNtU=
+
+Name: content/html/reference/parameters/column.html
+SHA-256-Digest: SU4lbNPr1ir+BTHgCzCcLOo1vyWaNYJDJNgpYBUk1s8=
+
+Name: content/html/reference/actions/usableOnMostApps/forStoringValues
+ /actionsForStoringValuesGeneral.html
+SHA-256-Digest: 7pPwbTjiyWGujQirTU4UNdb0e4mzGUsNi0cMVpa7m8k=
+
+Name: content/html/reference/parameters/delay_before_drop.html
+SHA-256-Digest: xbEbYfTZk25uXqR8tV+3yz/zgKg+8rAZRhonkGCFoG8=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/dragAndDrop/actionDragAndDropListComponents.html
+SHA-256-Digest: IhDGKksNd6kBLsoeq60/PvdE8rj8EGm0F76Oou04eEw=
+
+Name: content/html/userManual/tasks/workWithEditors/adding-comments-to
+ -items-in-editors.html
+SHA-256-Digest: MPd4W7bPrvzaWwHplEp06kP43hWu+kV7UKR/D3WVD0I=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionButtonComponents.html
+SHA-256-Digest: YJCNX8YEDanfeAAdF6yhEtj8fPva5iPwjeGfpEGi0Bo=
+
+Name: content/html/install/images/img1.jpg
+SHA-256-Digest: X3B0iHhMLXRK6XZ7rvPM5+0JByncWujumfwy0+SEx0c=
+
+Name: content/html/userManual/tasks/troubleshooting/troublestartaut.ht
+ ml
+SHA-256-Digest: jc7KXBeG77dKPiyUGrFcLSGouTMnj2PsWN1MycFAE5M=
+
+Name: content/html/userManual/images/referencetestcasedialog.png
+SHA-256-Digest: tmrDF5BwP7ZCgVRRbt0RGrULFefYXEGJbjLXVXTpIZo=
+
+Name: content/html/userManual/samples/exapleProject/the-structure-of-t
+ he-example-project.html
+SHA-256-Digest: 8DDMS4CnJOm+uDQneoce1m7iemu3CT2sCQomJljehd8=
+
+Name: content/html/userManual/concepts/testHierarchy/intro-test-hierar
+ chy.html
+SHA-256-Digest: 3d1BNb83vmS5M004eXrTJ0X3GQtO8ufCYK5WIZiXooI=
+
+Name: content/html/reference/components/abstractToolkit/graphicsCompon
+ ent/abstractToolkitTextInputComponent.html
+SHA-256-Digest: MxX4xmF3U0NBKoEHylG0MyI1zdup/PDf8YbF/dL/0BM=
+
+Name: content/html/userManual/tasks/troubleshooting/troublefailed.html
+SHA-256-Digest: tVSG+lBUi5Gx6Fe2kaMTNijdAKZY7WEa/ciLdmdAdKk=
+
+Name: content/html/userManual/samples/chapterIntro/chapterIntroSamples
+ .html
+SHA-256-Digest: BcmNNiyYBx45co1RAbDJz4PhHuKsDJDvPl355nWrQ6M=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEnablement/actionsCheckEnablementGeneral.html
+SHA-256-Digest: sufsIkntVZ4oaVLSlCp1LSP+fJtVW1CtIqxchkiHEcA=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatExecuteBehavior/click/actionClickGEF.html
+SHA-256-Digest: FBCT+DIrhww70bF4KeQHnuaMvIguUPgCnCtDOsaiQMQ=
+
+Name: content/html/reference/components/swtToolkit/toolItem/SWTToolkit
+ ToolItem.html
+SHA-256-Digest: Ubut6lpmZjIyytSBxqszFPOrGv72TyRHUGENiuKte4E=
+
+Name: content/html/userManual/userInterface/overviewUI/overviewUI.html
+SHA-256-Digest: LmCsYEw4kT+bclj2DECEa6NvRMUlsxRw743Ven4io28=
+
+Name: content/html/reference/components/concreteToolkit/textInputCompo
+ nent/ConcreteToolkitTextInputComponent.html
+SHA-256-Digest: NGUjF6GQwGdiB0PzWuO1bastJaR/0GQXLJKzr7LwAQA=
+
+Name: content/html/userManual/tasks/workWithALM/automatically-reportin
+ g-to-external-repositories-after-test-runs.html
+SHA-256-Digest: +84jliG3Y7q0TEHEULjrvnTzMBvr7lKqjlo84F4FesU=
+
+Name: content/html/reference/parameters/delay_after_closure.html
+SHA-256-Digest: BkyU06LJlzo6f9fyucAeiOslCJ4FS3Mf/oAOsxmd158=
+
+Name: content/html/reference/parameters/exists.html
+SHA-256-Digest: Lh5BwAUBJy4M/p9Mh1tinjG9YsHlMveZkFPpvAFhATA=
+
+Name: content/html/userManual/tasks/troubleshooting/troublestartserver
+ .html
+SHA-256-Digest: VXnohidr5+5rqE6D0pGAub31CVb6Q68ynxUzKWaDE6E=
+
+Name: content/html/userManual/tasks/produceReports/producing-reports-w
+ ith-birt.html
+SHA-256-Digest: 9NbHle1k0YODMBJyrto/DEQFgNZ56uN29spJ8+5WJeo=
+
+Name: content/html/userManual/tasks/workWithALM/configuring-task-repos
+ itories.html
+SHA-256-Digest: Je1xBHN6m9qbgBUTnP2t7DqIZfRovZApEniW8w+1df8=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectListComponents.html
+SHA-256-Digest: mHSAcq8YhGUEMr/ulWGysupcrjO4X0zh18QVAVlqHC4=
+
+Name: content/html/userManual/images/reportingperspective.png
+SHA-256-Digest: zd/DSWsoiNZkl9Jfug9Ao/h+RGVFMQWvK9G1lNg1Nv0=
+
+Name: content/html/developerManual/clientAPI/ch02s07s02.html
+SHA-256-Digest: hkeNPlC7+eE4zYFriU9+qqA9GEc45VQvljhSpzWOyFw=
+
+Name: content/html/userManual/toolkit/rcpAUT/rcpaut.html
+SHA-256-Digest: C5jibhRJ79l7FhNACrkfQbUA/3jAn5nDOtB7JBhFZq8=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkEnablement/actionCheckEnablementSWT.html
+SHA-256-Digest: 3IeErF3OsC2h2zZ2oLcyByoXpphJ/ZUAtwTLodlwZC8=
+
+Name: content/html/reference/components/concreteToolkit/buttonComponen
+ t/ConcreteToolkitButtonComponent.html
+SHA-256-Digest: 3HaTvA/kPEp4gELHrY9YvsDOcmb84z27sY0qSOHoRvA=
+
+Name: content/html/userManual/tasks/produceReports/showing-birt-report
+ s-in-an-external-viewer.html
+SHA-256-Digest: eEZqbrGJ7R12GCxdS47nGn1PRqrTLEdCm3/0oVzlh44=
+
+Name: content/html/userManual/tasks/workWithData/using-an-excel-file-a
+ s-an-external-data-source.html
+SHA-256-Digest: e3E/lyvizsldPt5bE0EAXelt5lSFalniivYvS32ODUM=
+
+Name: content/html/reference/parameters/source_operator.html
+SHA-256-Digest: /E3k9XwkDRV9sxSAV5faz8GdegIwR3ZJ4XS3bO82IGA=
+
+Name: content/html/userManual/images/autconfigwindow_expert.png
+SHA-256-Digest: MZRM3GL6OGLfw4epTkvcdZF7QJRgsTJwfmu4DiHfY4Y=
+
+Name: content/html/userManual/tasks/workWithTeststyleGuidelines/config
+ uring-teststyle-for-a-project.html
+SHA-256-Digest: 6JSIw1DYNi+nAxDC+Z9O1iek0hY2FMaqyyepVtLzWyU=
+
+Name: content/html/userManual/images/startServer.png
+SHA-256-Digest: a8KruF7N7nUkyrOe7FaYI00egYdvUDTgR/Xhyr8qaiY=
+
+Name: content/html/userManual/userInterface/editors/test-case-editor.h
+ tml
+SHA-256-Digest: vv1UggkyRLYNpLrIeJbA/IY9zmNSovwvdld378Mm7qw=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatExecuteB
+ ehavior/actionsThatExecuteBehaviorJavaFX.html
+SHA-256-Digest: HMK2Na7WE0UV/WLTx5oFyYmpFC7comfcwpQa4b55jfQ=
+
+Name: content/html/userManual/tasks/objectMapping/viewing-properties-f
+ or-a-component-in-the-object-mapping-mode.html
+SHA-256-Digest: R3ilRxN9vnckaG7NYWfvVvTjjdNo193ntACG/Ikzc3w=
+
+Name: content/html/userManual/images/quickfix.png
+SHA-256-Digest: Zp7MN0KT/slvkeG3vPPGtalXas4sSk3jT76fHURbHqI=
+
+Name: content/html/reference/parameters/text.html
+SHA-256-Digest: xL4T6CDu3atuDOWTauJ3uifHktrxhzCZQ44zm4SAWuM=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/actionsForSynchronization.html
+SHA-256-Digest: TiHcky3sVlDZKy7QzSqgcPlFIW2S4DIG/34dSN7LuJU=
+
+Name: content/html/reference/components/concreteToolkit/treeComponent/
+ ConcreteToolkitTreeComponent.html
+SHA-256-Digest: pQQsf6ZNcRIFDBwMI+GqCjmjth2QImoUqlNqzYH7wvY=
+
+Name: content/html/developerManual/gefToolkitExtension/walkthrough.htm
+ l
+SHA-256-Digest: Y4Jc2Cwe4HIqECSZOtxQmsGXX/ECmfGOLSgHSOq5D+A=
+
+Name: content/html/userManual/images/workspaceperspective.png
+SHA-256-Digest: zgxFu89uSgANWAjEjvjoxfI3DcxL/Ii7OwWkTdeyhP0=
+
+Name: content/html/userManual/tasks/workWithBrowsers/deleting-items-fr
+ om-browsers.html
+SHA-256-Digest: mMOxMGcPqnaLeTuTSlC8PLxcZjpCyF/Q5a4yH01pDjY=
+
+Name: content/html/userManual/toolkit/swingAUT/supported-swing-auts.ht
+ ml
+SHA-256-Digest: Rs9trAjdwnczrzPKDS7pl6eXh+eO2KSd8gqH7loyap8=
+
+Name: content/html/reference/parameters/methodArguments.html
+SHA-256-Digest: Au2iO7bI/PcfyBBenG7m5zOSV9Dq5VfxV0SeCBh4GlQ=
+
+Name: content/html/userManual/images/search_for_deprecated_modules.png
+SHA-256-Digest: zz+G/4jwywUBLkadSmQTatom2CJ4qmSagau4OPXiNCo=
+
+Name: content/html/userManual/tasks/workWithEditors/working-with-edito
+ rs.html
+SHA-256-Digest: XLECMFW3SFgZbSHysT8d6DiU+bKN8SGpJvDeexjK0Fk=
+
+Name: content/html/userManual/tasks/workWithTestCases/intro-test-cases
+ .html
+SHA-256-Digest: +4UVNfHrYI1uFM2+nfw6hi+SJHRaRz9taZpSQVZBnKI=
+
+Name: content/html/userManual/tasks/dealWithErrors/adding-event-handle
+ rs-to-a-test-case.html
+SHA-256-Digest: 01/X9sIgmNLgXdL1ZIH67I7H79HRk8sYMrljW0CLAJI=
+
+Name: content/contextReferenceManual.xml
+SHA-256-Digest: EMhzM+EwUwpgXyrkdiKEZytc1HbVMlf5A5JC7yuVmq0=
+
+Name: content/html/userManual/images/deleteproject.png
+SHA-256-Digest: TfNDpmwlw8NoHwz+0Q8PQDBrn/tgLvFlVNtof4mQz2g=
+
+Name: content/html/reference/parameters/insert_after_pattern.html
+SHA-256-Digest: ssgQoLXULEhHfdVfpt5Tkow0sIJMzLboKs9FjeMXLD4=
+
+Name: content/html/reference/toolkits/ch02s06.html
+SHA-256-Digest: 0OwrwuGJbFpUoiGDw30l3be1L4PHpm8Smie7Y7zGpdI=
+
+Name: content/html/userManual/toolkit/rcpAUT/setting-up-an-rcp-aut-for
+ -testing.html
+SHA-256-Digest: NI9gBbAAhoNMDKFAAS7o9Kn0za2ngm7Nys7J0jQnIZo=
+
+Name: content/html/userManual/tasks/configurePrefs/workspace-prefs.htm
+ l
+SHA-256-Digest: FiGhYi2B9h7wXZYBePbRVYnVVggLmoijY0bIDrQCm7o=
+
+Name: content/html/userManual/samples/dvd/sample-2.4-testing-tabbed-pa
+ nes-lists-combo-boxes.html
+SHA-256-Digest: tEneGcdc405jfy/Dtl1/rLhqu3Z6t3ShsM2EotI7Ae0=
+
+Name: content/html/userManual/images/SegmentedControls.png
+SHA-256-Digest: RTFaqiwSny4I6EcWqRC+XQKNNFz59UH/rbcKJkU9RCc=
+
+Name: content/html/reference/parameters/base_key.html
+SHA-256-Digest: SWb9sStdp6vyswk+5K/jnDgmAU57Ldghrhmfm0xiSy8=
+
+Name: content/tocReferenceManual.xml
+SHA-256-Digest: RPCHd/99PK369hqHe8Nwkaaem8OdSY6/gVbkdtuKrjI=
+
+Name: content/html/userManual/tasks/workWithComponentNames/intro-compo
+ nent-names.html
+SHA-256-Digest: PLsac6DkeSJ0F7XVr3bXtK8TrdZ0GWwOkC6Y4o+CpAI=
+
+Name: content/html/userManual/tasks/startITE/unix-users.html
+SHA-256-Digest: 20mNFkwRoWG19/CF3ncHyZ4e6uQVagNk1VelsbeSTqM=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/stopwatch/actionStopwatch.html
+SHA-256-Digest: qnYsEHVxDpAxOpF2o+6mB+cV/tGDC7gzbQ756Q4s6M0=
+
+Name: content/html/userManual/images/testresultprefs.png
+SHA-256-Digest: kheXpcboTw9scGrbg2bvkC83npkgUDrdUeuIPtvv+ws=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/invokeMethod/invokeMethod.html
+SHA-256-Digest: xJG8UlTqNRwTLAKbZ8Uz3kwIkusXJ0FW5MN+65zdEjc=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkExistence/actionCheckExistenceJavaFXTreeTables.html
+SHA-256-Digest: iVGGlLl1pk5XtrRT8tisrUypO1vgK56suM7fTQHhjdE=
+
+Name: content/html/reference/parameters/path_type.html
+SHA-256-Digest: 1Z8mvpXzqzZ4rpqNq1MoOMwVNAYSvNSQPulCwK0YU08=
+
+Name: content/html/userManual/tasks/workWithEditors/adding-task-ids-to
+ -items-in-editors.html
+SHA-256-Digest: +Qx9+dFiT9dfq2WqhAOJSZF9enNTHX+cXP202NllqFw=
+
+Name: content/html/reference/images/component/concrete/buttonComponent
+ _radioButton_deselected.png
+SHA-256-Digest: vzivVb3x95Zt4cjOVF6J12ZGHt9tNgJ9haAz2OZfbHM=
+
+Name: content/html/userManual/introduction/comparison/intro-approach.h
+ tml
+SHA-256-Digest: Hl4fWwlS+G394wII/jd8Lm6Hvd3VY9DodVS4OflVdy8=
+
+Name: content/html/userManual/userInterface/views/the-test-result-view
+ -1.html
+SHA-256-Digest: RpqEaAVyWMJnOBHbdDG14uSCXvd0R99jOhUxTm/zzE4=
+
+Name: content/html/userManual/concepts/approaches/creating-modules-fro
+ m-existing-test-cases.html
+SHA-256-Digest: V78I6onjBnkgNf14NHCpY4dvZiLmeQ34dZHcv5H1MnE=
+
+Name: content/html/userManual/tasks/workWithBrowsers/working-with-ids-
+ for-test-cases-and-test-suites.html
+SHA-256-Digest: bzwqrmVXXdq+Qi/5dAJwCbDosIkxj9RlpCcxrhAR6eo=
+
+Name: content/html/userManual/images/executionclient.png
+SHA-256-Digest: fr8kBsQC/FzEoldq2oRyzBfZJGy4OxM9Xh5QbqMMUZQ=
+
+Name: content/html/userManual/tasks/useTestExec/working-with-no-run.ht
+ ml
+SHA-256-Digest: s+aHJx8hyN9rg9TXa5sYYYttEEtDRi/fUopOUc9VZdc=
+
+Name: content/html/userManual/tasks/workWithJobs/working-with-jobs.htm
+ l
+SHA-256-Digest: U5jI8Yq/MXE7SmQqij2ZtqYfa/geLCExu9cIX0l13nY=
+
+Name: content/html/userManual/tasks/observing/starting-observing.html
+SHA-256-Digest: vp4Z7RJNisnjYXhQ+dghYPzt5UrlegNCXIHmTUymd7c=
+
+Name: content/html/reference/components/components.html
+SHA-256-Digest: 9QS9I9mBBanP39sSirPEMze5hcRBCnx32pL+i9lLoVg=
+
+Name: content/html/developerManual/toolkitExtension/apiExtension.html
+SHA-256-Digest: 03ZMUpWBu7F1tMb+qhg2WjehT+6EOVGv9XAJAnHO2qI=
+
+Name: content/html/userManual/concepts/architecture/aut-agent-1.html
+SHA-256-Digest: f/U4necOcfNt3ENbe6hSTqZRWbPyidu7DiGwwl6cFwg=
+
+Name: content/html/userManual/tasks/remote-debugging/remote-debugging.
+ html
+SHA-256-Digest: B+7mUHP/GnE7oSVKyM6nP5OhBtWnFw7kE5vSkvzv17s=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatExecuteBehavior/select/actionSelectGEF.html
+SHA-256-Digest: ZHMFwbduuUOgjDG/xCBN3oefO7EwbMIXgJphaOa8JdY=
+
+Name: content/html/developerManual/gefToolkitExtension/creating-an-acc
+ essibility-plug-in.html
+SHA-256-Digest: bbxzYQcO2GAAQ+TWgTwdkNkb+NQ+TpB1ud2rjNk5ncM=
+
+Name: content/html/userManual/tasks/workWithALM/intro-alm.html
+SHA-256-Digest: xQKTMqvqOoKWylhv93K5T5qCrGmn7+jrYMH676czTKE=
+
+Name: content/html/userManual/tasks/workWithEditors/renaming-items-in-
+ editors.html
+SHA-256-Digest: VUJiCOqOg1LXbTb3A0pQLbXoxU6zRRGfacOOAwAWQow=
+
+Name: content/html/userManual/samples/adder/Samplesaddertests.html
+SHA-256-Digest: tPwNsIIgfdW5u1AaIJPbNUxus+3H46ffv/lpolwOX+s=
+
+Name: content/html/userManual/tasks/dealWithErrors/reentry-types.html
+SHA-256-Digest: ylKaz8ILWRwb0P9K1bBJ/nsJQU5EeLVUNhEytPkf6ME=
+
+Name: content/html/userManual/samples/adder/sample-3-using-the-html-si
+ mple-adder.html
+SHA-256-Digest: 5yRsm7GoLlSLbh6RddvDg3mbBRRxVwSMJJL2zTCXVHY=
+
+Name: content/html/developerManual/toolkitExtension/creating-the-fragm
+ ent.html
+SHA-256-Digest: hheeS+MouFLtN+90k4CHaTkIWeTpvjaAP7cAUcktq20=
+
+Name: content/html/userManual/tasks/troubleshooting/troubleexecute.htm
+ l
+SHA-256-Digest: OeXnvEYp6AsAmHuYmnpkqieq9TSFChgcnhtZNVzQSdw=
+
+Name: content/html/userManual/samples/exapleProject/the-categories.htm
+ l
+SHA-256-Digest: InhHpC8a1dMV+kOqXynno4npMSXlHiYt1GAGHCrzkAE=
+
+Name: content/html/userManual/tasks/workWithCategories/creating-test-c
+ ases-test-suites-and-test-jobs-in-an-existing-category.html
+SHA-256-Digest: VJo0m3/bJtTKPQ4V8QBYoqMXfqflPd7nziZP1lFdF6c=
+
+Name: content/html/userManual/tasks/useTestExec/intro-usage-test-exec.
+ html
+SHA-256-Digest: VCaoHuzqLL7EjVxnssvwX+5zgW+u9oTRl8m/Qn3pnew=
+
+Name: content/html/reference/components/gefToolkit/figureCanvas/GEFToo
+ lkitFigureCanvas.html
+SHA-256-Digest: dtvSTT52H4y2gX/Yf0O94I5U7YP/t5UyNHQlsAQ+Amo=
+
+Name: content/html/userManual/tasks/logInAndSwitchDB/tasksdblogin.html
+SHA-256-Digest: jTF3OqVrGaCTEZaBVSmMT56RCpP5QrTHW0X00HPcOQ4=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkSelection/actionCheckSelectionSWTTrees.html
+SHA-256-Digest: gUwatLP/EAGwpA/BUFg9+lJxwWoh9c9L0eYe/ftbU3I=
+
+Name: content/html/userManual/samples/preparedProject/result-reports.h
+ tml
+SHA-256-Digest: tfctVPDu6Bpb8PAWtbCQzXblX9YOw7VHDZB8rgyAy7M=
+
+Name: content/html/userManual/tasks/workWithTestCases/editing-test-cas
+ es.html
+SHA-256-Digest: 0F9OMx4wS4nwDpV4EuzCpV7zCSNrH6FeEFU5kiZp1LA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionsCheckExistenceGeneral.html
+SHA-256-Digest: 38MXGkdPoCpPy1ndq/m71wnjN6gW0DQKEvWTcIXQQ2k=
+
+Name: content/html/userManual/images/MultiPicker.png
+SHA-256-Digest: MAvxoHY59keC87dpRap+kkQRw/XCvCK4ny8497Ek15Q=
+
+Name: content/html/reference/parameters/millisecs.html
+SHA-256-Digest: EvKsarnal471SgC+14u6OMEGT8W0dGR/ZPggrUSKAjA=
+
+Name: content/html/userManual/images/compnamesview.png
+SHA-256-Digest: j5x5V74yaQFQcJ4hhRiiUwU5rHW5D2pG+fC33Qt5Rx8=
+
+Name: content/html/userManual/tasks/configurePrefs/importing-and-expor
+ ting-database-preferences.html
+SHA-256-Digest: 6D+I4AqPSluk1GlHPxmQqORRebJ2Lkbd013BHdjQnFg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceTabComponents.html
+SHA-256-Digest: Y542BQAuCvbI+5lB8L+7ThH10PfPFr+55N//7M1/GW4=
+
+Name: content/html/reference/parameters/row_operator.html
+SHA-256-Digest: DejxOcFt3+TI+srXsvJIv6/FcjIUlekwTprzH09JnCQ=
+
+Name: content/html/userManual/tasks/searching/searching-for-places-whe
+ re-a-component-name-has-been-used.html
+SHA-256-Digest: Ml027XowVL5vhbxFnURUtXuGOA/lbF0qkZquY6Wci3o=
+
+Name: content/html/userManual/images/startAUT.png
+SHA-256-Digest: essk0ehhZXyzNy9DVTPSByWvxNhSo30/bnPb11boNeE=
+
+Name: content/html/install/index.html
+SHA-256-Digest: EKrAacvE4lasGCpLjg7wj+7fzm5RqIPK+78XnpnYtYk=
+
+Name: content/html/userManual/tasks/configurePrefs/generalkeys-prefere
+ nces.html
+SHA-256-Digest: r3IvjWMmkAByD6tBDEYOYLgJtDhtwU2JqefubKMDhfc=
+
+Name: content/html/userManual/toolkit/toolkit.html
+SHA-256-Digest: f0heJEOkQ5tzEZ4EPmZmd4SB+6Ooi/mz8sTx/jcw+PI=
+
+Name: content/html/reference/toolkits/ch02s03.html
+SHA-256-Digest: og2tBJqYxEL1NHRvKlg2OROMZYIjPxzE5fOwrCVM7Gw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/click/actionClickGeneral.html
+SHA-256-Digest: zAOdT8VgnPicj8BVWUbyhMkVwwzW1aolttywQ5wYlRk=
+
+Name: content/html/api-comparison/index.html
+SHA-256-Digest: 2f16jJmo40DWcxdqWfGRvevfiD8Mees68P8hHZ/K++Q=
+
+Name: content/html/reference/actions/usableOnMostApps/forComparingValu
+ es/checkStringValues/actionCheckStringValues.html
+SHA-256-Digest: 9qA4CC6fhXkYrxf9nCImHrQyApTzfRQKVRQq8y6wr6M=
+
+Name: content/html/releasenotes/images/ColorDot.png
+SHA-256-Digest: g8gjvojL42/rggFBKpG23REOjJf97u66Q64j4RfeVAg=
+
+Name: content/html/reference/images/component/concrete/buttonComponent
+ _checkBox_selected.png
+SHA-256-Digest: zJQ76GYvFxnh4A1Q+XTwcRXx90pDjOyg4ieIibYrge4=
+
+Name: content/html/reference/components/abstractToolkit/graphicsCompon
+ ent/abstractToolkitGraphicsComponent.html
+SHA-256-Digest: zGvStGkUGHFlkDQZRAACtLqv1y8Ndkjw+cl5aV4ylYg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelect.html
+SHA-256-Digest: dJNuLIQVkGqeZ1C8/VsOtrZGVEE5ZZEDx5+kACfHaOA=
+
+Name: content/html/userManual/userInterface/perspectives/perspectives.
+ html
+SHA-256-Digest: eemwWpKWahLd/8Cep6bRvSYrMtPv8uF2+vnIhPke6a4=
+
+Name: content/html/userManual/samples/preparedProject/accessing-the-pr
+ epared-project.html
+SHA-256-Digest: Aq+q0aJuMUUypdMpWFKuZURjn8ujxOU205TaShjD6Rw=
+
+Name: content/html/userManual/tasks/workWithComponentNames/no-componen
+ t-type-exists-message-in-component-names-view.html
+SHA-256-Digest: zEL7nFYSf1QH6XXrVMR4uqxeI7OqqbUP4cNG9QGVFWk=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/actionsThatExecuteBehavior.html
+SHA-256-Digest: frI2KY2ctpq3V58E87IjZXfzxzKlY2AE6cLO+mpBOXU=
+
+Name: content/html/userManual/images/contexts.png
+SHA-256-Digest: 7pLbsFGQd/FSElViWrBC1ObHw2ngid9RjQAnXcNtzJc=
+
+Name: content/html/reference/parameters/margin_top.html
+SHA-256-Digest: ivVJ1Kcl6pbtpgvFR6WWSZKS3nneE2Qs7XigfZgy208=
+
+Name: content/html/userManual/concepts/testHierarchy/test-steps.html
+SHA-256-Digest: VlDCz9pObczi7MB8P6rnHPObl3pk4QF1q+OhfVZDesE=
+
+Name: content/html/userManual/tasks/launchConfig/starting-the-aut-1.ht
+ ml
+SHA-256-Digest: mEpVGzCn+BSEWEsWeSSKqfI/a4fW3HmK2iw5zBIPHok=
+
+Name: content/html/userManual/images/treestructure.png
+SHA-256-Digest: ohx0TRDR1tk5bR1sYM3TgiImBxWifUcmHsYQTcIjZ2g=
+
+Name: content/html/userManual/userInterface/browsers/browsers.html
+SHA-256-Digest: j8BY2au5sVpVB+jxJDptxDrCJ/ckruWLohNmeA2YlxI=
+
+Name: content/html/userManual/concepts/databaseStructure/database-stru
+ cture.html
+SHA-256-Digest: oOnQoEG0WlUfEHFN3BbTq6pCUXfBDF45IkG1Fcns1LQ=
+
+Name: content/html/reference/components/concreteToolkit/operatingSyste
+ m/ConcreteToolkitOperatingSystemComponent.html
+SHA-256-Digest: vau8FKSpBVKM5Oz8lMQXPfwMhVS5HmUV4d+ZG86qdjc=
+
+Name: content/html/reference/parameters/expected_exit_code.html
+SHA-256-Digest: C2DIpRAcI/AXLaIcHWfIjWve/QfsXs+V88UtpZ89P0g=
+
+Name: content/html/userManual/tasks/configurePrefs/intro-preferences.h
+ tml
+SHA-256-Digest: S58jRUKr0e4RVU2Iis+jd2qC2P2z0wPBabUB7aKaB6I=
+
+Name: content/html/userManual/userInterface/views/the-test-result-summ
+ ary-view.html
+SHA-256-Digest: C68OnGop0ZoiSgUnCi1blCd7gPh/Z/TbZM+u7qts4u4=
+
+Name: content/html/reference/parameters/argument_split_character.html
+SHA-256-Digest: Z9CnD0V7Pwaz26TqhMNyIr/hJaWPJUFgoaMPwjHAuHs=
+
+Name: content/html/userManual/concepts/testExec/intro-test-execution-1
+ .html
+SHA-256-Digest: kmy4amj2Ybvk7kItBz1o+ua/qgCZJOGXQW7fF2Vi8MU=
+
+Name: content/html/userManual/introduction/chapterIntro/chapterIntroIn
+ troduction.html
+SHA-256-Digest: YMlrovP8Vxr7aLLUmfji8FEfTDkhjBMlUOIgPDSdDXY=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/setPosition/actionSetPositionSlider.html
+SHA-256-Digest: sA3/bLcYhFc0rEQLBLAWu4pqKsioltfv/N5GfcK89ZQ=
+
+Name: content/html/userManual/tasks/configurePrefs/label-decoration-pr
+ eferences.html
+SHA-256-Digest: JZAmI1+zv10BXUTy7I3iuP521LA/jFvannPtrnfcm8U=
+
+Name: content/html/userManual/images/testresultview.png
+SHA-256-Digest: OwAsUwU8GGxzt99Ce/rcBmgWn0Pr9C3pOxJT/42pb+I=
+
+Name: content/html/reference/parameters/target_text_path.html
+SHA-256-Digest: qEN9ltZwn/a3mzN7rflJ8DYBIBujSWhrG2zDlmtvzV8=
+
+Name: content/html/userManual/images/error.png
+SHA-256-Digest: G7zzv/EFimekFbqSF3WF9+ps0zeLluKLgWAvlRKyry4=
+
+Name: content/html/userManual/tasks/configurePrefs/observation-mode-pr
+ eferences.html
+SHA-256-Digest: nbbR4iURUX4qBD9ShH1+Un35NhXrl1z+XLbq27fB5Y8=
+
+Name: content/html/userManual/tasks/objectMapping/mapping-assigning-co
+ llected-technical-names-to-component-names.html
+SHA-256-Digest: r8dczxSU4+3LJ97CEUh+Ol/2GRBuZ3qOzrE8gLmBs3Q=
+
+Name: content/html/reference/actions/specificToJavaFXApps/forStoringVa
+ lues/actionsForStoringValuesTreeTables.html
+SHA-256-Digest: mY03/41Wx+/hSygF0CTQQO7lULelMN2mHOXZvr/jAm4=
+
+Name: content/html/userManual/samples/samples.html
+SHA-256-Digest: 5nqHu7BeOTAFw9OppOXzudmgTnDEtqC+8LhWrL4oLDU=
+
+Name: content/html/userManual/introduction/howTo/how-to-read-this-manu
+ al.html
+SHA-256-Digest: qxVBbm3BKV7aum8Vw5zk85g07aVDqihWzDiIroiPXH0=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/actionsThatExecuteBehaviorSWT.html
+SHA-256-Digest: YVQArf03mjaPc2s+gqcvZr3Z0HWfWrG82EzFhsbryGo=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionCheckTextTreeComponents.html
+SHA-256-Digest: OjiFLN0urzojL1O00LnG5FFyI7InOqNep7JY272e1Co=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkExistence/actionCheckExistenceSWT.html
+SHA-256-Digest: wMgoWufrfOqwX1fAe0HfcmDQx3ndSB2JYIrdLsSs7d4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/showText/actionShowText.html
+SHA-256-Digest: euOGmVZCbDXJ7/6EZ+q/U0J/q1BwPKLtxmSr1J1UMpc=
+
+Name: content/html/userManual/tasks/workWithData/using-variables-as-da
+ ta-for-test-cases.html
+SHA-256-Digest: i6DRDdEpjKX4ulROdqvibEgTwMW//Fpg2Cpfy9g18TM=
+
+Name: content/html/install/images/img2.jpg
+SHA-256-Digest: 9U5a5g+r+t5ZEyym/yhNxAEmgXJIIt8/7plLsrcxzcQ=
+
+Name: content/html/userManual/images/gdprefs.png
+SHA-256-Digest: FwdVnaNUAn0BQwCww50WO2kH4Dx9qlgoJYzZOK0fu+Q=
+
+Name: content/html/userManual/tasks/workWithData/viewing-and-changing-
+ data-sources-for-test-cases.html
+SHA-256-Digest: GrQUV0WhfmysC1MO2LL0aplnMpggWrPY8gqO8KYvgI0=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionMenuBarComponents.html
+SHA-256-Digest: E8guIBmdB1fZiyAgRQH31e55tlPdbYY4ZRjsOE8MWQ8=
+
+Name: content/html/reference/images/component/iOS/switch.png
+SHA-256-Digest: EQYhWMRmiDpmzTnHtnBNtnHuW3xtJbRuz5cqPlZOot4=
+
+Name: content/html/developerManual/gefToolkitExtension/creating-gef-to
+ olkit-extensions.html
+SHA-256-Digest: qEkFcozKNbMQk6ZzloRoGbFvsntTlSS5qZbSnljbe30=
+
+Name: content/html/userManual/concepts/testHierarchy/test-jobs.html
+SHA-256-Digest: g8Obig4nFuInUSdFpZixeyXqcps0WYsjpqn0FwLoedk=
+
+Name: content/html/userManual/tasks/configurePrefs/object-mapping-pref
+ erences.html
+SHA-256-Digest: 1itdO7685i6/paQ9UzuR6TPRe6FILIHppVaGoRjt7cU=
+
+Name: content/html/reference/components/concreteToolkit/listComponent/
+ ConcreteToolkitListComponent.html
+SHA-256-Digest: Nk1LuHNBJKir9G3WgGs0bDGxNx9K14jRaeKZv0VbsPA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/invokeMethod/actionInvokeMethod.html
+SHA-256-Digest: /9fmn0KyaGeQijkYZR0R7Eh8TKQ1fvsBmwpbeP2AR04=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/actionsCheckProperty.html
+SHA-256-Digest: X7ZzXJgiZIgAOKOkOQJQI7CF72QAV9Mj19hkwtYLuS4=
+
+Name: content/html/userManual/tasks/specialCharacters/symbols-with-spe
+ cial-meanings-for-certain-parameters.html
+SHA-256-Digest: lHPOewnL7s+WRZ5FEHcsfExWdXbzN56s262aKBAaof4=
+
+Name: content/html/userManual/images/newlogicwizard.png
+SHA-256-Digest: fy8WoHkqC69MmhaVu3gT65+5CTdwrCFvR6e2YIUhAvo=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceComboComponents.html
+SHA-256-Digest: 8+PHcBFcvAe6+3DvqeAwSIoEUUFL1iw0tKaGW8sqGjc=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/checkProperty/actionsCheckPropertyListComponents.html
+SHA-256-Digest: ipKN8D6LbME/z0X2PO+nIMOMzLqLlgZmwMBGHt7YwCk=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/executeExternalCommandOperatingSystem/actionExecuteExternalComman
+ dOperatingSystem.html
+SHA-256-Digest: kHlr8wuwR0hZeUA6QzrUqmnpbpd7OO3brbWkb6pqSmU=
+
+Name: content/html/userManual/tasks/startITE/choosing-a-workspace.html
+SHA-256-Digest: wLoQHmZMNVbPd0Az/CXIgyTjywMCWuOI8CsqUtpHy5Q=
+
+Name: content/html/userManual/concepts/databaseStructure/intro-db-stru
+ cture.html
+SHA-256-Digest: zpeIY8yp1w2zumNjBmuS4vFlszIVSfNeu6opbgvV7gY=
+
+Name: content/html/userManual/tasks/launchConfig/intro-launch-config.h
+ tml
+SHA-256-Digest: DjBJdvcUEnFxEUN2wzXjFJVpPwjzbLIFbPc8AxwOS90=
+
+Name: content/html/userManual/tasks/workWithALM/working-with-external-
+ task-repositories.html
+SHA-256-Digest: mU5DvfTx6vftNARrnZoJi1pUi8Oew/BPbopkVy3Qjr0=
+
+Name: content/html/userManual/tasks/workWithManualTestCases/creating-m
+ anual-tests.html
+SHA-256-Digest: qqqCooNUi7LzCKWepZXSiNbGI22sJsFlPDmBgX85Qak=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceTreeComponents.html
+SHA-256-Digest: 8XrPFBAFhECd2WTOueL791A3v61TZstqpEjH4+DWyFU=
+
+Name: content/html/userManual/images/SinglePicker.png
+SHA-256-Digest: Hm/5CjzPd0NmpV94VNflBoKQShRZw2Fxus1QLK9i+T4=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkText/actionsCheckTextTreeTables.html
+SHA-256-Digest: NEWi9stxPZT5RPELGrQBMYt5cHa3s01eZNY1fF0qUrU=
+
+Name: content/html/userManual/userInterface/browsers/intro-browsers-ui
+ .html
+SHA-256-Digest: OoutP5VLMNNOGcuQeoINX97jPVu58wgt+rBYyF6kixE=
+
+Name: content/html/reference/actions/specificToHTMLApps/forSynchroniza
+ tion/actionsForSynchronizationHTML.html
+SHA-256-Digest: OvuA1PJgiLDBBoZO/DCCxby9vqrO8AdHRT8AVLOUocA=
+
+Name: content/html/userManual/tasks/workWithEditors/extracting-test-ca
+ ses-from-editors-refactoring.html
+SHA-256-Digest: PINmEXLlGFWGc2bYXVZYtyz/iI+ItfMEQIjNQAELvtc=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/selectWindowByTitle/actionSelectWindowByTitle.html
+SHA-256-Digest: pTb86b7ZC49WaienyFklR6n7uWAn4UD5iZDeJYtnjtA=
+
+Name: content/html/userManual/tasks/workWithProjects/importproject.htm
+ l
+SHA-256-Digest: RtNX1sdA5B2L22CaJw2HZlQt6p031A53TMLh+bJT0pw=
+
+Name: content/html/developerManual/images/api-classes.png
+SHA-256-Digest: 91kYKJfeZqOzPcnNn0967IZ1RS0rN4FK3XqcILLLh64=
+
+Name: content/html/reference/actions/usableOnMostApps/forAUTLifecycle/
+ synchronizeTerminationAndRestartOfAUT/actionSynchronizeTerminationAnd
+ RestartOfAUT.html
+SHA-256-Digest: S4xbDpyeYz2zQle1nwSZDN1MyAzIxOYWsNnCgFtXB5s=
+
+Name: content/html/userManual/tasks/workWithData/entering-concrete-val
+ ues-as-data-in-test-cases.html
+SHA-256-Digest: kUeWwq/WgjoccW4kRSI0AJGCKxmROtfLEA+9kGZ8SeE=
+
+Name: content/html/userManual/toolkit/rcpAUT/design-for-testability-in
+ -rcp.html
+SHA-256-Digest: 0y3HSdDPh+r6Q17lFuQmka98BHTs6XzFKyiX85Lj42Y=
+
+Name: content/html/reference/parameters/margin_right.html
+SHA-256-Digest: aLr39hwV4Fme1cMIHqsQs/ij2Kq/JFFYxHwAu4F8wSA=
+
+Name: content/html/userManual/tasks/workWithSuites/configuring-test-su
+ ites-in-the-properties-view.html
+SHA-256-Digest: U3h1i3NKBR2RXuPgbU8mVvfSd+gm4Z59ltJo4/isC7s=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/click/actionClick.html
+SHA-256-Digest: GEdOvQtp+OLsbYp6cYYPDoKQixa9g52BhFnf9IMRg8w=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionTableComponents.html
+SHA-256-Digest: 3jO788XpgTFuIhdgbfIr6+m8vmuf7ssMeoqEyQYsTOo=
+
+Name: content/html/reference/parameters/action_to_perform.html
+SHA-256-Digest: Y5+qAjiMaMVbOFCLG5ae2xj4oR9p8+qr8QCk2APnSC4=
+
+Name: content/html/reference/images/component/concrete/textComponent.p
+ ng
+SHA-256-Digest: R5JtKaR/aElrUe7+H+0tzk+JYFjsn33t05wsQBanHb4=
+
+Name: content/html/userManual/concepts/architecture/working-with-the-i
+ te-and-aut-agent-on-different-machines.html
+SHA-256-Digest: 4v9P6YpHkfcq/4LXefBFhssVjwTErQ1nTnHHorrwRDA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionsCheckExistence.html
+SHA-256-Digest: tDNceuLYEB8mRXZQMjxeau7PwGS2Y4VDZl6+RjTAO9s=
+
+Name: content/html/developerManual/images/export-om.png
+SHA-256-Digest: UUeEEDDWSVYqaewoEryARXkEWH26vrLlA2ZaMvBM4UA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceMenuBarComponents.html
+SHA-256-Digest: X0/ss1y0x+WBiZNBdZqVjEKSqSFkdJQoyJIJ7nzO2Jo=
+
+Name: content/html/userManual/images/stopOM.png
+SHA-256-Digest: CA+kTGOUM6J3uAoxTtD48+JU0tRFC3mUSx3xBRVednU=
+
+Name: content/html/userManual/samples/adder/sample-2-using-the-swt-sim
+ ple-adder.html
+SHA-256-Digest: /SxZPIofYifrBfNdyIWuZb8FwUh5heVYhOYWSOnDA58=
+
+Name: content/html/userManual/tasks/workWithProjects/loadproject.html
+SHA-256-Digest: KYrpXt1NCS8+dJIR10eZjRtQKxesd5g5tMNSqND5uHY=
+
+Name: content/html/userManual/tasks/useTestExec/starting-the-test-exec
+ utor.html
+SHA-256-Digest: 0gY/02xQjfkQEMjFX20nbBU20FZkMeuaZXLtXj0g7JM=
+
+Name: content/html/userManual/concepts/testing/standards-conformance.h
+ tml
+SHA-256-Digest: HMspivadBRSHW2PzJcKfqCg0ot2VpcYDlB3S5UxShIM=
+
+Name: content/html/reference/images/component/concrete/editableComboCo
+ mponent.png
+SHA-256-Digest: H1jiBPYDpV6oyXg0UEUh7oR0mLZD6Z4xif2dH8+jjbg=
+
+Name: content/html/userManual/tasks/finishUp/stopping-the-aut.html
+SHA-256-Digest: 5pDOJnMKKDHOLSWC0EtQ7D2VXbEOi9ZAOx2xNalUxa0=
+
+Name: content/html/userManual/tasks/configurePrefs/test-result-prefere
+ nces.html
+SHA-256-Digest: COXBlQIVWZl4ypjyB6DC3qWYe0F3+oNTXJUT0f8suiE=
+
+Name: content/html/userManual/tasks/objectMapping/object-mapping-1.htm
+ l
+SHA-256-Digest: t95eKm9RO3arFF8x3EzIhramEHulIxIJOvO9mSI2YVg=
+
+Name: content/html/userManual/tasks/workWithEditors/commenting-out-ite
+ ms-in-editors.html
+SHA-256-Digest: lfX5Bxjq+PBMl06WKgEP1oKsMrxDC/A8Hjb2KTXdWz4=
+
+Name: content/html/userManual/images/excelexample.png
+SHA-256-Digest: 4kr65CwpN1Oy8Mhq/RablDTtL2exbISlg1/LXnnitAk=
+
+Name: content/html/userManual/tasks/startITE/restarting-the-ite.html
+SHA-256-Digest: ttb7ZxAowClsSofyByfvZfV8PlVTh7vDBUc+9/mPO8Q=
+
+Name: content/html/developerManual/clientAPI/ch02s01.html
+SHA-256-Digest: BN/Ma8KbuLdF+gpF4+ql1L3RrZILJgi9BkyP2LQwErY=
+
+Name: content/html/userManual/tasks/finishUp/stopping-the-aut-agent.ht
+ ml
+SHA-256-Digest: UV5akjhuCfF0YgEwOsqt1hMkFSnNa0vN4U3WeklnX7c=
+
+Name: content/html/userManual/samples/dvd/sample-2.1-testing-the-menu-
+ bar-and-dialog-boxes.html
+SHA-256-Digest: EFEuGQ6J1cn6dzFT5hK78pk/uB9Wj19MULCBPIuiB7E=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/actionsThatPerformChecksHTML.html
+SHA-256-Digest: F2ZCnChJT8qYCuFuGnX7lgmvjbgWkBwG8TJ5g6J9NbE=
+
+Name: content/html/reference/parameters/search_type.html
+SHA-256-Digest: 3htDFmWuoNCMo9eCILSuFalbfFbvP99l7Ww9CTwokPc=
+
+Name: content/html/userManual/tasks/workWithALM/creating-tasks-in-exte
+ rnal-repositories-from-test-result-reports.html
+SHA-256-Digest: MQOFqiBCkBgzF0lUgzRHh7jlSMRqDc7tXXjI560BHE4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/takeScreenshot/actionTakeScreenshot.html
+SHA-256-Digest: xG1DIqE4agFrnEQICy0ULqHZTkMt+HChOl0yX/RaTPc=
+
+Name: content/html/userManual/images/localName.png
+SHA-256-Digest: REIB6aQR0aIijZdGybgzjkLeRr+7N27yfqmLehqBUwY=
+
+Name: content/html/reference/introduction/introduction.html
+SHA-256-Digest: GhSotmgbN1ngOLnXGnB456NbRQVjzLi96CNslreFM5k=
+
+Name: content/html/userManual/userInterface/perspectives/the-execution
+ -perspective.html
+SHA-256-Digest: nApzcm2XGnogYp6D8c8a7ZIXiDQiwDxcO2SFMXtXhWk=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/actionsThatPerformChecksJavaFX.html
+SHA-256-Digest: TsDD7i2axZD+YiJA1jV+e4D07NMkb4HIEXbfCJVxcTc=
+
+Name: content/html/reference/components/htmlToolkit/locator/HTMLToolki
+ tLocator.html
+SHA-256-Digest: 7ObTqHApe7GPYNa7mXH02cMcn3eYhwVucwT41FTR3ho=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/dragAndDrop/actionDragAndDropGeneral.html
+SHA-256-Digest: WQwgdJ4KSGYfLNZjzjjNpe9LPbesqH83TPr/Umjm1Ro=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkExistence/actionCheckExistenceJavaFX.html
+SHA-256-Digest: igJGvZgYIo2wJ+aMStT8pXntyVtk0mEFz1eCH7Bk/Tg=
+
+Name: content/html/userManual/images/newtestcasedialog.png
+SHA-256-Digest: aDO64mWWhNNHyxK1PbInRQsOMvzzRHqcGSSS1Dw7R7M=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/checkProperty/actionsCheckPropertyTreeTableComponents
+ .html
+SHA-256-Digest: aKs8NuIeGtdpzEu3aLw3kiz9ZZaC2mOhxxMJnCNxHUo=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/interactAlert/actionInteractAlert.html
+SHA-256-Digest: Bdtr0EAGW1woeMm8FYCfCHQS6+rr0yOYRiTjIRUoVKo=
+
+Name: content/html/userManual/images/loadfromdb.png
+SHA-256-Digest: x1XZYvq23alo09pV8LEeZHX5eymqVfxOJZYOAc9ZWAw=
+
+Name: content/html/developerManual/toolkitExtension/remoteControlExten
+ sion.html
+SHA-256-Digest: qsWCZtCzredn7RjjSI69E4zRrq9UeZ45TDTHzxhm8ug=
+
+Name: content/html/userManual/images/objectmappingprefs.png
+SHA-256-Digest: 3U3BXknF8dD6iv9kpXv5MMwlCKDiuo3sF1Hh65mqSgk=
+
+Name: content/html/releasenotes/index.html
+SHA-256-Digest: gk5xkDQi7jFqzA+BkKze9QBsBUGdw5kHYFETK/c/vHM=
+
+Name: content/html/reference/parameters/type.html
+SHA-256-Digest: POMeLzz4V7fijeRyMAE9ltQBKEXGCqhnxa0fUChOsvM=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/checkProperty/actionsCheckPropertyTableComponents.htm
+ l
+SHA-256-Digest: yNs1x1Az2kbrjw8I6KwTHrn42GqgtLI5ku6N5QlaKGE=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectTabComponents.html
+SHA-256-Digest: ZDnNBmZTTzo9vouCDpbmi0VcIOH909dGqv1igrWhLog=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/openURL/actionOpenURL.html
+SHA-256-Digest: zjE4e3qyks5d50VeCanNVksZG/rsZVZAQk4k6KOXlnU=
+
+Name: content/html/userManual/samples/adder/sample-1-using-the-swing-s
+ imple-adder.html
+SHA-256-Digest: bbJh0SzsbjY50CC/KeyaxZCHLFamKtdPQunervHR78g=
+
+Name: content/html/userManual/userInterface/user-interface.html
+SHA-256-Digest: A7EAD9XSR5tGbAtUXzP5YmjxrJdAgFz5hFzJdDQjtxM=
+
+Name: content/html/userManual/concepts/architecture/intro-architecture
+ .html
+SHA-256-Digest: aerR7CxNQFO49xb7JiPvhyMa1VRgH9W3WvQ7Ebk02Gw=
+
+Name: content/html/userManual/images/general_projproperties.png
+SHA-256-Digest: KPgIJVWTUO7ZxV/z17WV74DZmwW7fBPSVJu8emcM6J8=
+
+Name: content/html/api-comparison/changes/8.2.0_to_8.3.0.html
+SHA-256-Digest: lDH76F5eqDuV2nyVBpCGkz+h/Cu7CslXLTPW/7DUg4w=
+
+Name: content/html/userManual/tasks/logInAndSwitchDB/selecting-and-cha
+ nging-the-database-connection.html
+SHA-256-Digest: eyC23rsEQdSEDrTcU2qDO84VKcLHsG9nAaIOkmkux38=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkText/actionCheckTextTreeTables.html
+SHA-256-Digest: SacogYZx+/dg7uwQstI6TIK1n6bTELlryIyn6bwrxGM=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/checkProperty/actionsCheckPropertyGeneral.html
+SHA-256-Digest: F8PPw2pndDjSNiPjG2Lth5hJcOj8nQUnQnD3wBUuBBw=
+
+Name: content/html/userManual/toolkit/javaFX/design-for-testability-in
+ -javafx.html
+SHA-256-Digest: MDlh2cckAAFOVWKKUKef969oWH0wH6qK/lbFTXQifDE=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectTextInputComponents.html
+SHA-256-Digest: uME4YGHnD8Q8vEfqHCKafFO47dhQcgMojaK3F+J7ToA=
+
+Name: content/html/userManual/tasks/workWithJobs/specifying-which-aut-
+ to-test-in-a-test-job.html
+SHA-256-Digest: RBZp8izutb3kUJBlYgzr67+Kz0ksDK61UgVr9faYg74=
+
+Name: content/html/userManual/tasks/infoTestSteps/specsteps.html
+SHA-256-Digest: /Icn7L8fQehMuCA4EcidvLM2FRq5oliRvcGB9VQvQV8=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/manualTestStep/actionManualTestStep.html
+SHA-256-Digest: j14bylv7vIlmbymDISa7SMddz58ff0all7Vqmnb0sr0=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceListComponents.html
+SHA-256-Digest: IRlltRdmv2AvCpizG7pHbqTjjFBdwtGMzn3puT1ktsc=
+
+Name: content/html/userManual/concepts/eventHandlers/default-event-han
+ dlers.html
+SHA-256-Digest: sYXb334ZrpAU08xLMn7cKi550KyoUxsbX4emcuOTrR8=
+
+Name: content/html/userManual/concepts/testing/intro-testing.html
+SHA-256-Digest: PjMXO+dIHPKptXhuLVPYaBMtP7QvniyvfOhwmQxMwRs=
+
+Name: content/html/reference/parameters/methodArgumentSeparator.html
+SHA-256-Digest: PbL13N2ro0aC1EUGvaZ1l4TGNJLUW45ol4zCbAnJkNg=
+
+Name: content/html/reference/parameters/direction.html
+SHA-256-Digest: K+oZ1hkRmAh84MVldJnXkOkdpdJ8+U3fvzs+d59xPFw=
+
+Name: content/html/userManual/images/workspacechooser.png
+SHA-256-Digest: Ia/8hiwtUHbZUtAiFWNDC1E2GptvzAbPjIPaEnXd8sk=
+
+Name: content/html/userManual/userInterface/views/the-properties-view.
+ html
+SHA-256-Digest: R6uQxrSbcr7vyD6UJsSMoiy1XpONIjzjLp81ctdKqkY=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/starting-web
+ -auts.html
+SHA-256-Digest: L0SHRReF7azAwHhzfHYMT7NqMEws84tVZ3qoQht/eeg=
+
+Name: content/html/reference/actions/specificToHTMLApps/actionsSpecifi
+ cToHTMLApplications.html
+SHA-256-Digest: Rtx7eIYlUUuhQe9BrRMZSQ7yiYKe0mihe/drOktFeyw=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/a
+ ctionsSpecificToSWTAndRCPApplications.html
+SHA-256-Digest: jkQGcqizpcGZN07jGIVXyhOO46nHhrzSacU9iIZFmxI=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatExecuteB
+ ehavior/select/actionSelectJavaFX.html
+SHA-256-Digest: tAxcmwYdiGJpWvd6aNLdsJLUtiAYTI45mlhZiQL6md0=
+
+Name: content/html/userManual/tasks/workWithProjects/exportproject.htm
+ l
+SHA-256-Digest: fBnJRRP4bOVSslSdbKTrgbNregQxahNdM+xTeqw14Wo=
+
+Name: content/html/developerManual/toolkitExtension/deploying-the-frag
+ ment.html
+SHA-256-Digest: rN/8IZM/Dk2df9g5Owk3Ue/aDac5ObJSANiB6RsyqHw=
+
+Name: content/html/reference/parameters/use_new_environment.html
+SHA-256-Digest: CVWSd8hW+SQ4yaa67yD//rOFyPzVZUSlpoUOHPg+he4=
+
+Name: content/html/releasenotes/images/EmbeddedAgent.png
+SHA-256-Digest: ll9P+7TYQZA+JfAIlIZTZPQLSU+Qj0pu2LTI7/PqVNk=
+
+Name: content/html/userManual/userInterface/editors/test-suite-editor.
+ html
+SHA-256-Digest: cD3nzQyro2hLnnij0mF7ojVTDwn6vjB6TpunAAAyjUU=
+
+Name: content/html/userManual/introduction/introduction.html
+SHA-256-Digest: 7NmcmWYbiWxFljo7UQsLmGvUB2vgC+9SOAxFMhHZ4bc=
+
+Name: content/html/userManual/concepts/testExec/test-execution-1.html
+SHA-256-Digest: jFIvdL78cWxJv03myfLK+vEI/wFLXoJ/c9RQTAprmBU=
+
+Name: content/html/userManual/tasks/workWithProjects/newproject.html
+SHA-256-Digest: drSiCbVUY0mkGMcUYOZlxcW30+b7FAuG8wKr2NAYohY=
+
+Name: content/html/reference/actions/specificToJavaFXApps/forStoringPr
+ operties/actionsForStoringPropertiesTreeTables.html
+SHA-256-Digest: pi0525mWSgrKdxSwaUgVDJ1K8wZxB20layOa89Pk3xs=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForComponentGeneral/actionWaitForComponentGeneral.html
+SHA-256-Digest: HrBfX2PdsKeJucbxWh3ziq0sDGbyL8ztt3kjKEX+qyU=
+
+Name: content/html/userManual/toolkit/rcpAUT/best-practices-for-testin
+ g-rcp-auts.html
+SHA-256-Digest: Bn65/7Ul1FgqpvGEX6I+qzCsiRH2Vklfl0CVIJ0kN/w=
+
+Name: content/html/reference/parameters/window_title.html
+SHA-256-Digest: 6MMqPL5g34O9p1ypl6IAWWQNvArt4z8g3Wk3P2gpCeA=
+
+Name: content/html/developerManual/keyboardLayout/keyboardLayout.html
+SHA-256-Digest: pfeP371SnhNt/cVm9wA6vjnLJOT/SGAXeNzivS3WLZM=
+
+Name: content/html/userManual/images/refArrow.png
+SHA-256-Digest: S4kmSJnc51hXyoYME+9aSnnI6Knq77raQbZjAuXGty8=
+
+Name: content/html/userManual/toolkit/gefTest/testing-gef-components.h
+ tml
+SHA-256-Digest: XoF5c+FE2Hlh+prHI7b1ECw2qE5TqVW0yorl/ubREx8=
+
+Name: content/html/releasenotes/images/DeleteUnusedCompNames.png
+SHA-256-Digest: 9oINwHlRFCboUKjS2xV/Pclsq032hmaG6WG082mDbXc=
+
+Name: content/html/userManual/tasks/workWithData/using-references-for-
+ data-in-test-cases.html
+SHA-256-Digest: FV8mPA4idWzJIfK1XjxZihA6ESoGTYgwpjsK8URIQyA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/collapseExpandTree/actionCollapseExpandTree.html
+SHA-256-Digest: NzLN5+t6rRcajugRGpkWataWZbh0kUXXwrgtVheUwqs=
+
+Name: content/html/userManual/tasks/workWithJobs/testing-different-aut
+ s-in-one-test-run.html
+SHA-256-Digest: ImKwv+g1zGO+LYMEoUMMccm2074WIViTATDJuLUf1L8=
+
+Name: content/html/userManual/tasks/workWithTeststyleGuidelines/intro-
+ teststyle.html
+SHA-256-Digest: n4yHT8CorlJ1ELGkbU8Hr52PIlc9FeY1eEIkxN4USJ8=
+
+Name: content/html/reference/toolkits/toolkits.html
+SHA-256-Digest: K4YxEQdxfV4+e7hUpC+xAOcbmS1ZLPsip7UWj21qv3Q=
+
+Name: content/html/userManual/tasks/searching/using-filters-in-the-ite
+ .html
+SHA-256-Digest: BL6ZsqN0HZvHF+m9GEKOJlv1W6n9Z63ohXGO79PA0sw=
+
+Name: content/html/userManual/tasks/workWithManualTestCases/working-wi
+ th-manual.html
+SHA-256-Digest: 3kBadH+nmU9mrjbWiXz94tO3cmTsT5eWu19+4hAY8EQ=
+
+Name: content/html/userManual/concepts/databaseStructure/single-user.h
+ tml
+SHA-256-Digest: INYqz7TVsr+4cze6nrxgySjq8K+fgX79SOBcmIPp1Ic=
+
+Name: content/html/developerManual/toolkitExtension/extensionExamples.
+ html
+SHA-256-Digest: N45iY3w4aKXrlb55rLDWFV+ligTlsppr1KVC5nOIz+A=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/moveInTablesAndTrees/actionMoveInTablesAndTrees.html
+SHA-256-Digest: rl9mfmV3yPWFgywibl614Pn25dYLKDuRZs03S1KZe2s=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceTableComponents.html
+SHA-256-Digest: GpacbIvyAoCnDvvx1Vj54V4XU6VhLOTb95r0JgfPHsE=
+
+Name: content/html/userManual/userInterface/editors/object-mapping-edi
+ tor-ui.html
+SHA-256-Digest: mdp6aymrysFnT8Hp1wNXVgSyt0S58q/rCu4f9X+6VHQ=
+
+Name: content/html/userManual/concepts/approaches/writing-modules-in-a
+ dvance.html
+SHA-256-Digest: PcB3ohSQCeELTjeIRGf4CqEOUVZIe1vNUD6wJodPtbY=
+
+Name: content/html/reference/components/htmlToolkit/htmlToolkitCompone
+ ntOverview.html
+SHA-256-Digest: /DZzOmIQzBJ6X4RHik1+SKk4RjyfxRj6mpW+7y6DjGo=
+
+Name: content/html/reference/components/htmlToolkit/alertPromptConfirm
+ ationDialog/HTMLToolkitAlertPromptConfirmationDialog.html
+SHA-256-Digest: IpLSEWv1234iQlc1KpkzaS94wUWGXidIYZQEgRONaaY=
+
+Name: content/html/reference/components/concreteToolkit/application/Co
+ ncreteToolkitApplicationComponent.html
+SHA-256-Digest: u3NhyyeusWAyj+sySRIFvMS3pvGA3Zg62W+G984Nl3s=
+
+Name: content/html/userManual/samples/dvd/Samplesdvdtests.html
+SHA-256-Digest: 4b32xHnVWQldmHqTGIT1Xyhyhj2JASLSGY5oY+ukJ74=
+
+Name: content/html/userManual/introduction/howTo/layout.html
+SHA-256-Digest: qrj7ekAgkGXno1EXaBSe5eTEe1crTEO5KzxRlV61M+g=
+
+Name: content/html/reference/parameters/create_directories.html
+SHA-256-Digest: xoD1e5Jj+8gpFdWwcX8QO/M83B/55dmipFCnz/nx48U=
+
+Name: content/html/userManual/images/objectmappinghowto.png
+SHA-256-Digest: +tEbwBXMRyAt4nlz+2pK6YsloAM/0tIP5VV391TJEEU=
+
+Name: content/html/userManual/tasks/troubleshooting/creating-a-support
+ -information-package.html
+SHA-256-Digest: w6B5v2hYND/FoF68Ycg3Psw90D3LZQnu6Ay1dsJEamI=
+
+Name: content/html/userManual/concepts/objectMapping/technical-names.h
+ tml
+SHA-256-Digest: svRt0E+JKqoPHMs8dWxmzzRbhfH81i0x8oLNg54iCY8=
+
+Name: content/html/userManual/images/originalData.png
+SHA-256-Digest: MQnPWuz/BX6W3wiJ22DUS4AyEDo7fIAiLWcoaKfQ2+s=
+
+Name: content/html/userManual/tasks/adaptUI/keyboard-shortcuts.html
+SHA-256-Digest: hJOaWnhYYRTWGAMQzWgHFShPFNdf7gIwoHcgZnNy3jg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEditability/actionCheckEditabilityGeneral.html
+SHA-256-Digest: 5Y8Fw6t9DZ/eRDLbrpVhJTOH3F/AlihWLUS14yFYofk=
+
+Name: content/html/userManual/userInterface/views/the-console.html
+SHA-256-Digest: fDLeCWeoq07jZAWN5OjF2k548s55bwODIuxLVPHQUd8=
+
+Name: content/html/userManual/tasks/infoTestSteps/intro-test-steps.htm
+ l
+SHA-256-Digest: Bnui2Gfb+Bu9ufmM2zTIlq8YAvqZtoirBcR3LbGikus=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/starting-and
+ -configuring-auts.html
+SHA-256-Digest: CpLY5Q974FARvInNOu87n3jT+YemOuVnb3GI17m38d0=
+
+Name: content/html/reference/components/concreteToolkit/tabbedComponen
+ t/ConcreteToolkitTabComponent.html
+SHA-256-Digest: F5Lh/oaewyz9hPlVEkDU2CFhWndRU/q3CcUR4Pby6sk=
+
+Name: content/html/reference/images/img1.jpg
+SHA-256-Digest: KoqHgn9dj2jVlHOWiYPvm10Zd0TFKbJE4qnv/CySU30=
+
+Name: content/html/userManual/concepts/objectMapping/assigning-technic
+ al-names-to-component-names.html
+SHA-256-Digest: NwydHwzTe0mjEuiC+wWNw55VfbWoGaCMTmzO7T7tb70=
+
+Name: content/html/userManual/tasks/workWithProjects/refreshproject.ht
+ ml
+SHA-256-Digest: quQQTbdSQhB264aB4jO7LfhfcCQ/bQZ0VRCAI/wmCjU=
+
+Name: content/html/userManual/images/EventHandler.png
+SHA-256-Digest: xDqaGmjmb0vzChfePlkS9zCNwIaVfrGeQkM7S6/TxAM=
+
+Name: content/html/userManual/samples/preparedProject/importing-and-lo
+ ading-the-prepared-project.html
+SHA-256-Digest: MtdTCYTa40thB8YOkju/g0Pw3wwwBmxwzIgFOn2dC9A=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionCheckTextComponentsThatShowText.html
+SHA-256-Digest: i952mtAYlco6MJcSF/DBYzxq1HBFBTg+4cuhMmqaWj0=
+
+Name: content/html/reference/parameters/url.html
+SHA-256-Digest: LD08O92yfRxfL6+IsoAe83nNlmu6hw7LjwMg8JOFslM=
+
+Name: content/html/reference/images/component/SWT/toolbarItem.png
+SHA-256-Digest: EXYkXG8Td3Nfyf3pGfRY3EhMIX82+yAKuGK59Oe3B2E=
+
+Name: content/html/userManual/tasks/useMatchingAndRegex/intro-matching
+ -and-regex.html
+SHA-256-Digest: etz4xszELbVDMLmc/FlVMiKTtuhHhCRtslZDvfkhYxM=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/select/actionSelectSWTTreeTables.html
+SHA-256-Digest: cmLzolp3XqUiSu/Rrbcg9v+wSY630ThpXmz17FQsMxo=
+
+Name: content/html/reference/images/component/concrete/buttonComponent
+ _checkBox_deselected.png
+SHA-256-Digest: WIafOMopSLfcqN51amoKIN30X+pctXmey4li2/BDr2g=
+
+Name: content/html/userManual/images/newprojectdialog.png
+SHA-256-Digest: JAQH0mND7AMg1r7BTNdwEa6UrIoE+iC6x+mcenK3+5A=
+
+Name: content/html/userManual/tasks/useTestExec/using-the-test-executo
+ r-for-testing-from-the-command-line.html
+SHA-256-Digest: MkRBCjw3YvH790ya9oZo3u4j+Ym84DGlVc04zTMSqtg=
+
+Name: content/html/reference/components/swtToolkit/treeTable/SWTToolki
+ tTreeTable.html
+SHA-256-Digest: GZzzQGcXg09eW0glOqNAoMNGxJICM+nGH2q/VbpjWnQ=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionTabComponents.html
+SHA-256-Digest: YuOtV75qgIkXsCLm9Ubzs11X6MXG0af3Y+2vVmYu0Vo=
+
+Name: content/html/userManual/toolkit/javaFX/toolkit-javafx.html
+SHA-256-Digest: 5vulaTR72tENjRRgdbrUKE5fYbn/iRkRMIXRetQIeVs=
+
+Name: content/html/userManual/tasks/defineAUT/define-aut.html
+SHA-256-Digest: o8ImFB3NURkwlzJqenTzKYVZw02ZBRDRoXoGeDpkujQ=
+
+Name: content/html/userManual/images/OMCats.png
+SHA-256-Digest: n/AcaT3i1tMapWJrBnyiR8THAcBHjLbHX780kvCtWYQ=
+
+Name: content/html/userManual/concepts/testExec/test-step-execution.ht
+ ml
+SHA-256-Digest: K+MrpruPH8BdnnL1KEbmcBKDLJ+Qmn+mnQYs6ahAgnY=
+
+Name: content/html/userManual/concepts/objectMapping/locating-componen
+ ts-during-test-execution.html
+SHA-256-Digest: qEI9gyfy7xKJK4CSXQiBsj8JSpiDKQ6wSQBL+PoRuEU=
+
+Name: content/html/userManual/tasks/tasks.html
+SHA-256-Digest: NbZG4Jf+08YEXNvkUhpc3ztv5/uSztmhwjlDXZ1Xtes=
+
+Name: content/html/css/style.css
+SHA-256-Digest: wOHBJafxPsrqY4qu0NTCxpPeSipZWIKLFNiDafjvWxE=
+
+Name: content/html/userManual/tasks/specialCharacters/verbatimsymbol.h
+ tml
+SHA-256-Digest: bCPeBwqvKNT2yBv/x8ri3yfju/g1TYfoosNh7OcYaos=
+
+Name: content/html/userManual/images/autconfigwindowadvanced.png
+SHA-256-Digest: 2A5gy0DJKf8shuTscFrY9FSQkBAVb+Xy5WrIv734oWs=
+
+Name: content/html/reference/actions/usableOnMostApps/forStoringValues
+ /actionForStoringValuesTableComponents.html
+SHA-256-Digest: QXhDSevG4RrTDgXUp2EVR2+ofNW0OAlx3KlLiw2aBGA=
+
+Name: content/html/userManual/images/startSuite.png
+SHA-256-Digest: k45glsgmnCJm8JublcI3YzWLhLZg4DIMC8fh7rBZJ5Q=
+
+Name: content/html/reference/images/component/concrete/tabComponent.pn
+ g
+SHA-256-Digest: YURJP32/11lmG0aGOXMpu6o7y/D714r8+S2AJMqvQoA=
+
+Name: content/html/reference/parameters/number_of_cells.html
+SHA-256-Digest: rrzs0uVMJ3wCKZR7H+msjUEnkGrzQAlr7ClJL03s10c=
+
+Name: content/html/userManual/introduction/howTo/conventions-used.html
+SHA-256-Digest: oibCDjba4dsHVCrlgsOqAyKw5U/m3PM/f9I8ma+1OdM=
+
+Name: content/html/userManual/images/teststepdialog.png
+SHA-256-Digest: HRyExFmiSbgx3y3sDMLuP+BYJL8D/l/PO7g0NCqFOBY=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatExecuteB
+ ehavior/select/actionSelectJavaFXTreeTables.html
+SHA-256-Digest: WgPTbd/hXa/X52FdAaA40c7KGdOW+D5+1L+eBMupR5g=
+
+Name: content/html/developerManual/images/img2.jpg
+SHA-256-Digest: yGEeOOlkvV2s4P0hV2eLX37BdkvPPkxFYRWccmgSig8=
+
+Name: content/html/userManual/images/pause.png
+SHA-256-Digest: CaZmfn/ReXqKkvucUQjSxnjTY6lK1kIwRNY0oK/w+1U=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/using-workin
+ g-dir-aut-config.html
+SHA-256-Digest: /LC6EkpgIBlhILvzFX1liXMHHZDZxwTu1Op7hE9/tkY=
+
+Name: content/html/userManual/userInterface/browsers/the-component-nam
+ es-browser.html
+SHA-256-Digest: fJJ6a7IJ7u3DDsLrpkCOxvU5iWY2tMKCgTt0aOUN4jg=
+
+Name: content/html/userManual/tasks/workWithEditors/copy-items-in-edit
+ ors.html
+SHA-256-Digest: t/flnlIECTnOf1/RLb9vr6l/Oj2FIVIWAU5nSgBBtmQ=
+
+Name: content/tocUserManual.xml
+SHA-256-Digest: YTdL2p9VvKlYSSIeyHN7Q5xIcV55k6m6XR1HFJ8Ig9I=
+
+Name: content/html/reference/actions/usableOnMostApps/actionsUsableOnM
+ ostApplications.html
+SHA-256-Digest: bWDySZtPTo2OgmXPLDx9mmQstwRafScVUbzAWdUn3qw=
+
+Name: content/html/userManual/tasks/workWithData/data-types-and-enteri
+ ng-data-for-test-cases.html
+SHA-256-Digest: fa0LwbtNtQ9+/OxOjFVD/FkmC0RD4vOdTDg09t0DjUE=
+
+Name: content/html/reference/parameters/textpath.html
+SHA-256-Digest: p26aLsrRSMGjFq12rUvJMddJU12FwU6j5Y9cb7cJvVQ=
+
+Name: content/html/reference/parameters/enabled.html
+SHA-256-Digest: 3dD5+uqwsnsH5CGKNBveIKBf4Kx2BEJn3XJd/ivBCtk=
+
+Name: content/html/reference/components/gefToolkit/gefToolkitComponent
+ Overview.html
+SHA-256-Digest: PaWLYaIroqWqilhe+DTzbajEDyafQrKPU1KRZc4LcTY=
+
+Name: content/html/userManual/tasks/workWithTestCases/moving-test-case
+ s-to-external-projects.html
+SHA-256-Digest: 7Uorg4E8P2pKQrMNCxoc8eOmQMIteGkVoKfqcCDu9BM=
+
+Name: content/html/reference/actions/specificToJavaFXApps/actionsSpeci
+ ficToJavaFXApplications.html
+SHA-256-Digest: RbRv1zu9vFkPKJITgoJOjGfO99vecK53b+ZEXWDf2q0=
+
+Name: content/html/reference/images/component/concrete/treeComponent.p
+ ng
+SHA-256-Digest: zz6x9w1aNnmS2HyoOR6obiaEuoRl1PkhVFlHOhf1J8k=
+
+Name: content/html/userManual/userInterface/views/views.html
+SHA-256-Digest: az8jND/wjB362Vu/XFBJsdYafVTdfPtELhoNPa7CXHk=
+
+Name: content/html/reference/parameters/title.html
+SHA-256-Digest: 9ewpUrW97LxkQbJ+zdQIAzYy3xCChDFu3UWwc1emR/k=
+
+Name: content/html/userManual/images/stop.png
+SHA-256-Digest: VceOiPA5t8W2wmPZxb8NeVlSvX/TEGg0xhfCRx1yBXE=
+
+Name: content/html/reference/images/component/concrete/treeComponent_c
+ ontextMenu.png
+SHA-256-Digest: Qxxiq0ocI60hcofDN+kk5WbR6Pz/DyaxNJv6JY4/OOk=
+
+Name: content/html/reference/toolkits/ch02s07.html
+SHA-256-Digest: gCOhK+nosPyZlu1oYzKf88EtavKws3e0Ejvz7WJqqXA=
+
+Name: content/html/userManual/tasks/migrateToNewerVersion/migrating-to
+ -newer-versions.html
+SHA-256-Digest: L9RAwnVxX5VNHP5PPm1S7lMtm7+rr6Tp5aqCvNHqzho=
+
+Name: content/html/reference/parameters/activation_method.html
+SHA-256-Digest: ilMmsCXdTjov9TgwnPSAqsp+9yBRQ6Ay7FCjJkXLMjQ=
+
+Name: content/html/releasenotes/images/img1.jpg
+SHA-256-Digest: m2995zE8DGSa3nrWXL7xxkNPiarUVezIPvOFs9URtxQ=
+
+Name: content/html/userManual/tasks/configurePrefs/aut-agent-preferenc
+ es.html
+SHA-256-Digest: g6kX2AF4O0KmufqZbQPB8B0jAaJaJxnMbt5384BRvrw=
+
+Name: content/html/userManual/introduction/comparison/programmed-tests
+ .html
+SHA-256-Digest: y3ieL4yH9uhVUmtOzI8GBTo2jL7885m0kge/3zfmefs=
+
+Name: content/html/userManual/tasks/workWithData/overwriting-data-for-
+ test-cases-and-test-suites.html
+SHA-256-Digest: GCNOb1ONlJlH4JRytFii6nZ54DQc7yWMXuhpb79/pqQ=
+
+Name: content/html/developerManual/images/cap-factory-methods.png
+SHA-256-Digest: KhPWiv8uWgCpoPVuYYDsnCJp2WOGVIkcsClNznxgiIE=
+
+Name: content/html/reference/images/img2.jpg
+SHA-256-Digest: WQtACTDAQ74/cieSIVGwRM7wo9UkDj95oN1xKbiq/lY=
+
+Name: content/html/userManual/images/workspaceprefs.png
+SHA-256-Digest: N5euVGRnGHYyNGH4deGhO3ETR5PVargN7aqmUzebs9Y=
+
+Name: content/html/userManual/tasks/troubleshooting/troubleconnectserv
+ er.html
+SHA-256-Digest: yWvF4FmfIHMGtwleeP57VNp1BCWDNp4r9QTrxKGulFs=
+
+Name: content/html/reference/parameters/mouse_button.html
+SHA-256-Digest: YF/GfQLG0aFW7pqHxbxWwLMLCOKqMUFPr3j7Hhf8Wbw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/dragAndDrop/actionDragAndDropTableComponents.html
+SHA-256-Digest: RkT7/GcPtt5ke+NzQIe5c6AEGU3h2YSKu8PQHICxrSs=
+
+Name: content/html/developerManual/gefToolkitExtension/setting-up-your
+ -workspace.html
+SHA-256-Digest: qNlp/eD2NAqywJmPFiKDA8XcbBO6Kv+ywKyuvnKyKzM=
+
+Name: content/html/reference/parameters/time_per_word.html
+SHA-256-Digest: ophJs0YiFBXtvaKRpRJwAUsPVMNB7Gz7ML5AoH5tnow=
+
+Name: content/html/userManual/tasks/workWithTestCases/creating-tests-f
+ rom-the-library-of-pre-defined-test-cases.html
+SHA-256-Digest: RextBDYL6+ue7V8cbI4Stnin/a6wxKjgPoh9ifEopK8=
+
+Name: content/html/userManual/images/stopAUT.png
+SHA-256-Digest: CHiYqf5rfcPAlFcJGJ2D0KnTYTrLKp7OvP61salCvwo=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatPerformChecks/actionsThatPerformChecksGEF.htm
+ l
+SHA-256-Digest: aR6ZvVEEbR8lZL4RLjG88urT2zlmUqxeqoAcelNTrm8=
+
+Name: content/html/userManual/images/compnamebrowser.png
+SHA-256-Digest: iIDc+6z8+P5rbVTz4hfyLevhno0gHaU9kONF2MIVvkI=
+
+Name: content/html/reference/parameters/number_of_clicks.html
+SHA-256-Digest: JMfkD5IYVeO11WiIwrpag8nFrQylYY/PB/kn3Nwo+MY=
+
+Name: content/html/reference/parameters/indexpath.html
+SHA-256-Digest: PyVRcqDjCDLsSrHvGgqpJsf12w0X5mdXgzJihceSvWs=
+
+Name: content/html/userManual/tasks/objectMapping/object-mapping.html
+SHA-256-Digest: gb7OCokncuxWNtVJqFvY9fAiBvcbRZZ4f4IyWZRf1kY=
+
+Name: content/html/userManual/tasks/useTestExec/using-test-exec-with-e
+ mbedded-db.html
+SHA-256-Digest: Bf7iEzFcUdsrxvWa11hOXONgF1swG1YPXLwLHt17e/4=
+
+Name: content/html/reference/parameters/editable.html
+SHA-256-Digest: xTf9dn2vb6rvIDNRYEh13dqWSf+hPO9xUOCJAP6LTaI=
+
+Name: content/html/userManual/userInterface/browsers/the-test-case-bro
+ wser.html
+SHA-256-Digest: HI8pwNtkm4089RMOpdLdaD02gTqa4By+5ZQv+8PACv4=
+
+Name: content/html/reference/images/component/concrete/comboComponent.
+ png
+SHA-256-Digest: oFeceS2admex4CUP6TcqRkcBTItxua+BVHaZTe3+xCs=
+
+Name: content/html/userManual/tasks/searching/searching-for-places-whe
+ re-a-test-case-or-test-suite-has-been-used.html
+SHA-256-Digest: AJCW4F0Nb3Ee+r0v3++tOG5b2Q4M8LnXapdQV3vizzo=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkTextByLocator/actionCheckText.html
+SHA-256-Digest: o+rt8bfR1icJYOGXa8hAxDSBwvN6BTUrJn20SzeQP2E=
+
+Name: content/html/userManual/concepts/objectMapping/intro-object-mapp
+ ing-2.html
+SHA-256-Digest: 4lxcdn47Dy63WLdb77B08W49nHX+dYw5RVnN7opLhls=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatPerformChecks/checkCount/actionCheckAnchorCou
+ ntGEF.html
+SHA-256-Digest: EYsXneyaJgIsyYqH1VkzJav1Ugm6F0ZpYQVfD5keYSY=
+
+Name: content/html/userManual/tasks/workWithProjects/deleteproject.htm
+ l
+SHA-256-Digest: QZv2OJ3RpPsfrdAYuz9p6MMEW5joypEIfkGtmtm8Jdo=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkSelection/actionCheckSelectionSWT.html
+SHA-256-Digest: Oy9VPkevNI8JDGo2naDyh2Au5/jP2+NjDzqbX5GbvEE=
+
+Name: content/html/userManual/images/TableViewSimple.png
+SHA-256-Digest: mmKmpgWhiXcAxOBEAjxGec+UInUNiDCeMl6ElXGf1Lg=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/basic-config
+ uration-info.html
+SHA-256-Digest: ZILM8NqzaRgg91FZVTgOCsZ1D4x5H2eBRyXe4gpYQu0=
+
+Name: content/html/userManual/userInterface/views/the-image-view.html
+SHA-256-Digest: AXHvEdUk2KCnHyRhQ1uInHY4DKeX6wO6HnWlZ659ojU=
+
+Name: content/html/userManual/images/autconfigwindow_basic.png
+SHA-256-Digest: kVGbkSkUvihkTJJK+lszzOAMmm9M9RUhpbzYawe/znk=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/goBack/actionGoBack.html
+SHA-256-Digest: tgQpgBdBPRazWpzwafUErcEINTqx3I9UMHF18nDs9wM=
+
+Name: content/html/reference/parameters/identifier_type.html
+SHA-256-Digest: bGoADpBMAWF9lGLnRfLV9vet6yikKTPgkKS51OSptW0=
+
+Name: content/html/reference/parameters/count.html
+SHA-256-Digest: Xo6f0nRl8UkzRSTolompqGxbKAGB1wqF9wc3dzVRBso=
+
+Name: content/html/reference/parameters/scaling_factor.html
+SHA-256-Digest: puEAe6R3Oy8kaiM5j399Xw/yCor6SmgfIIrZrJb5Uto=
+
+Name: content/html/userManual/images/autsettingsdialog.png
+SHA-256-Digest: 7cPh7fwBf7JhKZKczOi6g65tmMRgNHDlCmuLF8OF+Rg=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatPerformChecks/checkExistence/actionCheckExist
+ enceGEF.html
+SHA-256-Digest: +BIIK4XUYvJUYFtGhL9KFseGVkTL/++qb+LwECl735M=
+
+Name: content/html/userManual/tasks/produceReports/generating-birt-rep
+ orts.html
+SHA-256-Digest: mnr1K6dGaAXNSvKrr7okFeBA/OPwh1VCK2fk5WE7KIg=
+
+Name: content/html/userManual/tasks/configurePrefs/database-preference
+ s.html
+SHA-256-Digest: ykp88kQWoID9/sc26irRaq1JKD3Q2kdJ4GoJKfdQaZ4=
+
+Name: content/html/userManual/tasks/troubleshooting/troubleshooting.ht
+ ml
+SHA-256-Digest: TZXwalLQ6/kn3pzj0rY5Oa/KRE1WcIaVF8N4lS9HjqQ=
+
+Name: content/html/reference/images/component/concrete/menuBarComponen
+ t.png
+SHA-256-Digest: HMS1S1l7bX6R0OLI9cwp/eSV+ltL5ix1SBO6OmrMNhc=
+
+Name: content/html/userManual/images/readonly.png
+SHA-256-Digest: 9lmao1o1jZyNydilxOlZMoWV/Q7tjxOUKAoyzCO8l/U=
+
+Name: plugin.xml
+SHA-256-Digest: RrWwLvVRgjkvNclX4zA7f2YvMw92VoxO7dbn5HKF+rA=
+
+Name: content/html/userManual/tasks/workWithTestResults/the-test-resul
+ t-view.html
+SHA-256-Digest: uDwvSU855uOTSfl8ufBmuU/kohGzLIt0Dt58vO5S7w8=
+
+Name: content/html/userManual/tasks/useMatchingAndRegex/using-the-simp
+ le-match-operator.html
+SHA-256-Digest: KlV+edepmFfnVkXGxJ5hNZbS1dqXsdIl6z/r5w0xlU0=
+
+Name: content/html/reference/actions/usableOnMostApps/thatSendKeyboard
+ Interaction/actionsThatSendKeyboardInteractionGeneral.html
+SHA-256-Digest: zhdw3pCV3CMJJl78y3dlQDVPv5Ze3j90pyOcBJPIwDY=
+
+Name: content/html/reference/parameters/operator.html
+SHA-256-Digest: Nb4qbcQZvR6lDExh/pyKOCSRDT8mmyYWxnCxHy039F8=
+
+Name: content/html/reference/toolkits/ch02s02.html
+SHA-256-Digest: mqiTqKXuWXriIAig2VWJKxj5eb0pvhk40E/YP6U+kKg=
+
+Name: content/html/userManual/tasks/useDBToolClient/starting-the-dbtoo
+ l.html
+SHA-256-Digest: sBxLrhCejtLORvdYoKyfTrsyPerXoWEKeJDg442SaPA=
+
+Name: content/html/userManual/index.html
+SHA-256-Digest: CHB6Yj2vCmudEvUKkOQPdfshCh9qHgocbFNoVjuFcJw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/moveInTablesAndTrees/actionMoveInTablesAndTreesTreeComponent.html
+SHA-256-Digest: BUiXAjWPynTBin9a3vHNwrdfmVC5yjXLhuGlZ6Hr5zI=
+
+Name: content/html/reference/components/concreteToolkit/tooltipCompone
+ nt/ConcreteToolkitTooltipComponent.html
+SHA-256-Digest: Fpz3PoO5GpoE9QH+BUj5hSOiGuO8o37J8nw3R8CPKxE=
+
+Name: content/html/userManual/tasks/specialCharacters/general-special-
+ characters.html
+SHA-256-Digest: bco9QDsQNaWX9EbbZI+QAFEc+lxjvCd97pXOHym5lJE=
+
+Name: content/html/userManual/tasks/finishUp/disconnecting-from-the-au
+ t-agent.html
+SHA-256-Digest: 9hOv5M46MN9mN7oYokg5uoEcin6stlqtfJhuDsRglds=
+
+Name: content/html/reference/components/concreteToolkit/menuBarCompone
+ nt/ConcreteToolkitMenuBarComponent.html
+SHA-256-Digest: DecdMN5u5eq+N3hmPHqb7PHKcpllW7r9d2nFFSRyogo=
+
+Name: content/html/userManual/concepts/objectMapping/object-mapping-2.
+ html
+SHA-256-Digest: 6N0/m5oMxYzGS7RLpYzCkHMUe8IJe25319poHkOGcF0=
+
+Name: content/html/userManual/tasks/troubleshooting/troubleobjectmappi
+ ng.html
+SHA-256-Digest: 5uSXOuH6Am9C3BImsA9A0QYnJulM/L1E6DfnEnGqxNo=
+
+Name: content/html/reference/parameters/destination.html
+SHA-256-Digest: jlQ9BvKliWJZXeI83eH1kHEiZhOr3XMUk6aOMOkb9bE=
+
+Name: content/html/userManual/userInterface/views/the-data-sets-view.h
+ tml
+SHA-256-Digest: h5cv0Q9ZpbVw0Vru4HGF2UJfh5lxhZBG6gr7/GMD0yk=
+
+Name: content/html/developerManual/images/convert.png
+SHA-256-Digest: DiSebV2yxbJaCEk5tWWoyXmZNDD93NR+cdxknAULLGw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectComboComponents.html
+SHA-256-Digest: r9xQOBlTHx0djShDHbewqTVzklirEYx1TrqtEaNWw8c=
+
+Name: content/html/reference/parameters/arguments.html
+SHA-256-Digest: gm86in4AYdLYUMreJMcycQlgKKGLFOtxHof9mnCfrd4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/activateApplication/actionActivateApplication.html
+SHA-256-Digest: BsbscbXoUKrShND+H/MaC0mWZ/CxzcX6nU4DbkLAWSA=
+
+Name: content/html/userManual/tasks/launchConfig/launch-configurations
+ .html
+SHA-256-Digest: np8nHDM0sfYDBsNqNUsiQTUhuYk+VlGFqelkL2upCjw=
+
+Name: content/html/userManual/tasks/chapterIntro/chapterIntroTasks.htm
+ l
+SHA-256-Digest: CLbl8X2rWV1czH4/BoY1YCEh282gvmfvIGoPmBlRNag=
+
+Name: content/html/userManual/images/ModulesCategory.png
+SHA-256-Digest: 5d4VpS32C5op6D4uqTA8Gwp+pPkj470nv+otUqvJ/0g=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkText/actionsCheckText.html
+SHA-256-Digest: GHhCPwRFyvzxxBginnMNvYWh1M+5oFWrTIiD6uJj/h8=
+
+Name: content/html/userManual/toolkit/swingAUT/intro-swing-aut.html
+SHA-256-Digest: n0GE3DeJ4m+4TXnN4PLKL6aoaJQxrJ7K8ImC26tnGEg=
+
+Name: content/html/userManual/tasks/workWithComponentNames/creating-ne
+ w-component-names.html
+SHA-256-Digest: 5McWeT05xTqn1gepyNdmJ35rQqAf5KdHBE9IEhbKlO8=
+
+Name: content/html/userManual/toolkit/javaFX/intro-javafx-aut.html
+SHA-256-Digest: w/Q6IGJdscXvBwcmEKiFLfNZ0+OeWS5/4DX6SoFjo9s=
+
+Name: content/html/userManual/images/client.png
+SHA-256-Digest: OvkCQzC9zIrguoXu3qpUTYBh/UhfzRbjnnsqvGumULA=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/copyTextToClipboard/actionCopyTextToClipboard.html
+SHA-256-Digest: 8wNbm2Y3/FUS7iNufc++T5BnX5cAWqvO//cC/Ii6en0=
+
+Name: content/html/userManual/tasks/testExec/interactive-test-analysis
+ .html
+SHA-256-Digest: UwHFVbRjj/Wcju4TGnVBbQL2lfKEUOHBnPjtoxNUSvo=
+
+Name: content/html/userManual/images/img2.jpg
+SHA-256-Digest: L6PbP149rE6LPd3015YhYstWZLrwyICqgiCWtv3wixU=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkExistence/actionCheckExistenceApplication.html
+SHA-256-Digest: 181g8E/TkMdrclIKxLDNMy3V3k8hCcipWADAR1bzs7E=
+
+Name: content/html/userManual/tasks/testExec/altering-the-speed-of-tes
+ t-execution.html
+SHA-256-Digest: X1EIHMROzSq1CMatn8hBl0q36NhgA1BmcggFdQ/h4Ak=
+
+Name: content/html/reference/parameters/css_path.html
+SHA-256-Digest: blO8FtoseQz4EOQVmik8tcIdmnXhFPAlfQJ5DDpDf0Y=
+
+Name: content/html/releasenotes/images/HTMLReport.png
+SHA-256-Digest: KiPffyTG5qlyezxFfeolzlc7/V/Yy/mcZI/llypwLCs=
+
+Name: content/html/reference/parameters/hasConnection.html
+SHA-256-Digest: ShuU/BS48Nz6jBSywAwd43XtfBAVUkopz2zxKPINIX0=
+
+Name: content/html/userManual/concepts/architecture/architecture.html
+SHA-256-Digest: 6az68S3f+Cu3HxhWldvGuy8BRM3gjx3HZoljlNNyBk4=
+
+Name: content/html/reference/images/component/iOS/list.png
+SHA-256-Digest: 2tsBJDHEJpuv5OLdyUCxrkXlj7ppyIQyvTuLDLQjX2M=
+
+Name: content/html/userManual/concepts/reusability/reusability.html
+SHA-256-Digest: Pzzt5LDVj/Ni/UXO1yWK2fTsc7WRqbHKTQ/xcPeb4SA=
+
+Name: content/html/userManual/tasks/workWithProblemsView/working-with-
+ the-problems-view.html
+SHA-256-Digest: p3CTLAh8ctSGgRCxfW5jX6eYtz6C2tAKYf2Zd+H5ClM=
+
+Name: content/html/userManual/tasks/observing/observing.html
+SHA-256-Digest: X8630jE2Z12o5d+UQVO9h/hyWTjb6evSeumKiPwqe3Q=
+
+Name: content/html/userManual/tasks/workWithBrowsers/working-with-brow
+ sers.html
+SHA-256-Digest: 4F7zas0Zvm4Cz+IbBPO5sjGHShB0LKOcghAUZ8FyUWI=
+
+Name: content/html/userManual/tasks/finishUp/finishing-up.html
+SHA-256-Digest: 9ZZ6d0EdqoHsyDEJTbSa+4okKwgmJgg+3enlNADKMmo=
+
+Name: content/html/userManual/toolkit/rcpAUT/intro-rcp-aut.html
+SHA-256-Digest: CGWUmppUvvSno8sscnInqTzm85nN0WdwtTYPsF6sFog=
+
+Name: content/html/userManual/userInterface/perspectives/the-reporting
+ -perspective.html
+SHA-256-Digest: Alxy4O43S+EvRCwC9IUEkTwwZIbu7XyOQsiUoHiHm+M=
+
+Name: content/html/userManual/tasks/workWithJobs/combining-test-suites
+ -into-a-test-job.html
+SHA-256-Digest: rHxTX2LVM2vhS7GFEHBgIAxYlMzHXaNK2cayh51hlbg=
+
+Name: content/html/reference/parameters/timer_name.html
+SHA-256-Digest: f+E8XulupOBb3I5L7Uzcir2zM59OEwSEZ7ERoIdwFNM=
+
+Name: content/html/userManual/toolkit/rcpAUT/supported-rcp-auts.html
+SHA-256-Digest: q2gdvRgJD1epl0iASx2vD45fBGap8c+i5bvYUrM48e8=
+
+Name: content/html/reference/actions/usableOnMostApps/forStoringValues
+ /actionForStoringValuesApplication.html
+SHA-256-Digest: aCTuC8HEkVHfUbrcwhhNMW2R08xFvFxsQ2E9yN89HFg=
+
+Name: content/html/userManual/images/greenborders.png
+SHA-256-Digest: Fdx+adbUeptese7JgXACPDY6igWtP1f8jRNehjnDMbo=
+
+Name: content/html/userManual/tasks/infoTestSteps/editingsteps.html
+SHA-256-Digest: THsGFMuG82FuHY9eHeGbBcYUEMcvRndAWiTT6SJ/6p4=
+
+Name: content/html/reference/images/component/concrete/buttonComponent
+ _radioButton_selected.png
+SHA-256-Digest: L3FNjGEoLQ050VDk8T26WPVk8GC1uubo+Wzo/JcMNLg=
+
+Name: content/html/reference/parameters/methodSignature.html
+SHA-256-Digest: iXQ0w3eB54CB4NOMYV0+SE2GO2Gzw3m2jjmKgatENUc=
+
+Name: content/html/userManual/introduction/comparison/our-approach.htm
+ l
+SHA-256-Digest: c3ipYKFnlh6rtcz052LZkPsjtEOiieJ6pYJrl4lPfzg=
+
+Name: content/html/userManual/toolkit/swingAUT/testing-swing-auts.html
+SHA-256-Digest: yDy1Z9b0HClz2UyfxG575XnMWzAxOkOKfWmngTb3dck=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/invokeMethod/actionInvokeMethodGeneral.html
+SHA-256-Digest: mHZg1hgPQVhbDYWzmhC/qFeGcvEr9j57rQFNYuVDarg=
+
+Name: content/html/userManual/concepts/overview/overview.html
+SHA-256-Digest: car8ECMKClaWlr/LW9QKI0nbQX+Pyu5zMv6vCTMz7Ig=
+
+Name: content/html/userManual/toolkit/webAUT/design-for-testability-ht
+ ml-auts.html
+SHA-256-Digest: gqouYCEeSDxB7D9HQNj864tt/bMdRyZU1mk3r8j8vbQ=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkSelection/actionCheckSelectionListComponents.html
+SHA-256-Digest: 2ufQzgZy+kmjt5FQpk7lQHPlg0pLMWtni42Iw+97sSc=
+
+Name: content/html/developerManual/gefToolkitExtension/gefreference.ht
+ ml
+SHA-256-Digest: 6Mv3DYs7yBscNA1y1L/7wAJLkn/S8Cvlre/ZIBwR4zg=
+
+Name: content/html/userManual/samples/adder/sample-4-using-the-javafx-
+ simple-adder.html
+SHA-256-Digest: wAfBugHkh04U5KgtYLULRXupDZOmESg7SLBAC0M27Kg=
+
+Name: content/html/userManual/tasks/configurePrefs/test-preferences.ht
+ ml
+SHA-256-Digest: TLCBHgvHRx8u7LrjzKEiFi7FQH8pe6JK6BziaTCHMf4=
+
+Name: content/html/userManual/tasks/workWithTestResults/xml-and-html-r
+ eports.html
+SHA-256-Digest: 3SmMvCd4Pt2QIyZG0nrTuADWdRyh+PW96H0O2wf1Npg=
+
+Name: content/html/index.html
+SHA-256-Digest: pFywhb9japwZb6lsxFIC85bbBi2kQhi2V4c6r2yqpfU=
+
+Name: content/html/userManual/toolkit/webAUT/supported-html-auts.html
+SHA-256-Digest: pdtva8RTeXH/muqD1b+5T3JDRvjvNWHmIFEF1f5PBOg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEditability/actionCheckEditabilityTableComponents.html
+SHA-256-Digest: W/pJREJPortXO7cQJxgH+80MVmTOC9F1nx6/GmUV+jU=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEnablement/actionCheckEnablementMenuBarComponents.html
+SHA-256-Digest: 8k3rwtTxJBgO/rHR6i5X7Dbwz4gX+n0IU5pd6srG6j4=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkProperty/checkProperty/actionsCheckPropertyTreeComponents.html
+SHA-256-Digest: kGeG0l8nU9LQMthnQxfCfdpmgjmh4ZpUjF1VrWhtjXo=
+
+Name: content/html/userManual/samples/exapleProject/the-reused-project
+ s.html
+SHA-256-Digest: 9u5Aw0/T1cyit7v19kBAImn4GixWbaCverQts9WwwJ0=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/starting-jav
+ afx-auts.html
+SHA-256-Digest: pbUpms54u67fB6q4zJbf2vTiyFybd147LtMWk2Sqi1M=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/select/actionSelectContextMenus.html
+SHA-256-Digest: lEegFxiNPw1qr0Tszl98Ehe06L/3aF04PssKDHqAuQc=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatExecuteB
+ ehavior/move/actionMoveJavaFX.html
+SHA-256-Digest: rCP/Yr+6u9+FF67W6pHgeEsfMNcH+p6faADPE+739/I=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForWindowToClose/actionWaitForWindowToClose.html
+SHA-256-Digest: EhKI874ATUy8xWzL4XVBzkBdeHKVQBiEqTZdA084w0U=
+
+Name: content/html/reference/parameters/activate_key.html
+SHA-256-Digest: S7JgfxkANGMnSkXiqihEEx0I+hG9b+zRzOAKPjiE5P4=
+
+Name: content/html/userManual/tasks/launchConfig/customizing-the-persp
+ ective.html
+SHA-256-Digest: yM7NaexPULP6qzCdxMpQFdmYVnfW1oWltfyOPTkrg0I=
+
+Name: content/html/userManual/tasks/workWithCategories/adding-comments
+ -to-categories.html
+SHA-256-Digest: 2Vw3MwHK8aK+OEv6CDsze49b4Baz0okhcB7y866pZjY=
+
+Name: content/html/userManual/tasks/workWithData/special-parameters-em
+ pty-strings-and-the-escape-character.html
+SHA-256-Digest: HHc8RbiYeXOf6EYKSqAKNvt5VOoN4SVf1rJIJVu4hGE=
+
+Name: content/html/userManual/tasks/workWithBrowsers/renaming-items-in
+ -browsers.html
+SHA-256-Digest: 98WVJa4D/E3ocnzE4FM40osJRxNsznL1gG69XQPiZBY=
+
+Name: content/tocDeveloperManual.xml
+SHA-256-Digest: j6GHovDAGpyhyCteVWBY7YtJE1IWZuVqMpEMiTBBns0=
+
+Name: content/html/userManual/tasks/workWithEditors/adding-description
+ s-to-items-in-editors.html
+SHA-256-Digest: axTRe2yaKBpi+5qWKk+2x5gWI8xCmmqO1/qgdLKQnCY=
+
+Name: content/html/reference/parameters/expected_behavior.html
+SHA-256-Digest: 8zmPFFec5oW0kPmjNQz9w7nlxyYFDTl9tjP6L33ZwwI=
+
+Name: content/html/reference/parameters/xpath.html
+SHA-256-Digest: iLvnvRGW9usBQ5SswoBOWih4oRcCvN5YrFfsDRArLGQ=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/reloadPage/actionReloadPage.html
+SHA-256-Digest: R61+Pu7STQbBgk49hSzM7rZ2Zb+9dbf+vQZnVUKceao=
+
+Name: content/html/developerManual/clientAPI/ch02s07s01.html
+SHA-256-Digest: owVyI68ZucWKv1x7CVFModf/u822Gs6VQeh47ojY7zU=
+
+Name: content/html/userManual/tasks/workWithProjects/projectproperties
+ .html
+SHA-256-Digest: urFSzrtvEXUNOSpW86IeZLKXT87LnoXYJEwKwiaISms=
+
+Name: content/html/userManual/tasks/startITE/starting-the-integrated-t
+ est-environment.html
+SHA-256-Digest: HBx3c9TOvgyY/+0HmiDtcwpulyWPCbDUuzvKJ54HyjA=
+
+Name: content/html/reference/toolkits/ch02s05.html
+SHA-256-Digest: pV7zeZ42KvFK2tjbTj0eSNU80mQoh3uvhd9IXa4ajfc=
+
+Name: content/html/userManual/tasks/searching/other-filter-options.htm
+ l
+SHA-256-Digest: kpA/zPKtOc4mQ35saQIQylUjQC1L0sgJpTkkNE3AmAg=
+
+Name: content/html/reference/actions/usableOnMostApps/forAUTLifecycle/
+ restart/actionRestart.html
+SHA-256-Digest: uwQQPehh/8Bp9WPaEcUwStRIA86tfZ5vVQZbl0Fxy3M=
+
+Name: content/html/userManual/userInterface/views/the-inspector.html
+SHA-256-Digest: p2JxYUCTLobjROAeIzizoE11PvMzYByy9DPWB5rSqPU=
+
+Name: content/html/userManual/images/info.png
+SHA-256-Digest: WE4ibP400Rv8k/YK9dSX4GESlOWMPy0RSmjt0sQ03XQ=
+
+Name: content/html/userManual/images/autdialog.png
+SHA-256-Digest: sdoDNzuwLZLwkMZ7Q7qvgQbT+07UyK2VRB6nmsDnL8k=
+
+Name: content/html/userManual/tasks/configurePrefs/embedded-aut-agent-
+ preferences.html
+SHA-256-Digest: vCu7BJiVsKt+HIZsPDj0abo77nnj5bUoyqMFcavXEho=
+
+Name: content/html/userManual/toolkit/rcpAUT/keyboard-layouts.html
+SHA-256-Digest: M/pvmUWkJ9O3re9Ewx2ibbUBXxrbIeYloyyDTOehIIE=
+
+Name: content/html/developerManual/images/img1.jpg
+SHA-256-Digest: XxRWdo+uS+KNq7y/SKAXcq60kgtvRw1gBNHx47fJNX4=
+
+Name: content/html/reference/actions/usableOnMostApps/forComparingValu
+ es/actionsForComparingValues.html
+SHA-256-Digest: qgaPIO5H4P/IkC3zYfAwVTHVaFNtSbA7xieODYU4/jw=
+
+Name: content/html/userManual/tasks/searching/searching-for-tasks.html
+SHA-256-Digest: b4cnAyCrWwz5QdSGoQRMT5xA10JG9hJtxxTj0E4YE04=
+
+Name: content/html/reference/parameters/source_text_path.html
+SHA-256-Digest: JeHYwrK0PdYsNVOgk75C+fJe3u6zlheZRBuy/zzmsBw=
+
+Name: content/html/reference/parameters/pre_ascend.html
+SHA-256-Digest: Mo+HIn6sjy12XyC2nTPymZ2XWlVjlTtWOGYvzPXCrdw=
+
+Name: content/html/userManual/tasks/workWithProjects/working-with-proj
+ ects.html
+SHA-256-Digest: YNBucArYh7wgW4ucxSI59Xu/JuvF7+oj/n3cTCEh3cc=
+
+Name: content/html/userManual/tasks/workWithEditors/reverting-changes-
+ in-an-editor.html
+SHA-256-Digest: y1IZqdBuN0zG6uQ32pkMA+Ef8+QJvu9g1b8moTv9yW4=
+
+Name: content/html/userManual/introduction/comparison/manual-tests.htm
+ l
+SHA-256-Digest: IXkZh91Ca7aUdRppopQOr3Mg8jJcEv69F/CaIHCUyZU=
+
+Name: content/html/userManual/concepts/eventHandlers/event-handlers.ht
+ ml
+SHA-256-Digest: nROaj/ez95jQCwCdGny79zttVjSKEBHfL9fBEwCNWgc=
+
+Name: content/html/userManual/tasks/finishUp/closing-the-ite-and-stopp
+ ing-the-aut-agent.html
+SHA-256-Digest: 5+9mEWTRAbmbtjgccD7Ct4o4RaxkaPIbnL/pZGQ5jjg=
+
+Name: content/html/reference/actions/usableOnMostApps/thatSendKeyboard
+ Interaction/actionThatSendKeyboardInteractionTableComponent.html
+SHA-256-Digest: sIY/hv4Mc7WBvHE5xuvRen6tB5MRrSH02RwNmXIpKRM=
+
+Name: content/html/developerManual/clientAPI/ch02s06.html
+SHA-256-Digest: 8f7uMoHh5+SGvSEm4O21Raos+gTRcxcI6HvkVPTH6ns=
+
+Name: content/html/userManual/images/serverconfig.png
+SHA-256-Digest: Zc5HNbOH99rURywTu64ODCmsJr4XN4uigEuM40eAgZM=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkEditability/actionsCheckEditabilityTreeTables.html
+SHA-256-Digest: uYr4KLfJYv2++9epv/HLMi0ibhOrIZRmXX/AmZjBGoQ=
+
+Name: content/html/userManual/tasks/adaptUI/moving-browsers-views-and-
+ editors.html
+SHA-256-Digest: fDj1CgrMKHGE6XoP/p13+rS/A8zbADIhdy1C4cJ3Xr4=
+
+Name: content/html/userManual/images/almproperties.png
+SHA-256-Digest: DMCbTAccTqngxHPVZ7wd+hFN+drr3zVIYKJ53+Lg77Q=
+
+Name: content/html/userManual/tasks/launchConfig/common-pitfalls.html
+SHA-256-Digest: ZUqTsX8N/Vni7yaRqrRya/YWqiy0pzDP2+5FJ60zZAs=
+
+Name: content/html/reference/images/component/concrete/tableComponent.
+ png
+SHA-256-Digest: hy/W38YL2KgYaS8ZSz+AZsavAsaMMZR1Nt3W+I0g9lM=
+
+Name: content/html/reference/parameters/text_operator.html
+SHA-256-Digest: 8LuFM9x+tC8slBBeWhTK6He6ELj5opGSk/CQsx785qc=
+
+Name: content/html/reference/components/abstractToolkit/abstractToolki
+ tComponentOverview.html
+SHA-256-Digest: 9FzpDqkxK4TWn0jJsr/A7GoO0v8Zpk3xpx4yN1a1Mhs=
+
+Name: content/html/userManual/tasks/workWithComponentNames/merging-com
+ ponent-names.html
+SHA-256-Digest: Z+7AFAVyQXtEkj49PRq3a4Bp61NuHrUCHIjCf9L13wc=
+
+Name: content/html/reference/components/abstractToolkit/graphicsCompon
+ ent/abstractToolkitTextComponent.html
+SHA-256-Digest: C7mKmefoHR1GeM7xn/pm5mI72bsndPNTpE8y0tamDls=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForComponentMenuBar/actionWaitForComponentMenuBar.html
+SHA-256-Digest: HyVpT6CDgFX0+Pxqlg8fwUqCCFCHnlzthsI1ukjbLyM=
+
+Name: content/html/userManual/introduction/comparison/recorded-tests.h
+ tml
+SHA-256-Digest: +aunvu1hIr0H0NOGKDde47XguTVg8SuuJysOVGPDrxU=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkURL/actionCheckURL.html
+SHA-256-Digest: hEJlpvHvnTYdPlDM0oi1XgsDdSFwLRXGQvittjJCli0=
+
+Name: content/html/userManual/images/showresultview.png
+SHA-256-Digest: EGg3OT4VQ4ZanuOvHP0x1qvBN9tYKGe88HEn9Jx/eEw=
+
+Name: content/html/reference/parameters/executable.html
+SHA-256-Digest: L/JPS3suCEcMo9KG+7Rz5BzgEZ/Egv+q4lIQBpGShDk=
+
+Name: content/html/userManual/tasks/testExec/starting-the-aut.html
+SHA-256-Digest: eKz6+32RUaW6uq3tLBz1652mGTCQChUljJxm5Mv2MyM=
+
+Name: content/html/reference/images/component/concrete/listComponent.p
+ ng
+SHA-256-Digest: OoxZ/bYQFHzRdlCwmXzkjv7PpjSTgMTd54kPyTBwQPk=
+
+Name: content/html/reference/toolkits/ch02s01.html
+SHA-256-Digest: 56dSPYAN+DnkyEDg4E0BdXKUjMgGzQq/kAO0yHJmcwQ=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkFocus/actionsCheckFocus.html
+SHA-256-Digest: DiWK8k715zuIWwnMalBcwKU06t7dyi/2HIJi5BAO2dY=
+
+Name: content/html/reference/parameters/measure.html
+SHA-256-Digest: YOxvKMSBJomY0bm/axuoMLKVMoeStf08TmeO1Y5TwaI=
+
+Name: content/html/developerManual/toolkitExtension/creating-the-toolk
+ it-plug-in.html
+SHA-256-Digest: YVOLv+5O9zkXFCZSyzAC1N5KYOeepe9m5MrzBB3Fc9I=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatPerformChecks/checkProperty/actionCheckProper
+ tyGEF.html
+SHA-256-Digest: ZrtFjOrHwK51CgmEJSC2UDEDF/bt4XyIkjwggBPyvnY=
+
+Name: content/html/userManual/images/SearchDialog.png
+SHA-256-Digest: A9XqffoZiKUlE1/V1EJJ0nQLmfk1fNO5yz56GSqKSr0=
+
+Name: content/html/reference/parameters/row.html
+SHA-256-Digest: iTkkvQmuD1ZfAze/8x2ggqiUTS5di3znAUD6HGfi9tI=
+
+Name: content/html/reference/actions/usableOnMostApps/forAUTLifecycle/
+ actionsForAUTLifecycle.html
+SHA-256-Digest: AlIQnKhsclr7O7zTt/T+JbE/UTDSTrLwjL5Ut1Cz5Qk=
+
+Name: content/html/userManual/userInterface/editors/central-test-data-
+ editor.html
+SHA-256-Digest: oICWh1uAZvuuM4wVg74/gDbe2FjtmwiIjrS8N70C/Gk=
+
+Name: content/html/userManual/tasks/specialCharacters/special-characte
+ rs.html
+SHA-256-Digest: F4yrIFDos9lQIj3OiKXNdT8O8xY0p7h0wJ48ii38g2Q=
+
+Name: content/html/userManual/tasks/configurePrefs/configure-prefs.htm
+ l
+SHA-256-Digest: owCJZymxT9XP7wzBSvPMGfsMlsSyftFVFjqkD+CD+v0=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEditability/actionCheckEditability.html
+SHA-256-Digest: VLtGgOwPQrVdUEdD5E75cql1OdLt1Dr18O9L3Bz8y9U=
+
+Name: content/html/reference/parameters/textsize.html
+SHA-256-Digest: ZPiZLgUloThDhZ33ncKykko6MAT/xeR3qxaQSx0ugXU=
+
+Name: content/html/userManual/images/cam.png
+SHA-256-Digest: Xy08eX1WBF86NF7Xs8Xsg9efNmS6aVD5MKFbn9gDtBQ=
+
+Name: content/html/userManual/tasks/adaptUI/restoring-user-interface-d
+ efaults.html
+SHA-256-Digest: z9hSd8dgXGMyXuPbKBvPBHQfy3HT3JgFmAZmJApdUvg=
+
+Name: content/html/reference/components/htmlToolkit/anchor/HTMLToolkit
+ Anchor.html
+SHA-256-Digest: 8ypFFqsVi4p6cCuw6bekJHdxgM7LJ7nRjWrNITOEs5Y=
+
+Name: content/html/reference/parameters/selected.html
+SHA-256-Digest: jQ436XFrJks9+M6Slgw4CIy+JR+ybIhbNpBK0UBTiOU=
+
+Name: content/html/reference/actions/usableOnMostApps/forAUTLifecycle/
+ prepareForAUTTermination/actionPrepareForAUTTermination.html
+SHA-256-Digest: +tZgWJF4qzgk/9px9sk5a5D/pALGjnNQjkQKxsec370=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkSelection/actionCheckSelectionSWTToolbarItems.h
+ tml
+SHA-256-Digest: 3Zgt0OrwV+kpY+aU44OqXsCGdWzheujkVP+XE1dBp4Y=
+
+Name: content/html/userManual/tasks/dealWithErrors/event-types.html
+SHA-256-Digest: mh/iDZqKB63nZhVCF7CrbmzvMbmYd2+IhOa2z1QnbaI=
+
+Name: content/html/userManual/glossary/glossary.html
+SHA-256-Digest: ++3stIqQnbAlBprLhPR1zQtLnJOVhVsqD8400e2dYtM=
+
+Name: content/html/userManual/tasks/observing/tips-and-tricks-observat
+ ion-mode.html
+SHA-256-Digest: i9CW/A06hER28i11HGsdrQiTAwvo4yIVzu9rI8Dd9Is=
+
+Name: content/html/userManual/tasks/configurePrefs/editor-preferences.
+ html
+SHA-256-Digest: WGNWe3+RtP8WKhXGtG6xSmnts8EKiWo3750edR3umMU=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/executeExternalCommand/actionExecuteExternalCommand.html
+SHA-256-Digest: 2gLCPmP0k52pvX7826Ud6RcobtR9d4ICPb5ALcn9d7A=
+
+Name: content/html/developerManual/clientAPI/ch02s02.html
+SHA-256-Digest: g0mXT9wOPQkHIWjGCjRhv3lQy934sQ7MMLuyrzZEPyA=
+
+Name: content/html/reference/parameters/target_operator.html
+SHA-256-Digest: 4wzl73RQEcD47N16CKPyCXnjRyZ0DwORbJyKw+0RVpw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/dragAndDrop/actionDragAndDropTreeComponents.html
+SHA-256-Digest: DJ3TrWLWTGs8vn71OKwNLznNa1GRS5wyGnLhq2aCLDw=
+
+Name: content/html/reference/actions/usableOnMostApps/forStoringValues
+ /actionForStoringValuesTreeComponents.html
+SHA-256-Digest: rgt98Wel6j5twuAizUTRfWOVThPBn6SyEQqfuR1n35s=
+
+Name: content/html/userManual/concepts/chapterIntro/chapterIntroConcep
+ ts.html
+SHA-256-Digest: 7okYqgm8BG3/oJ61Ryv3BM4q3c6LMzngSk5xDxyXu1A=
+
+Name: content/html/userManual/tasks/adaptUI/intro-ui.html
+SHA-256-Digest: v+KcPHMjmhccQSyYRbu2kah9Us2zudCaUqJF74LPp6k=
+
+Name: content/html/userManual/tasks/workWithManualTestCases/executing-
+ and-analyzing-manual-tests.html
+SHA-256-Digest: oIkHyki+4a5ujFhvWTKPGpu1eDgFLgrJrSSHPF7WDco=
+
+Name: content/html/userManual/tasks/workWithCodeCoverageJava/working-w
+ ith-code-coverage-with-java-tests.html
+SHA-256-Digest: UvVBvasFFS9HRVlqMpFZh8iVpQcjZMVSSnMEGW/qDiA=
+
+Name: content/html/userManual/concepts/eventHandlers/customized-event-
+ handlers.html
+SHA-256-Digest: pEzMxlFX7cvZx1v4X7wpJW87+utvyHIRTzz8hOPQol0=
+
+Name: content/html/userManual/images/stopServer.png
+SHA-256-Digest: VRmyIwUUCEPIPpqhjWKH/asSnMU3NqdNyS8DZX3AZIg=
+
+Name: content/html/userManual/tasks/workWithProjects/tracking-changes-
+ in-a-project.html
+SHA-256-Digest: 1GPbFq/Jk3kDT6eoRNSzqA3JZhW+JbuucQMMq4OOPig=
+
+Name: content/html/userManual/toolkit/gefTest/geftest.html
+SHA-256-Digest: 72laMCBlxryY3tugLQye4nAe/oMOeTyJmMZO7ux0PgM=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/actionsThatPerformChecksSWT.html
+SHA-256-Digest: aMxKb7fO2zqstGHTNoC4FzMRlvvjn4Lp4b83hS5Pv8I=
+
+Name: content/html/userManual/tasks/workWithTeststyleGuidelines/activa
+ ting-teststyle-for-a-project.html
+SHA-256-Digest: t1hlYK4s21W9mW5VAFScJLfI4ZtDPtMvnHWQDSJNszY=
+
+Name: content/html/userManual/images/dblogin.png
+SHA-256-Digest: Fj0Pkg+qGkmLZJDkpGJkOL3SiLFs+J+j2EdIET9ZgxI=
+
+Name: content/html/userManual/tasks/workWithTestCases/creating-test-ca
+ ses.html
+SHA-256-Digest: P6cjATzJfwEdlRpZ+bN+ZTroNCuz+wzGWEjIUeTRMjM=
+
+Name: content/html/userManual/tasks/searching/searching.html
+SHA-256-Digest: PP4olhaYqQOv53b9yOLKi7GfYelC8dsRhxFJ17czytg=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/starting-oth
+ er-auts.html
+SHA-256-Digest: I/i85k5bEfPqGIxGt0G6WDCBRLEjVt/drncRtulSv1k=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatPerformC
+ hecks/checkSelection/actionCheckSelectionJavaFXTreeTables.html
+SHA-256-Digest: outarYC0RY/lw4arA3GlOfqvY+DGQfBGyH8L0KoeHUE=
+
+Name: content/html/userManual/images/stopcam.png
+SHA-256-Digest: WY+/3CWjc2ERYVzgkTJEFJDFDvMndfdpgqBwZSFI/sw=
+
+Name: content/html/userManual/images/obsconsole.png
+SHA-256-Digest: xB1go46cwq/e7qqtOKqpkLPQHBS1LefNZupkn8Ia7rA=
+
+Name: content/html/reference/components/concreteToolkit/textComponent/
+ ConcreteToolkitTextComponent.html
+SHA-256-Digest: wDz5KFT1ioGyyaDm3xZIiJjBcKz3wOdRItlIdXdg2uM=
+
+Name: content/html/userManual/userInterface/views/intro-views.html
+SHA-256-Digest: CWNtrO6QwiH0uVnTLbojA6uTlSDx2Taq1iSNJkOT0RA=
+
+Name: META-INF/maven/org.eclipse.jubula/org.eclipse.jubula.client.ua.h
+ elp/pom.xml
+SHA-256-Digest: QjIzi4RgbLlbIfaRJglZCTGxxBQtd81GQ4f8QS8gs3o=
+
+Name: content/html/userManual/tasks/startAndConnectAUTAgent/connect-au
+ t-agent.html
+SHA-256-Digest: SljgwpQJkIwIqe2n+ijdwJW8KCQXUMEcaW54sOgDGDI=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/toggleCheckbox/actionToggleCheckboxSWT.html
+SHA-256-Digest: ugG6nI7gE3beZHSlnABTvjNakwvEBV9MIBNlgTLKFWo=
+
+Name: content/html/reference/components/swtToolkit/swtToolkitComponent
+ Overview.html
+SHA-256-Digest: Zifxxkn81Y4JRO1yFFaBZgGQpWvo/fU7N/8kdgQU66g=
+
+Name: content/html/reference/actions/specificToJavaFXApps/thatExecuteB
+ ehavior/move/actionMoveJavaFXTreeTables.html
+SHA-256-Digest: GnB6nUxJ7JpxgGOeCPZ9ojZx8JUT5DJ3ZEAQ48DzSnE=
+
+Name: content/html/releasenotes/images/Migration.png
+SHA-256-Digest: 8jgVWw13pRmxL3kZBvx+g+8zrTPEuzMXt+/1LrKXhu0=
+
+Name: content/html/css/docbook.css
+SHA-256-Digest: FckXcjb6IZjYe9qbuHJ+0T63fEfoT6swtTacPhFbp5g=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/actionsOnTheGEFFigureCanvas.html
+SHA-256-Digest: 6V6yaClSIrHLLrKUD2GM3zj6uat8isTXx19JfY4koMM=
+
+Name: content/html/userManual/images/refresh.png
+SHA-256-Digest: VDxaLlP0e4VTtJ2geuCsStXnBuOgOYWzWido6PudB98=
+
+Name: content/html/userManual/concepts/observeUserActions/observing-us
+ er-actions.html
+SHA-256-Digest: w7B7FEhngMdZRISMyfKzIEBQal+1JRhZFhIKYOY12zE=
+
+Name: content/html/userManual/tasks/startAndConfigureAUTs/configuringa
+ ut.html
+SHA-256-Digest: Z4tvSIHJGxNbCxap0PcV+UsTutIhqHJnF9fKECiSuXk=
+
+Name: content/html/userManual/images/ReplaceTC_CompNames.png
+SHA-256-Digest: kCxMqPh0Voz78/Z7pfrK/nPvtiK0pc+1AwDEvP/7Ges=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatPerformChe
+ cks/checkExistenceAlert/actionCheckExistenceAlert.html
+SHA-256-Digest: WxbENahElXYYu3wivJgjW+h1d/XtdvkFSTbPfx3ZMs4=
+
+Name: content/html/userManual/tasks/workWithEditors/adding-items-to-ed
+ itors.html
+SHA-256-Digest: rfaJ6Fj4vwrqgDcJG2PP7MuoKLcU4nibKMatgdgMrrk=
+
+Name: content/html/userManual/images/objectmappingpref.png
+SHA-256-Digest: Q/j9xd7ccTPZxcZ5mpPnFKWHNMHkLHwmGCaBBvkS9qQ=
+
+Name: content/html/userManual/images/javafxconfigwithjar.png
+SHA-256-Digest: pUhDNTYo1lRrXqFF1vNgyquzx/p4mgLhDSWuhxfV+4Q=
+
+Name: content/html/developerManual/toolkitExtension/requirements.html
+SHA-256-Digest: At4PcSibJU8gMD66R5TR+xZgYztiwcslNwAKMA5ErwA=
+
+Name: content/contextUserManual.xml
+SHA-256-Digest: k8YfAD606Z6dM1KpKYiV4+amnx+EO9cWGgm2brJIF5k=
+
+Name: plugin.properties
+SHA-256-Digest: wL1ylqRCPngyEKcyO3tBIipPYeYWhjkJjYl+uqVX14A=
+
+Name: content/html/reference/components/concreteToolkit/tableComponent
+ /ConcreteToolkitTableComponent.html
+SHA-256-Digest: mIKjFqyk3L+JsMBDp2sEafBVE0Yuj17bvkdbcTFLV3k=
+
+Name: content/html/reference/toolkits/ch02s08.html
+SHA-256-Digest: 5Z6y9qXDubCr6IhVdMIwf6rbuJSH5/2bvzCwnMof17Q=
+
+Name: content/html/userManual/concepts/testHierarchy/test-cases.html
+SHA-256-Digest: PAnTTH0uR6iIfQ49IvZiO2rW7+NsWbUSlEQPjS4Yz4Q=
+
+Name: content/html/userManual/tasks/produceReports/writing-your-own-bi
+ rt-reports.html
+SHA-256-Digest: bHAjMYGwWWObph4r2Sl2wmXl8dU9K7j2cAo194XujLo=
+
+Name: content/html/userManual/toolkit/javaFX/information-on-the-suppor
+ t-for-javafx-auts.html
+SHA-256-Digest: GlHlMuZNviDM2MGcDZ1c9hkuCeZ02+4pAsE7Lj5m0kw=
+
+Name: content/html/reference/parameters/encoding.html
+SHA-256-Digest: 4en+GdwDf/QYfb2tKAspTQ3ZmIVNcKjBpVuTUO5jCTQ=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatExecuteBehavior/select/actionSelectSWT.html
+SHA-256-Digest: Jmo5+JsdBQk2h2xoVAfsVwnCy4catKYurrVsGSD5NBw=
+
+Name: content/html/reference/actions/usableOnMostApps/thatExecuteBehav
+ ior/pauseTestExecution/actionPauseTestExecution.html
+SHA-256-Digest: ZQ6uyHmhLnsdzZ6mnfksX1n24AJNCcixs84lhcixk0E=
+
+Name: content/html/userManual/tasks/workWithTestCases/working-with-tes
+ t-cases.html
+SHA-256-Digest: uwhZIo5keRQuHMZ7oVKCKZr7DXQSDoww8X/K/wb3zHM=
+
+Name: content/html/reference/parameters/property_value.html
+SHA-256-Digest: WHtqabmqeTxWzci9p1GvLUyEEj6d1cCTRF9TSUODVJw=
+
+Name: content/html/userManual/tasks/startAndConnectAUTAgent/intro-aut-
+ agent.html
+SHA-256-Digest: 0DqSP5cNy7cDDD2lZicQTo+RjPzzRKKdUzkjrgvNkHc=
+
+Name: content/contextDeveloperManual.xml
+SHA-256-Digest: +2pg2f326KEDqNrkANyfI8cSudO3hWBzr2qJktQBbts=
+
+Name: content/html/userManual/tasks/workWithEditors/intro-editors.html
+SHA-256-Digest: dbOSf9839cWwu/uPDSdPnpkTWnJeC4qb4p4pDOws10w=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEnablement/actionCheckEnablementTabComponents.html
+SHA-256-Digest: LmZ0mpeM83WX23jKY/l0hm4dmUJtOJJNLKbYfmnfMjA=
+
+Name: content/html/userManual/tasks/workWithTestCases/adding-and-inser
+ ting-new-test-cases-to-a-test-case.html
+SHA-256-Digest: myvBn+itQ5FHR0WiVJ41G3dSuDdIaAhui8Y+QD1vLQY=
+
+Name: content/html/userManual/userInterface/editors/intro-editors-ui.h
+ tml
+SHA-256-Digest: T6mLHjfUJGyK4dcQDkU9Fc9Ud/oBAnPR+eNvG9jizQA=
+
+Name: content/html/userManual/images/img1.jpg
+SHA-256-Digest: MNBeBCX7Vc2HKCadIodbPh0MyU5zWrlaDWxSMHZk3pA=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/t
+ hatPerformChecks/checkSelection/actionCheckSelectionSWTTreeTables.htm
+ l
+SHA-256-Digest: aLJpSYk7NQgTMxW/sQfJ1zjh9t6Kz6XLScFtXp4vMEA=
+
+Name: content/html/reference/images/component/concrete/application.png
+SHA-256-Digest: nTiVCKtNQKWk544L7b5GXyGuEJpq/UzzoJ4T6R2RUK8=
+
+Name: content/html/userManual/tasks/workWithTeststyleGuidelines/workin
+ g-with-the-teststyle-guidelines.html
+SHA-256-Digest: fIJVAzrpBBjsNQJgRRoRFn4viia75t91qYEhEHvpaGk=
+
+Name: content/html/userManual/tasks/observing/intro-observation-mode.h
+ tml
+SHA-256-Digest: ufnRlgJprc4SeZnXIDi7ctKk9ILL6c+QfZXsWjXYSmw=
+
+Name: content/html/userManual/tasks/useRelativePaths/using-relative-pa
+ ths-in-aut-configurations-and-as-test-data.html
+SHA-256-Digest: +kll0CDBYMhlO4HsS9PMlkrZj/HwOdC+d0PDI8ERFQU=
+
+Name: content/html/userManual/concepts/extensibility/extensibility.htm
+ l
+SHA-256-Digest: C6fVz0UNgdmmBw7UD5xGpmb0HPrUIbs3qdcdbT+JwQk=
+
+Name: content/html/userManual/tasks/remote-debugging/configuring-eclip
+ se-for-remote-debugging.html
+SHA-256-Digest: ahhTYQUafQjbbZvBUuEknq7OQtJtIE2i5Oe6JXuIJAo=
+
+Name: content/html/userManual/images/extensionstab.png
+SHA-256-Digest: +Jquy2iv2fQv9+XjZMl6RK8pFzu7TmcpkZb5lpweSjs=
+
+Name: content/html/userManual/tasks/searching/searching-for-items-in-e
+ ditors-and-browsers.html
+SHA-256-Digest: uazkuqsQ4gsUdyCa/uZnzPRApxcbSLOqmBqEhCjoB8w=
+
+Name: content/html/userManual/tasks/launchConfig/aut-agent.html
+SHA-256-Digest: eoEll6yevQNmJhlkg/hhS4pZkUbITJbBFSFMP6Kwvzw=
+
+Name: content/html/reference/parameters/comparison_method.html
+SHA-256-Digest: 0isM8Hjk1mzytJ8HcZkqs0XInhNNeWkeWOpH3rSCHq0=
+
+Name: content/html/userManual/toolkit/chapterIntro/chapterIntroToolkit
+ .html
+SHA-256-Digest: g/oRy8ULi54SNgsZTqoGGMkcAhZ/yxVr4MZ5GOppgA4=
+
+Name: content/html/userManual/tasks/workWithTestResults/working-with-t
+ he-test-result-summary-view.html
+SHA-256-Digest: cfFEoygjhqTd4hcclVDoZIYRMMQLXsJL/uvxe6lnqqw=
+
+Name: content/html/userManual/tasks/useMatchingAndRegex/using-matching
+ -and-regex.html
+SHA-256-Digest: v8OmHzb1sn9WQjl2FXn6bFUJp2bkrjxDcJy29HOcp+I=
+
+Name: content/html/reference/images/component/concrete/buttonComponent
+ .png
+SHA-256-Digest: Hoptef+uMCM4iGQb6uHulqGOqQ2D4skiKeQmtvVRaGI=
+
+Name: about.html
+SHA-256-Digest: 5TCjGfu5Hhx1GTYtI0X36pWDJwCTTbxjhQ+bTo42Gcw=
+
+Name: content/html/userManual/tasks/adaptUI/changing-perspectives.html
+SHA-256-Digest: AKD75jKnbnLI44MJIspBg/1ZVpvawfRqiyKqZhLCIrI=
+
+Name: content/html/userManual/tasks/workWithJobs/creating-a-new-test-j
+ ob.html
+SHA-256-Digest: k5IH0tAAyERVbV3k2ZNWy7moEmppVVKteJr5ResyxTk=
+
+Name: content/html/reference/actions/actions.html
+SHA-256-Digest: rGKkjs+5A9QDr/3Bbwu4SW1Q7htn+n4ZtjZumf8XQN0=
+
+Name: content/html/reference/actions/usableOnMostApps/forSynchronizati
+ on/waitForWindowActivation/actionWaitForWindowActivation.html
+SHA-256-Digest: E4PJ7aw6PB97Uq4VJRnx5TJQ+5rD+tT5jY5BTjVMxYE=
+
+Name: content/html/reference/parameters/extend_selection.html
+SHA-256-Digest: vsciM4/DN+NvZ85td8XhA/F9QEekEldBXd8dp8WtK3E=
+
+Name: content/html/userManual/images/delete.png
+SHA-256-Digest: jp2dFAuXM7waVGgT8LZlRQ2uDLjsdQgm+aeAi4rhlaQ=
+
+Name: content/html/userManual/images/globalName.png
+SHA-256-Digest: rSGjRQOgVuFNRUtoGi6KH875K1SFsPQUeVWAMvNyKU4=
+
+Name: content/html/reference/actions/specificToSWTAndRCPApplications/o
+ nTheGEFFigureCanvas/thatExecuteBehavior/actionsThatExecuteBehaviorGEF
+ .html
+SHA-256-Digest: DYWWrC0VbL9sF6xrVmCLDEvcgrRJoDJhImTMoXOQgmA=
+
+Name: content/html/userManual/userInterface/perspectives/the-workspace
+ -perspective.html
+SHA-256-Digest: RlY4XDqMx7pq1ooZGGezbnnuwM87g5MMPaatsMWAK6A=
+
+Name: content/html/developerManual/toolkitExtension/deploying-the-tool
+ kit-plug-in.html
+SHA-256-Digest: hDMMkmT4sur+V9ijpjSu1Rz0BYcVFRHhAafMrA7pdGw=
+
+Name: content/html/userManual/tasks/searching/using-the-search-dialog.
+ html
+SHA-256-Digest: S07iOV1eHpxT2n6bWZdlpIjyI2AqEdA7qcjoXtIxQCo=
+
+Name: content/html/reference/actions/specificToHTMLApps/thatExecuteBeh
+ avior/selectWindowWithID/actionSelectWindowWithID.html
+SHA-256-Digest: 2TaK8HyaXl9xMi3ygSTy2+YgmJ6PKXLWkloUKhMvQmc=
+
+Name: content/html/reference/actions/usableOnMostApps/thatPerformCheck
+ s/checkEnablement/actionsCheckEnablement.html
+SHA-256-Digest: 1bvrrDtxQzeh/9GAT8RSyxYH+F8V5G4lBDMQHJXefms=
+

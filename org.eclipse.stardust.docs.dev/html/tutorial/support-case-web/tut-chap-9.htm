@@ -1,0 +1,283 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Handling Data and Data Flows in the Process</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Adding Process Data Paths",
+	      "tut-chap-8.htm","tut-chap-10.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Handling Data and Data Flows in the Process</h1>
+<p>Activities manipulate workflow relevant data. In the support case management process of ACME, a 
+set of data items describes the support case. For example, a description of the problem, a reference 
+to the customer reporting the problem, etc. is created by the Create Case activity and 
+then passed to other applications to be changed or augmented with other data items related to 
+the support case. The data structures or variable definitions used in this process must now be 
+defined in the model. This tutorial uses the Structured Data type to represent the case data.</p>
+<p>To start with:</p>
+
+<ol>
+	<li>Drag the <strong>Support Case Data</strong> from the <strong>Data</strong> node
+	<p class="image"><img src="images/drag-data.png" alt=""> <br>
+<strong>Figure:</strong> Drag Support Case Data</p>
+	
+	</li>
+	<li>Drop it in the <strong>Collect Details</strong> swim lane
+	<p class="image"><img src="images/drop-data.png" alt=""> <br>
+<strong>Figure:</strong> Drag Support Case Data</p>
+	</li>
+</ol>
+<h2 id="init">Setting up Data as Output of a non-interactive Activity</h2>
+<p>The Support Case data keeps the information and makes it available for 
+all activities in the process. The difference consists in the relationships between the support case data 
+and the diverse activities. First, an instance of the Support Case Data needs to be created so 
+it can be used by other activities. Init Data performs the object instantiation. In Enter Data the 
+activity gives output of case information to the Support Case Data object instance. Then the activity 
+Analyze To Solve uses the data (modified or supplemented within this activity) as both input and output. 
+Finally, the remaining activities in the process use the same data element as the input data only.</p>
+<p>To achieve this, you need to create data flows between data and activity. Then, you need to specify data paths 
+for these activities.</p>
+<p>So, let's start with creating a data flow between the data element and the <strong>Init Data</strong> activity</p>
+<ol>
+	<li>Hover the mouse over the <strong>Init Data</strong> activity and select <strong>Create Connection</strong> icon 
+	from the flyout menu of the activity</li>
+	<li>Click the <strong>Support Case Data</strong>. The output data mapping is created.
+
+	<p class="image"><img src="images/init-out.png" alt=""> <br>
+	<strong>Figure:</strong> Create Data Flow - Init Data and Support Case Data</p></li>
+	
+</ol>
+<p>Now you have created a data flow between an activity and a data.</p>
+<h3 id="initflow">Specifying Data Flow Properties</h3>
+<p>The next step is to specify data flow properties.</p>
+<ol>
+	<li>Click the data flow 
+	<p class="image"><img src="images/data-flow.png" alt=""> <br>
+	<strong>Figure:</strong> Click Data Flow</p>
+	</li>
+	<li>In the <strong>Data Flow</strong> properties panel, select <strong>CustomerOutData</strong> from the Output Access Point drop-down list
+	<p class="image"><img src="images/init-out-flow.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow Properties - Output Access Point</p>
+	</li>
+
+</ol>
+<h2 id="io">Setting up Data as Input and Output of the Interactive Activity Enter Data</h2>
+<p>The Enter Data is the first activity in the process to interact with a human. The steps are similar to those used 
+for the non-Interactive application. </p>
+<ol>
+	<li>Hover the mouse over the <strong>Enter Data</strong> activity and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the activity</li>
+	<li>Click the <strong>Support Case Data</strong>. The output data mapping is created.
+	<p class="image"><img src="images/enter-out.png" alt=""> <br>
+	<strong>Figure:</strong> Output Data Mapping</p></li>
+	
+	<li>Hover the mouse over the <strong>Support Case Data</strong> and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the data
+	<p class="image"><img src="images/data-hover.png" alt=""> <br>
+	<strong>Figure:</strong> Support Case Data - Create Connection</p>
+	</li>
+	<li>Click the <strong>Enter Data</strong> activity. The input data mapping is created.
+	<p class="image"><img src="images/input-enter.png" alt=""> <br>
+	<strong>Figure:</strong> Input Data Mapping</p>
+	</li>
+</ol>
+<h3 id="dfenter">Specifying Data Flow Properties for Enter Data</h3>
+<p>However, as Enter Data is a Manual activity you need to provide additional detail, 
+so that later, the Stardust features can automatically render a user interface to present the data.</p>
+<ol>
+	<li>Click the data flow created between the <strong>Support Case Data</strong> and <strong>Enter Data</strong> activity
+	<p class="image"><img src="images/iodataflow.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow between Data and Activity</p>
+	
+	</li>
+	<li>The <strong>Data Flow</strong> properties are displayed. Ensure that the <strong>Output Access Point</strong>
+	is set to <strong>Default</strong>.
+	
+		<p class="image"><img src="images/iodfprop.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow Property</p>
+	</li>
+	<li>Click the Add icon <img src="images/addp.png" alt=""> to add a new data flow.
+	</li>
+	<li>In the <strong>Name</strong> field, specify <strong>CustomerID</strong>.</li>
+	<li>Make sure that the <strong>Input</strong> and <strong>Output</strong> check boxes are selected.</li>
+	<li>Specify <strong>Id</strong> in the <strong>Input Data Path</strong> and <strong>Output Data Path</strong> fields.</li>
+	<li>Make sure that the <strong>Output Access Point</strong>
+	is set to <strong>Default</strong>.
+	
+	<p class="image"><img src="images/enter-id.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow - Customer ID</p></li>
+</ol>
+<p>Similarly, add the following data mappings for the Enter Data activity.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Input/Output Data Mapping</th>
+		<th>Input/Output Data Path</th>
+	</tr>
+	<tr>
+		<td>CustomerName</td>
+		<td>Input and Output</td>
+		<td>Name</td>	
+	</tr>
+	<tr>
+		<td>eMail</td>
+		<td>Input and Output</td>
+		<td>Email</td>	
+	</tr>
+	<tr>
+		<td>ProductName</td>
+		<td>Input and Output</td>
+		<td>Product/Name</td>	
+	</tr>
+	<tr>
+		<td>Synopsis</td>
+		<td>Input and Output</td>
+		<td>Product/Synopsis</td>	
+	</tr>
+</table>
+<p>The Data Flow is created as shown in the following screenshot:</p>
+<p class="image"><img src="images/data-flow-enter.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow - Enter Data</p>
+
+<h2 id="solve">Setting up Data as Input and Output of the Interactive Activity Analyze to Solve</h2>
+<p>The second human activity, Analyze To Solve, needs both input and output data mappings. 
+The procedure is very similar to the one used for Enter Data activity.</p>
+<ol>
+	<li>Hover the mouse over the <strong>Analyze To Solve</strong> activity and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the activity</li>
+	<li>Click the <strong>Support Case Data</strong>. The output data mapping is created.
+	<p class="image"><img src="images/analyse-out.png" alt=""> <br>
+	<strong>Figure:</strong> Output Data Mapping</p></li>
+	
+	<li>Hover the mouse over the <strong>Support Case Data</strong> and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the data
+	<p class="image"><img src="images/data-hover.png" alt=""> <br>
+	<strong>Figure:</strong> Support Case Data - Create Connection</p>
+	</li>
+	<li>Click the <strong>Analyze To Solve</strong> activity. The input data mapping is created.
+	<p class="image"><img src="images/analyze-in.png" alt=""> <br>
+	<strong>Figure:</strong> Input Data Mapping</p>
+	</li>
+</ol>
+<h3 id="dfenter">Specifying Data Flow Properties for Analyze To Solve</h3>
+<p>However, as Analyze To Solve is a Manual activity you need to provide additional detail, 
+so that later, the Stardust features can automatically render a user interface to present the data.</p>
+<ol>
+	<li>Click the data flow created between the <strong>Support Case Data</strong> and <strong>Analyze To Solve</strong> activity
+	<p class="image"><img src="images/data-analyze-mapping.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow between Data and Activity</p>
+	
+	</li>
+	<li>The <strong>Data Flow</strong> properties are displayed. Ensure that the <strong>Output Access Point</strong>
+	is set to <strong>Default</strong>.
+	
+		<p class="image"><img src="images/iodfprop.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow Property</p>
+	</li>
+	<li>Click the Add icon <img src="images/addp.png" alt=""> to add a new data flow.
+	</li>
+	<li>In the <strong>Name</strong> field, specify <strong>CustomerID</strong>.</li>
+	<li>Make sure that the <strong>Input</strong> check box is selected.</li>
+	<li>Specify <strong>Id</strong> in the <strong>Input Data Path</strong> and <strong>Output Data Path</strong> fields.</li>
+	<li>Make sure that the <strong>Output Access Point</strong>
+	is set to <strong>Default</strong>.
+	<p class="image"><img src="images/data-flow-analyze-id.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow - Customer ID</p></li>
+</ol>
+<p></p>
+<p>Similarly, add the following data mappings for the Analyze To Solve activity.</p>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Input/Output Data Mapping</th>
+		<th>Input/Output Data Path</th>
+	</tr>
+	<tr>
+		<td>CustomerName</td>
+		<td>Input</td>
+		<td>Name</td>	
+	</tr>
+	<tr>
+		<td>eMail</td>
+		<td>Input</td>
+		<td>Email</td>	
+	</tr>
+	<tr>
+		<td>ProductName</td>
+		<td>Input</td>
+		<td>Product/Name</td>	
+	</tr>
+	<tr>
+		<td>Synopsis</td>
+		<td>Input</td>
+		<td>Product/Synopsis</td>	
+	</tr>
+	<tr>
+		<td>State</td>
+		<td>Input and Output</td>
+		<td>Product/State</td>
+	</tr>
+	<tr>
+		<td>Analysis</td>
+		<td>Input and Output</td>
+		<td>Product/Analysis</td>
+	</tr>
+</table>
+<p>The Data Flow is created as shown in the following screenshot:</p>
+<p class="image"><img src="images/data-flow-analyze-solve.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow - Analyze to Solve</p>
+
+
+<h2 id="delpath">Setting up Data as Input of the Interactive Activity Deliver Patch</h2>
+<p>Deliver Patch is also an interactive activity which needs an In Data Mapping for e-mail (allowing the customer to 
+be sent a software patch in this example).</p>
+<ol>
+	<li>Hover the mouse over the <strong>Support Case Data</strong> and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the data.</li>
+	<li>Click the <strong>Deliver Patch</strong> activity. The input data mapping is created.
+	</li>
+	<li>Click the data flow created between the <strong>Support Case Data</strong> and the <strong>Deliver Patch</strong> activity.
+	The data flow properties are displayed.
+	
+	</li>
+	<li>In the <strong>Input Data Path</strong> text box, specify <strong>Email.</strong>.
+	<p class="image"><img src="images/del-patch.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow Property - Input Data Path - Email</p>
+	
+	</li>
+</ol>
+
+<h2 id="not">Setting up Data as Input of a non-interactive Activity Notify Customer</h2>
+<ol>
+	<li>Hover the mouse over the <strong>Support Case Data</strong> and select the <strong>Create Connection</strong> icon 
+	from the flyout menu of the data.</li>
+	<li>Click the <strong>Notify Customer</strong> activity. The input data mapping is created.
+	</li>
+	<li>Click the data flow created between the <strong>Support Case Data</strong> and the <strong>Notify Customer</strong> activity.
+	The data flow properties are displayed.
+	</li>
+	<li>Select <strong>customer</strong> from the <strong>Input Access Point</strong> drop-down list.
+	<p class="image"><img src="images/notify-in.png" alt=""> <br>
+	<strong>Figure:</strong> Data Flow - Input Access Point</p>
+	
+	</li>
+</ol>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

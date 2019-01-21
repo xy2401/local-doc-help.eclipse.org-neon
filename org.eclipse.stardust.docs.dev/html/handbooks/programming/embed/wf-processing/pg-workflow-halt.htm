@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Pausing Workflow Processing for Spawned Processes</title>
+<script language="JavaScript" src="../../../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Workflow Processing to Abort and Start Subprocess",
+	        "pg-workflow-spawn.htm","pg-workflow-switch.htm",
+	        "../../../handbooks.htm","Developer Handbook",
+	        "../../pg-preface.htm","Programming Guide",
+	        "../pg-embedded-preface.htm","Embedded Usage","wf-preface.html","Processing Workflow");
+ -->
+</script>
+<h1>Pausing Workflow Processing for Spawned Processes</h1>
+
+<p>This chapter describes the usage of a variant HALT of spawn option for the <a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/WorkflowService.html">WorkflowService</a>
+method <tt>spawnPeerProcessInstance(long processInstanceOid, String spawnProcessID, SpawnOptions options)</tt>:</p>
+
+<pre>
+/**
+    * Creates a new SpawnOption that allows to specify the starting activity and detailed data copy options.
+    *
+    * @param startActivity the activity from which the spawned process instance should start.
+    *        If null, the spawned process instance will start from the default start activity.
+    * @param spawnMode specifies what action to take with the originating process instance. {@link SpawnMode#Keep}, {@link SpawnMode#ABORT} or {@link SpawnMode#HALT}.
+    * @param comment a comment describing the operation. May be null.
+    * @param dataCopyOptions instructions on how the data should be transferred from the
+    *        originating process instance to the spawned process instance. If null, then
+    *        {@link DataCopyOptions.DEFAULT} is used.
+    */
+   public SpawnOptions(String startActivity, SpawnMode spawnMode, String comment,
+         DataCopyOptions dataCopyOptions)
+</pre>
+<p>Using this option, you can set the <tt>SpawnMode</tt> to <tt>HALT</tt>. 
+In this state, no transition is allowed via workflowservice API
+until the process is resumed.
+In this case, following would be the behavior:</p>
+<ul>
+	<li>The parent process instance would be halted and resume processing as soon as the spawned process instance is completed.</li>
+	<li>Both process instances get linked via a link of link type <tt>PredefinedProcessInstanceLinkTypes#INSERT</tt></li>
+
+</ul>
+    
+<p>To specify the spawn mode, use the following Enum constant:</p>
+<pre>
+public enum SpawnMode
+   {
+      KEEP,
+      ABORT,
+      HALT
+   }
+</pre>
+<p>For more information, please refer 
+    to the JavaDoc of <a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/SpawnOptions.html">SpawnOptions</a>
+    class.</p>
+<h2>Resuming</h2>
+<p>Completion of a process checks for a <tt>PredefinedProcessInstanceLinkTypes#INSERT</tt>
+link and starts a resume on the linked source process. The linked source process is resumed if all of its linked target processes
+are already terminated.
+</p>
+<p>Note that when using the API to halt a process, you may get a <tt>ConcurrencyException</tt>. 
+In that case, wait for some time and retry the API call.</p>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+<p></p>
+</body>
+</html>

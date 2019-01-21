@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Implementing a Custom ErrorCase</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../../../styles/carnot.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="../../../styles/naviLine.js"
+	type="text/javascript"
+></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("",
+        "../tutorials.html","",
+        "../../handbooks.htm","Developer Handbook",
+        "../pg-preface.htm","Programming Guide",
+        "../tutorials.html","Tutorials"); 
+-->
+</script>
+<h1>Implementing a Custom ErrorCase</h1>
+<p>This example demonstrates how to implement a custom 
+<a href="../../../reference/api/common/org/eclipse/stardust/common/error/ErrorCase.html">ErrorCase</a>.
+It is based on an example implementation of the 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/core/spi/monitoring/IActivityInstanceMonitor.html">IActivityInstanceMonitor</a>
+SPI, but could be adapted to any SPI implementation that needs to provide custom error cases.
+The implementation is similar to the 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/BpmRuntimeError.html">BpmRuntimeError</a>
+ErrorCase.</p>
+<ul>
+   <li><a href="#ex">Downloading the Example Implementation Sources</a></li>
+   <li><a href="#basic">Basic Setup of the custom ErrorCase</a></li>
+   <li><a href="#adv">Using custom ErrorCases in an advanced Implementation</a></li>
+</ul>
+<h2 id="ex">Downloading the Example Implementation Sources</h2>
+<p>You can download the following ZIP file containing all tutorial files from here:</p>
+<ul>
+   <li><a href="../../../examples/tutorials/all-tutorials.zip"></a></li>
+</ul>
+<p>You find the custom error case example containing the example implementation classes as 
+well as required property files in the <code>error-case</code> folder of the ZIP file accordingly.</p>
+<h2 id="basic">Basic Setup of the custom ErrorCase</h2>
+<p>A custom error case can be created by simply extending the base class 
+<a href="../../../reference/api/common/org/eclipse/stardust/common/error/ErrorCase.html">ErrorCase</a>.
+<p>In our tutorial, we create a class <strong>ActivityInstanceMonitorErrorCase</strong>
+implementing the ErrorCase class. You find this class in the 
+<code>src/main/java/org/eclipse/stardust/examples/errorcases</code> folder in the example
+zip file.</p>
+<pre>
+package org.eclipse.stardust.examples.errorcases;
+
+import java.text.MessageFormat;
+
+import org.eclipse.stardust.common.error.ErrorCase;
+import org.eclipse.stardust.engine.api.runtime.BpmRuntimeErrorMessages;
+
+
+public class ActivityInstanceMonitorErrorCase extends ErrorCase
+{
+
+   private static final long serialVersionUID = 1L;
+
+   
+   // Error Types
+   public static final Args0 AIM_GENERIC_ERROR = newArgs0("CUST01000", ActivityInstanceMonitorErrorMessage.getString("CUST01000")); //$NON-NLS-1$ //$NON-NLS-2$
+   public static final Args1 AIM_GENERIC_ERROR_WITH_SINGLE_ARG = newArgs1("CUST01010", ActivityInstanceMonitorErrorMessage.getString("CUST01010")); //$NON-NLS-1$ //$NON-NLS-2$   
+   
+   //
+   
+   private static final Object[] NONE = {};
+
+   private final String defaultMessage;
+
+   private final Object[] args;
+
+   private ActivityInstanceMonitorErrorCase(String id)
+   {
+      this(id, null);
+   }
+
+   private ActivityInstanceMonitorErrorCase(String id, String defaultMessage)
+   {
+      this(id, defaultMessage, NONE);
+   }
+
+   private ActivityInstanceMonitorErrorCase(String code, String defaultMessage, Object msgArgs[])
+   {
+      super(code);
+
+      this.defaultMessage = defaultMessage;
+      this.args = msgArgs;
+   }
+
+   public String getDefaultMessage()
+   {
+      return defaultMessage;
+   }
+
+   public Object[] getMessageArgs()
+   {
+      return args;
+   }
+
+   public String toString()
+   {
+      return getId() + " - " + MessageFormat.format(getDefaultMessage(), args); //$NON-NLS-1$
+   }
+   
+   public static Args0 newArgs0(String errorCode)
+   {
+      return new Args0(errorCode, BpmRuntimeErrorMessages.getString(errorCode));
+   }
+
+
+   public static Args0 newArgs0(String errorCode, String defaultMessage)
+   {
+      return new Args0(errorCode, defaultMessage);
+   }   
+   
+
+   public static Args1 newArgs1(String errorCode)
+   {
+      return new Args1(errorCode, BpmRuntimeErrorMessages.getString(errorCode));
+   }
+
+   public static Args1 newArgs1(String errorCode, String defaultMessage)
+   {
+      return new Args1(errorCode, defaultMessage);
+   }
+   
+   public static class Args0 extends AbstractErrorFactory
+   {
+      private Args0(String errorCode, String defaultMessage)
+      {
+         super(errorCode, defaultMessage);
+      }
+
+      public ActivityInstanceMonitorErrorCase raise()
+      {
+         return buildError(NONE);
+      }
+   }
+
+   public static class Args1 extends AbstractErrorFactory
+   {
+      private Args1(String errorCode, String defaultMessage)
+      {
+         super(errorCode, defaultMessage);
+      }
+
+      public ActivityInstanceMonitorErrorCase raise(Object arg)
+      {
+         return buildError(new Object[] {arg});
+      }
+
+      public ActivityInstanceMonitorErrorCase raise(long arg)
+      {
+         return buildError(new Object[] {new Long(arg)});
+      }
+   }   
+   
+   static abstract class AbstractErrorFactory
+   {
+      private final String errorCode;
+
+      private final String defaultMessage;
+
+      protected AbstractErrorFactory(String errorCode, String defaultMessage)
+      {
+         this.errorCode = errorCode;
+         this.defaultMessage = defaultMessage;
+      }
+
+      protected ActivityInstanceMonitorErrorCase buildError(Object[] args)
+      {
+         return new ActivityInstanceMonitorErrorCase(errorCode, defaultMessage, args);
+      }
+
+      public String getErrorCode()
+      {
+         return errorCode;
+      }
+   }   
+   
+}
+</pre>
+<p>The new ErrorCase can be utilized, by throwing a 
+<a href="../../../reference/api/common/org/eclipse/stardust/common/error/PublicException.html">PublicExceptions</a>
+with a new instance of the custom error case, for example:</p>
+<pre>new PublicException(new ActivityInstanceMonitorErrorCase("CUST-10001"));</pre>
+<p>This would result in a public Exception of the type 
+<code>ActivityInstanceMonitorErrorCase</code> with the Error ID: CUST-10001.</p>
+<h2 id="adv">Using custom ErrorCases in an advanced Implementation</h2>
+<p>The provided example of <code>ActivityInstanceMonitorErrorCase</code> shows a more 
+advanced approach of instantiating error cases and providing messages and internationalization
+through resource bundles.</p>
+<ul>
+   <li><a href="#const">Setting Error Types</a></li>
+   <li><a href="#mess">Loading Messages through an Error Message Provider</a></li>
+   <li><a href="#puberr">Throwing a Public Error with the specified Error Types</a></li>
+</ul>
+<h3 id="const">Setting Error Types</h3>
+<p>Different error types for this ErrorCase can be defined as final statics (constants) 
+and instantiated through a factory method expecting a certain number of arguments 
+(Args0, Args1, etc.). Create a resource bundle containing all clear text messages for a 
+certain error type in the following format:</p>
+<pre>
+CUST01000 = A custom error with no Argument has been thrown!
+CUST01010 = A custom error with one Argument has been thrown: {0}
+</pre>
+<p>The messages will be referenced by the error ID.</p>
+<p>You find the example resource bundle in the 
+<code>ipp-activityinstancemonitor-errors.properties</code> file in the example zip file.
+<code>ipp-activityinstancemonitor-errors_de.properties</code> is provided as 
+example internationalized resource bundle.</p>
+<h3 id="mess">Loading Messages through an Error Message Provider</h3>
+<p>The message (informational) text for a certain error type can be loaded through an 
+error message provider, which loads the resource bundle from the classpath.
+In our example, we load
+<code>org.eclipse.stardust.examples.errorcases.ipp-activityinstancemonitor-errors</code>).</p>
+<p></p>
+<pre>
+package org.eclipse.stardust.examples.errorcases;
+
+import java.util.MissingResourceException;
+import java.util.ResourceBundle;
+
+public class ActivityInstanceMonitorErrorMessage
+{
+   private static final String BUNDLE_NAME = "org.eclipse.stardust.examples.errorcases.ipp-activityinstancemonitor-errors"; //$NON-NLS-1$
+   private static ResourceBundle resourceBundle;
+   
+   private ActivityInstanceMonitorErrorMessage()
+   {
+   }
+
+   public static String getString(String key)
+   {
+      try
+      {
+         if(resourceBundle == null)
+         {
+            resourceBundle = ResourceBundle.getBundle(BUNDLE_NAME);
+         }
+         
+         return resourceBundle.getString(key);
+      }
+      catch (MissingResourceException e)
+      {
+         return '!' + key + '!';
+      }
+   }  
+}
+
+</pre>
+<p>You find the example error message class <code>ActivityInstanceMonitorErrorMessage</code>
+in the example zip file in folder <code>src/main/java/org/eclipse/stardust/examples/errorcases</code>.</p>
+<h3 id="puberr">Throwing a Public Error with the specified Error Types</h3>
+<p>To throw a PublicError with one of the specific types, the call is made to the 
+static variable of the type and by calling the raise method as follows:</p>
+<pre>ActivityInstanceMonitorErrorCase.AIM_GENERIC_ERROR_WITH_SINGLE_ARG.raise
+("A custom error happened while suspending ActivityInstance &lt;" + ai + "&gt;"));</pre>
+<p>The parameter text is inserted into the corresponding place holder in the error type text.</p>
+<p>The following example class throws a public exception using our specified types:</p>
+<pre>
+package org.eclipse.stardust.examples.errorcases;
+
+import org.eclipse.stardust.common.error.PublicException;
+import org.eclipse.stardust.common.log.LogManager;
+import org.eclipse.stardust.common.log.Logger;
+import org.eclipse.stardust.engine.api.query.WorklistQuery;
+import org.eclipse.stardust.engine.api.runtime.ActivityInstanceState;
+import org.eclipse.stardust.engine.core.runtime.beans.IActivityInstance;
+import org.eclipse.stardust.engine.core.spi.monitoring.IActivityInstanceMonitor;
+
+public class ActivityInstanceMonitorTest implements IActivityInstanceMonitor
+{
+
+   private static final Logger trace = LogManager.getLogger(WorklistQuery.class);
+
+   @Override
+   public void activityInstanceStateChanged(IActivityInstance ai, int state)
+   {
+      trace.info("Activating SPI for ActivityStateChange");
+
+      if (state == ActivityInstanceState.COMPLETED)
+      {         
+         throw new PublicException(               
+               ActivityInstanceMonitorErrorCase.AIM_GENERIC_ERROR.raise());
+      }
+      else if (state == ActivityInstanceState.SUSPENDED)
+      {
+         throw new PublicException(
+               ActivityInstanceMonitorErrorCase.AIM_GENERIC_ERROR_WITH_SINGLE_ARG.raise("A custom error happened while suspending ActivityInstance &lt;"
+                     + ai + "&gt;"));
+      }
+
+   }
+
+}
+</pre>
+<p>You find the example public exception test class <code>ActivityInstanceMonitorTest</code>
+in the example zip file in folder <code>src/main/java/org/eclipse/stardust/examples/errorcases</code>.</p>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

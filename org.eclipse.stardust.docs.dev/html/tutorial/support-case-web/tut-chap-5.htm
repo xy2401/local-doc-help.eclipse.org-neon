@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Creating Structured Data Types</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Creating Structured Data",
+	      "tut-chap-4.htm","tut-chap-6.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Creating Structured Data Types</h1>
+<p>We need to create structured data types for the data definition of Product and Customer. 
+Once the data type is defined, you can create a structured data of the same type.
+</p>
+<h2>Creating a new Structured Type</h2>
+<p>To create a new structured type:</p>
+<ol>
+	<li>In the My Process Models panel, right-click the <strong>Structured Types</strong> node and 
+	select the <strong>Create Data Type</strong> option. 
+	
+	<p class="image"><img src="images/cr-type.png" alt="Create Data Type"> <br>
+<strong>Figure:</strong> Create Data Type</p>
+	</li>
+</ol>
+<p>A new structured type named <strong>XSD Data Structure 1</strong> is created and its properties are displayed.</p>
+<p class="image"><img src="images/xsd-struct.png" alt="Create Data Type"> <br>
+<strong>Figure:</strong> XSD Data Structure 1</p>
+
+<h3>Defining the Structured Data Type named Product</h3>
+<p>Now the newly created <strong>XSD Data Structure 1</strong> structured type is visible 
+under the <strong>Structured Type</strong> tree.</p>
+
+<ol>
+	<li>Open the property panel of new structured type</li>
+	<li>In the <strong>Data Structure Name</strong> text box, specify name as <strong>Product</strong></li>
+	<li>In the <strong>Configuration</strong> panel, click 
+	the <strong>Add</strong> <img src="images/add-field.png"> icon to add fields</li>
+	<li>In the Name field, type <strong>Name</strong></li>
+	<li>Similarly, add <strong>Synopsis</strong> and <strong>State</strong> fields</li>
+	<li>For all the fields, the <strong>Type</strong> field should be <strong>Text</strong> and the 
+	<strong>Cardinality</strong> should be <strong>Exactly One</strong></li>
+</ol>
+<p>Following screenshot displays the Product structured type.</p>
+<p class="image"><img src="images/product.png" alt="Product-Structured Type"> <br>
+<strong>Figure:</strong> Product-Structured Type</p>
+<h3>Defining the Structured Data Type named Customer</h3>
+<p>The next step is to create a structured type named Customer.</p>
+<ol>
+	<li>Create a new structured type as described in the preceding section</li>
+	<li>In the <strong>Data Structure Name</strong> text box, specify name as <strong>Customer</strong></li>
+	<li>In the <strong>Configuration</strong> panel, click 
+	the <strong>Add</strong> <img src="images/add-field.png"> icon to add fields</li>
+	<li>Add the following composite types: 
+	<ul>
+		<li>With the name <tt>Id</tt>, type <tt>Number</tt> and cardinality <tt>Exactly One</tt></li>
+		<li>with the name <tt>Name</tt>, type <tt>Text</tt> and cardinality <tt>Exactly One</tt></li>
+		<li>with the name <tt>Email</tt>, type <tt>Text</tt> and cardinality <tt>Exactly One</tt></li>
+		<li>with the name <tt>Product</tt>, type <tt>Product</tt> and cardinality <tt>Exactly One</tt></li>	
+	</ul>
+	</li>
+</ol>
+<p>Following screenshot displays the Customer structured type.</p>
+<p class="image"><img src="images/cust-type.png" alt="Customer-Structured Type"> <br>
+<strong>Figure:</strong> Customer-Structured Type</p
+<p>Now the data type Customer can be used for the data in our Support-Case model.
+</p>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

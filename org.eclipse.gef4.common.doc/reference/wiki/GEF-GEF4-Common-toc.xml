@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/Common/Common.html" label="GEF4 Common Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/Common/Common.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Common" label="Common">
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Activate" label="Activate">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IActivatable" label="IActivatable"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ActivatableSupport" label="ActivatableSupport"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Adapt" label="Adapt">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IAdaptable.2C_AdapterKey" label="IAdaptable, AdapterKey"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IAdaptable.Bound" label="IAdaptable.Bound"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#AdaptableSupport" label="AdaptableSupport"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#AdapterStore" label="AdapterStore"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Adapt.Inject" label="Adapt.Inject">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#AdapterInjectionSupport.2C_AdaptableTypeListener.2C_AdapterInjector" label="AdapterInjectionSupport, AdaptableTypeListener, AdapterInjector"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#InjectAdapters" label="InjectAdapters"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#AdapterMap.2C_AdapterMaps" label="AdapterMap, AdapterMaps"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#AdaptableScope.2C_AdaptableScopes" label="AdaptableScope, AdaptableScopes"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Attributes" label="Attributes">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IAttributeStore" label="IAttributeStore"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IAttributeCopier" label="IAttributeCopier"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Beans.Binding" label="Beans.Binding"></topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Beans.Property" label="Beans.Property"></topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Beans.Value" label="Beans.Value"></topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Collections" label="Collections">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#CollectionUtils" label="CollectionUtils"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ObservableMultiset.2C_ObservableMultisetWrapper.2C_UnmodifiableObservableMultisetWrapper" label="ObservableMultiset, ObservableMultisetWrapper, UnmodifiableObservableMultisetWrapper"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ObservableSetMultimap.2C_ObservableSetMultimapWrapper.2C_UnmodifiableObservableSetMultimapWrapper" label="ObservableSetMultimap, ObservableSetMultimapWrapper, UnmodifiableObservableSetMultimapWrapper"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#MultisetListenerHelper.2C_SetMultimapListenerHelper" label="MultisetListenerHelper, SetMultimapListenerHelper"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ObservableListWrapperEx" label="ObservableListWrapperEx"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ListListenerHelperEx.2C_SetListenerHelperEx.2C_MapListenerHelperEx" label="ListListenerHelperEx, SetListenerHelperEx, MapListenerHelperEx"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Dispose" label="Dispose">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#IDisposable" label="IDisposable"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Common/Common.html#Reflect" label="Reflect">
+			<topic href="reference/wiki/GEF/GEF4/Common/Common.html#ReflectionUtils" label="ReflectionUtils"></topic>
+		</topic>
+	</topic>
+</toc>

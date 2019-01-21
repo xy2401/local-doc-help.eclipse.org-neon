@@ -1,0 +1,6 @@
+org.eclipse.gef4.cloudio.internal.ui
+org.eclipse.gef4.cloudio.internal.ui.actions
+org.eclipse.gef4.cloudio.internal.ui.data
+org.eclipse.gef4.cloudio.internal.ui.layout
+org.eclipse.gef4.cloudio.internal.ui.util
+org.eclipse.gef4.cloudio.internal.ui.view

@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>GEF4 Graph Developer Documentation</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../book.css"/>
+	</head>
+	<body>
+		<p>
+			<i>Note to non-wiki readers: This documentation is generated from the Eclipse wiki - if you have corrections or additions it would be awesome if you added them in 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" target="doc_external">the original wiki page</a>
+			</i>.
+		</p>
+		<h2 id="Introduction">Introduction</h2>
+		<p>The <span style="color:#960607">
+			<a href="#" title="GEF/GEF4/Graph">GEF4 Graph</a></span> component provides a simple, UI-independent graph model. It consists of the single 
+			<a href="#Graph">Graph</a> module. There are also a couple of undeployed 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph/Examples" title="GEF/GEF4/Graph/Examples" target="doc_external">Graph Examples</a>.
+		</p>
+		<p>
+			<img width="600" border="0" src="images/GEF4-Components-Graph.png"/>
+		</p>
+		<h2 id="Graph">Graph</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.graph</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.graph</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Graph">Graph</a> module of 
+			<a href="#" title="GEF/GEF4/Graph">GEF4 Graph</a> provides the single 
+			<a href="#Graph:Root">{Root}</a> package, which delivers a generic graph model representation and related utility classes.
+		</p>
+		<p><hr/></p>
+		<p><div id="Graph:Root"></div></p>
+		<h3 id=".7BRoot.7D">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.graph</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Graph:Root">{Root}</a> package provides a simple graph model and a support class to copy/merge such models.
+		</p>
+		<p>
+			<img width="1148" border="0" src="images/GEF4Graph-model.png"/>
+		</p>
+		<h4 id="Graph.2C_Node.2C_Edge">Graph, Node, Edge</h4>
+		<p>A <code>Graph</code> serves as a container for <code>Node</code>s and <code>Edge</code>s. Additionally, a <code>Graph</code> can be 
+			<i>nested</i> inside a 
+			<i>nesting</i> <code>Node</code>, so that sub-graphs can be properly represented. 
+		</p>
+		<p>Moreover, arbitrary attributes can be set on <code>Graph</code>s, <code>Node</code>s, and <code>Edge</code>s, as they all implement 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Common#IAttributeStore" title="GEF/GEF4/Common#IAttributeStore" target="doc_external">org.eclipse.gef4.common.attributes.IAttributeStore</a>. As all attributes are maintained in observable collections/properties, listeners can be registered to react to changes. The concrete attributes that are used are outside the scope of the 
+			<a href="#" title="GEF/GEF4/Graph">GEF4 Graph</a> component. The DOT importer of the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT" title="GEF/GEF4/DOT" target="doc_external">GEF4 DOT</a> component, e.g. adds DOT-specific attributes to the Graph it creates, the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">GEF4 Zest</a> component uses visualization-specific attributes, which determine the concrete visualization.
+		</p>
+		<p>A <code>Graph</code> can be easily constructed using a <code>Graph.Builder</code>:</p>
+		<pre class="source-java">  Graph graph = new Graph.Builder()
+    .attr(DotAttributes._TYPE__G, DotAttributes._TYPE__G__DIGRAPH)//
+    .attr("g_attr", "g1").node("n1")//
+    .attr(DotAttributes.LABEL__GNE, "1")//
+    .attr(DotAttributes.ID__GNE, "1")//
+    .node("n2")//
+    .attr(DotAttributes.LABEL__GNE, "2")//
+    .attr(DotAttributes.ID__GNE, "2")//
+    .node("n3")//
+    .attr(DotAttributes.LABEL__GNE, "3")//
+    .attr(DotAttributes.ID__GNE, "3")//
+    .edge("n1", "n2").attr(DotAttributes.LABEL__GNE, "e1")
+    .edge("n1", "n3").build();
+
+</pre>
+		<p>It allows to chain <code>Node.Builder</code>s, which can be made identifiable through an arbitrary Object key (here "n1", "n2", "n3"), and <code>Edge.Builder</code>s, which can refer to identifiable <code>Node.Builder</code>s to build their source and target elements, so even a complex wired graph can be created through a single builder chain. This is very useful when creating a Graph model that wraps a given semantic model (here a Statechart, which comprises States and Transitions):</p>
+		<pre class="source-java">  Graph.Builder builder = new Graph.Builder().attr(ZestProperties.LAYOUT_ALGORITHM__G, new RadialLayoutAlgorithm());
+  for (State s : statechart.getStates()) {
+    // use the State as key for the Node builder
+    builder.node(s).attr(ZestProperties.LABEL__NE, s.getName());
+  }
+  for (Transition t : statechart.getTransitions()) {
+    // build an Edge for each Transition, referring to the Node builders of its source and target States
+    builder.edge(t.getSource(), t.getTarget()).attr(ZestProperties.LABEL__NE, "");
+  }
+  Graph graph = builder.build()
+
+</pre>
+		<h4 id="GraphCopier">GraphCopier</h4>
+		<p>A <code>GraphCopier</code> is a utility class to copy/merge graphs. It requires an 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Common#IAttributeCopier" title="GEF/GEF4/Common#IAttributeCopier" target="doc_external">org.eclipse.gef4.common.attributes.IAttributeCopier</a> to copy/transfer the attributes of the <code>Graph</code>, <code>Node</code>, and <code>Edge</code> elements that are copied.
+		</p>
+		<p>
+			<a href="http://wiki.eclipse.org/Category:GEF" title="Category:GEF" target="doc_external">Category:GEF</a>
+		</p>
+	</body>
+</html>

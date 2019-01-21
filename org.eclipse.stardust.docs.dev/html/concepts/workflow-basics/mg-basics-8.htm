@@ -1,0 +1,625 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Workflow Data</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Structured Data Types",
+		"mg-basics-7.htm","concept-struct-types.html",
+		"../key-concepts.html","Concepts","mg-basics-preface.htm","Workflow Basics");
+ -->
+</script>
+<h1>Workflow Data</h1>
+
+<p>Workflow data are all business data accessed and modified during the execution of
+processes. They are indirectly manipulated by applications and directly by the process
+engine. Data may include control data, e.g. simple flags accessed in transition conditions
+or complex business data such as an invoice or a customer.</p>
+<ul>
+	<li><a href="#predefined">Predefined Data</a></li>
+	<li><a href="#userdefined">User-defined Data</a></li>
+   <li><a href="#types">Data Types</a></li>
+   <li><a href="#values">Data Values</a></li>
+   <li><a href="#acc">Data Accessors</a></li>
+	<li><a href="#dataflow">Data Flow</a></li>
+	<li><a href="#custom">Custom Data Types</a></li>
+   <li><a href="#dataPaths">Data Paths</a></li>
+   <li><a href="#vol">Volatile Process Data</a></li>
+</ul>
+<p>For details on using data in the Eclipse Modeler and the Modeling perspective, please
+refer to chapter
+<a href="../../handbooks/modelling/mg-defdesk-7.htm">Specifying Data</a> 
+in the Eclipse <a href="../../handbooks/modelling/mg-preface.htm">Modeling Guide</a>
+and chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data.htm">
+Specifying Data</a> in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>
+respectively.</p>
+<h2 id="predefined">Predefined Data</h2>
+<p>There are two general types of data: predefined and user-defined. Predefined data
+give read only access to intrinsic properties of the current process instance and are part
+of every model. The following predefined data is available for models:</p>
+<ul>
+   <li>The current date (<code>CURRENT_DATE</code>)</li>
+   <li>The current locale (<code>CURRENT_LOCALE</code>), e.g. <code>DE</code></li>
+   <li>The current model (<code>CURRENT_MODEL</code>), containing attributes like
+   version, etc.</li>
+   <li>The current user (<code>CURRENT_USER</code>), the user currently attached to the
+   activity thread (usually only available for synchronously executed activity threads)</li>
+   <li>The last activity performer (<code>LAST_ACTIVITY_PERFORMER</code>)</li>
+   <li>The OID of the process instance (<code>PROCESS_OID</code>)</li>
+   <li>The priority assigned to the current process (<code>PROCESS_PRIORITY</code>)</li>
+   <li>The OID of the root process instance (<code>ROOT_PROCESS_OID</code>) used in a
+   subprocess</li>
+   <li>The starting user (<code>STARTING_USER</code>)</li>
+   <li>The business date (<code>BUSINESS_DATE</code>), a predefined data of type <code>Calendar</code>, which can be
+   used e.g. in the Traffic Light view or for Benchmark calculations<span class="ipp"> as well as descriptor for 
+   processes of the Model &amp; Go perspective</span>. Note that the Business Date data is only intended for the storage 
+   of Date information and not time. Also, no time zone conversion is performed as the business date is 
+   treated like a constant where every day has a constant instance. So it is always the same for all users no matter in
+    which time zone they are.</li>
+</ul>
+
+<h2 id="userdefined">User-defined Data</h2>
+<p>User-defined data are data defined specifically for the process.</p>
+
+<h2 id="types">Data Types</h2>
+<p>Every data is of some specific data type with its own configuration
+possibilities, e.g.:</p>
+<ul>
+	<li>Java Style data types
+	(see chapters 
+	<a href="../../handbooks/modelling/data-integration/mg-integration-2.htm">Working with Java Style Data Types</a>
+	and 
+	<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data.htm">Specifying Data</a>
+	accordingly for details on how to use these data types in our modelers)
+	<ul>
+	    <li>Entity Bean</li>
+	    <li>Serializable</li>
+	    <li>Primitive data types like int, long, String</li>
+	 </ul></li>
+	 <li>DMS data types, like Document, Document List, Folder, Folder List (see 
+	 chapter <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dms/html/dms/dms-data-types.html">
+	 DMS Data Types</a> in the DMS Integration Guide)</li>
+	<li>XML documents (see chapter 
+	<a href="../../handbooks/modelling/data-integration/mg-integration-3.htm">Integrating XML Data</a>
+	for details)</li>
+	<li>Structured data types - please refer to chapter
+	<a href="concept-struct-types.html">Structured Data Types</a> for details</li>
+</ul>
+<p>The Stardust Process Engine ships with a couple of predefined data types. This
+type system may be programmatically extended.</p>
+<p>Chapter <a href="../../handbooks/modelling/data-integration/data-int-preface.html">Data Integration</a>
+describes the usage of concrete data types in detail.</p>
+
+<h2 id="values">Data Values</h2>
+<p>Data instantiated at runtime are called data values. The instantiation of these
+data values is based on the respective process instance. They have a persistent
+representation in the audit trail. As mentioned before, data of sub-processes are
+associated to the scope process instance.</p>
+<h2 id="acc">Data Accessors</h2>
+<h3 id="accessPoints">Access Point</h3>
+<p>Access points are named parameters to set or get values associated with a model
+element at runtime. At modeling time they have at least the following attributes:</p>
+<ul>
+    <li>A unique ID</li>
+    <li>A data type</li>
+    <li>A direction marking it as IN, OUT or INOUT parameter</li>
+    <li>Custom attributes according to the associated data type</li>
+</ul>
+<p>Access points are a unique concept to make data (in a general sense) reachable in
+the Stardust runtime. Access points can be defined for applications, activities, event
+handlers etc. Examples include:</p>
+<ul>
+    <li>Application IN and OUT parameters</li>
+    <li>Values from events, e.g. the caught exception from an exception event</li>
+    <li>Even workflow data themselves are access points. A workflow data
+    interpreted as an access point always has the access point ID <code>this</code>.</li>
+</ul>
+
+<h3>Access Path</h3>
+<p>Depending on the type of the access point a so-called access path can be applied
+to it. Basically, this is just an operation at runtime.</p>
+<ul>
+    <li>For IN access points an access path accepts exactly one Java object as a
+    parameter and executes &quot;something&quot; on the access point where the execution
+    semantics is provided by the underlying data type.</li>
+    <li>For OUT access points an access path executes on the access point according
+    to the semantics of the underlying data type.</li>
+</ul>
+<p>The syntax and semantics of access paths are defined by the data type of the
+corresponding access point. An access path may be empty.</p>
+
+<h3>Accessor</h3>
+<p>A pair (access point, access path) belonging together is called an accessor. Like
+with access paths we distinguish IN accessors and OUT accessors. When an accessor is
+referenced as such a pair (a,b) the first element is referring to the access point, the
+second one to the access path.</p>
+<p>At runtime you can apply an accessor, depending on the type and the model
+element. In many cases, e.g. for data mappings, this is done by the engine itself.</p>
+
+<h3>Bridge Object</h3>
+<p>When applying an IN accessor at runtime you have to pass an object to this
+operation, when applying an OUT accessor you will retrieve an object. Such intermediate
+objects being passed around are called bridge objects.</p>
+<p>The most common form of access points are access points with a Java style data
+type (e.g. of Serializable or Entity Bean type). In this case access paths have the form
+of chained getters and setters, e.g.:</p>
+<ul>
+    <li>An IN access path: <code>getCustomer().setFirstName(java.lang.String)</code></li>
+    <li>An OUT access path: <code>getCustomer().getFirstName().toUpperCase()</code></li>
+</ul>
+
+<h3>Method Path</h3>
+<p>Such a chain of getters/setters used for an access path is also called a method
+path (workflow data as access point). <span class="Stil1">Consider an Entity Bean
+Customer used as workflow data</span><strong>:</strong></p>
+<pre>public interface Customer extends EJBObject<br>{<br>  public void setFirstName(String name);<br>  public String getFirstName();<br>...</pre>
+<p>The Entity Bean itself forms the <code>this</code> access point. You can apply method
+paths as discussed in the preceding example (application parameter as access point).
+Consider a plain Java application:</p>
+<pre>public class Converter<br>{<br>  public String concat(String a, String b)<br>...</pre>
+<p>With completion method <code>concat</code> concatenating two strings.</p>
+<p>This application will offer the method parameters as IN access points <code>sParam1</code>,
+<code>sParam2</code>. Only empty access paths are allowed. Executing the accessor (<code>sParam1,
+null</code>) at runtime will just set the first parameter to the value of the bridge object.</p>
+<p>The return value of the method is offered as an OUT access point <code>returnValue</code>.
+Executing the accessor (<code>returnValue</code>, <code>toUpperCase()</code>) will return the
+capitalized form of the concatenated string.</p>
+<p><img src="images/mg-basics-20.jpg" alt=""></p>
+<p>In the <a href="../../handbooks/modelling/mg-modeler-preface.html">Stardust Process Workbench</a> an accessor
+is always shown in a similar manner as shown in the example screenshot: the access point
+(Data) in a combo box and the access path (Data path) in a custom editor provided by the
+underlying data type. In the example case, a Java style access point, you can directly
+type the method path or you can use the associated edit button to open a dialog to choose
+the method path from a tree view.</p>
+<h2 id="dataflow">Data Flow</h2>
+<p>This section discusses the various means to manipulate and read workflow data
+mainly based on the accessor concept discussed above.</p>
+<ul>
+   <li><a href="#mani">Manipulating Data during Activity Execution</a></li>
+   <li><a href="#inout">IN/OUT Data Mapping</a></li>
+   <li><a href="#context">Application Contexts for Data Mappings</a></li>
+   <li><a href="#modelele">Data Mappings as Model Elements</a></li>
+   <li><a href="#dmnonappl">Data Mappings for Non-Interactive Application Activities</a></li>
+   <li><a href="#intactAppl">Data Mappings for Interactive Application Activities</a></li>
+   <li><a href="#manual">Data Mappings for Manual Activities</a></li>
+   <li><a href="#event">Data Flow during Event Handling</a></li>
+   <li><a href="#automatic">Automatic Completion of Data Mappings</a></li>
+   <li><a href="#setdataproc">Setting Data when starting Processes</a></li>
+</ul>
+<h3 id="mani">Manipulating Data during Activity Execution</h3>
+<p>Stardust controls the execution of business logic on
+business data according to the workflow model. You may regard</p>
+<ul>
+    <li>the workflow model as a program and</li>
+    <li>the workflow data as a handle in this program representing persistent
+    business data.</li>
+    <li>Activities as functions called from the program may be provided by an
+    associated application.</li>
+</ul>
+<p>Hence, it needs to be specified in the workflow model</p>
+<ul>
+    <li>how data are read/written from their persistent representation and</li>
+    <li>how data are passed as input to activities and retrieved as output from
+    activities.</li>
+</ul>
+<p class="image"><img src="images/mg-basics-21.jpg" alt=""> <br>
+<strong>Figure:</strong> Collaborators for Data Manipulation during Activity Execution</p>
+
+<h3 id="inout">IN/OUT Data Mapping</h3>
+<p><img src="images/mg-basics-22.jpg" alt=""></p>
+<p>Data mappings glue workflow data and activities together. They define a data flow
+from the data to the activity (IN-data mappings) or from the activity to the data
+(OUT-data mappings). This is done using accessors on the data side and the activity side
+as well.</p>
+<p>OUT data mappings which &quot;flow&quot; from the activity to the data consist of
+the following:</p>
+<ul>
+    <li>An OUT accessor of the activity, the activity accessor</li>
+    <li>An IN accessor of the data, the data accessor</li>
+</ul>
+<p>At runtime, the bridge object from the activity accessor is passed to the data
+accessor. OUT data mappings are performed immediately before the activity is completed.
+Especially for an application activity the associated application has finished its work.</p>
+<p>Similarly, IN data mappings which &quot;flow&quot; from the data to the activity
+consist of the following:</p>
+<ul>
+    <li>An IN accessor of the activity, the activity accessor</li>
+    <li>An OUT accessor of the data, the data accessor</li>
+</ul>
+<p>At runtime, the bridge object from the data accessor is passed to the activity
+accessor. IN data mappings are performed after an activity is activated. Especially for a
+non-interactive application activity the associated application has not yet started.</p>
+<p class="image"><img src="images/mg-basics-23.jpg" alt=""> <br>
+<strong>Figure:</strong> Data Mappings in the Activity Instance Lifecycle</p>
+<p>To allow for successful data transfer the concrete type of the bridge object and
+the expected type of the IN accessor must match. This can often be checked at modeling
+time because a data type can give a hint to the modeling environment regarding the
+expected type for the IN accessor parameter or the expected return value type of an OUT
+accessor.</p>
+<p>Java style data types can report the expected type of the accessor very precisely
+by means of the method signatures of the last part of the access paths:</p>
+<ul>
+    <li>An OUT access path <code>toString().toUpperCase()</code> will have an expected
+    type <code>java.lang.String</code>.</li>
+    <li>An IN access path <code>getCounter().setIncrement(int)</code> will have an
+    expected type <code>int</code>.</li>
+</ul>
+<p>Both types won't match and trying to combine them for a data mapping would result
+in an inconsistency warning in the Stardust Process Workbench.</p>
+<p>For interactive activities it is possible to have data mappings with activity
+accessor undefined. In this case the bridge object is directly set or retrieved from the
+interactive execution context. See below for details.</p>
+
+<h3 id="context">Application Contexts for Data Mappings</h3>
+<p>As explained in the preceding section, data mappings make use of access points
+defined for the activity. This raises the question of where these access points are coming
+from. Roughly spoken, there may be different sources for access points which are grouped
+by the application context. This association between application paths and an application
+context is implied by the data mapping itself. The following application contexts are
+provided for a data mapping:</p>
+<ul>
+   <li><a href="#engctx">Engine Context</a></li>
+   <li><a href="#nonintact">Non-interactive Application Context</a></li>
+   <li><a href="#intact">Interactive Application Context</a></li>
+   <li><a href="#default">Default Context</a></li>
+</ul>
+<h4 id="engctx">Engine Context</h4>
+<p>The activity itself offers a pseudo application context called the engine context.
+It contains a Java style <span class="Stil1">access point <code>activityInstance</code>
+of type </span><code>org.eclipse.stardust.engine.api.runtime.ActivityInstance</code> which provides access to the
+attributes of the corresponding activity instance at runtime.</p>
+<h4 id="nonintact">Non-interactive Application Context</h4>
+<p>If the activity is non-interactive and there is an application associated with it,
+the so called non-interactive application context is available, offering all access points
+of the associated non-interactive application.</p>
+<h4 id="intact">Interactive Application Context</h4>
+<p>If the activity has an associated interactive application every application context
+defined in the application is exposed in the activity scope, too. It offers the access
+points defined in the application context itself (e.g. JSP Application).</p>
+<h4 id="default">Default Context</h4>
+<p>There is another context for all interactive activities, the <strong>default
+context</strong>. This context allows only data mappings without activity access point/activity
+access path and is used for embedded programming and for manual activities.</p>
+<p>For In-data mappings with default context, you have the option to use constant 
+In-data mapping or the standard data-bound In-data mapping.</p>
+<h3 id="modelele">Data Mappings as Model Elements</h3>
+<p>According to the previous observations a data mapping as a model element has the
+following properties:</p>
+<ul>
+    <li>A (possibly automatically generated) ID</li>
+    <li>A direction with the value IN or OUT</li>
+    <li>The associated context</li>
+    <li>A data accessor</li>
+    <li>An activity accessor</li>
+</ul>
+<p>The triple (ID, direction, context) uniquely identifies a data mapping in the
+scope of the owning activity.</p>
+
+<h3 id="dmnonappl">Data Mappings for Non-Interactive Application Activities</h3>
+<p>Non-interactive application activities exploit the following application
+contexts:</p>
+<ul>
+    <li>Engine context</li>
+    <li>Non-interactive application context</li>
+</ul>
+<p>Apart from special cases the non-interactive application context is the context
+commonly used for offering access to the associated application. The engine context is
+only used when access to intrinsic attributes of the workflow, like the OID of the current
+activity instance, is needed.</p>
+
+<p class="image"><img src="images/mg-basics-24.jpg" alt=""> <br>
+<strong>Figure:</strong> Collaborators for Data Manipulation during Activity Execution</p>
+<p>Consider the following Java application with completion method <code>convertIntegerString</code>
+associated with an activity convert:</p>
+
+<pre>class Converter<br>{<br>  String convertIntegerToString(int i)<br>  {<br>      return Integer.toString(i);<br>  }<br>}
+</pre>
+<p>Consider also two workflow data <code>intvals</code> of type <code>int</code> and person of type <code>Person</code>:
+</p>
+<pre>class Person<br>{<br>   void setAge(String age)<br>...</pre>
+<p>The following data mappings of the activity <code>convert</code> will convert the
+input data interval appropriately and set it as the age of the data person:</p>
+<ul>
+    <li>An IN data mapping setting the value of <code>intval</code> to <code>iParam1</code> (all
+    access paths are empty).</li>
+    <li>An OUT data mapping calling the <code>setAge</code> method of the person data
+    with the converted integer value.</li>
+</ul>
+<p class="image"><img src="images/mg-basics-25.jpg" alt=""> <br>
+<strong>Figure:</strong> Example Data Mappings for the Application Context</p>
+<h3 id="intactAppl">Data Mappings for Interactive Application Activities</h3>
+<p>Data mappings for interactive activities work slightly different than
+non-interactive ones:</p>
+<ul>
+    <li>Application processing is outside the control of the engine.</li>
+    <li>The bridge object from/to the application accessor is passed to the engine
+    by using the Stardust API.</li>
+</ul>
+<p>In essence, this means that the Stardust Process Engine has no knowledge of the
+application accessors. Additionally, for every single activity there may be different
+application contexts configured with different execution semantics on the application
+side.</p>
+<p class="image"><img src="images/mg-basics-26.png" alt=""> <br>
+<strong>Figure:</strong> Data Mappings in the Life Cycle of an Interactive Activity
+Instance</p>
+<p>There are two possibilities to handle interactive data mappings:</p>
+<ul>
+    <li>Labeling all data mappings of the context with a well-known, human editable
+    ID and letting the application client care for providing/processing the bridge objects
+    of these unique identifiable data mappings. This means that the client has to
+    explicitly know the meaning of each data mapping ID.</li>
+    <li>Providing enough meta information in every data mapping so that every data
+    mapping can be processed by the client. There are still data mapping IDs exploited to
+    associate meta information to the bridge object values (see also the <a
+        href="../../handbooks/programming/pg-preface.htm"> Programming Guide</a>) but these IDs have no
+    semantic meaning.</li>
+</ul>
+<p>Which strategy is chosen depends on the characteristics of the concrete
+application context.</p>
+<p>Consider an Entity Bean Customer where we want to modify the name of the customer
+accessible by:</p>
+<pre>String getCustomerName</pre>
+<pre>void setCustomerName(String name)</pre>
+<!-- maybe replace with an appropriate example without JFC <P  >
+We have modeled an interactive activity 
+ <code>Modify_Customer</code> with two application contexts configured:</P>
+<ul>
+  <li> A JFC application represented by the 
+    <code>CreateOrModifyCustomer</code>    visual Java Bean</li>
+  <li> A JSP application represented by the JSP page 
+    <code>modify_customer.jsp</code></li>
+</ul>
+<P  >&nbsp;</P>
+ 
+   <div align="center">
+     <p><IMG SRC="images/mg-basics-27.jpg">
+     <p>
+       
+   Figure:	Collaborators of an Interactive Data Mapping</p>
+   </div>
+   <P  >
+This way we are able to execute this activity at runtime in the 
+	
+	<strong>	Stardust Workflow Execution Perspective</strong>.-->
+<h4>JSP Application Context</h4>
+<p>We will model the following data mappings for the JSP application context:</p>
+<ul>
+    <li>An IN data mapping with ID <code>customerName</code> and data accessor <code>
+    (this, getCustomerName())</code>, resulting at runtime in a bridge object containing the
+    customer name.</li>
+    <li>An OUT data mapping with the same ID <code>customerName</code> and data
+    accessor <code> (this, setCustomerName(String))</code> resulting at runtime in a bridge
+    object where the new customer name could be set.</li>
+</ul>
+<p>The JSP page has to be enabled to retrieve and set the bridge object representing
+the customer name, which in reality will exist beside a lot of other bridge objects
+representing e.g. other customer attributes. In the Stardust Workflow Execution Perspective this is
+supported by providing two maps (for IN and OUT data mappings respectively) containing the
+bridge objects referenced by their data mapping ID.</p>
+<p>Creating data mappings for the JSP application is thus an example for the first
+strategy: the data mappings and bridge objects exploited by the application client are
+referenced by their IDs. Note that the Stardust Process Workbench helps you to manage
+those kinds of data mappings by having the data mapping IDs editable in those cases.</p>
+<p class="image"><img src="images/mg-basics-28.jpg" alt=""> <br>
+<strong>Figure:</strong> JSP Application Context: Modifying an Entity Bean Attribute</p>
+
+<!-- <h4>JFC Application Context</h4>
+<P  > The JFC application context type perfectly mimics non-interactive data mappings 
+  by providing application accessors, too, effectively rendering JFC application 
+  context data mappings similar to non-interactive application mappings. But there 
+  is one important difference at execution time: the application accessors are 
+  not evaluated by the process engine itself but by the JFC application client 
+  (typically the CARNOT Process Execution Desktop).</P>
+   <P  >&nbsp;</P>
+ 
+   <div align="center">
+     <p><IMG SRC="images/mg-basics-29.jpg">
+     
+   <br><strong>Figure:</strong>	JFC Application Context: Modifying an Entity Bean Attribute 
+   
+   </p>
+   </div>
+   <P  >
+In our example let's assume that the 
+ <code>ModifyCustomerPanel</code> makes the customer name accessible by the two methods:</P>
+   <PRE  >String getCustomerName()</PRE>
+<PRE  >void setCustomerName(String).</PRE>
+<P  >
+You will then model two data mappings for the JFC context containing application accessors, too:</P>
+<UL>
+<LI  >
+An IN data mapping with the data accessor  <code>  (this, getCustomerName())</code>and application accessor 
+<code>(setCustomerName(String), null</code>) 
+ passing at runtime in a bridge object containing the customer name.</LI>
+<LI  >
+An OUT data mapping with data accessor 
+  <code>(this, setCustomerName(String))</code> and application accessor
+  <code>(getCustomerName(), null)</code> passing at runtime a bridge object containing the new customer name.</LI>
+</UL>
+  -->
+
+<h3 id="manual">Data Mappings for Manual Activities</h3>
+<p>Manual activities allow using and manipulating data directly without invoking an
+application. This resembles the discussed behavior of the JSP context type:</p>
+<ul>
+    <li>Data mappings for manual activities are collected under the default
+    context.</li>
+    <li>Data mappings are identified by a human editable ID.</li>
+</ul>
+<p>More details on default panels/pages are found in the section <a
+    href="../../handbooks/modelling/activities/manual-activities.html">Manual Activities</a> of the <a
+    href="../../handbooks/modelling/mg-integration-preface.htm">System Integration</a> chapter. To slightly modify
+our previous example, let's assume that the activity <code>Modify_Customer</code> is
+implemented as a manual activity having two data mappings in the default context:</p>
+<ul>
+    <li>An IN data mapping with ID <code>customerName</code> and data accessor <code>(this,
+    getCustomerName())</code>, resulting at runtime in a bridge object containing the customer
+    name.</li>
+    <li>An OUT data mapping with the same ID <code>customerName</code> and data
+    accessor <code>(this, setCustomerName(String))</code> resulting at runtime in a bridge
+    object where the new customer name could be set.</li>
+</ul>
+<p>These are precisely the same mappings we have specified for the JSP context in the
+previous example. At runtime, the Stardust Workflow Execution Perspective will render these mappings on
+the default panel/page as a single editable text field labeled <strong>customerName</strong>,
+being initialized with the current customer name. Completing the activity would write any
+changes in the field value back to the customer Entity Bean.</p>
+<p class="image"><img src="images/mg-basics-30.jpg" alt=""> <br>
+<strong>Figure:</strong> Embedded Client Context: Modifying an Entity Bean Attribute</p>
+<p>Data mappings in the engine context for interactive activities are executed the
+same way as for non-interactive activities. This implies that they are executed completely
+under the control of the process engine.</p>
+
+<h3 id="event">Data Flow during Event Handling</h3>
+<p>Depending on its type, an event handler may offer data to its subordinate actions
+in form of access points.</p>
+<p>The set data event action will use these values and apply an accessor to an
+associated data. This way a set data action very much resembles an OUT data mapping by
+combining two accessors to enable data flow from the activity to a workflow data. The
+crucial difference is the point in time when this data flow is &quot;executed&quot;: it is
+done when catching an event and not after the activity completed its work.</p>
+<h3 id="automatic">Automatic Completion of Data Mappings</h3>
+<p>When an input or output mapping is created for an activity with
+an application attached, the data mapping is automatically connected to
+the first input/output access point, whose type matches the data of the
+data mapping and which is not connected via a data mapping already.</p>
+<p>If no matching access point according to these rules is
+available, no completion occurs.</p>
+<h4>Priority of Preset Access Point</h4>
+<p>The preset access point of the data mapping follows these rules:</p>
+<ul>
+   <li>Parameters are preferred to methods.</li>
+   <li>Methods of the concrete Java class are preferred to methods of
+   superclasses.</li>
+</ul>
+<h3 id="setdataproc">Setting Data when starting Processes</h3>
+<p>When starting a process, the data of the created process instance may be
+initialized. This can be done as follows:</p>
+<ul>
+    <li>Programmatically. The API to start processes offers the option to initialize
+    an arbitrary set of workflow data. See the <a href="../../handbooks/programming/pg-preface.htm">Stardust 
+    Programming Guide</a> for details.</li>
+</ul>
+
+<h4>Parameter Mapping</h4>
+<p>JMS triggers and Mail triggers offer the option to initialize workflow data by
+applying parameter mappings. Trigger parameters are provided at runtime in form of access
+points allowing for parameter mappings. They are configured in the Parameter Mapping panel
+of the triggers properties dialog. For more information on how to set up trigger
+parameters please refer to the chapter <a href="../../handbooks/modelling/mg-defdesk-11.htm">Working with Triggers</a>.</p>
+<p>A parameter mapping can be performed implicitly, when triggering a process by the
+trigger process action. A copy of the current data is then passed to the triggered
+process.</p>
+
+<h2 id="custom">Custom Data Types</h2>
+<p>As for applications, it is possible to define custom data types beyond the data
+types shipped with Stardust . A custom data type defines:</p>
+<ul>
+    <li>The syntax and semantics of access path execution</li>
+    <li>The storage behavior of underlying &quot;real data&quot;. This way
+    arbitrary custom storage solutions, e.g. document management systems may be seamlessly
+    integrated with Stardust .</li>
+</ul>
+<p>For more information, see the <a href="../../handbooks/programming/pg-preface.htm">Programming
+Guide</a>.</p>
+
+<h2 id="dataPaths">Data Paths</h2>
+<p>Data paths are a way to define read/write accessors to workflow data of a process
+instance. They are used for embedded programming to gain fine-grained access to data
+and to visualize process data in the Stardust Portals when defined as 
+<a href="#descriptor">descriptor</a>.</p>
+<p>To access data paths programmatically at runtime, you can use the
+provided class
+<a href="../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/WorkflowService.html">
+org.eclipse.stardust.engine.api.runtime.WorkflowService</a>.
+Please see the section
+<a href="../../handbooks/programming/embed/pg-embedded-3.htm#workflowservice">WorkflowService</a>
+of the chapter <a href="../../handbooks/programming/embed/pg-embedded-3.htm">Stardust Services</a>
+in the
+<a href="../../handbooks/programming/pg-preface.htm">Programming Guide</a> for more
+information on the embedded usage of this Stardust service.</p>
+<p>As a model element a data path has the following properties:</p>
+<ul>
+    <li>An ID unique in the scope of the enclosing process definition</li>
+    <li>A human readable name</li>
+    <li>A direction which has the value IN or OUT</li>
+    <li>A workflow data accessor</li>
+    <li>A flag indicating whether the data path is a descriptor</li>
+</ul>
+<p>Executing a data path at runtime would just execute the corresponding workflow
+data accessor.</p>
+<p>For details on using data paths in the Portal Modeling perspective and the Eclipse modeler, please
+refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-path.html">
+Configuring Data Paths</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a> handbook and chapter
+<a href="../../handbooks/modelling/mg-defdesk-9.htm">Working with Data Paths</a> of the
+<a href="../../handbooks/modelling/mg-preface.htm">Modeling Guide</a> respectively.</p>
+<h3 id="descriptor">Descriptors</h3>
+<p>A special case of a data path is a descriptor. A descriptor is defined as in data path
+for a process definition, which is additionally marked as descriptor. Descriptors are always
+evaluated when retrieving an activity instance via the Stardust API, e.g. for a 
+worklist. This is a common shortcut to provide custom rendering attributes or often used 
+data for an activity instance. Descriptors can be visualized in process details and tables 
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a>.
+They visualize data relevant for work items in a participant's
+worklist. Custom descriptors must be defined separately for each process.</p>
+<p>If an out data path exists with the same Id as the in data path of a descriptor, its
+process specific value can be edited in the Process Details view of the according process.</p>
+<h4>Unsupported Data Types</h4>
+<p>Note that timestamp data types like <code>datetime</code>, <code>date</code> and <code>time</code>
+are currently not supported as descriptors.</p>
+<h4 id="comp">Composite Descriptors</h4>
+<p>The Portal Modeling perspective allows to use composite descriptors. These descriptors can be composed of multiple
+existing in-data paths of the process and/or configuration variables, optionally combined with some text. Please refer
+to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-path.html#composite">
+Using Composite Descriptors</a> of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-path.html">
+Configuring Data Paths</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a> handbook for details.</p>
+<p>Circular references are not prohibited, but an evaluation will ignore loops. For example, a set of references 
+<code>A -&gt; B -&gt; A</code> will be evaluated as <code>A -&gt; B</code> only.</p>
+<h4 id="compl">Link Descriptors</h4>
+<p>The Portal Modeling perspective allows to use Link descriptors, which can be composed of link text and URL that is 
+optionally parameterizable with other In-data paths and/or configuration variables. These links can be displayed in 
+process or activity tables as descriptors. The descriptor column is showing the link text, which you can click to open 
+the link containing the defined URL.</p>
+<p>Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-path.html#link">
+Using Link Descriptors</a> of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-path.html">
+Configuring Data Paths</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a> handbook for details.</p>
+<h4 id="kdes">Key Descriptors</h4>
+<p>Key descriptors allow designating special descriptors to support searching related processes with matching key 
+descriptors.</p>
+<h2 id="vol">Volatile Process Data</h2>
+<p>You can mark process data of type primitive, serializable, structured data and XML as 
+volatile. Process data values of volatile process data 
+are removed from the Audit Trail on process completion. In case of straight through 
+processing (process execution in one transaction) volatile process data values are not 
+stored at all in the database.</p>
+<p>It is not recommended to use volatile process data as descriptors.</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Using Camel Consumer and Producer Applications</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<LINK REL="stylesheet" TYPE="text/css" HREF="../../../styles/carnot.css"
+	TITLE="Style">
+<script src="../../../styles/naviLine.js"
+	type="text/javascript">
+</script>
+</head>
+<script>
+<!--
+	writeNavigation("Integrating Synchronous Web Services",
+			"../mg-integration-jsf.html",
+			"../mg-integration-8.htm","../../handbooks.htm",
+			"Developer Handbook","../mg-preface.htm", "Modeling Guide",
+			"../mg-integration-preface.htm","System Integration");
+-->
+</script>
+<body>
+<h1>Using Camel Consumer and Producer Applications</h1>
+<p>Camel Consumer and Producer applications allow you to specify arbitrary Camel Routes to be invoked from activities 
+in Process Models at runtime and ensure connectivity via simple XML configurations leveraging the connectivity 
+capabilities of Apache Camel.</p>
+<ul>
+	<li><a href="#create">Creating a Camel Consumer / Producer Application</a></li>
+	<li><a href="#props">Setting Application Properties</a>
+	<ul>
+	   <li><a href="#general">General Tab</a></li>
+      <li><a href="#proute">Producer Route</a></li>
+      <li><a href="#croute">Consumer Route</a></li>
+	   <li><a href="#tapts">Typed Access Points</a></li>
+	</ul>
+	</li>
+</ul>
+<h2 id="create">Creating a Camel Consumer / Producer Application</h2>
+<p>To create a Camel Consumer application:</p>
+<ol>
+   <li>Select <strong>Applications &gt; Camel Consumer Application</strong> in the diagram toolbar.
+   <p class="image"><img src="images/create-consumer-appl.png"
+   alt="Create Camel Consumer Application"><br>
+   <strong>Figure:</strong> Create a Camel Consumer Application</li>
+   <li>Click on the diagram to place the symbol for the Camel Consumer application there.
+   <p class="image"><img src="images/camel-consumer-appl.png"
+   alt="Camel Consumer Application"><br>
+   <strong>Figure:</strong> Camel Consumer Application</p></li>
+</ol>
+<p>To create a Camel Producer application:</p>
+<ol>
+   <li>Select <strong>Applications &gt; Camel Producer Application</strong> in the diagram toolbar.
+   <p class="image"><img src="images/create-camel-appl.png"
+	alt="Create Camel Producer Application"><br>
+   <strong>Figure:</strong> Create a Camel Producer Application</p></li>
+   <li>Click on the diagram to place the symbol for the Camel Producer application there.
+   <p class="image"><img src="images/camel-application.png"
+   alt="Camel Producer Application"><br>
+   <strong>Figure:</strong> Camel Producer Application</p></li>
+</ol>
+<h2 id="props">Setting Application Properties</h2>
+<p>Double-click the application symbol to open the properties page. Select <strong>General Tab</strong>
+to open the Camel specific properties section.</p>
+<p class="image"><img src="images/camel-appl-props.png"
+	alt="Camel Application Properties Page"><br>
+<strong>Figure:</strong> Camel Producer Application Properties Page</p>
+<ul>
+   <li><a href="#general">General Tab</a></li>
+   <li><a href="#proute">Producer Route</a></li>
+   <li><a href="#croute">Consumer Route</a></li>
+   <li><a href="#tapts">Typed Access Points</a></li>
+</ul>
+<h3 id="general">General Tab</h3>
+<p>In the <strong>General Tab</strong> section, you can set properties for the following:</p>
+<ul>
+   <li><a href="#context">CamelContextID</a></li>
+   <li><a href="#invocp">Invocation Pattern</a></li>
+   <li><a href="#access">Body Access Points</a></li>
+   <li><a href="#bean">Additional Spring Bean Definitions</a></li>
+</ul>
+<h4 id="context">CamelContextID</h4>
+<p>The <strong>CamelContextID</strong> defines the ID of the
+CamelContext object, which represents the Camel runtime system.</p>
+<h4 id="invocp">Invocation Pattern</h4>
+<p>In the <strong>Invocation Pattern</strong> drop-down list you may specify the invocation pattern.</p>
+<p class="image"><img src="images/camel-end-point.png" alt="Set Endpoint Pattern"><br>
+<strong>Figure:</strong> Set Invocation Pattern</p>
+<p>A Camel application can follow the invocation pattern of the following types depending if it is a Consumer or
+Producer application:</p>
+<ul>
+   <li><strong>Send</strong><br><br>This option can be selected for Producer applications.
+   A message is sent to any Camel endpoint. No response is expected. The activity instance is completed after the 
+   message is sent and the process moves ahead.<br>
+   <p>Note that a Consumer application changes to type Producer in case this option is selected.</p></li>
+   <li><strong>Send/Receive</strong><br><br>This option can be selected for Producer applications.
+   A Camel message is sent to any Camel endpoint. A response is expected either synchronously or asynchronously. After
+   the response is received, the activity instance is completed and the process moves ahead.
+   <p>In case you choose the <strong>Send/Receive</strong> option, you can select between the following invocation
+   types:</p>
+   <ul>
+      <li><strong>Synchronous</strong> - the same thread that sends the Camel message is receiving the response.
+      <p>Note that a Consumer application changes to type Producer in case this option and type is selected.</p></li>
+      <li><strong>Asynchronous</strong> - a different thread from the one that sent the Camel message is receiving the 
+      response.
+      <p>Note that the application changes to type Producer/Consumer in case this type is selected.
+      The Consumer route contains the logic that will retrieve the result and completes the activity.</p></li>
+   </ul>
+   <p class="image"><img src="images/sel-invoc-type.png" alt="Select the type of invocation"><br>
+   <strong>Figure:</strong> Select the type of invocation</p>
+   <li><strong>Receive</strong><br><br>This option can be selected for Consumer applications.
+   No Camel message is sent. The process stops waiting for an incoming Camel message as 
+   per Consumer Route definition. Once the response is received, the activity instance is completed and the process 
+   moves ahead.
+   <p>Note that a Producer application changes to type Consumer in case this option is selected.</p></li>
+</ul>
+<h4 id="access">Body Access Points</h4>
+<p>The <strong>Body Input Access Point</strong> and <strong>Body Output Access Point</strong>
+define the data values for the body of the exchange. All other access points defined in the
+<a href="#tapts">Typed Access Points</a> section will be set to the header of the exchange.</p>
+<p class="image"><img src="images/camel-acc-pts-sel.png" alt="Selecting an Body Input Access Points"><br>
+<strong>Figure:</strong> Selecting an Body Input Access Points</p>
+<p>In the drop-down list all access point, which were defined in the
+<a href="#tapts">Typed Access Points</a> section for input and output respectively, are available
+for selection.</p>
+<p class="image"><img src="images/camel-body-acc-pts.png" alt="Body Access Points"><br>
+<strong>Figure:</strong> Body Access Points</p>
+<h4 id="bean">Additional Spring Bean Definitions</h4>
+<p>You may use references to Spring Beans in your routes. These
+Spring Beans are either expected to be defined externally in your
+runtime environment or can be defined in the <strong>Additional
+Spring Bean Definitions</strong> text area:</p>
+<p class="image"><img src="images/camel-appl-bean.png" 
+   alt="Spring Bean Definition"><br>
+<strong>Figure:</strong> Spring Bean Definition</p>
+<p>Hereby, the byte code of <code>com.siriussuper.order.OrderCache</code>
+is expected to be available in your runtime deployment, e.g. by adding a
+Utility JAR file with this byte code to your Solution Release.</p>
+<h3 id="proute">Producer Route</h3>
+<p>All routes based on a Camel application type definition are created and started at 
+application startup by the Spring bean. Routes get stopped and recreated after each model 
+deployment even if a process model is overridden. If a model is deleted from the Audit Trail 
+database, all routes based on a Camel application type defined for this process model will 
+be stopped and removed from the Camel Context.</p>
+<p>In the <strong>Producer Route</strong> section you can define
+arbitrary Camel Routes to be invoked from activities in the Process Model
+at runtime, like:</p>
+<p class="image"><img src="images/camel-appl-route.png" alt="Simple Route example"><br>
+<strong>Figure:</strong> Simple Route example</p>
+<p>or more complex cases like</p>
+<p class="image"><img src="images/camel-appl-route-complex.png"
+	alt="Complex Route example"><br>
+<strong>Figure:</strong> Complex Route example</p>
+<p>In all cases, you need to ensure that the Camel Components used
+in the tags are part of your Runtime Environment setup.</p>
+<p>Additionally, you can set the following options:</p>
+<ul>
+   <li><strong>Include Process Context Headers</strong> - determines if the process OID, 
+   activity OID and model ID should get added to the header of the Producer route</li>
+   <li><strong>Transacted</strong> - marks the Producer routes as transacted or not</li>
+   <li><strong>Auto Startup</strong> - specifies whether to auto startup the Producer routes</li>
+</ul>
+<p>These options are enabled by default.</p>
+<h3 id="croute">Consumer Route</h3>
+<p>In the <strong>Consumer Route</strong> section you can define
+arbitrary Camel Routes to be invoked from activities in the Process Model
+at runtime, like:</p>
+<p class="image"><img src="images/camel-consumer-route.png" alt="Consumer Route example"><br>
+<strong>Figure:</strong> Consumer Route example</p>
+<p>Note that you need to ensure that the Camel Components used in the tags are part of your Runtime Environment setup.</p>
+<p>Additionally, you can set the following options:</p>
+<ul>
+   <li><strong>Transacted</strong> - marks the Consumer routes as transacted or not</li>
+   <li><strong>Auto Startup</strong> - specifies whether to auto startup the Consumer routes</li>
+</ul>
+<p>These options are enabled by default.</p>
+<h3 id="tapts">Typed Access Points</h3>
+<p>In the <strong>Typed Access Points</strong> section, you can define parameters to access the 
+data associated with the application. You can specify multiple In or Out access points for the 
+Camel Endpoint to invoke the Web service.</p>
+<p>You can define input or output parameters. A Camel application automatically determines if the 
+application type is send only/or send and receive. If at least one out mapping is provided, the application
+is considered send/receive. If no out data mapping is provided, the application is considered as send only.</p>
+<p>To add an input parameter, click <strong>Add Input</strong>.</p>
+<p class="image"><img src="images/camel-add-input.png" alt="Add Input"><br>
+<strong>Figure:</strong> Add an input parameter</p>
+<p>Add a parameter name and select the data type with its matching type definition. Supported data types are:</p>
+<ul>
+   <li>Structured Data</li>
+   <li>Primitive</li>
+   <li>Serializable Data</li>
+</ul>
+<p class="image"><img src="images/camel-sel-datatype.png" alt="Add Parameter"><br>
+<strong>Figure:</strong> Add parameter details</p>
+<p>To add an output parameter, click <strong>Add Output</strong>.</p>
+<p class="image"><img src="images/camel-add-ouput.png" alt="Add Output"><br>
+<strong>Figure:</strong> Add an output parameter</p>
+<p>Enter details similar as for an input parameter.</p>
+<p>The added parameters are now available for selection in the 
+<a href="#access">Body Access Points</a> section. For example, if you enter the
+following parameters as input and output access points:</p>
+<p class="image"><img src="images/camel-add-pts-ex.png" alt="Example parameters"><br>
+<strong>Figure:</strong> Example parameters</p>
+<p>One of the input parameters can be selected as body input access point and one of
+the output parameters can be selected as body output access point in the 
+<a href="#access">Body Access Points</a> section.</p>
+<p class="image"><img src="images/camel-sel-pts-ex.png" alt="Available Parameters"><br>
+<strong>Figure:</strong> Parameters available in drop-down list</p>
+<script>
+	writeFooter();
+</script>
+</body>
+</html>

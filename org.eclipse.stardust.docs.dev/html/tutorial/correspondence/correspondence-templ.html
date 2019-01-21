@@ -1,0 +1,348 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+  <title>Creating Correspondence with Templates and Image Substitution</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	writeNavigation("",
+		"correspondence-simple.html","",
+		"../tut-preface.htm","Tutorials",
+	   "correspondence.html","Creating Correspondence");
+ -->
+</script>
+
+<h1>Creating Correspondence with Templates and Image Substitution</h1>
+<p>This tutorial example demonstrates how to create correspondence by using templates 
+including static and dynamic images. We use the 
+<strong>CORRESPONDENCE.xsd</strong> schema file, the 
+<strong>LoanCorrespondence</strong> example model, the templates
+<code>applicant-template.html</code> and <code>applicant-template.docx</code> and example
+images from the <code>all-tutorials.zip</code> file. If you have not done already, you 
+can download the zip file containing these sources from here:<br>
+<a href="../../examples/tutorials/all-tutorials.zip">
+all-tutorials.zip</a>.</p>
+<p>You find the example sources in folder <code>correspondence</code>.</p>
+<p>The <strong>LoanCorrespondence</strong> model contains a structured data of the 
+referenced <strong>Correspondence</strong> structured data type, a Correspondence UI 
+Mashup and a Script application for adding image bookmarks. Templates are provided in HTML
+and Docx format including images, which will be included in the message.</p>
+<p>To start with this example, add the <strong>CORRESPONDENCE.xsd</strong> file to your
+projects classpath. This structured data type is described in detail in chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/correspondence-data.html">Using the predefined Structured Data Type for Correspondence</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>.</p>
+<ul>
+   <li><a href="#model">Viewing the Example Model</a></li>
+   <li><a href="#upltmpl">Uploading and Viewing the Correspondence Templates</a></li>
+   <li><a href="#start">Starting the UI Mashup</a></li>
+   <li><a href="#viewcorr">Viewing the Correspondence in the Document Folder</a></li>
+</ul>
+
+<h2 id="model">Viewing the Example Model</h2>
+<p>Import the <strong>LoanCorrespondence</strong> model in the Modeling perspective. The model contains a structured 
+data <strong>CORRESPONDENCE</strong> of structured data type <strong>CORRESPONDENCE</strong> containing the imported 
+Correspondence xsd. It also contains two applications, the Correspondence UI Mashup and a Script application for adding
+image bookmarks. For details on the Correspondence UI Mashup, please refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-ui-mashup.html">Creating a Correspondence UI Mashup</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>.
+Please take care to replace the URL in the mashup configuration with your context root.</p>
+<ul>
+   <li><a href="#script">Viewing the Script Application</a></li>
+   <li><a href="#proc">Viewing the Loan Correspondence Process</a></li>
+</ul>
+<h3 id="script">Viewing the Script Application</h3>
+<p>Let's have a look at the <strong>Prepare Image Locations</strong> Script application.</p> 
+<h4>Parameters</h4>
+<p>The Script application has the following parameters:</p>
+<ul>
+   <li><strong>CORRESPONDENCE_OUT</strong>: out parameter of structured type 
+   <strong>CORRESPONDENCE</strong></li>
+   <li><strong>companyId</strong> - in parameter of type String, defining the company id
+   used in the dynamic image reference for the template</li>
+</ul>
+<p class="image"><img src="images/corr-script-param.png" alt="Script Parameters"><br>
+<strong>Figure:</strong> Script Parameters</p>
+<h4>Configuration</h4>
+<p>The <strong>Script Code</strong> field contains the following code:</p>
+<pre>
+CORRESPONDENCE_OUT = {FieldMetaData: []};
+
+/* Push the "FieldMetaData" array elements. Individual properties:
+   - Type:         Metadata field type. Should always equal "image"
+   - Name:         Word Docx Bookmark Name 
+   - Location:     Document Repository image path (prefixed with repository://)
+   - UseImageSize: Boolean indicating if original image size should be resized
+*/
+
+// Example adding a static  image bookmark
+CORRESPONDENCE_OUT.FieldMetaData.push({
+    Type : "image",
+    Name : "OtherLogo",
+    Location : "repository:///documents/correspondence-templates/logos/sungard.png",
+    UseImageSize : true
+});
+
+// Example adding a dynamic image bookmark based on "CompanyId" Process Data
+if (CompanyId) {
+    CORRESPONDENCE_OUT.FieldMetaData.push({
+        Type : "image",
+        Name : "CompanyLogo",
+        Location : "repository:///documents/correspondence-templates/logos/" + CompanyId + ".png",
+        UseImageSize : true
+    });
+}</pre>
+<p class="image"><img src="images/script-code.png" alt="Script Code"><br>
+<strong>Figure:</strong> Script Code</p>
+<p>In case the in-parameter <strong>CompanyId</strong> is empty, a static image bookmark
+with location 
+<code>&quot;repository:///documents/correspondence-templates/logos/sungard.png&quot;</code>
+is pushed to the meta data. If <strong>CompanyId</strong> has a value, this value is used
+for a dynamic image bookmark. The location is created dynamically with the provided
+<strong>CompanyId</strong> data value as 
+<code>&quot;repository:///documents/correspondence-templates/logos/&quot; + CompanyId + &quot;.png&quot;</code>.</p>
+<h3 id="proc">Viewing the Loan Correspondence Process</h3>
+<p>The <strong>Loan Correspondence</strong> process has the following workflow:</p>
+<ol>
+   <li>Activity <strong>Enter Data</strong> reads data of the applicant, like name and 
+   id of the company</li>
+   <li>Activity <strong>Prepare Image Locations</strong> implements the Script application
+   we had a look at in the preceeding section. Data <strong>CompanyId</strong> has an
+   in-data path and <strong>CORRESPONDENCE</strong> has an out-data path to the
+   application activity accordingly.</li>
+   <li>The next activity is the Correspondence UI Mashup using the 
+   <strong>CORRESPONDENCE</strong> input data</li>
+   <li>A last activity <strong>Show Data</strong> displays the resulting
+   <strong>CORRESPONDENCE</strong> data.</li>
+</ol>
+<p class="image"><img src="images/process-templ-diagram.png" alt="Loan Correspondence Process"><br>
+<strong>Figure:</strong> Loan Correspondence Process</p>
+<h2 id="upltmpl">Uploading and Viewing the Correspondence Templates</h2>
+<p>Templates are provided in HTML and Docx format including images, which will be included in the message.</p>
+
+<p>In the Workflow Execution perspective open the <strong>My Documents</strong> view.
+Upload the following correspondence templates, which are provided in the example ZIP file,
+in the <strong>Common Documents &gt; correspondence-templates</strong> folder:</p>
+<ul>
+   <li><code>applicant-template.html</code></li>
+   <li><code>applicant-template.docx</code></li>
+</ul>
+<p class="image"><img src="images/uploaded-templates.png" alt="Uploaded Templates"><br>
+<strong>Figure:</strong> Uploaded Templates</p>
+<p>Create a subfolder <code>logos</code> and upload the example image files
+<strong>sungard.png</strong> and <strong>XYZ.png</strong>. Hereby, 
+<strong>sungard.png</strong> will be used for the static image replacement and
+<strong>XYZ.png</strong> as dynamic image bookmark in our Script application.</p>
+<p class="image"><img src="images/uploaded-templ-img.png" alt="Uploaded images"><br>
+<strong>Figure:</strong> Uploaded images</p>
+<h3 id="htmltmpl">Looking at the HTML Template Example</h3>
+<p>Our HTML template example has the following content:</p>
+<pre>
+&lt;p&gt;&lt;img src="data:image/jpeg;base64,$base64Encoder.encodeBase64String($dms.retrieveContent('/documents/correspondence-templates/logos/sungard.png'))"/&gt;&lt;/p&gt;
+
+&lt;p&gt;Dear &lt;strong&gt;$ApplicantName&lt;/strong&gt;,&lt;/p&gt;
+
+&lt;p&gt;&nbsp; &nbsp; &nbsp;We have received your loan application, but are missing the following documents.&lt;span style="line-height:1.6em"&gt;&nbsp; &nbsp; &nbsp;&lt;/span&gt;&lt;/p&gt;
+
+&lt;table border="1" cellpadding="1" cellspacing="1" style="width:500px"&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Driver&#39;s License&lt;/td&gt;
+         &lt;td&gt;A copy of your current valid Driver&#39;s License is required.&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Pay Slip&lt;/td&gt;
+         &lt;td&gt;A copy of your recent pay stub is required.&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&nbsp; &nbsp; &nbsp;Kindly send the above in to us at the earliest.&lt;/p&gt;
+
+&lt;p&gt;Sincerely,&lt;/p&gt;
+
+&lt;img src="data:image/jpeg;base64,$base64Encoder.encodeBase64String($user.signature)"/&gt;
+
+&lt;p&gt;$user.firstName&nbsp;$user.lastName&lt;/p&gt;
+
+&lt;p&gt;&nbsp;&lt;/p&gt;
+</pre>
+<h4>Image placeholder</h4>
+<p>The first line</p>
+<pre>&lt;p&gt;&lt;img src="data:image/jpeg;base64,$base64Encoder.encodeBase64String($dms.retrieveContent('/documents/correspondence-templates/logos/sungard.png'))"/&gt;&lt;/p&gt;</pre>
+<p>contains an image link to the logo image we like to display at the top of
+the template. This is the <code>sungard.png</code> image we uploaded to the 
+<code>correspondence-templates/logos</code> folder.</p>
+<p>Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html#img">Including Images from the Document Repository</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html">Using Correspondence Templates</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>
+for details on how to include images in templates and message editor source.</p>
+<h4>Process Data Path usage</h4>
+<p>The <strong>$ApplicantName</strong> variable references the Process data path 
+<strong>ApplicantName</strong> and will be replaced with the value entered for the
+data accordingly.</p>
+<h4>User attributes usage</h4>
+<p>The following user attributes are used:</p>
+<ul>
+   <li>$user.firstName</li>
+   <li>$user.lastName</li>
+</ul>
+<p>Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html#useratt">Using User Attributes</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html">Using Correspondence Templates</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>
+for details on how to use user attributes.</p>
+
+<h4>Including the user signature</h4>
+<p>The image uploaded for the user signature is used. Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html#sign">Including the User Signature</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html">Using Correspondence Templates</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>
+for details on how to include the users signature.</p>
+<h3 id="docxtmpl">Looking at the docx Template Example</h3>
+<p>Lets have a look at our docx template file. Open the file to view the content in
+Microsoft Word.</p>
+<p class="image"><img src="images/corr-templ-docx.png" alt="Correspondence Template docx File"><br>
+<strong>Figure:</strong> Correspondence Template docx File</p>
+<p>Two template images are added in the docx file. Bookmarks are linked to these images.</p>
+<p>To view the bookmarks:</p>
+<ol>
+   <li>In the <strong>Insert</strong> tab of the Word editor, select 
+   <strong>Bookmark</strong>.
+   <p class="image"><img src="images/open-bookmarks.png" alt=""></p></li>
+   <li>In the <strong>Bookmark</strong> dialog, you see two bookmarks added, 
+   <strong>CompanyLogo</strong> and <strong>signature</strong>.
+   <p class="image"><img src="images/view-bookmarks.png" alt=""></p></li>
+   <li>To see where these bookmarks belong to, click the bookmark name and select
+   <strong>Go To</strong>.
+   <p class="image"><img src="images/goto-bookmarks.png" alt=""></p></li>
+</ol>
+
+<h2 id="start">Starting the UI Mashup</h2>
+<ul>
+   <li><a href="#user">Creating a User with Signature</a></li>
+   <li><a href="#startproc">Starting the Loan Correspondence Process</a></li>
+   <li><a href="#html">Using the HTML Template</a></li>
+   <li><a href="#docx">Attaching the DOCX Template</a></li>
+   <li><a href="#other">Attaching a Document from File System</a></li>
+</ul>
+<h3 id="user">Creating a User with Signature</h3>
+<p>Create a user with an uploaded signature:</p>
+<ol>
+   <li>Create a user in the Participant Management view and assign him to the 
+   Administrator role.</li>
+   <li>Upload a signature for this user in the Configuration User Profile.
+   <p class="image"><img src="images/add-signature.png" alt="Add User Signature"></p></li>
+</ol>
+<h3 id="startproc">Starting the Loan Correspondence Process</h3>
+<p>To start the Loan Correspondence Process:</p>
+<ol>
+   <li>Login with the created user account.</li>
+   <li>In the Workflow Execution perspective, start process 
+   <strong>Loan Correspondence</strong>.</li>
+   <li>Enter an applicant name and the company name <strong>XYZ</strong>.
+   <p class="image"><img src="images/enter-data-compl.png" alt="Enter Data"></p></li>
+</ol>
+<h3 id="html">Using the HTML Template</h3>
+<p>To use the example HTML template, do the following:</p>
+<ol>
+   <li>Click the <strong>Message</strong> entry on the left side of the message content
+   editor.
+   <p class="image"><img src="images/click-message.png" alt="Open the Select Template dialog"></p></li>
+   <li>In the <strong>Select Template</strong> editor, expand the 
+   <strong>correspondence-template</strong> node.</li>
+   <li>Select the example <strong>applicant-template.html</strong> template.
+   <p class="image"><img src="images/sel-template.png" alt="Select Template"></p></li>
+   <li>Click <strong>OK</strong></li>
+</ol>
+<p>Now the message content editor displays the template content with substituted variables,
+image and signature.</p>
+<p class="image"><img src="images/html-template-result.png" alt="Resulting Message Content"><br>
+<strong>Figure:</strong> Message Content with replaced image, variables and signature</p>
+
+<h3 id="docx">Attaching the DOCX Template</h3>
+<p>Now upload the DOCX template:</p>
+<ol>
+   <li>Click the
+   <img class="noborder" src="images/sel-templ-icon.png" alt="Select Attachments Icon">
+   icon to open the <strong>Select Attachments</strong> dialog.
+   <p class="image"><img src="images/select-template.png" alt=""></p></li>
+   <li>Select <code>applicant-template.docx</code> and click <strong>OK</strong>.
+   <p class="image"><img src="images/select-attachment-docx.png" alt="Attachments Dialog"></p></li>
+</ol>
+<!-- <p>You see now the <code>applicant-template.docx</code> template listed in the -->
+<!-- attachments section.</p> -->
+<!-- <p class="image"><img src="images/docx-attached.png" alt="Attached DOCX template"><br> -->
+<!-- <strong>Figure:</strong> Attached DOCX template</p> -->
+<h3 id="other">Attaching a Document from File System</h3>
+<p>Additionally we attach a document from our file system:</p>
+<ol>
+   <li>Click the <strong>Select Attachments</strong> icon.
+   <p class="image"><img src="images/select-attachments.png" alt="Attachments Dialog"></p></li>
+   <li>In the file browser select a document from your file system.</li>
+</ol>
+<p>You see now the attached document listed in the attachments section.</p>
+<p class="image"><img src="images/other-attached.png" alt="Attached other file"><br>
+<strong>Figure:</strong> Attached file from file system</p>
+<p>Complete the <strong>Loan Correspondence</strong> UI Mashup activity.
+Activity <strong>Show Data</strong> displays the <strong>CORRESPONDENCE</strong>
+meta data.</p>
+<p class="image"><a href="images/show-data-templ-orgsize.png" target="_blank">
+<img src="images/show-data-templ.png" alt="Show Data"></a><br>
+<strong>Figure:</strong> Displayed Correspondence data</p>
+
+<h2 id="viewcorr">Viewing the Correspondence in the Document Folder</h2>
+<p>In the <strong>Document Repository</strong> view or the <strong>Process Documents</strong>
+section in the process history view of the <strong>Loan Correspondence</strong> process,
+expand the <code>correspondence</code> folder.</p>
+<p>You see the created correspondence, named as <code>correspondence-out-<i>x</i></code>.
+It contains the attached docx template as well as the attached local file.</p>
+<p class="image"><img src="images/corr-folder.png" alt="Correspondence displayed in Process Documents"><br>
+<strong>Figure:</strong> Correspondence displayed in Process Documents</p>
+<h3 id="vcorr">Viewing the Correspondence in read-only Mode</h3>
+<p>To view the correspondence in read-only mode, click the created correspondence node
+<code>correspondence-out-<i>x</i></code>.</p>
+<p class="image"><img src="images/click-corr-node.png" alt="Click Correspondence"><br>
+<strong>Figure:</strong> Click Correspondence</p>
+<p>The correspondence opens in a read-only viewer.</p>
+<p class="image"><img src="images/viewing-corr-orgsize.png" alt="Viewing the Correspondence"><br>
+<strong>Figure:</strong> Viewing the Correspondence in read-only mode</p>
+<h3 id="vdocx">Viewing the Correspondence DOCX Document</h3>
+<p>To view the resulting document of the attached DOCX template, you have to download the 
+DOCX document first:</p>
+<ol>
+   <li>Right-click the document and select the <strong></strong> option
+   <p class="image"><img src="images/download-docx.png" alt="Download DOCX document"></p></li>
+   <li>Click the <strong>Download</strong> button to start the download.
+   <p class="image"><img src="images/click-download-button.png" alt="Download"></p></li>
+</ol>
+<p>Now open the downloaded document in Microsoft Word. You see the placeholders in the 
+DOCX template replaced with process data values. The dynamic image reference displays the
+<code>XYZ.png</code> image provided in the <strong>correspondence-templates/logos</strong>
+folder as we entered <strong>XYZ</strong> as Company Id.
+This referenced location was created via the Script Application by the following
+field meta data assignment:</p>
+<pre>Location : &quot;repository:///documents/correspondence-templates/logos/&quot; + CompanyId + &quot;.png&quot;</pre>
+<p class="image"><img src="images/docx-result.png" alt="Resulting DOCX Document"><br>
+<strong>Figure:</strong> Resulting DOCX Document</p>
+
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

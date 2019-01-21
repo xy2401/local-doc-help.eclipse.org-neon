@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>GEF4 Cloudio Developer Documentation</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../book.css"/>
+	</head>
+	<body>
+		<p>
+			<i>Note to non-wiki readers: This documentation is generated from the Eclipse wiki - if you have corrections or additions it would be awesome if you added them in 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Cloudio" target="doc_external">the original wiki page</a>
+			</i>.
+		</p>
+		<h2 id="Introduction">Introduction</h2>
+		<p>The <span style="color:#8A3572">
+			<a href="#" title="GEF/GEF4/Cloudio">GEF4 Cloudio</a></span> component provides support for visualizing tag clouds within a dedicated SWT Canvas or JFace viewer. It is internally decomposed into the single 
+			<b>
+				<a href="#Cloudio.UI">Cloudio.UI</a>
+			</b> module. There are also a couple of undeployed 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Cloudio/Examples#Examples.UI_.28undeployed.29" title="GEF/GEF4/Cloudio/Examples#Examples.UI (undeployed)" target="doc_external">Cloudio UI Examples</a> that demonstrate usage of the (still internal) API. The user documentation is provided in terms of the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Cloudio/User_Guide" title="GEF/GEF4/Cloudio/User Guide" target="doc_external">GEF4 Cloudio User Guide</a>.
+		</p>
+		<p>
+			<img width="600" border="0" src="images/GEF4-Components-Cloudio.png"/>
+		</p>
+		<p><hr/></p>
+		<h2 id="Cloudio.UI">Cloudio.UI</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.cloudio.ui</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.cloudio.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Cloudio.UI">Cloudio.UI</a> module of 
+			<a href="#" title="GEF/GEF4/Cloudio">GEF4 Cloudio</a> realizes the Tag cloud view end-user features, as outlined in the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Cloudio/User_Guide" title="GEF/GEF4/Cloudio/User Guide" target="doc_external">GEF4 Cloudio User Guide</a>. It does not provide any public API yet, but exposes its internal API (guarded by an x-friends directive).
+		</p>
+		<p><hr/></p>
+		<h2 id="Cloudio.UI_2">Cloudio.UI</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.cloudio.ui</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.cloudio.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Cloudio.UI">Cloudio.UI</a> module of 
+			<a href="#" title="GEF/GEF4/Cloudio">GEF4 Cloudio</a> provides SWT- and JFace-based support for rendering tag clouds.
+		</p>
+		<p><hr/></p>
+		<p><div id="Cloudio.UI:Root"></div></p>
+		<h3 id=".7BRoot.7D">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.cloudio.internal.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Cloudio.UI:Root">{Root}</a> package provides an SWT widget (
+			<a href="#TagCloud.2C_Word">TagCloud</a>) and a JFace viewer (
+			<a href="#TagCloudViewer.2C_ICloudLabelProvider">TagCloudViewer</a>), which support rendering of word clouds.
+		</p>
+		<h4 id="TagCloud.2C_Word">TagCloud, Word</h4>
+		<p>A <code>TagCloud</code> is a special org.eclipse.swt.widgets.Canvas, dedicated to display a tag cloud. It expects the to be rendered words and related properties (weight, angle, color, font) to be represented as <code>Word</code> input elements and can be created as follows:</p>
+		<pre class="source-java">public static void main(String [] args) {
+  final Display display = new Display();
+  final Shell shell = new Shell(display);
+  TagCloud cloud = new TagCloud(shell, SWT.NONE);
+  
+  // Generate some dummy words - color, weight and fontdata must
+  // always be defined.
+  List&lt;Word&gt; words = new ArrayList&lt;Word&gt;();
+  Word w = new Word("Hello");
+  w.setColor(display.getSystemColor(SWT.COLOR_DARK_CYAN));
+  w.weight = 1;
+  w.setFontData(cloud.getFont().getFontData().clone());
+  words.add(w);
+  w = new Word("Cloudio");
+  w.setColor(display.getSystemColor(SWT.COLOR_DARK_GREEN));
+  w.setFontData(cloud.getFont().getFontData().clone());
+  w.weight = 0.5;
+  w.angle = -45;
+  words.add(w);
+
+  shell.setBounds(50,50, 300, 300);
+  cloud.setBounds(0,0, shell.getBounds().width, shell.getBounds().height);
+
+  // Assign the list of words to the cloud:
+  cloud.setWords(words, null);
+  shell.open();
+  while (!shell.isDisposed()) {
+    if (!display.readAndDispatch()) display.sleep();
+  }
+  display.dispose();
+}
+
+</pre>
+		<p>The result should look similar to this (String positions are assigned by random):</p>
+		<p>
+			<img border="0" src="images/Zest_cloudio_snippet1.png"/>
+		</p>
+		<h4 id="TagCloudViewer.2C_ICloudLabelProvider">TagCloudViewer, ICloudLabelProvider</h4>
+		<p>A <code>TagCloudViewer</code> is a special org.eclipse.jface.viewers.ContentViewer, that renders a tag cloud. It is internally based on a 
+			<a href="#TagCloud.2C_Word">TagCloud</a> and enhances the functionality of the tag cloud: it is possible to select
+			and deselect elements by mouse click, to zoom in or out using the mouse wheel and to display tool tips on words. The 
+			<a href="#TagCloudViewer.2C_ICloudLabelProvider">TagCloudViewer</a> expects an org.eclipse.jface.viewers.IStructuredContentProvider and an <code>ICloudLabelProvider</code>. The words that are to be rendered in the 
+			<a href="#TagCloud.2C_Word">TagCloud</a> are inferred by queuing the <code>ICloudLabelProvider</code> for labels of the elements returned by the org.eclipse.jface.viewers.IStructuredContentProvider. The properties of the words (weight, color, font, angle) are retrieved via the <code>ICloudLabelProvider</code> for each word as well.
+		</p>
+		<p>A <code>TagCloudViewer</code> can be used as follows:</p>
+		<pre class="source-java">  import java.util.ArrayList;
+  import java.util.Arrays;
+  import java.util.List;
+
+  import org.eclipse.jface.viewers.BaseLabelProvider;
+  import org.eclipse.jface.viewers.ISelectionChangedListener;
+  import org.eclipse.jface.viewers.IStructuredContentProvider;
+  import org.eclipse.jface.viewers.IStructuredSelection;
+  import org.eclipse.jface.viewers.SelectionChangedEvent;
+  import org.eclipse.jface.viewers.StructuredSelection;
+  import org.eclipse.jface.viewers.Viewer;
+  import org.eclipse.swt.SWT;
+  import org.eclipse.swt.graphics.Color;
+  import org.eclipse.swt.graphics.Font;
+  import org.eclipse.swt.graphics.FontData;
+  import org.eclipse.swt.widgets.Display;
+  import org.eclipse.swt.widgets.Shell;
+  import org.eclipse.zest.cloudio.ICloudLabelProvider;
+  import org.eclipse.zest.cloudio.TagCloud;
+  import org.eclipse.zest.cloudio.TagCloudViewer;
+
+  public class TagCloudViewerSnippet {
+
+    static class CustomLabelProvider extends BaseLabelProvider implements ICloudLabelProvider {
+
+        private Font font;
+
+        public CustomLabelProvider(Font font) {
+            this.font = font;
+        }
+
+        @Override
+        public String getLabel(Object element) {
+            return element.toString();
+        }
+
+        @Override
+        public double getWeight(Object element) {
+            return Math.random();
+        }
+
+        @Override
+        public Color getColor(Object element) {
+            return Display.getDefault().getSystemColor(SWT.COLOR_GREEN);
+        }
+
+        @Override
+        public FontData[] getFontData(Object element) {
+            return font.getFontData();
+        }
+
+        @Override
+        public float getAngle(Object element) {
+            return (float) (-90 + Math.random() * 180);
+        }
+
+        @Override
+        public String getToolTip(Object element) {
+            return element.toString();
+        }
+    }
+
+    public static void main(String [] args) {
+        final Display display = new Display();
+        final Shell shell = new Shell(display);
+        TagCloud cloud = new TagCloud(shell, SWT.NONE);
+
+        final TagCloudViewer viewer = new TagCloudViewer(cloud);
+
+        // A simple content provider for a list of elements 
+        viewer.setContentProvider(new IStructuredContentProvider() {
+
+            @Override
+            public void dispose() { }
+
+            @Override
+            public void inputChanged(Viewer viewer, Object oldInput,
+                    Object newInput) {}
+
+            @Override
+            public Object[] getElements(Object inputElement) {
+                return ((List&lt;?&gt;)inputElement).toArray();
+            }
+
+        });
+
+        // A simple label provider (see above)
+        viewer.setLabelProvider(new CustomLabelProvider(cloud.getFont()));
+
+        // Demo of an selection listener
+        viewer.addSelectionChangedListener(new ISelectionChangedListener() {
+
+            @Override
+            public void selectionChanged(SelectionChangedEvent event) {
+                IStructuredSelection selection = (IStructuredSelection) viewer.getSelection();
+                System.out.println("Selection: " + selection);
+            }
+        });
+
+        // Demo data
+        List&lt;String&gt; data = new ArrayList&lt;String&gt;();
+        data.add("Hello");
+        data.add("World");
+        data.add("Hello Cloudio");
+
+        shell.setBounds(50,50, 300, 300);
+        cloud.setBounds(0,0, shell.getBounds().width, shell.getBounds().height);
+
+        // Set the input of the viewer
+        viewer.setInput(data);
+
+        // Set initial selection:
+        viewer.setSelection(new StructuredSelection(Arrays.asList("Hello Cloudio")));
+ 
+        shell.open();
+        while (!shell.isDisposed()) {
+            if (!display.readAndDispatch()) display.sleep();
+        }
+        display.dispose();
+    }
+  }
+
+</pre>
+		<p> 
+			The result will look similar to this:</p>
+		<p>
+			<img border="0" src="images/Zest_cloudio_snippet2.png"/>
+		</p>
+		<p><hr/></p>
+		<h3 id="Layout">Layout</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.cloudio.internal.ui.layout</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Layout">Layout</a> package provides the contract (
+			<a href="#ILayouter.2C_DefaultLayouter">ILayouter</a>) for algorithms that perform placement of words during tag cloud generation, as well as a related default implementation (
+			<a href="#ILayouter.2C_DefaultLayouter">DefaultLayouter</a>).
+		</p>
+		<h4 id="ILayouter.2C_DefaultLayouter">ILayouter, DefaultLayouter</h4>
+		<p>An <code>ILayouter</code> is used by a 
+			<a href="#TagCloud.2C_Word">TagCloud</a> to compute the actual placement of words inside a given area. The <code>DefaultLayouter</code> places words similar to the algorithm used by 
+			<a href="http://www.wordle.net" target="doc_external">Wordle</a>.
+		</p>
+		<p><hr/></p>
+		<h3 id="Util">Util</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.cloudio.internal.ui.util</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Util">Util</a> package provides a two-dimensional tree structure to store non-overlapping rectangles (
+			<a href="#RectTree.2C_RectNode.2C_SmallRect">RectTree</a>), a custom rectangle implementation (
+			<a href="#RectTree.2C_RectNode.2C_SmallRect">SmallRect</a>) with short precision used by it (which will probably be replaced with 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Rectangle" title="GEF/GEF4/Geometry#Rectangle" target="doc_external">org.eclipse.gef4.geometry.planar.Rectangle</a> in the future), and a 
+			<a href="#CloudMatrix">CloudMatrix</a>, which represents a drawable area within a tag cloud through a 
+			<a href="#RectTree.2C_RectNode.2C_SmallRect">RectTree</a>.
+		</p>
+		<h4 id="RectTree.2C_RectNode.2C_SmallRect">RectTree, RectNode, SmallRect</h4>
+		<p>A <code>RectTree</code> is a two-dimensional tree structure to store non-overlapping rectangles that are represented through <code>RectNode</code>s, which are internally based on a short-precision rectangle representation (<code>SmallRect</code>).</p>
+		<h4 id="CloudMatrix">CloudMatrix</h4>
+		<p>A <code>CloudMatrix</code> represents the drawable area within a tag cloud (and information about which word is placed at which coordinate), internally based on a 
+			<a href="#RectTree.2C_RectNode.2C_SmallRect">RectTree</a>.
+		</p>
+		<p>
+			<a href="http://wiki.eclipse.org/Category:GEF" title="Category:GEF" target="doc_external">Category:GEF</a>
+		</p>
+	</body>
+</html>

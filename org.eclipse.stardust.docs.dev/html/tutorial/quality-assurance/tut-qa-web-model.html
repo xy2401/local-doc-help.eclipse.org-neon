@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+    charset="ISO-8859-1" type="text/css">
+<title>Creating the QA Example Model in the Modeling perspective</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Checking Quality Assurance in the Portal",
+      "tut-quality-assurance.html","tut-qa-portal.html",
+		"../tut-preface.htm","Tutorials",
+      "tut-quality-assurance.html","Quality Assurance");
+-->
+</script>
+<h1>Creating the QA Example Model in the Portal Modeling perspective</h1>
+<p>If you like to create the model with an Activity marked for Quality Assurance in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Modeling</a>
+perspective of the Stardust Portal, proceed as follows:</p>
+<ul>
+   <li><a href="#workflow">Creating the Workflow</a></li>
+   <li><a href="#setqa">Setting Quality Assurance Criteria</a></li>
+   <li><a href="#codes">Setting Quality Assurance Codes</a></li>
+</ul>
+<h2 id="workflow">Creating the Workflow</h2>
+<p>First create the workflow of the model:</p>
+<ol>
+   <li>Create a process called <strong>QAUseFormula</strong>.</li>
+   <li>Create two roles <strong>Accountant</strong> and <strong>QA Operator</strong>.</li>
+   <li>Create the following two primitive data:
+   <ul>
+      <li><strong>Account Number</strong> of type <tt>Number</tt></li>
+      <li><strong>Account Name</strong> of type <tt>Text</tt></li>
+   </ul></li>
+   <li>Click on the process to open its diagram canvas.</li>
+   <li>Click on the default lane to open its properties pane and select 
+   <strong>Accountant</strong> as participant.
+   <p><img src="images/lane-participant-web.png" alt="Participant"></p></li> 
+   <li>Create a start event followed by a manual activity, e.g.
+   <strong>Create Account</strong>.</li>
+   <li>Drag the two data to the lane.</li>
+   <li>Create In- and Out-data-mappings for both data to activity 
+   <strong>Create Account</strong>.</li>
+   <li>Create a new lane and select <strong>QA Operator</strong> as participant.</li>
+   <li>In this lane create a subsequent manual activity, e.g. 
+   <strong>Next Activity</strong>.</li>
+</ol>
+<p>The workflow should now look like in the following diagram:</p>
+<p class="image"><img src="images/diagram-web.png" alt="Diagram"><br>
+<strong>Figure:</strong> Diagram with created workflow.</p>
+
+<h2 id="setqa">Setting Quality Assurance Criteria</h2>
+<p>Now set the criteria for quality assurance in the property page of 
+activity <strong>Create Account</strong>:</p>
+<ol>
+   <li>Click the <img class="noborder" src="images/qa-icon-web.png" alt="QA">
+   icon on the left side of the pane to open the <strong>Quality Assurance</strong> 
+   properties.</li>
+   <li>In the <strong>Quality Assurance</strong> pane, choose role
+   <strong>QA Operator</strong> from the drop-down list as <strong>QA Participant</strong>.</li>
+   <li>Leave the probability value as <tt>100%</tt>.</li>
+   <li>Enter the following formula:
+   <pre>
+var accnr=AccountNumber;
+var accname=AccountName;
+if ( (accnr &gt; 9999) || (accnr &lt; 1000))
+{
+    true;
+}
+else if ( accname == null )
+{
+    true;
+}
+else 
+{
+    false;
+}</pre></li>
+</ol>
+<p class="image"><img src="images/qa-criteria-web.png" alt=""><br>
+<strong>Figure:</strong> Quality Assurance Criteria</p>
+
+<h2 id="codes">Setting Quality Assurance Codes</h2>
+<p>Now we set quality assurance codes that can be used to be added as notes 
+when a quality assurance on an activity instance fails. These can be set in the
+model property page:</p>
+<ol>
+   <li>Open the model property page.</li>
+   <li>Go to the <strong>Quality Assurance Codes</strong> tab.</li>
+   <li>Click the <img class="noborder" src="images/add-icon-web.png" alt="Add"> 
+   <strong>Add</strong> icon to add a new code.</li>
+   <li>Enter the following two error codes:
+   <ul>
+      <li><strong>ERR_101</strong> with description <tt>Invalid Account Number</tt></li>
+      <li><strong>ERR_102</strong> with description <tt>Invalid Account Name</tt></li>
+   </ul></li>
+</ol>
+<p>The error codes are now listed in the <strong>Quality Assurance Codes</strong> tree:</p>
+<p class="image"><img src="images/err-code-web.png" alt=""><br>
+<strong>Figure:</strong> New Error Codes listed in the tree</p>
+<p>Now mark in the activity that these codes should be used:</p>
+<ol>
+   <li>Open the property page of activity <strong>Create
+   Account</strong>.</li>
+   <li>Click the <img class="noborder" src="images/qa-codes-icon-web.png" alt="QA">
+   icon on the left side of the pane to open the <strong>Quality Assurance Codes</strong> 
+   properties.</li>
+   <li>In the <strong>Quality Assurance Codes</strong> section,
+   select the two error codes for the account.</li>
+</ol>
+<p class="image"><img src="images/err-code-use-web.png" alt="Error Codes"><br>
+<strong>Figure:</strong> Select error codes to be used.</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

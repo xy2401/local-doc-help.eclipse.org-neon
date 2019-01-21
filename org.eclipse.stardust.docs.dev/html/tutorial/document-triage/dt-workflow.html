@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="STYLESHEET" href="../../styles/carnot.css" type="text/css">
+<title>Creating the Document Triage Workflow</title>
+<script src="../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+writeNavigation("Performing the Document Triage",
+   "doc-triage.html","dt-execute.html",
+   "../tut-preface.htm","Tutorials",
+   "doc-triage.html","Document Triage Tutorial");
+-->
+</script>
+<h1>Creating the Document Triage Workflow</h1>
+<p>For our example model <strong>DocumentTriageExample.xpdl</strong> we create
+two processes, one for Document Rendezvous waiting for incoming Documents, and one for the
+Document Triage, containing the predefined UI Mashup activity for indexing.</p>
+<p>You find the complete example model <strong>DocumentTriageExample.xpdl</strong> as well as model 
+<strong>DocumentRequestPredefined.xpdl</strong> containing the predefined structured data type
+in the <strong>all-tutorials.zip</strong> file in the <code>document-triage/src/main/resources</code> folder.</p>
+<ul>
+   <li><a href="#prep">Importing and preparing the predefined Data Model</a></li>
+   <li><a href="#dat">Creating Business Object and Document Data</a></li>
+   <li><a href="#usecase">Creating a Document Upload Process</a></li>
+   <li><a href="#rendez">Preparing the Document Rendezvous</a></li>
+</ul>
+<h2 id="prep">Importing and preparing the predefined Data Model</h2>
+<p>To make the predefined structured data type, which is required for our Document Triage, available, import the 
+<strong>DocumentRequestPredefined.xpdl</strong> model from the <strong>all-tutorials.zip</strong> file.</p>
+<p>The usage of this predefined model is described in detail in section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/documents/document-triage.html#prefmod">
+Predefined Document Request Model Structure</a> of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/documents/document-triage.html">
+Triaging Documents</a> in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">
+End User Handbook</a>.</p>
+<p>Do not forget to adjust the server base URL in the <strong>Default Value</strong> entry field
+of the <strong>serverBaseUrl</strong> configuration variable of the predefined model.</p>
+<p class="image"><img src="images/server-base-url.png" alt=""><br>
+<strong>Figure:</strong> Enter Server Base URL</p>
+<h2 id="dat">Creating Business Object and Document Data</h2>
+<p>To create the example Document Triage model, create the following data type and data:</p>
+<ol>
+   <li>Create a Structured Type <strong>Loan Application Type</strong> with the String
+   fields <strong>TaxId</strong>, <strong>FirstName</strong> and <strong>LastName</strong>.
+   <p><img src="images/struct-type.png" alt=""></p></li>
+   <li>Create Structured Data <strong>Loan Applicant</strong> of this type and enable it
+   to be used as Business Object.
+   <p><img src="images/create-struct-data.png" alt=""></p></li>
+   <li>Select <strong>TaxId</strong> as primary key and <strong>FirstName</strong> as
+   name field.
+   <p><img src="images/create-bo.png" alt=""></p></li>
+   <li>Create a structured data of type <strong>Document Request Predefined/DOCUMENT_REQUEST</strong>.
+   This is the document request data type of the <strong>Document Request Predefined</strong>
+   model. This type is described in detail in section
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/documents/document-triage.html#prefmod">
+   Predefined Document Request Model Structure</a> of chapter
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/documents/document-triage.html">
+   Triaging Documents</a> in the
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">
+   End User Handbook</a>.
+   <p><img src="images/create-docreq-data.png" alt=""></p></li>
+</ol>
+<p>For details on defining structured data as Business Objects refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-bo.html">Specifying Structured Data as Business Object</a>
+in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>.</p>
+<h2 id="usecase">Creating a Document Upload Process</h2>
+<p>Add a simple document triage process <strong>Document Triage</strong>:</p>
+<ol>
+   <li>Add a manual activity <strong>Upload Documents</strong> to provide the option to 
+   upload documents as process attachments</li>
+   <li>Drag and drop the <strong>Document Triage Panel</strong> UI Mashup application 
+   from the predefined Document Request model to the diagram canvas of the document triage
+   process.
+   <p><img src="images/dt-drag-appl.png" alt="Drag UI Mashup Application"></p></li>
+   <li>The activity properties pane displays the implementation of the 
+   <strong>Document Request Predefined/Document Triage Panel</strong> application.
+   <p><img src="images/dt-appl-act-props.png" alt="Application Properties"></p></li>
+   <li>Connect the activities</li>
+   <li>Set the process properties to support process attachments.
+   <p><img src="images/dt-support-attachment.png" alt="Support Process Attachments"></p></li>
+</ol>
+<p>The process now looks similar to the following:</p>
+<p class="image"><img src="images/dt-ex-index-proc.png" alt=""><br>
+<strong>Figure:</strong> Example Document Upload process</p>
+
+<h2 id="rendez">Preparing the Document Rendezvous</h2>
+<p>Now we create process <strong>Loan Application</strong> for invoking a Document 
+Rendezvous. We use a Script task for easier reading of Document Request data. Prepare the 
+workflow as follows:</p>
+<ol>
+   <li>Create a Script Invocation application <strong>Define Requested Documents</strong>
+   <p><img src="images/create-script-task.png" alt="Script Task"></p></li>
+   <li>In the <p><img src="images/script-task.png" alt="Script Task"></p></li>
+   <li>In the property page of the application enter the <strong>DOCUMENT_REQUEST</strong>
+   type from the predefined model as OUT parameter:
+   <p><img src="images/dt-ex-script-app-para.png" alt=""></p></li>
+   <li>In the <strong>Configuration</strong> tab, enter JavaScript to define the document
+   request data, for example:
+   <pre>
+documentRequest = {Documents: [{
+         Name : "ID",
+         Exists : false,
+         Accepted : false,
+         Required : true,
+         DocumentLocation : "",
+         IsAttachment : false,
+         IsTemplate : false,
+         ConvertToPDF : true,
+         DocumentID : "",
+         DocumentType : "",
+         Comment : "",
+         ACL : ""
+     }, {
+         Name : "PaySlip",
+         Exists : false,
+         Accepted : false,
+         Required : true,
+         DocumentLocation : "",
+         IsAttachment : false,
+         IsTemplate : false,
+         ConvertToPDF : true,
+         DocumentID : "",
+         DocumentType : "",
+         Comment : "",
+         ACL : ""
+     }]}</pre>
+   <p><img src="images/dt-ex-script-app-config.png" alt=""></p></li>
+   <li>Drag the Script Invocation application to the diagram canvas.
+   <p><img src="images/drag-script-appl.png" alt="Drag Script Invocation"></p></li>
+   <li>Drag the <strong>DOCUMENT REQUEST</strong> and the <strong>Loan Applicant</strong>
+   data to the diagram canvas.</li>
+   <li>Create a manual activity <strong>Get Application Info</strong> reading data to the 
+   Business Object data.</li>
+   <li>Create a Rendezvous Route Activity <strong>Document Rendezvous Loan</strong>(Task = None):
+   <ol>
+      <li>Select Task <strong>None Task</strong>.
+      <p><img src="images/task-none.png" alt="None Task"></p></li>
+      <li>Begin the Activity ID of the Route Activity with <code>DocumentRendezvous</code>,
+      e.g. <code>DocumentRendezvous_Loan</code>. Do not include spaces in the ID!</li> 
+      <li>Mark this Activity as <strong>Hibernate Initially</strong></li>
+   </ol>
+   <p><img src="images/rendezvous-activity.png" alt="Route Activity Properties"></p></li>
+   <li>Create in and out data mappings from this activity to the <strong>DOCUMENT_REQUEST</strong>
+   data.</li>
+   <li>Create an activity <strong>Loan Review</strong> with an in data mapping from 
+   <strong>Loan Application</strong> data to display the resulting Business
+   Object data.</li>
+   <li>Open the properties pane of the <strong>Loan Application</strong> process.</li>
+   <li>Mark the process to support process attachments.</li>
+   <li>Add <strong>LoanApplicant.TaxId</strong> as descriptor.
+   <p><img src="images/dt-desciptor.png" alt="Add Descriptor"></p></li>
+   <li>Add <strong>DOCUMENT_REQUEST</strong> as in and out data paths.
+   <p><img src="images/dt-proc-data-path.png" alt=""></p></li>
+</ol>
+<p>The following screenshot shows the example Document Rendezvous process for Loan application:</p>
+<p class="image"><img src="images/rendezvous-process.png" alt="Claims Processing Example"><br>
+<strong>Figure:</strong> Loan Application Example Workflow</p>
+<p>For details on the Document Rendezvous concept in general, please refer to chapter
+<span class="hideReference">
+<strong>Document Rendezvous</strong> in the Stardust
+<strong>Concepts</strong> 
+</span>
+<span class="showReference">
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dev/html/concepts/executing-workflow/document-rendezvous.html">Document Rendezvous</a>
+in the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dev/html/concepts/key-concepts.html">Concepts</a></span>
+part.</p>
+
+
+<script type="text/javascript">
+<!--
+writeFooter();
+-->
+</script>
+</body>
+</html>

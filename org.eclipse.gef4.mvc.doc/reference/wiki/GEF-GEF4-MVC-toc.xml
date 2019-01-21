@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/MVC/MVC.html" label="GEF4 MVC Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MVC" label="MVC">
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#.7BRoot.7D" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MvcModule" label="MvcModule"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Behaviors" label="Behaviors">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IBehavior.2C_AbstractBehavior" label="IBehavior, AbstractBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#BehaviorUtils" label="BehaviorUtils"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ContentBehavior.2C_ContentPartPool" label="ContentBehavior, ContentPartPool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#HoverBehavior" label="HoverBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#SelectionBehavior" label="SelectionBehavior"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Domain" label="Domain">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IDomain.2C_AbstractDomain" label="IDomain, AbstractDomain"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Models" label="Models">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ContentModel" label="ContentModel"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FocusModel" label="FocusModel"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#GridModel" label="GridModel"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#HoverModel" label="HoverModel"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#SelectionModel" label="SelectionModel"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Operations" label="Operations">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ITransactionalOperation" label="ITransactionalOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractCompositeOperation" label="AbstractCompositeOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AddContentChildOperation" label="AddContentChildOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AttachToContentAnchorageOperation" label="AttachToContentAnchorageOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#BendContentOperation" label="BendContentOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ChangeContentsOperation" label="ChangeContentsOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ChangeFocusOperation" label="ChangeFocusOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#DeselectOperation" label="DeselectOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#DetachFromContentAnchorageOperation" label="DetachFromContentAnchorageOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ForwardUndoCompositeOperation" label="ForwardUndoCompositeOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#RemoveContentChildOperation" label="RemoveContentChildOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ResizeContentOperation" label="ResizeContentOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ReverseUndoCompositeOperation" label="ReverseUndoCompositeOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#SelectOperation" label="SelectOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#SetRefreshVisualOperation" label="SetRefreshVisualOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#TransformContentOperation" label="TransformContentOperation"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Parts" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IVisualPart.2C_AbstractVisualPart" label="IVisualPart, AbstractVisualPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IRootPart.2C_AbstractRootPart" label="IRootPart, AbstractRootPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IContentPart.2C_AbstractContentPart" label="IContentPart, AbstractContentPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFeedbackPart.2C_AbstractFeedbackPart" label="IFeedbackPart, AbstractFeedbackPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IHandlePart.2C_AbstractHandlePart" label="IHandlePart, AbstractHandlePart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IContentPartFactory" label="IContentPartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ITransformableContentPart" label="ITransformableContentPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IResizableContentPart" label="IResizableContentPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IBendableContentPart" label="IBendableContentPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFeedbackPartFactory" label="IFeedbackPartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IHandlePartFactory" label="IHandlePartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#PartUtils" label="PartUtils"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Policies" label="Policies">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IPolicy.2C_AbstractPolicy" label="IPolicy, AbstractPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractTransactionPolicy" label="AbstractTransactionPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractInteractionPolicy" label="AbstractInteractionPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ContentPolicy" label="ContentPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#CreationPolicy" label="CreationPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#DeletionPolicy" label="DeletionPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractTransformPolicy" label="AbstractTransformPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractResizePolicy" label="AbstractResizePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractBendPolicy" label="AbstractBendPolicy"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Tools" label="Tools">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ITool.2C_AbstractTool" label="ITool, AbstractTool"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Viewer" label="Viewer">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IViewer.2C_AbstractViewer" label="IViewer, AbstractViewer"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MVC.FX" label="MVC.FX">
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#.7BRoot.7D_2" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MvcFxModule" label="MvcFxModule"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Behaviors_2" label="Behaviors">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXConnectionClickableAreaBehavior" label="FXConnectionClickableAreaBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXFocusBehavior" label="FXFocusBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXGridBehavior" label="FXGridBehavior"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXHoverBehavior" label="FXHoverBehavior"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Domain_2" label="Domain">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXDomain" label="FXDomain"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Operations_2" label="Operations">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXBendConnectionOperation" label="FXBendConnectionOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXChangeViewportOperation" label="FXChangeViewportOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXResizeOperation" label="FXResizeOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXRevealOperation" label="FXRevealOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTransformOperation" label="FXTransformOperation"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Parts_2" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractFXContentPart" label="AbstractFXContentPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractFXFeedbackPart.2C_FXHoverFeedbackPart.2C_FXSelectionFeedbackPart.2C_FXSelectionLinkFeedbackPart" label="AbstractFXFeedbackPart, FXHoverFeedbackPart, FXSelectionFeedbackPart, FXSelectionLinkFeedbackPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXDefaultFocusFeedbackPartFactory.2C_FXDefaultHoverFeebackPartFactory.2C_FXDefaultSelectionFeedbackPartFactory" label="FXDefaultFocusFeedbackPartFactory, FXDefaultHoverFeebackPartFactory, FXDefaultSelectionFeedbackPartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#AbstractFXHandlePart.2C_AbstractFXSegmentHandlePart.2C_FXCircleSegmentHandlePart.2C_FXRectangleSegmentHandlePart.2C_FXSquareSegmentHandlePart" label="AbstractFXHandlePart, AbstractFXSegmentHandlePart, FXCircleSegmentHandlePart, FXRectangleSegmentHandlePart, FXSquareSegmentHandlePart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXDefaultHoverHandlePartFactory.2C_FXDefaultSelectionHandlePartFactory" label="FXDefaultHoverHandlePartFactory, FXDefaultSelectionHandlePartFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXRootPart" label="FXRootPart"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXPartUtils" label="FXPartUtils"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Policies_2" label="Policies">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnClickPolicy" label="IFXOnClickPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnDragPolicy" label="IFXOnDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnHoverPolicy" label="IFXOnHoverPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnPinchSpreadPolicy" label="IFXOnPinchSpreadPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnRotatePolicy" label="IFXOnRotatePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnScrollPolicy" label="IFXOnScrollPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IFXOnTypePolicy" label="IFXOnTypePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXFocusAndSelectOnClickPolicy" label="FXFocusAndSelectOnClickPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXMarqueeOnDragPolicy" label="FXMarqueeOnDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTranslateSelectedOnDragPolicy" label="FXTranslateSelectedOnDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXBendOnSegmentDragPolicy" label="FXBendOnSegmentDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXNormalizeConnectedOnDragPolicy" label="FXNormalizeConnectedOnDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXBendFirstAnchorageOnSegmentHandleDragPolicy" label="FXBendFirstAnchorageOnSegmentHandleDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXResizeTransformSelectedOnHandleDragPolicy" label="FXResizeTransformSelectedOnHandleDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXRotateSelectedOnHandleDragPolicy" label="FXRotateSelectedOnHandleDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXResizeTransformFirstAnchorageOnHandleDragPolicy" label="FXResizeTransformFirstAnchorageOnHandleDragPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXHoverOnHoverPolicy" label="FXHoverOnHoverPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXZoomOnPinchSpreadPolicy" label="FXZoomOnPinchSpreadPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXRotateSelectedOnRotatePolicy" label="FXRotateSelectedOnRotatePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXPanOrZoomOnScrollPolicy" label="FXPanOrZoomOnScrollPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXDeleteSelectedOnTypePolicy" label="FXDeleteSelectedOnTypePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXPanOnTypePolicy" label="FXPanOnTypePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXSelectFocusedOnTypePolicy" label="FXSelectFocusedOnTypePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTraverseFocusOnTypePolicy" label="FXTraverseFocusOnTypePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXChangeViewportPolicy" label="FXChangeViewportPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTransformPolicy" label="FXTransformPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXResizePolicy" label="FXResizePolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXBendConnectionPolicy" label="FXBendConnectionPolicy"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTransformConnectionPolicy" label="FXTransformConnectionPolicy"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Providers" label="Providers">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#DefaultAnchorProvider" label="DefaultAnchorProvider"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTransformProvider" label="FXTransformProvider"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#GeometricOutlineProvider.2C_GeometricBoundsProvider.2C_ShapeOutlineProvider.2C_ShapeBoundsProvider" label="GeometricOutlineProvider, GeometricBoundsProvider, ShapeOutlineProvider, ShapeBoundsProvider"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Tools_2" label="Tools">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXClickDragTool" label="FXClickDragTool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXHoverTool" label="FXHoverTool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXPinchSpreadTool" label="FXPinchSpreadTool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXRotateTool" label="FXRotateTool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXScrollTool" label="FXScrollTool"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXTypeTool" label="FXTypeTool"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Viewer_2" label="Viewer">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXViewer" label="FXViewer"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MVC.UI" label="MVC.UI">
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#.7BRoot.7D_3" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MvcUiModule" label="MvcUiModule"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Parts_3" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ISelectionProviderFactory" label="ISelectionProviderFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ContentSelectionProvider" label="ContentSelectionProvider"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Properties" label="Properties">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#IPropertySheetPageFactory" label="IPropertySheetPageFactory"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#UndoablePropertySheetPage.2C_UndoablePropertySheetEntry" label="UndoablePropertySheetPage, UndoablePropertySheetEntry"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#SetPropertyValueOperation" label="SetPropertyValueOperation"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#ContentPropertySourceAdapterFactory" label="ContentPropertySourceAdapterFactory"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MVC.FX.UI" label="MVC.FX.UI">
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#.7BRoot.7D_4" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MvcFxUiModule" label="MvcFxUiModule"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Parts_4" label="Parts">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXEditor" label="FXEditor"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXEditorActionBarContributor" label="FXEditorActionBarContributor"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXView" label="FXView"></topic>
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#DeleteActionHandler" label="DeleteActionHandler"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#MVC.FX.UI_2" label="MVC.FX.UI">
+		<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Properties_2" label="Properties">
+			<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#FXPaintPropertyDescriptor" label="FXPaintPropertyDescriptor"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/MVC/MVC.html#Migration_from_GEF_.28MVC.29_3.x_to_MVC.2C_MVC.FX.2C_MVC.UI.2C_MVC.FX.UI" label="Migration from GEF (MVC) 3.x to MVC, MVC.FX, MVC.UI, MVC.FX.UI"></topic>
+</toc>

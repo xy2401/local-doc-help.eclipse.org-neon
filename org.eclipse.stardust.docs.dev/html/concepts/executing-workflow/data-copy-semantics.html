@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Data Copy and Mapping Semantics</title>
+<link rel="stylesheet" type="text/css" href="../../styles/carnot.css"
+	title="Style">
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Different Model Versions and Workflow Executions",
+		"case-concept.html","model-version-abort-join.html",
+		"../key-concepts.html","Concepts",
+        "workflow.html","Executing Workflow");
+ -->
+</script>
+<h1>Data Copy and Mapping Semantics</h1>
+<p>This chapter covers the data copy semantics for following features:</p>
+<ul>
+	<li>Aborting and Starting a Process</li>
+	<li>Pausing and Starting a new Process</li>
+	<li>Spawning a Subprocess</li>
+</ul>
+
+<h2 id="semantics">Data Copy/Mapping Semantics</h2>
+<p>Spawned subprocesses inherit the data of their root process by copy using the usual semantic 
+for copy all data. Similarly, processes that are aborted and started from the root process instance and
+paused and started a new process instance
+copy the data using the following data copy semantics. Note that target for the copied data can
+also be other models or model versions.</p>
+<table>
+   <tr>
+      <th>Data</th>
+      <th>Synchronous/Asynchronous Subprocess</th>
+      <th>Spawned Subprocess and Peer Process </th>
+   </tr>
+   <tr>
+      <td>Primitive Data</td>
+      <td>Passed by value </td>
+      <td>Passed by value </td>
+   </tr>
+   <tr>
+      <td>Serializable Data </td>
+      <td>Passed by value </td>
+      <td>Passed by value </td>
+   </tr>
+   <tr>
+      <td>Structured Data</td>
+      <td>Passed by value </td>
+      <td>Passed by value </td>
+   </tr>
+   <tr>
+      <td>XML Document </td>
+      <td>Passed by value</td>
+      <td>Passed by value</td>
+   </tr>
+   <tr>
+      <td>Hibernate Data </td>
+      <td>Passed by reference</td>
+      <td>Passed by reference</td>
+   </tr>
+   <tr>
+      <td>Entity Bean</td>
+      <td>Passed by reference</td>
+      <td>Passed by reference</td>
+   </tr>
+   <tr>
+      <td>Document </td>
+      <td>Passed by reference</td>
+      <td>Passed by reference, except for the Extract Pages functionality. In the latter case new documents are created.</td>
+   </tr>
+   <tr>
+      <td>Document List</td>
+      <td>Shallow copy means the list get copied and content passed by reference </td>
+      <td>Shallow copy means the list get copied and content passed by reference</td>  
+   </tr>
+   <tr>
+      <td>Folder </td>
+      <td>Passed by reference</td>
+      <td>Passed by reference</td>  
+   </tr>
+   <tr>
+      <td>Folder List</td>
+      <td>Shallow copy means the list get copied and content passed by reference</td>
+      <td>Shallow copy means the list get copied and content passed by reference</td>  
+   </tr>
+   <tr>
+      <td>Notes </td>
+      <td>Passed by value</td>
+      <td>Passed by value</td>   
+   </tr>
+   <tr>
+      <td>Process Attachment </td>
+      <td>Refer Document List</td>
+      <td>Refer Document List</td>  
+   </tr>
+</table>
+<h3 id="heuristics">Data Mapping Heuristics</h3>
+<p>Data mapping heuristics is only applied to document data and document list.
+Consider Po is the originating process instance while Ps is spawned one. The following
+data mapping heuristic apply for spawned subprocesses, peer processes and newly started process.</p>
+
+<table>
+   <tr>
+      <th>Data</th>
+      <th>Mapping Heuristic</th>
+   </tr>
+   <tr>
+      <td>Document </td>
+      <td>All data values of Po are passed to Ps regardless of whether Ps uses this data. 
+      In addition, the following copy heuristics apply to the document data values Po has, 
+      but the Process Definition of  Ps does not use and the data of Ps that hasn't been initialized 
+      yet via the prior step (passing all data from Po to Ps): 
+         <ul>
+            <li>The same-type-rule - If Po uses a document data d1 with document type t1 and 
+            Po has exactly one document data with type t1 and if Ps has exactly one document 
+            data d2 with the same document type t1 then the document (including meta data) 
+            will be passed from d1 to d2.</li>
+            <li>The one-document-rule - If Po has exactly one document data d1 with type 
+            t1 and Ps uses exactly one document data d2 with type t1 (t1 and t2 might be the same types or not)}} 
+    then this document data (excluding meta data) will be passed from d1 to d2.</li>
+      <li>else  
+   the document data (including meta data) will be passed as process attachment(s) from Po to Ps 
+   (unless Ps does not support process attachments).</li>
+   </ul> 
+      </td>
+   </tr>
+   <tr>
+      <td>Document List </td>
+      <td>Same as Document</td>
+   </tr>
+</table>
+
+<p>Currently, Stardust Portal does not support viewing of Document List, Folder and Folder List.</p>
+
+<h3 id="spawnscope">Department Scoping for Spawned Subprocess</h3>
+<p>In case the data associated with root process contains department information, it gets copied to the 
+spawned process as it is. Thus, the department scope of a spawned process inherits the department scope
+of the root process.</p>
+
+<h2 id="behavior">Behavior of Subprocesses in Process Instance Hierarchy for Spawned Subprocesses</h2>
+<table>
+   <tr>
+      <th></th>
+      <th>Is Subprocess Of Root Process Instance </th>
+      <th>Subprocess Instance Must Be Completed <br>To Complete Root Process Instance</th>
+      <th>Abort Of Root Process Instance Results<br> In Abort Of Subprocess Instance</th>
+      <th>Abort Of Subprocess Instance Results <br>In Abort Of Root Process Instance</th>
+      <th>Interrupted Subprocess: Recovery Of <br>Root Process Instance Recovers Subprocess</th>
+   </tr>
+   <tr>
+      <td>Synchronous Subprocess </td>
+      <td>Supported</td>
+      <td>Supported</td>
+      <td>Supported (If it hasn't been terminated yet)</td>
+      <td>Supported (configurable - the user can decide whether to abort root process instance)</td>
+      <td>Supported</td>
+   </tr>
+   <tr>
+      <td>Asynchronous Subprocess </td>
+      <td>Not Supported</td>
+      <td>Not Supported</td>
+      <td>Not Supported</td>
+      <td>Not Supported</td>
+      <td>Not Supported (since asynchronous 'subprocesses' are not real subprocesses) </td>
+   </tr>
+   <tr>
+      <td>Spawned Subprocess </td>
+      <td>Supported</td>
+      <td>Supported</td>
+      <td>Supported (If it hasn't been terminated yet)</td>
+      <td>Supported (configurable - the user can decide whether to abort root process instance </td>
+      <td>Supported</td>
+   </tr>
+</table>
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

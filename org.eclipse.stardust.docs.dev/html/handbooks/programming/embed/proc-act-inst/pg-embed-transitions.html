@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../../styles/carnot.css"
+    charset="ISO-8859-1" type="text/css"
+>
+<title>Retrieving Transition Information of a Process Definition</title>
+<script language="JavaScript" src="../../../../styles/naviLine.js"
+    type="text/javascript"
+></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Retrieving Information on Transition Steps and Targets",
+        "pg-embed-qa.html","pg-embed-trans-info.html",
+		"../../../handbooks.htm","Developer Handbook",
+		"../../pg-preface.htm","Programming Guide",
+		"../pg-embedded-preface.htm","Embedded Usage","procs-preface.html","Managing Processes and Activities");
+ -->
+</script>
+<h1>Retrieving Transition Information of a Process Definition</h1>
+<p>The
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/ProcessDefinition.html">
+ProcessDefinition</a> class provides functionality to retrieve information on transitions in the process definition.</p>
+<ul>
+   <li><a href="#all">Retrieving all Transitions defined in the Process Definition</a></li>
+   <li><a href="#target">Retrieving a List of all Transitions with a specific Target Activity</a></li>
+   <li><a href="#source">Retrieving a List of all Transitions with a specific Source Activity</a></li>
+   <li><a href="#act">Retrieving a specific Transition</a></li>
+   <li><a href="#srcact">Retrieving the Source Activity for a specified Transition</a></li>
+   <li><a href="#targact">Retrieving the Target Activity for a specified Transition</a></li>
+</ul>
+<h2 id="all">Retrieving all Transitions defined in the Process Definition</h2>
+<p>Use method <code>getAllTransitions()</code> to get all transitions defined for the
+process definition:</p>
+<pre>List&lt;Transition&gt; getAllTransitions();</pre>
+<p>The method returns a list of
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/Transition.html">Transition</a>
+objects.</p>
+<h2 id="target">Retrieving a List of all Transitions with a specific Target Activity</h2>
+<p>In case you like to get a list of all transitions having as target a specified activity, use:</p>
+<pre>List&lt;Transition&gt; getIncomingTransitions(Activity activity);</pre>
+<p>The method returns a list of
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/Transition.html">Transition</a>
+objects. This list can be empty if there are no incoming transitions to the specified activity.</p>
+<h2 id="source">Retrieving a List of all Transitions with a specific Source Activity</h2>
+<p>The following method returns a list of all transitions having as source the specified activity:</p>
+<pre>List&lt;Transition&gt; getOutgoingTransitions(Activity activity);</pre>
+<p>The method returns a list of
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/Transition.html">Transition</a>
+objects. This list can be empty if there are no incoming transitions from the specified activity.</p>
+<h2 id="act">Retrieving a specific Transition</h2>
+<p>To retrieve a specific transition, specified by the transition Id, use:</p>
+<pre>Transition getTransition(String transitionId);</pre>
+<p>The method returns the requested transition or <code>null</code> if there is no transition with the specified Id.</p>
+<h2 id="srcact">Retrieving the Source Activity for a specified Transition</h2>
+<p>If you like to retrieve the source activity of a specified transition, use the
+following method:</p>
+<pre>Activity getSourceActivity(Transition transition);</pre>
+<p>It returns an 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/Activity.html">Activity</a>
+object.</p>
+<h2 id="targact">Retrieving the Target Activity for a specified Transition</h2>
+<p>To get the target activity for a specified transition, use:</p>
+<pre>Activity getTargetActivity(Transition transition);</pre>
+<p>The method returns an 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/model/Activity.html">Activity</a>
+object.</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

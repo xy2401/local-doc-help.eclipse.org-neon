@@ -1,0 +1,115 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.linuxtools.gcov.docs;singleton:=true
+Bundle-Name: %bundleName
+Bundle-Version: 1.0.0.201703072040
+Archiver-Version: Plexus Archiver
+Bundle-Localization: plugin
+Built-By: genie.linuxtools
+Require-Bundle: org.eclipse.help
+Bundle-ManifestVersion: 2
+Bundle-Vendor: %provider
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_121
+
+Name: plugin.xml
+SHA-256-Digest: oI0C9vuTogiaZIIgQsmj5MB8r2oow0KnPTMvR14K+AQ=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/LinuxToolsGcovProfili
+ ngTools.png
+SHA-256-Digest: vd49sDwwSLgIEaU7NBe7pOcDynkaz6wu6QlcuaAC9l0=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/LinuxToolsGcovAnnotat
+ edSource.png
+SHA-256-Digest: 8ZD4iGDEPKPGMSNILQ7bevjmSjXiTze6Ldj/Dx8/45Q=
+
+Name: META-INF/maven/org.eclipse.linuxtools.gcov/org.eclipse.linuxtool
+ s.gcov.docs/pom.xml
+SHA-256-Digest: NfLcdyeguGSRsW22aQ3ZBoZi9sxzBl37TFGCD03ezkg=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gprof-birt-chart.gif
+SHA-256-Digest: F5ahJf1ypNU9CND04zb/+uPQQ9Pus9wGeZGgBFxJecU=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gprof-sort-per-file.g
+ if
+SHA-256-Digest: cpU+Oxtr38KYFrfjXasNFFg4KhvPg0W4a8glaLazKHs=
+
+Name: images/prev.gif
+SHA-256-Digest: I4Bs/TypPpF2FValAaI3lNDWuD4KFikkGjdaeiyR4Yc=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gprof-export-to-csv.g
+ if
+SHA-256-Digest: rDwwcmFIVkgNAzCA6Rsq62V08u03zLu2a3AbAOW4QuM=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Installation-and-Set-Up.html
+SHA-256-Digest: VtlB+B+yk3+1VwLZeipmmZXJm1FS0jqGa4O1360f1fY=
+
+Name: book.css
+SHA-256-Digest: UCuR8Qyhx1o7HqT9o8lvZb2d5k/w0hlkeZGQT0LLn0Y=
+
+Name: plugin.properties
+SHA-256-Digest: 2uXd6RQ/Ls4fSiQ8hzOq6wieTeD7pE1rZlSvUpx76wI=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gprof-sort-per-functi
+ on.gif
+SHA-256-Digest: IKYui79S/VfkudxWdrGnkDYG6GwHwEzU8feepufvacY=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/LinuxToolsGcovView.pn
+ g
+SHA-256-Digest: W44RdATxSU+vYIz01KSCeVjDJLQDyFYd+iRKyr8Hwwo=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/LinuxToolsProfileAsGc
+ ov.png
+SHA-256-Digest: YYzs+eL9ntpybkxCoOT0UG8E4Y5fLrd5w5yjel6tejk=
+
+Name: about.html
+SHA-256-Digest: 1fuYr0bu6NsJZCAmSom5QtnvnV0Cg8DwLn77Dd1Ql24=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/GcovAnnotatedSource.p
+ ng
+SHA-256-Digest: 0DQT5DpF6RWD1uHL8Oupe2T/Hj87pRFxedkyDsJIyVk=
+
+Name: images/home.gif
+SHA-256-Digest: 4cB3uzSzawBtPtcQboiWU16+RMytdhxFuZZGzwENCF8=
+
+Name: META-INF/maven/org.eclipse.linuxtools.gcov/org.eclipse.linuxtool
+ s.gcov.docs/pom.properties
+SHA-256-Digest: AdSPEQ4OfmtxXo7gTsKt72Kr+MrHUR1hEZScYpljU6g=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Gcov-main-view.html
+SHA-256-Digest: i7EPNZtD5sFLFDK+dcrOmZp1OgiOg4eSMnVYJL2591U=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/GcovView.png
+SHA-256-Digest: jXciT8ppUHoANEJFifSlr56Y/eTQ9cCQwxV6yQsgKOw=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Updating-This-Document.html
+SHA-256-Digest: ksOrmBi7vCvuM8/BH23oLZ/raOQKEf5bXEPqsXxJV24=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Opening-gcov-result.html
+SHA-256-Digest: Gs2IGErZ85584S0xQe6oWWVL0dGuamXo0VwB2wVuiNM=
+
+Name: images/next.gif
+SHA-256-Digest: IFqoxpwo9EXNAc2xh0M2KmlZWC1RBMxv8nWCwhMwRtI=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gcov-binary-file.png
+SHA-256-Digest: vkMxTixfteQG+I1oad85JwaDXpbbGSduad2X+1SHCrQ=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gcov-project-explorer
+ .png
+SHA-256-Digest: 6JImJX7bkoZlim/pEjFamEHn0jM1ahh9AOv9CTYVj7o=
+
+Name: Linux_Tools_Project/GCov/User_Guide/User-Guide.html
+SHA-256-Digest: WnurrfRUTZSz3n6EO8/PIITEdKHYlz3eEBW2kL8m184=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Troubleshooting.html
+SHA-256-Digest: UAsiccA8bAnczRIHk2nNVHLX77uXXIRg0Xotp4C9xuU=
+
+Name: toc.xml
+SHA-256-Digest: PKpYtuJUxsmeCvsNu5ENspjI5mRO2GmELtApt+WHHYg=
+
+Name: Linux_Tools_Project/GCov/User_Guide/images/Gcov-sort-per-folder.
+ gif
+SHA-256-Digest: M5Zxx0bqev+tFsvIw80tOfJ/tcyaoABar7ipcV6ayfo=
+
+Name: Linux_Tools_Project/GCov/User_Guide/Profiling-Code-Coverage.html
+SHA-256-Digest: Z35loHnb7tWk1ggygwQACaWRCoQL0hBf+EQYafLItyI=
+

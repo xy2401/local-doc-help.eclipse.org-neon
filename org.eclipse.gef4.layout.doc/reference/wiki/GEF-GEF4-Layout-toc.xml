@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/Layout/Layout.html" label="GEF4 Layout Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#Layout" label="Layout">
+		<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#.7BRoot.7D" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#ILayoutAlgorithm" label="ILayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#LayoutContext" label="LayoutContext"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#ILayoutFilter" label="ILayoutFilter"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#LayoutProperties" label="LayoutProperties"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#Algorithms" label="Algorithms">
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#GridLayoutAlgorithm" label="GridLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#BoxLayoutAlgorithm" label="BoxLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#SpringLayoutAlgorithm" label="SpringLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#HorizontalShiftLayoutAlgorithm" label="HorizontalShiftLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#TreeLayoutAlgorithm" label="TreeLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#RadialLayoutAlgorithm" label="RadialLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#SpaceTreeLayoutAlgorithm" label="SpaceTreeLayoutAlgorithm"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#SugiyamaLayoutAlgorithm" label="SugiyamaLayoutAlgorithm"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#Migration_from_Zest_1.x_to_GEF4_Layout" label="Migration from Zest 1.x to GEF4 Layout">
+		<topic href="reference/wiki/GEF/GEF4/Layout/Layout.html#Custom_Layouts" label="Custom Layouts"></topic>
+	</topic>
+</toc>

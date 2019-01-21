@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Adding Activities in Swim Lanes</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Handling Data and Data Flows in the Process",
+	      "tut-chap-7.htm","tut-chap-9.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Adding Activities in Swim Lanes</h1>
+<p>Once all the building blocks are ready, we can add activities in swim lanes.
+</p>
+<p>Let's first understand, how each activity drives the workflow:</p>
+<ul>
+	<li>Initialization of a case related customer data</li>
+	<li>Creation of a support case on an incoming customer call</li>
+	<li>Analysis of and providing a solution to the problem</li>
+	<li>Delivering a patch to the customer</li>
+	OR
+	<li>Notifying the customer if the search for a solution to this problem has been rejected</li>
+	<li>Displaying the input data</li>
+</ul>
+<p>These activities form the backbone of the definition of the support process and are labeled as:</p>
+<ul>
+	<li><strong>Init Data</strong> - no user interaction</li>
+	<li><strong>Enter Data</strong> - involves user interaction</li>
+	<li><strong>Analyze To Solve</strong> - involves user interaction</li>
+	<li><strong>Deliver Patch</strong> -  involves user interaction</li>
+	<li><strong>Notify Customer</strong> - no user interaction</li>
+	
+</ul>
+
+<p>To add activities in the swim lanes:</p>
+
+<ol>
+	<li>In the <strong>My Process Models</strong> panel, expand the <strong>Support Case</strong> model</li>
+	<li>Drag the <strong>Support Case Factory</strong> application from the Applications node and drop it in the 
+	<strong>Start Process</strong> swim lane. 
+	The script task named Support Case Factory gets created.
+	<p class="image"><img src="images/app-act.png" alt="Create Activity"> <br>
+<strong>Figure:</strong> Create Application Activity</p>
+	</li>
+	
+	<li>Click on the newly created application activity to view its properties
+	
+	<p class="image"><img src="images/scf-act.png" alt=""> <br>
+<strong>Figure:</strong> Click Application Activity</p>
+	</li>
+	<li>In the General properties, specify <strong>Init Data</strong> in the Name text box
+	<p class="image"><img src="images/app-act-gen.png" alt=""> <br>
+<strong>Figure:</strong> Application Activity - Init Data</p>
+Note that it is a <strong>Script Task</strong>.
+	</li>
+	<li>Go to the <strong>Profile</strong> panel and make sure that the <strong>Integrator</strong> profile is selected.
+	<p class="image"><img src="images/integrator-prof.png" alt=""> <br>
+<strong>Figure:</strong> Profile - Integrator</p>
+	</li>
+	<li>In the properties panel of the Init Data activity, click on the <strong>Implementation</strong>
+	icon to view implementation properties
+	<p class="image"><img src="images/implementation-icon.png" alt=""> <br>
+<strong>Figure:</strong> Property - Implementation</p></li>
+	<li>In the toolbar, click the <strong>Create Activity</strong> icon and  
+	drop it in the <strong>Collect Details</strong> swim lane
+	<p class="image"><img src="images/act-two.png" alt=""> <br>
+<strong>Figure:</strong> Activity Added</p>
+	
+	</li>
+	<li>Rename the activity as <strong>Enter Data</strong></li>
+	<li>Similarly, add following activities:
+		<ul>
+			<li>In the Analyze Issues swim lane, add <strong>Manual Task</strong> activity and 
+			rename it to <strong>Analyze To Solve</strong>.</li>
+			<li>In the Analyze Issues swim lane, drag and drop the <strong>Notify Customer</strong> application.</li>
+			<li>In the Deliver Results swim lane, add <strong>None Task</strong> activity and rename it to <strong>Deliver Patch</strong>.</li>
+		</ul></li>
+</ol>
+
+	<p class="image"><img src="images/activities.png" alt=""> <br>
+<strong>Figure:</strong> Activities</p>
+<h2 id="trans">Creating Transitions between Two Activities</h2>
+<p>Once all the activities are created, the modeler has to define their sequence and transitions between these activities. So that
+a workflow is defined.</p>
+<p>To define a transition between two activities:</p>
+<ol>
+	<li>Hover the mouse over the <strong>Init Data</strong> activity and click the sequence flow icon
+	<p class="image"><img src="images/hover.png" alt=""> <br>
+<strong>Figure:</strong> Click Sequence Flow Icon</p>
+	
+	</li>
+	<li>Click the <strong>Enter Data</strong> activity as second anchor point for connection
+	
+	<p class="image"><img src="images/second-anchor.png" alt=""> <br>
+<strong>Figure:</strong> Define Transition</p>
+	</li>
+	<li>Similarly, specify transition for following activities:
+	<ul>
+		<li>From <strong>Enter Data</strong> activity to <strong>Analyze to Solve</strong></li>
+		<li>From <strong>Analyze to Solve</strong> activity to <strong>Deliver Patch</strong></li>
+	</ul>
+	</li>
+	<li>Leave the <strong>Notify Customer</strong> activity without any transition</li>
+
+</ol>
+
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

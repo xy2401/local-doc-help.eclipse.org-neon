@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Benchmarks</title>
+<link rel="stylesheet" type="text/css" href="../styles/carnot.css"
+   title="Style">
+<script language="JavaScript" src="../styles/naviLine.js"
+   type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+   writeNavigation("Quality Assurance",
+      "activity-criticality.html","quality-assurance.html",
+      "key-concepts.html","Concepts");
+ -->
+</script>
+
+<h1>Benchmarks</h1>
+<p>Benchmarks are intended to provide targets for measuring Business Processes.</p>
+<ul>
+	<li><a href="#usage">Common Usage Pattern</a></li>
+	<li><a href="#recom">Benchmarks or Criticality - Our Recommendation</a></li>
+	<li><a href="#association">Benchmark/Model Association and Storage</a></li>
+	<li><a href="#associ">Behavior of Benchmark for Transient Processes</a></li>
+	<li><a href="#delben">Deletion of Benchmarks</a></li>
+	<li><a href="#dae">Benchmark Daemon</a></li>
+	<li><a href="#calc">Benchmark Calculations</a></li>
+	<li class="ipp"><a href="#dayc">Business Days Calculations</a></li>
+	<li><a href="#date">Business Date</a></li>
+	<li class="ipp"><a href="#days">Working Days / Non-Working Days</a></li>
+	
+</ul>
+<h2 id="usage">Common Usage Pattern</h2>
+<p>Benchmarks support monitoring the status of process execution against conditions such as:</p>
+<ul>
+	<li>An Activity of a process instance must be completed at 4 PM of the day the process instance has been started</li>
+	<li>The entire execution time (duration) of a process instance must not exceed 10 business days</li>
+	<li>The execution of activities within a process must be completed by a given time and day since the start 
+	of the process (For example, by 2:30 PM on the 5<sup>th</sup> business day after process start.) </li>
+</ul>
+<p>For example, passport processing time is five days. After submitting a passport application, 
+the passport should be delivered within five business days from the date of submission. Here you can specify benchmark condition as
+<tt>Business date(process start time) + 5 days offset</tt>.
+Specifying a benchmark on such a process would ensure the timely execution of the process.</p>
+<h2 id="recom">Benchmarks or Criticality - Our Recommendation</h2>
+ <p>In some scenarios, you might have to decide whether to use benchmarks or criticality.
+
+The criticality feature simply provides automatic aging of the activity. It gives an ordered list of activities that is
+used as assembly line. For details on Criticality, please refer to the chapter <a href="activity-criticality.html">Activity Criticality</a>.</p>
+<p>Benchmarks can be seen as an extension of the existing Criticality concept for a more flexible criticality calculation.
+Also, using benchmarks provide additional views to monitor these extended criticality values.
+</p>
+
+ <p>The Benchmark feature has business data driven calculation.
+ Calculation of the process execution time is based on process data and/or business date. 
+ The user can define the exact time of process execution. Based on specified condition, 
+ you can get an overview of how many process instances 
+ exist at a given time for:</p>
+ <ul>
+ 	<li>all processes</li>
+ 	<li>processes of a specific process definition</li>
+ 	<li>processes working against a specific business object instance</li>
+ 	<li>processes working against a specific business object instance which is grouping other business object instances</li> 
+ </ul> 
+ <p>Hence, to measure the accurate time of process execution, we recommend you to use both the features together.
+ For more information on how to define the benchmarks, please refer to the chapter 
+ <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/bcc-views-benchmarks.html">Managing Benchmark Definitions</a> of the 
+ <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">Enduser Handbook</a>.</p>
+<h2 id="association">Benchmark/Model Association and Storage</h2>
+<p>Benchmarks are defined against the currently active models.
+Association between Benchmarks and Processes/Activities is purely based on (fully qualified) IDs.
+</p> 
+<p>
+Benchmarks are stored in the default document repository. For more information, please refer to the
+section <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/admin-portal/admin-portal-repository.html#benchmark">benchmark-definitions</a>
+ of the chapter 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/admin-portal/admin-portal-repository.html">Viewing and Managing Document Repository Resources</a>.
+
+Benchmarks are assigned against the combination of a process and an activity. So, for example, 
+a daily checklist will have a different benchmark than a monthly checklist.</p>
+<h2 id="associ">Behavior of Benchmark for Transient Processes</h2>
+<p>Process instances in transient mode cannot have benchmarks associated with it as no process data is stored in the 
+AuditTrail.</p>
+
+
+<h2 id="delben">Deletion of Benchmarks</h2>
+<p>When you delete a benchmark, the following checks are applied to it before deletion.</p>
+<ul>
+	<li>You cannot delete a published benchmark that is associated with a running process instance.
+	But if a published benchmark doesn't have any running process instances, then that benchmark can be deleted.
+	</li>
+	<li>If the benchmark is associated with a model or process from the <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/components/config/config-benchmark.html">Benchmark Configuration</a> panel then deletion of that benchmark is not allowed.  </li>
+	<li>Also, refer to the section <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/admin-portal/admin-portal-repository.html#benchmark">benchmark-definitions</a> of the
+chapter <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/admin-portal/admin-portal-repository.html">Viewing and Managing Document Repository Resources</a>.</li>
+	
+</ul>
+<p class="note"><strong>Note:</strong><br> Benchmarks get deleted if you perform <strong>Cleanup Audit Trail and Model Database</strong> 
+operation. 
+However, note that benchmarks do not get deleted on <strong>Cleanup Audit Trail Database</strong> operation.</p>
+
+<h2 id="dae">Benchmark Daemon</h2>
+<p>The Benchmark Daemon performs benchmark calculations at scheduled intervals.</p>
+<p>Additional Activity recalculation options can be set on the Benchmark Configuration Panel, including:</p>
+<ul>
+	<li>Activity Creation</li>
+	<li>Activity Suspend</li>
+</ul>
+<p>Note that all the recalculation options are enabled by default. For more information, please refer to 
+the chapter <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/components/config/config-benchmark.html">Configuring Benchmark Settings</a>.</p>
+<p>Process instance benchmarks are recalculated only when the daemon runs. For more information about daemons, please refer to 
+the chapter <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dev/html/concepts/admin-concepts/ag-concepts-2.htm">Daemons</a>.</p>
+<h3 id="benchd">Avoiding Timeouts when using the Benchmark Daemon</h3>
+<p>Timeouts when you are using the Benchmark daemon might happen due to low batch size 
+values. In that case increase the timeout value of the daemon queue via the property 
+<strong>benchmark.daemon.BatchSize</strong> in your server-side 
+<code>carnot.properties</code> file.</p>
+<p>Additionally make sure that the default transaction timeout for your Daemon queue is
+at least equal to the value of property <strong>benchmark.daemon.Periodicity</strong>.</p>
+<p>Please find details on properties <strong>benchmark.daemon.Periodicity</strong> and
+<strong>benchmark.daemon.BatchSize</strong> in section 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dev/html/handbooks/operation/properties/ag-appendix-properties-2.htm#daemon">Daemon</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dev/html/handbooks/operation/properties/ag-appendix-properties-2.htm">Server Side Properties</a>.</p>
+
+<h2 id="calc">Benchmark Calculations</h2> 
+<p>Once the process instance and activity instance is complete, the associated benchmark is not updated.
+The Stardust Portal displays the last updated state (before the process instance or activity instance completed) in the various 
+tables, dashboards, and reports.</p> 
+<div class="ipp"><h2 id="dayc">Business Days Calculations</h2> 
+<p>Benchmark calculations are generally against business days rather than calendar days. 
+Business day calculations require an association of a benchmark and a business calendar.</p>
+<p>The business calendar must be a Time-Off calendar defined in the Calendar perspective.
+For more information, please refer to 
+the <a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/business-calendar/introduction.html">Working with Calendars</a> handbook.
+</p>
+<p>Calendar association is implicit for process instances started via calendars but for other start channels 
+manual start, manual start using business object instances, and APIs a default calendar should be specified in the 
+Benchmark Definition view.</p> 
+<p>The business calendar can be specified when starting via the business object instance manual start view.
+If a business calendar is not available, calculations are reverted to calendar days.
+Business days calculations should start from the business date.</p></div>
+<h3 id="date">Business Date</h3>
+<p>To support Benchmark calculations, a predefined Business Date primitive data of type <code>Date and Time plus Time Zone</code> is 
+provided. The business date is set to the process start date when a process instance is started 
+unless the business date is externally injected. It can be specified for Checklists started via Business 
+Object Manual Starts. For more information, please refer to the 
+ chapter <a href ="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/modeler/process-def-view/start-process.html">Starting a Process</a>
+of the <a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/modeler/toc.html">Model &amp; Go!</a> handbook.</p> 
+<div class="ipp"><h3 id="days">Working Days / Non-Working Days</h3> 
+<p>The business calendar(s) defining the business days must specify the event time for 
+non-working days (for example, Time Off Events) as either <strong>All Day</strong> or with <strong>Start Time</strong> / <strong>End Time</strong> of 12:00am - 11:59pm.
+Business Days calculations consider days with Time Off Events that cover 
+the entire 24 hour time range as non-working days.</p></div> 
+ 
+<!-- from CRNT-37573 x 
+ Extended implementation of benchmark runtime artifact management to disallow delete for benchmarks 
+ that are in use by an active process instance.
+Added NPE check that throws an ObjectNotFound Exception when trying to load a benchmark 
+definition that has been deleted. -->
+ 
+  
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

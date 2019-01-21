@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>GEF4 DOT User Guide</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../../book.css"/>
+	</head>
+	<body>
+		<p>
+			<i>Note to non-wiki readers: This documentation is generated from the Eclipse wiki - if you have corrections or additions it would be awesome if you added them in 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/DOT" target="doc_external">the original wiki page</a>
+			</i>.
+		</p>
+		<h3 id="Introduction">Introduction</h3>
+		<p>The 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT" title="GEF/GEF4/DOT" target="doc_external">GEF4 DOT</a> component adds a 
+			<i>DOT Editor</i> and a 
+			<i>DOT Graph View</i>, as well as a 
+			<i>Dot</i> preference page and a 'Sync Graphviz Export' toggle button to the UI. The 
+			<i>DOT Editor</i> can be used to edit 
+			<a href="http://www.graphviz.org" target="doc_external">Graphviz</a> *.dot files, while the 
+			<i>DOT Graph View</i> allows to render them within Eclipse using 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">GEF4 Zest</a>. The additional 
+			<i>Sync Graphviz Export</i> feature that is related to the 
+			<i>DOT Editor</i> (provided via a toggle button in the main toolbar) further allows to export them into different image formats (such as PDF, PNG, ...) using the 
+			<a href="http://www.graphviz.org/" target="doc_external">Graphviz</a> native executable. 
+		</p>
+		<p>In combination, the 
+			<i>DOT Editor</i>, 
+			<i>DOT Graph View</i>, and the 
+			<i>Sync Graphviz Export</i> feature, provide a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">GEF4 Zest</a>-based 
+			<a href="http://www.graphviz.org" target="doc_external">Graphviz</a> DOT authoring environment. If a *.dot file or embedded DOT is edited, it can be visualized in the 
+			<i>DOT Graph View</i>, and/or can be exported as a PDF or image by using the 
+			<i>Sync Graphviz Export</i>. At the same time the 
+			<i>DOT Graph View</i> and 
+			<i>Sync Graphviz Export</i> provide a simple way to visualize *.dot file output of any kind of program, e.g. to visualize and debug internal data structures, results, etc: if a program running in Eclipse outputs any *.dot file in the workspace and the workspace is refreshed, the 
+			<i>DOT Graph View</i> and the export will be updated accordingly.
+		</p>
+		<p><small>Please note that the 
+			<i>DOT Editor</i> and the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">GEF4 Zest</a>-based rendering of the 
+			<i>DOT Graph View</i> are currently still limited to support only a subset of the DOT language (see 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=454629" target="doc_external">#454629</a>, 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=321775" target="doc_external">#321775</a>, and 
+			<a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=441352" target="doc_external">#441352</a> for details).</small>
+		</p>
+		<h3 id="DOT_Editor">DOT Editor</h3>
+		<p>The 
+			<i>DOT Editor</i> is registered for *.dot files within the Eclipse Workbench UI. It is based on 
+			<a href="https://www.eclipse.org/Xtext/" target="doc_external">Xtext</a> and thus provides support for syntax coloring, content assist, and integrated validation, as well as a customized Outline view integration.
+		</p>
+		<p>
+			<img border="0" src="images/DotEditor.png"/>
+		</p>
+		<p>The editor validates the currently edited .dot file on the fly and issues warnings/errors e.g in case of using deprecated/invalid dot language elements:</p>
+		<p>
+			<img border="0" src="images/Dot_editor_warning_detection.png"/>
+
+			<img border="0" src="images/Dot_editor_error_detection.png"/>
+		</p>
+		<p>The editor also provides a 
+			<i>Sync Graphviz Export</i> option (toggle button in the toolbar; using the default Graphviz icon), which - if enabled - automatically stores an image file (.pdf, .png, ...) representing the saved state of the edited .dot file to the directory containing the .dot file, and opens it with the associated external image viewer, if one is available. In this example, the export looks like this:
+		</p>
+		<p>
+			<img width="150" border="0" src="images/DotZestM2Rendered.png"/>
+		</p>
+		<p>The export relies on executing the native Graphviz dot binary, which can be configured under 'Windows -&gt; Preferences -&gt; Dot -&gt; Graphviz' preference page. The following two screenshots represent the Graphviz preference page before/after the path to the dot executable is defined.</p>
+		<p>
+			<img width="600" border="0" src="images/Graphviz_preference_page1.png"/>
+
+			<img width="600" border="0" src="images/Graphviz_preference_page2.png"/>
+		</p>
+		<h3 id="DOT_Graph_View">DOT Graph View</h3>
+		<p>The 
+			<i>DOT Graph View</i> ('Window -&gt; Show View -&gt; Other... -&gt; Visualization -&gt; DOT Graph') can be used to visualize DOT graphs contained in *.dot files or embedded in other files, which are either explicitly loaded from the workspace, or synched with the .dot file currently being edited in the active 
+			<i>DOT Editor</i>.
+		</p>
+		<p>For instance, consider a file with the .dot extension, containing the following DOT graph definition: </p>
+		<pre>digraph {
+    edge[dir="both"]
+    1;
+    2 [shape="diamond"];
+    3 
+    4 [shape="circle", xlabel="external node label"];
+    5 [shape=box, label="internal node label"];
+    1 -&gt; 2 [style=dashed, headlabel="head label", taillabel="tail label"]
+    3 -&gt; 2 [style=dotted, label="edge label"]
+    2 -&gt; 4 [arrowtail="box"]
+    4 -&gt; 5 [arrowhead="tee"]
+    2 -&gt; 5 [arrowhead = "open", xlabel="external edge label"]
+}
+</pre>
+		<p>Loading it in the view will result either in the following representation on the left side in '
+			<b>native mode</b>' (when the dot executable is configured, it is used for layouting), or in the following representation on the right side in '
+			<b>emulated mode</b>' (when the dot executable is not configured, the layouting is emulated by using a comparable 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout" title="GEF/GEF4/Layout" target="doc_external">GEF4 Layout</a> algorithm).
+		</p>
+		<p>
+			<img width="550" border="0" src="images/DOT_Graph_view_native.jpg"/>
+
+			<img width="540" border="0" src="images/DOT_Graph_view_emulated.jpg"/>
+		</p>
+		<p>The view can be linked with the 
+			<i>DOT Editor</i> to visualize the saved state of the currently edited .dot file through the 'Link with DOT Editor' toggle button in the view's toolbar:
+		</p>
+		<p>
+			<img width="1000" border="0" src="images/Tree_native.png"/>
+		</p>
+		<p>It can further be used to display embedded DOT in other files, e.g. 
+			<a href="http://fsteeg.wordpress.com/2010/01/07/visual-textual-documentation-with-dot-and-zest-in-eclipse/" target="doc_external">in source code comments</a> or 
+			<a href="http://fsteeg.wordpress.com/2010/02/07/diagrams-in-wiki-markup-with-mylyn-wikitext-dot-and-zest/" target="doc_external">in wiki markup</a>:
+		</p>
+		<p>
+			<img width="600" border="0" src="images/Embedded_emulated.png"/>
+		</p>
+	</body>
+</html>

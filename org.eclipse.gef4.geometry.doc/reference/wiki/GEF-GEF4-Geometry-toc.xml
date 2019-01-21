@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/Geometry/Geometry.html" label="GEF4 Geometry Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry" label="Geometry">
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Planar" label="Planar">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#IGeometry.2C_ICurve.2C_IShape.2C_IMultiShape" label="IGeometry, ICurve, IShape, IMultiShape"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#IRotatable.2C_IScalable.2C_ITranslatable" label="IRotatable, IScalable, ITranslatable"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#AbstractGeometry.2C_AbstractRectangleBasedGeometry.2C_AbstractArcBasedGeometry.2C_AbstractPointListBasedGeometry.2C_AbstractMultiShape" label="AbstractGeometry, AbstractRectangleBasedGeometry, AbstractArcBasedGeometry, AbstractPointListBasedGeometry, AbstractMultiShape"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Point" label="Point"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Dimension" label="Dimension"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Line" label="Line"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Rectangle" label="Rectangle"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Polyline" label="Polyline"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Polygon" label="Polygon"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Ellipse" label="Ellipse"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Arc" label="Arc"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Pie" label="Pie"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#RoundedRectangle" label="RoundedRectangle"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#BezierCurve" label="BezierCurve"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#QuadraticCurve" label="QuadraticCurve"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#CubicCurve" label="CubicCurve"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#PolyBezier" label="PolyBezier"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#CurvedPolygon" label="CurvedPolygon"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Region" label="Region"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Ring" label="Ring"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Path" label="Path"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Euclidean" label="Euclidean">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Angle" label="Angle"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Vector" label="Vector"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Straight" label="Straight"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Projective" label="Projective">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Vector3D" label="Vector3D"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Straight3D" label="Straight3D"></topic>
+		</topic>
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Convert.AWT" label="Convert.AWT">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry2AWT" label="Geometry2AWT"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#AWT2Geometry" label="AWT2Geometry"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry.Convert.FX" label="Geometry.Convert.FX">
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Convert.FX" label="Convert.FX">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry2JavaFX" label="Geometry2JavaFX"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#JavaFX2Geometry" label="JavaFX2Geometry"></topic>
+		</topic>
+	</topic>
+	<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry.Convert.SWT" label="Geometry.Convert.SWT">
+		<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Convert.SWT" label="Convert.SWT">
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#Geometry2SWT" label="Geometry2SWT"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#SWT2Geometry" label="SWT2Geometry"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#SWT2AWT" label="SWT2AWT"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Geometry/Geometry.html#AWT2SWT" label="AWT2SWT"></topic>
+		</topic>
+	</topic>
+</toc>

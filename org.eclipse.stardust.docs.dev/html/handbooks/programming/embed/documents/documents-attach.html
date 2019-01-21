@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../../../styles/carnot.css" charset="ISO-8859-1"
+    type="text/css">
+<title>Attaching Documents to a Process</title>
+<script language="JavaScript" src="../../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("",
+		"documents-versions.html","",
+		"../../../handbooks.htm","Developer Handbook",
+		"../../pg-preface.htm","Programming Guide",
+		"../pg-embedded-preface.htm","Embedded Usage",
+		"docs-preface.html","Document Management");
+-->
+</script>
+<h1>Attaching Documents to a Process</h1>
+<p>In some cases you like to attach documents from the activity screen instead of 
+launching the Stardust Portal, e.g.:</p>
+<ul>
+   <li>You like to attach the document while filling in the information from the same 
+   activity screen.</li>
+   <li>You need to attach reports, which you download from a <code>http</code> location.</li>
+</ul>
+<h2 id="iaa">Attaching a Document from an interactive Application Activity</h2>
+<p>For example to attach a document from an interactive JSF Activity, you can perform
+the following steps:</p>
+<ol>
+   <li>Edit the xhtml file and add the following entry:
+   <pre>&lt;trh:rowLayout&gt;
+   &lt;tr:inputFile label="Attach Document: " value="#{SwitchDetailsDataEntryBean.file}" /&gt;
+&lt;/trh:rowLayout&gt;</pre>
+   This entry in xhtml will create a control with <strong>Attach Document</strong> as label, an edit 
+   control next to this that will display the path of the browsed file and a <strong>Browse</strong>
+   button, that opens up Open Windows Dialog box.</li>
+   <li>In your backing bean class add the following code:
+   <pre>
+package com.sungard.iworks.web.jsf.beans.iworkscompass.switchrequest;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import org.apache.myfaces.trinidad.context.RequestContext;
+import org.apache.myfaces.trinidad.model.UploadedFile;
+import ag.carnot.web.jsf.common.ManagedBeanUtils;
+import ag.carnot.web.jsf.common.beans.SessionContext;
+import ag.carnot.web.jsf.common.structureddata.ComplexTypeWrapper;
+import ag.carnot.web.jsf.processportal.beans.ActivityInstanceDialogBean;
+import ag.carnot.workflow.runtime.DmsUtils;
+import ag.carnot.workflow.runtime.Document;
+import ag.carnot.workflow.runtime.DocumentInfo;
+import ag.carnot.workflow.runtime.DocumentManagementService;
+import ag.carnot.workflow.runtime.Folder;
+import ag.carnot.workflow.runtime.ProcessInstance;
+
+public class SwitchDetailsDataEntryBean {
+   private UploadedFile file; 
+   public UploadedFile getFile() {
+      return file;
+   }
+   public void setFile(UploadedFile file) {
+      this.file = file;
+   }
+   public SwitchDetailsDataEntryBean(){
+      super();
+      RequestContext requestContext = RequestContext.getCurrentInstance();
+      requestContext.getPageFlowScope().put("carnotActivityUsesUpload", new Boolean(true));
+   } 
+   public List complete(){
+      System.out.println("Complete method Started");
+      if(file&nbsp;!= null)
+      {
+         try
+         {
+            SessionContext sessionContext = SessionContext.findSessionContext(); 
+            DocumentManagementService documentManagementService = sessionContext.getServiceFactory().
+            getDocumentManagementService();
+            String fileName = this.getFile().getFilename();
+            DocumentInfo documentInfo = DmsUtils.createDocumentInfo(fileName);
+            // documentInfo.setProperties((Map)
+            // this.documentPropertiesWrapper.getComplexType());
+            System.out.println("File Type&nbsp;: " + file.getContentType());
+            documentInfo.setContentType(file.getContentType()); 
+            ByteArrayOutputStream out = new ByteArrayOutputStream(); 
+            try 
+            {
+               InputStream in = this.getFile().getInputStream();
+               int b;
+               while ((b = in.read())&nbsp;!= -1){
+               out.write(b);
+            }
+            out.close();
+            in.close();
+         }
+         catch (Exception e)
+         {
+            e.printStackTrace();
+         } 
+         byte[] documentContent = out.toByteArray(); 
+         System.out.println("File length: " + documentContent.length); 
+         Document scannedSwitchDocument = documentManagementService.createDocument("/", documentInfo,
+         documentContent, null);
+         attachments.add(scannedSwitchDocument);
+         System.out.println("Document created."); 
+         return attachments;
+      }
+      catch(Exception e)
+      {
+         System.out.println("in catch");
+         e.printStackTrace();}
+      } 
+      return null;
+   } 
+}</pre></li>
+   <li>Add <strong>Process Attachments</strong> as an OUT Data to that particular activity 
+   in the model.</li>
+</ol>
+
+<h2 id="url">Attaching a Document from a URL</h2>
+<p>To attach a document from a URL:</p>
+<ol>
+   <li>Have an Application activity in your model, whose service method should look like 
+   as below:
+   <pre>
+package com.sungard.iworks.web.jsf.beans.iworkscompass.switchrequest;
+ 
+import java.io.*;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List; 
+import ag.carnot.web.jsf.common.beans.SessionContext;
+import ag.carnot.workflow.runtime.DmsUtils;
+import ag.carnot.workflow.runtime.Document;
+import ag.carnot.workflow.runtime.DocumentInfo;
+import ag.carnot.workflow.runtime.DocumentManagementService;
+
+public class AttachReportToProcess
+{ 
+   public List attachReport(String repFileName, List documents)
+   {
+      InputStream is = null;
+      ByteArrayOutputStream out = new ByteArrayOutputStream();
+      try
+      { 
+         SessionContext sessionContext = SessionContext.findSessionContext(); 
+         DocumentManagementService documentManagementService = sessionContext.getServiceFactory().
+         getDocumentManagementService();
+         DocumentInfo documentInfo = DmsUtils.createDocumentInfo(repFileName); 
+         System.out.println("Downloaded Started.");
+         String fileURL ="http://iwks-nat-frmsvr:7778/reportspdf/" + repFileName;
+         URL fileUrl = new URL(fileURL);
+         documentInfo.setContentType("application/pdf");
+         //os = new BufferedOutputStream(new FileOutputStream("c:\\src\\A00004056238.pdf"));
+          
+         // openConnection method on a URL.
+         URLConnection URLConn = fileUrl.openConnection();
+         is = URLConn.getInputStream(); 
+         //InputStream in = this.getFile().getInputStream();
+         int b;
+         while ((b = is.read())&nbsp;!= -1)
+         {
+            out.write(b);
+         }
+         out.close();
+         is.close(); 
+         byte[] documentContent = out.toByteArray(); 
+         System.out.println("File length: " + documentContent.length); 
+         Document scannedSwitchDocument = documentManagementService.createDocument("/", documentInfo, 
+         documentContent, null);
+         List attachments = new ArrayList();
+         List paths = new ArrayList ();
+         paths.add("/");
+         System.out.println("documents&nbsp;: "+documents);
+         //ArrayList existingAttachments = new ArrayList (documentManagementService.getDocuments(paths));
+         attachments.addAll(documents);
+         attachments.add(scannedSwitchDocument);
+         return attachments;          
+      }
+      catch (Exception e) {
+         e.printStackTrace();
+      }
+      return null;
+   }   
+}</pre></li>
+   <li>Make sure to have the existing attachments passed in as an IN parameter to this 
+   method and also use that to add all existing attachments to the process attachment 
+   that you are going to return from this service method. Otherwise this code will attach
+   the current doc (the report only) and deletes all existing attachments.</li>
+   <li>Have PROCESS_ATTACHMENTS passed as IN and OUT data to this application activity in
+   the model.</li>
+</ol>
+ 
+<script language="JavaScript" type="text/javascript"> 
+writeFooter(); 
+</script>
+</body>
+</html>

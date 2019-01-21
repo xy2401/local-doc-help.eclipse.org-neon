@@ -1,0 +1,1439 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<contexts>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Introduction to the AUT agent" href="content/html/userManual/tasks/startAndConnectAUTAgent/intro-aut-agent.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Connecting to the AUT Agent" href="content/html/userManual/tasks/startAndConnectAUTAgent/connect-aut-agent.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Connecting to the AUT Agent" href="content/html/userManual/tasks/startAndConnectAUTAgent/connect-aut-agent.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Help system" href="content/html/userManual/tasks/startITE/help-system.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Working with the AUT Agent and client on one machine" href="content/html/userManual/tasks/startITE/working-with-the-aut-agent-and-client-on-one-machine.html"/>
+  </context>
+  <context id="dbLoginContextId">
+    <description>Database Login</description>
+    <topic label="Logging into and switching databases" href="content/html/userManual/tasks/logInAndSwitchDB/logging-into-and-switching-databases.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Creating a new Project" href="content/html/userManual/tasks/workWithProjects/newproject.html"/>
+  </context>
+  <context id="problemViewNoProjectContextId">
+    <description>Project Options Dialog</description>
+    <topic label="Creating a new Project" href="content/html/userManual/tasks/workWithProjects/newproject.html"/>
+  </context>
+  <context id="projectSettingsPageContextId">
+    <description>Project Properties</description>
+    <topic label="Editing general Project properties" href="content/html/userManual/tasks/workWithProjects/projectproperties.html"/>
+  </context>
+  <context id="autSettingsPageContextId">
+    <description>Adding/editing AUT's</description>
+    <topic label="Editing the AUTs in a Project" href="content/html/userManual/tasks/workWithProjects/projectproperties.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Duplicating AUT configurations" href="content/html/userManual/tasks/workWithProjects/projectproperties.html"/>
+  </context>
+  <context id="autSettingsPageContextId">
+    <description>Adding/editing AUT's</description>
+    <topic label="Duplicating AUT configurations" href="content/html/userManual/tasks/workWithProjects/projectproperties.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Editing the AUT configurations in a Project" href="content/html/userManual/tasks/workWithProjects/projectproperties.html"/>
+  </context>
+  <context id="projectUsedPropertyPageContextId">
+    <description>Used Projects Properties</description>
+    <topic label="Reusing (referencing) whole Projects in a Project" href="content/html/userManual/tasks/workWithProjects/reuseproject.html"/>
+  </context>
+  <context id="databaseMigrationAssistantContextId">
+    <description>Database Migration</description>
+    <topic label="Changing the version of a reused Project" href="content/html/userManual/tasks/workWithProjects/reuseproject.html"/>
+  </context>
+  <context id="projectUsedPropertyPageContextId">
+    <description>Used Projects Properties</description>
+    <topic label="Changing the version of a reused Project" href="content/html/userManual/tasks/workWithProjects/reuseproject.html"/>
+  </context>
+  <context id="projectSearchForDeprecatedModulesPageContextId">
+    <description>Searching for deprecated modules</description>
+    <topic label="Searching for deprecated modules" href="content/html/userManual/tasks/workWithProjects/reuseproject.html"/>
+  </context>
+  <context id="openProjectDialogContextId">
+    <description>Opening Projects</description>
+    <topic label="Opening Projects" href="content/html/userManual/tasks/workWithProjects/loadproject.html"/>
+  </context>
+  <context id="problemViewNoProjectContextId">
+    <description>Project Options Dialog</description>
+    <topic label="Opening Projects" href="content/html/userManual/tasks/workWithProjects/loadproject.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Refreshing Projects" href="content/html/userManual/tasks/workWithProjects/refreshproject.html"/>
+  </context>
+  <context id="deleteProjectDialogContextId">
+    <description>Deleting Projects</description>
+    <topic label="Deleting Projects" href="content/html/userManual/tasks/workWithProjects/deleteproject.html"/>
+  </context>
+  <context id="dialogProjectSaveAsContextId">
+    <description>Saving Projects under a different name</description>
+    <topic label="Saving a Project as a new Project" href="content/html/userManual/tasks/workWithProjects/saveproject.html"/>
+  </context>
+  <context id="problemViewNoProjectContextId">
+    <description>Project Options Dialog</description>
+    <topic label="Importing Projects" href="content/html/userManual/tasks/workWithProjects/importproject.html"/>
+  </context>
+  <context id="dialogProjectImportRenameContextId">
+    <description>Project Import Rename Dialog</description>
+    <topic label="Importing Projects" href="content/html/userManual/tasks/workWithProjects/importproject.html"/>
+  </context>
+  <context id="importProjectDialogContextId">
+    <description>Importing Projects</description>
+    <topic label="Importing Projects" href="content/html/userManual/tasks/workWithProjects/importproject.html"/>
+  </context>
+  <context id="openProjectImportAllRequiredProjectsContextId">
+    <description>Importing Dependent Projects</description>
+    <topic label="Importing Projects" href="content/html/userManual/tasks/workWithProjects/importproject.html"/>
+  </context>
+  <context id="openProjectDialogContextId">
+    <description>Opening Projects</description>
+    <topic label="Versioning Projects" href="content/html/userManual/tasks/workWithProjects/projectversion.html"/>
+  </context>
+  <context id="dialogProjectCreateNewVersionContextId">
+    <description>Versioning Projects</description>
+    <topic label="Versioning Projects" href="content/html/userManual/tasks/workWithProjects/projectversion.html"/>
+  </context>
+  <context id="projectSettingsPageContextId">
+    <description>Project Properties</description>
+    <topic label="Tracking changes in a Project" href="content/html/userManual/tasks/workWithProjects/tracking-changes-in-a-project.html"/>
+  </context>
+  <context id="autSettingWizardPagePageContextId">
+    <description>Defining an AUT</description>
+    <topic label="Defining applications under test (AUTs)" href="content/html/userManual/tasks/defineAUT/define-aut.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Defining applications under test (AUTs)" href="content/html/userManual/tasks/defineAUT/define-aut.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Configuring AUTs to be started from the ITE" href="content/html/userManual/tasks/startAndConfigureAUTs/configuringaut.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Basic information required for every AUT configuration" href="content/html/userManual/tasks/startAndConfigureAUTs/basic-configuration-info.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Using a working directory in an AUT configuration" href="content/html/userManual/tasks/startAndConfigureAUTs/using-working-dir-aut-config.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Starting Java AUTs (Swing, SWT/RCP/GEF)" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-java-auts.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Two options to start Java AUTs" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-java-auts.html"/>
+  </context>
+  <context id="autSettingWizardPagePageContextId">
+    <description>Defining an AUT</description>
+    <topic label="Two options to start Java AUTs" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-java-auts.html"/>
+  </context>
+  <context id="autSettingWizardPagePageContextId">
+    <description>Defining an AUT</description>
+    <topic label="Starting Java AUTs with the autrun command" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-java-auts.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Starting JavaFX AUTs" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-javafx-auts.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Starting Web AUTs (HTML)" href="content/html/userManual/tasks/startAndConfigureAUTs/starting-web-auts.html"/>
+  </context>
+  <context id="dialogRenameContextId">
+    <description>Renaming</description>
+    <topic label="Renaming items in browsers" href="content/html/userManual/tasks/workWithBrowsers/renaming-items-in-browsers.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Renaming items in browsers" href="content/html/userManual/tasks/workWithBrowsers/renaming-items-in-browsers.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Renaming items in browsers" href="content/html/userManual/tasks/workWithBrowsers/renaming-items-in-browsers.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Renaming items in browsers" href="content/html/userManual/tasks/workWithBrowsers/renaming-items-in-browsers.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Deleting items from browsers" href="content/html/userManual/tasks/workWithBrowsers/deleting-items-from-browsers.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Deleting items from browsers" href="content/html/userManual/tasks/workWithBrowsers/deleting-items-from-browsers.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Deleting items from browsers" href="content/html/userManual/tasks/workWithBrowsers/deleting-items-from-browsers.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Working with IDs for Test Cases and Test Suites" href="content/html/userManual/tasks/workWithBrowsers/working-with-ids-for-test-cases-and-test-suites.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Working with IDs for Test Cases and Test Suites" href="content/html/userManual/tasks/workWithBrowsers/working-with-ids-for-test-cases-and-test-suites.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Opening the Test Case Browser multiple times" href="content/html/userManual/tasks/workWithBrowsers/opening-the-test-case-browser-multiple-times.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Opening the task editor for items in browsers" href="content/html/userManual/tasks/workWithBrowsers/opening-the-task-editor-for-items-in-browsers.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Opening the task editor for items in browsers" href="content/html/userManual/tasks/workWithBrowsers/opening-the-task-editor-for-items-in-browsers.html"/>
+  </context>
+  <context id="testCaseOpenExistingContextId">
+    <description>Open Existing Test Case</description>
+    <topic label="Opening items in editors" href="content/html/userManual/tasks/workWithEditors/opening-items-in-editors.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Opening items in editors" href="content/html/userManual/tasks/workWithEditors/opening-items-in-editors.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Opening items in editors" href="content/html/userManual/tasks/workWithEditors/opening-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="testCaseAddExistingContextId">
+    <description>Existing Test Case Dialog</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Adding items to editors" href="content/html/userManual/tasks/workWithEditors/adding-items-to-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Deleting items from editors" href="content/html/userManual/tasks/workWithEditors/deleting-items-from-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Deleting items from editors" href="content/html/userManual/tasks/workWithEditors/deleting-items-from-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Deleting items from editors" href="content/html/userManual/tasks/workWithEditors/deleting-items-from-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Renaming items in editors" href="content/html/userManual/tasks/workWithEditors/renaming-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Renaming items in editors" href="content/html/userManual/tasks/workWithEditors/renaming-items-in-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Renaming items in editors" href="content/html/userManual/tasks/workWithEditors/renaming-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Adding comments to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-comments-to-items-in-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Adding comments to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-comments-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Adding comments to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-comments-to-items-in-editors.html"/>
+  </context>
+  <context id="newCommentDialogContextId">
+    <description>Add a comment</description>
+    <topic label="Adding comments to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-comments-to-items-in-editors.html"/>
+  </context>
+  <context id="editDescriptionDialogContextId">
+    <description>Description Dialog</description>
+    <topic label="Adding descriptions to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-descriptions-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Adding descriptions to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-descriptions-to-items-in-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Adding descriptions to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-descriptions-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Adding descriptions to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-descriptions-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Adding Task IDs to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-task-ids-to-items-in-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Adding Task IDs to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-task-ids-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Adding Task IDs to items in editors" href="content/html/userManual/tasks/workWithEditors/adding-task-ids-to-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Commenting out items in editors" href="content/html/userManual/tasks/workWithEditors/commenting-out-items-in-editors.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Commenting out items in editors" href="content/html/userManual/tasks/workWithEditors/commenting-out-items-in-editors.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Extracting Test Cases from editors: Refactoring" href="content/html/userManual/tasks/workWithEditors/extracting-test-cases-from-editors-refactoring.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Extracting Test Cases from editors: Refactoring" href="content/html/userManual/tasks/workWithEditors/extracting-test-cases-from-editors-refactoring.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Replacing Test Cases in editors: Refactoring" href="content/html/userManual/tasks/workWithEditors/replacing-test-cases-in-editors-refactoring.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Replacing Test Cases in editors: Refactoring" href="content/html/userManual/tasks/workWithEditors/replacing-test-cases-in-editors-refactoring.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Saving Test Cases from an editor as a new Test Case" href="content/html/userManual/tasks/workWithEditors/saving-test-cases-from-an-editor-as-a-new-test-case.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Saving Test Cases from an editor as a new Test Case" href="content/html/userManual/tasks/workWithEditors/saving-test-cases-from-an-editor-as-a-new-test-case.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Reverting changes in an editor" href="content/html/userManual/tasks/workWithEditors/reverting-changes-in-an-editor.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Reverting changes in an editor" href="content/html/userManual/tasks/workWithEditors/reverting-changes-in-an-editor.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Reverting changes in an editor" href="content/html/userManual/tasks/workWithEditors/reverting-changes-in-an-editor.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Working with categories in the browsers and editors" href="content/html/userManual/tasks/workWithCategories/working-with-categories-in-the-browsers-and-editors.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Working with categories in the browsers and editors" href="content/html/userManual/tasks/workWithCategories/working-with-categories-in-the-browsers-and-editors.html"/>
+  </context>
+  <context id="dialogNewCategoryContextId">
+    <description>New Category Dialog</description>
+    <topic label="Working with categories in the browsers and editors" href="content/html/userManual/tasks/workWithCategories/working-with-categories-in-the-browsers-and-editors.html"/>
+  </context>
+  <context id="newTestDataCategoryContextId">
+    <description>New Category</description>
+    <topic label="Creating a category" href="content/html/userManual/tasks/workWithCategories/creating-a-category.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Creating Test Cases, Test Suites and Test Jobs in an existing category" href="content/html/userManual/tasks/workWithCategories/creating-test-cases-test-suites-and-test-jobs-in-an-existing-category.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Creating Test Cases, Test Suites and Test Jobs in an existing category" href="content/html/userManual/tasks/workWithCategories/creating-test-cases-test-suites-and-test-jobs-in-an-existing-category.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Adding comments to categories" href="content/html/userManual/tasks/workWithCategories/adding-comments-to-categories.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Adding comments to categories" href="content/html/userManual/tasks/workWithCategories/adding-comments-to-categories.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Working with Test Cases" href="content/html/userManual/tasks/workWithTestCases/working-with-test-cases.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Working with Test Cases" href="content/html/userManual/tasks/workWithTestCases/working-with-test-cases.html"/>
+  </context>
+  <context id="testcaseNewContextId">
+    <description>New Test Case Dialog</description>
+    <topic label="Creating Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-test-cases.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Creating Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-test-cases.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Creating Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-test-cases.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Creating tests from the library of pre-defined Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-tests-from-the-library-of-pre-defined-test-cases.html"/>
+  </context>
+  <context id="testCaseAddExistingContextId">
+    <description>Existing Test Case Dialog</description>
+    <topic label="Creating tests from the library of pre-defined Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-tests-from-the-library-of-pre-defined-test-cases.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Creating tests from the library of pre-defined Test Cases" href="content/html/userManual/tasks/workWithTestCases/creating-tests-from-the-library-of-pre-defined-test-cases.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Opening existing Test Cases" href="content/html/userManual/tasks/workWithTestCases/opening-existing-test-cases.html"/>
+  </context>
+  <context id="testCaseOpenExistingContextId">
+    <description>Open Existing Test Case</description>
+    <topic label="Opening existing Test Cases" href="content/html/userManual/tasks/workWithTestCases/opening-existing-test-cases.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Editing Test Cases" href="content/html/userManual/tasks/workWithTestCases/editing-test-cases.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Editing Test Cases" href="content/html/userManual/tasks/workWithTestCases/editing-test-cases.html"/>
+  </context>
+  <context id="dialogTestcaseAddNewContextId">
+    <description>Add New Test Case Dialog</description>
+    <topic label="Adding and inserting new Test Cases to a Test Case" href="content/html/userManual/tasks/workWithTestCases/adding-and-inserting-new-test-cases-to-a-test-case.html"/>
+  </context>
+  <context id="dialogTestcaseInsertNewContextId">
+    <description>Insert New Test Case Dialog</description>
+    <topic label="Adding and inserting new Test Cases to a Test Case" href="content/html/userManual/tasks/workWithTestCases/adding-and-inserting-new-test-cases-to-a-test-case.html"/>
+  </context>
+  <context id="testCaseMoveExternalContextId">
+    <description>Move Test Cases to an External Project</description>
+    <topic label="Moving Test Cases to external Projects" href="content/html/userManual/tasks/workWithTestCases/moving-test-cases-to-external-projects.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Moving Test Cases to external Projects" href="content/html/userManual/tasks/workWithTestCases/moving-test-cases-to-external-projects.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Replacing a specific Test Case at places where it has been reused" href="content/html/userManual/tasks/workWithTestCases/replacing-a-specific-test-case-at-places-where-it-has-been-reused.html"/>
+  </context>
+  <context id="searchRefactorReplaceExecutionTestCaseWizardContextId">
+    <description>Replace Test Case</description>
+    <topic label="Replacing a specific Test Case at places where it has been reused" href="content/html/userManual/tasks/workWithTestCases/replacing-a-specific-test-case-at-places-where-it-has-been-reused.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Data types and entering data for Test Cases" href="content/html/userManual/tasks/workWithData/data-types-and-entering-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Data types and entering data for Test Cases" href="content/html/userManual/tasks/workWithData/data-types-and-entering-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Data types and entering data for Test Cases" href="content/html/userManual/tasks/workWithData/data-types-and-entering-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Data types and entering data for Test Cases" href="content/html/userManual/tasks/workWithData/data-types-and-entering-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Entering concrete values as data in Test Cases" href="content/html/userManual/tasks/workWithData/entering-concrete-values-as-data-in-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using references for data in Test Cases" href="content/html/userManual/tasks/workWithData/using-references-for-data-in-test-cases.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Using references for data in Test Cases" href="content/html/userManual/tasks/workWithData/using-references-for-data-in-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using the edit parameters dialog to add, edit and delete references" href="content/html/userManual/tasks/workWithData/using-the-edit-parameters-dialog-to-add-edit-and-delete-references.html"/>
+  </context>
+  <context id="editParametersDialogContextId">
+    <description>Editing Parameters</description>
+    <topic label="Using the edit parameters dialog to add, edit and delete references" href="content/html/userManual/tasks/workWithData/using-the-edit-parameters-dialog-to-add-edit-and-delete-references.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Using the edit parameters dialog to add, edit and delete references" href="content/html/userManual/tasks/workWithData/using-the-edit-parameters-dialog-to-add-edit-and-delete-references.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Using variables as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-variables-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using variables as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-variables-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Using variables as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-variables-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Using functions as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-functions-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using functions as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-functions-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Using functions as data for Test Cases" href="content/html/userManual/tasks/workWithData/using-functions-as-data-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Concatenating (combining) parameters" href="content/html/userManual/tasks/workWithData/concatenating-combining-parameters.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Concatenating (combining) parameters" href="content/html/userManual/tasks/workWithData/concatenating-combining-parameters.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Viewing and changing data sources for Test Cases" href="content/html/userManual/tasks/workWithData/viewing-and-changing-data-sources-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Changing the data source for a Test Case" href="content/html/userManual/tasks/workWithData/viewing-and-changing-data-sources-for-test-cases.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using central data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Using central data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Creating and editing central test data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="newTestDataCubeNameContextId">
+    <description>New Central Data Set</description>
+    <topic label="Creating and editing central test data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Deleting central test data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Adding and modifying parameters for central test data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Entering data for central test data sets" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Reusing central test data sets in Test Cases" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Reusing central test data sets in Test Cases" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Importing Excel files as central test data" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Importing Excel files as central test data" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="searchRefactorChangeCtdsColumnUsageWizardPagePageContextId">
+    <description>Changing Central Test Data Columns</description>
+    <topic label="Changing the column used in a central test data set for multiple Test Cases" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Changing the column used in a central test data set for multiple Test Cases" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Changing the column used in a central test data set for multiple Test Cases" href="content/html/userManual/tasks/workWithData/using-central-data-sets.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using an Excel file as an external data source" href="content/html/userManual/tasks/workWithData/using-an-excel-file-as-an-external-data-source.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Using the Data Sets View to enter data loops" href="content/html/userManual/tasks/workWithData/using-the-data-sets-view.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Using the Data Sets View to enter data loops" href="content/html/userManual/tasks/workWithData/using-the-data-sets-view.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Special parameters: empty strings and the escape character" href="content/html/userManual/tasks/workWithData/special-parameters-empty-strings-and-the-escape-character.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Special parameters: empty strings and the escape character" href="content/html/userManual/tasks/workWithData/special-parameters-empty-strings-and-the-escape-character.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Overwriting data for Test Cases and Test Suites" href="content/html/userManual/tasks/workWithData/overwriting-data-for-test-cases-and-test-suites.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Overwriting data for Test Cases and Test Suites" href="content/html/userManual/tasks/workWithData/overwriting-data-for-test-cases-and-test-suites.html"/>
+  </context>
+  <context id="guidancerExecTestCaseEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Overwriting data for Test Cases and Test Suites" href="content/html/userManual/tasks/workWithData/overwriting-data-for-test-cases-and-test-suites.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Creating new component names" href="content/html/userManual/tasks/workWithComponentNames/creating-new-component-names.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Creating new component names" href="content/html/userManual/tasks/workWithComponentNames/creating-new-component-names.html"/>
+  </context>
+  <context id="newComponentNameContextId">
+    <description>New Component Name Dialog</description>
+    <topic label="Creating new component names" href="content/html/userManual/tasks/workWithComponentNames/creating-new-component-names.html"/>
+  </context>
+  <context id="compNameViewContextId">
+    <description>Component Names View</description>
+    <topic label="Entering and reassigning component names in the Component Names View" href="content/html/userManual/tasks/workWithComponentNames/entering-and-reassigning-component-names-in-the-component-names-view.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Renaming component names" href="content/html/userManual/tasks/workWithComponentNames/renaming-component-names.html"/>
+  </context>
+  <context id="renameComponentNameContextId">
+    <description>Rename Component Name Dialog</description>
+    <topic label="Renaming component names" href="content/html/userManual/tasks/workWithComponentNames/renaming-component-names.html"/>
+  </context>
+  <context id="compNameViewContextId">
+    <description>Component Names View</description>
+    <topic label="Propagating component names" href="content/html/userManual/tasks/workWithComponentNames/propagating-component-names.html"/>
+  </context>
+  <context id="compNameViewContextId">
+    <description>Component Names View</description>
+    <topic label="No component type exists message in Component Names View" href="content/html/userManual/tasks/workWithComponentNames/no-component-type-exists-message-in-component-names-view.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Merging component names" href="content/html/userManual/tasks/workWithComponentNames/merging-component-names.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Merging component names" href="content/html/userManual/tasks/workWithComponentNames/merging-component-names.html"/>
+  </context>
+  <context id="mergeComponentNameContextId">
+    <description>Merge Component Name Dialog</description>
+    <topic label="Merging component names" href="content/html/userManual/tasks/workWithComponentNames/merging-component-names.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Deleting unused component names" href="content/html/userManual/tasks/workWithComponentNames/deleting-unused-component-names.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Understanding the component hierarchy" href="content/html/userManual/tasks/workWithComponentNames/understanding-the-component-hierarchy.html"/>
+  </context>
+  <context id="compNameViewContextId">
+    <description>Component Names View</description>
+    <topic label="Understanding the component hierarchy" href="content/html/userManual/tasks/workWithComponentNames/understanding-the-component-hierarchy.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Understanding the component hierarchy" href="content/html/userManual/tasks/workWithComponentNames/understanding-the-component-hierarchy.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Creating a Test Suite" href="content/html/userManual/tasks/workWithSuites/creating-a-test-suite.html"/>
+  </context>
+  <context id="dialogTestsuiteNewContextId">
+    <description>New Test Suite Dialog</description>
+    <topic label="Creating a Test Suite" href="content/html/userManual/tasks/workWithSuites/creating-a-test-suite.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Configuring Test Suites in the Properties View" href="content/html/userManual/tasks/workWithSuites/configuring-test-suites-in-the-properties-view.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Configuring Test Suites in the Properties View" href="content/html/userManual/tasks/workWithSuites/configuring-test-suites-in-the-properties-view.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Configuring Test Suites in the Properties View" href="content/html/userManual/tasks/workWithSuites/configuring-test-suites-in-the-properties-view.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Combining Test Suites into a Test Job" href="content/html/userManual/tasks/workWithJobs/combining-test-suites-into-a-test-job.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Testing different AUTs in one test run" href="content/html/userManual/tasks/workWithJobs/testing-different-auts-in-one-test-run.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Testing different AUTs in one test run" href="content/html/userManual/tasks/workWithJobs/testing-different-auts-in-one-test-run.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Testing different AUTs in one test run" href="content/html/userManual/tasks/workWithJobs/testing-different-auts-in-one-test-run.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Creating a new Test Job" href="content/html/userManual/tasks/workWithJobs/creating-a-new-test-job.html"/>
+  </context>
+  <context id="dialogTestJobNewContextId">
+    <description>New Test Job</description>
+    <topic label="Creating a new Test Job" href="content/html/userManual/tasks/workWithJobs/creating-a-new-test-job.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Specifying which AUT to test in a Test Job" href="content/html/userManual/tasks/workWithJobs/specifying-which-aut-to-test-in-a-test-job.html"/>
+  </context>
+  <context id="guidancerTestJobEditorContextId">
+    <description>Test Job Editor</description>
+    <topic label="Specifying which AUT to test in a Test Job" href="content/html/userManual/tasks/workWithJobs/specifying-which-aut-to-test-in-a-test-job.html"/>
+  </context>
+  <context id="capContextId">
+    <description>Test Steps</description>
+    <topic label="Information on Test Steps" href="content/html/userManual/tasks/infoTestSteps/information-on-test-steps.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Creating manual tests" href="content/html/userManual/tasks/workWithManualTestCases/creating-manual-tests.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Executing and analyzing manual tests" href="content/html/userManual/tasks/workWithManualTestCases/executing-and-analyzing-manual-tests.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Object mapping" href="content/html/userManual/tasks/objectMapping/object-mapping-1.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Opening the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="The Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Working with categories in the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="dialogOMCategoryNewContextId">
+    <description>New Object Mapping Category Dialog</description>
+    <topic label="Working with categories in the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="The configuration view in the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Refreshing the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Finding components in the AUT via the Object Mapping Editor: highlight in AUT" href="content/html/userManual/tasks/objectMapping/object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Deleting from the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/deleting-from-the-object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Removing unused component names from the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/deleting-from-the-object-mapping-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Collecting components (technical names) from the AUT" href="content/html/userManual/tasks/objectMapping/collecting-components-technical-names-from-the-aut.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Understanding the colored dots when collecting component names in the Object Mapping Editor" href="content/html/userManual/tasks/objectMapping/collecting-components-technical-names-from-the-aut.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Mapping (assigning) collected technical names to component names" href="content/html/userManual/tasks/objectMapping/mapping-assigning-collected-technical-names-to-component-names.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Object mapping and AUT changes" href="content/html/userManual/tasks/objectMapping/object-mapping-and-aut-changes.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Component specific Profile" href="content/html/userManual/tasks/objectMapping/component-specific-profile.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Viewing properties for a component in the Object Mapping Mode" href="content/html/userManual/tasks/objectMapping/viewing-properties-for-a-component-in-the-object-mapping-mode.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Prerequisites for test execution" href="content/html/userManual/tasks/testExec/prerequisites-for-test-execution.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Prerequisites for test execution" href="content/html/userManual/tasks/testExec/prerequisites-for-test-execution.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Starting the AUT" href="content/html/userManual/tasks/testExec/starting-the-aut.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Starting the AUT" href="content/html/userManual/tasks/testExec/starting-the-aut.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Starting the AUT" href="content/html/userManual/tasks/testExec/starting-the-aut.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Starting, stopping and pausing Test Suites and Test Jobs" href="content/html/userManual/tasks/testExec/starting-stopping-and-pausing-test-suites-and-test-jobs.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Starting, stopping and pausing Test Suites and Test Jobs" href="content/html/userManual/tasks/testExec/starting-stopping-and-pausing-test-suites-and-test-jobs.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Interactive test analysis" href="content/html/userManual/tasks/testExec/interactive-test-analysis.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Interactive test analysis" href="content/html/userManual/tasks/testExec/interactive-test-analysis.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="Interactive test analysis" href="content/html/userManual/tasks/testExec/interactive-test-analysis.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Altering the speed of test execution" href="content/html/userManual/tasks/testExec/altering-the-speed-of-test-execution.html"/>
+  </context>
+  <context id="runningAutsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Altering the speed of test execution" href="content/html/userManual/tasks/testExec/altering-the-speed-of-test-execution.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="The Test Result View" href="content/html/userManual/tasks/workWithTestResults/the-test-result-view.html"/>
+  </context>
+  <context id="prefPageTestResultContextId">
+    <description>Test Result Preferences</description>
+    <topic label="XML/HTML and monitoring reports" href="content/html/userManual/tasks/workWithTestResults/xml-and-html-reports.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="Working with the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="prefPageTestResultContextId">
+    <description>Test Result Preferences</description>
+    <topic label="Working with the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Working with the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Re-opening the test result view for a test run" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Filtering and sorting in the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Changing the amount of result summaries shown in the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Changing the relevance of a test run" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Refreshing the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Deleting test runs from the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="Exporting test results from the Test Result Summary View as HTML and XML reports" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Exporting test results from the Test Result Summary View as HTML and XML reports" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="Entering comments for test runs in the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Entering comments for test runs in the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryAddCommentContextId">
+    <description>Add Comment Dialog</description>
+    <topic label="Entering comments for test runs in the Test Result Summary View" href="content/html/userManual/tasks/workWithTestResults/working-with-the-test-result-summary-view.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Generating BIRT reports" href="content/html/userManual/tasks/produceReports/generating-birt-reports.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Writing your own BIRT reports" href="content/html/userManual/tasks/produceReports/writing-your-own-birt-reports.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="Creating tasks in external repositories from test result reports" href="content/html/userManual/tasks/workWithALM/creating-tasks-in-external-repositories-from-test-result-reports.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Automatically reporting to external repositories after test runs" href="content/html/userManual/tasks/workWithALM/automatically-reporting-to-external-repositories-after-test-runs.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Using the test executor for testing from the command line" href="content/html/userManual/tasks/useTestExec/using-the-test-executor-for-testing-from-the-command-line.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Using the dbtool client to import, delete and export from the command line" href="content/html/userManual/tasks/useDBToolClient/using-the-dbtool-client-to-import-delete-and-export-from-the-command-line.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Dealing with errors in tests: Event Handlers" href="content/html/userManual/tasks/dealWithErrors/dealing-with-errors-in-tests.html"/>
+  </context>
+  <context id="eventHandlerAddContextId">
+    <description>Event Handlers</description>
+    <topic label="Dealing with errors in tests: Event Handlers" href="content/html/userManual/tasks/dealWithErrors/dealing-with-errors-in-tests.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Dealing with errors in tests: Event Handlers" href="content/html/userManual/tasks/dealWithErrors/dealing-with-errors-in-tests.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Adding Event Handlers to a Test Case" href="content/html/userManual/tasks/dealWithErrors/adding-event-handlers-to-a-test-case.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Working with code coverage with Java tests" href="content/html/userManual/tasks/workWithCodeCoverageJava/working-with-code-coverage-with-java-tests.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Working with code coverage with Java tests" href="content/html/userManual/tasks/workWithCodeCoverageJava/working-with-code-coverage-with-java-tests.html"/>
+  </context>
+  <context id="org.eclipse.ui.resource_view_context">
+    <description>Navigator View</description>
+    <topic label="Working with code coverage with Java tests" href="content/html/userManual/tasks/workWithCodeCoverageJava/working-with-code-coverage-with-java-tests.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Configuring code coverage for an AUT" href="content/html/userManual/tasks/workWithCodeCoverageJava/configuring-code-coverage-for-an-aut.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Resetting and accumulating code coverage" href="content/html/userManual/tasks/workWithCodeCoverageJava/resetting-and-accumulating-code-coverage.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Viewing the code coverage for a test run" href="content/html/userManual/tasks/workWithCodeCoverageJava/viewing-the-code-coverage-for-a-test-run.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Troubleshooting code coverage" href="content/html/userManual/tasks/workWithCodeCoverageJava/troubleshooting-code-coverage.html"/>
+  </context>
+  <context id="prefPageBasicContextId">
+    <description>Test Preferences</description>
+    <topic label="Test preferences" href="content/html/userManual/tasks/configurePrefs/test-preferences.html"/>
+  </context>
+  <context id="prefPageServerContextId">
+    <description>AUT Agent Preferences</description>
+    <topic label="AUT Agent preferences" href="content/html/userManual/tasks/configurePrefs/aut-agent-preferences.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="AUT Agent preferences" href="content/html/userManual/tasks/configurePrefs/aut-agent-preferences.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="AUT Agent preferences" href="content/html/userManual/tasks/configurePrefs/aut-agent-preferences.html"/>
+  </context>
+  <context id="prefPageEmbeddedAgentContextId">
+    <description>Embedded AUT Preferences</description>
+    <topic label="Embedded AUT Agent preferences" href="content/html/userManual/tasks/configurePrefs/embedded-aut-agent-preferences.html"/>
+  </context>
+  <context id="databaseConnectionConfigurationDialogContextId">
+    <description>Database connection preferences</description>
+    <topic label="database preferences" href="content/html/userManual/tasks/configurePrefs/database-preferences.html"/>
+  </context>
+  <context id="editorPrefPageContextId">
+    <description>Editor Preferences</description>
+    <topic label="Editor preferences" href="content/html/userManual/tasks/configurePrefs/editor-preferences.html"/>
+  </context>
+  <context id="prefPageObjectMapContextId">
+    <description>Object Mapping Preferences</description>
+    <topic label="Object mapping preferences" href="content/html/userManual/tasks/configurePrefs/object-mapping-preferences.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Object mapping preferences" href="content/html/userManual/tasks/configurePrefs/object-mapping-preferences.html"/>
+  </context>
+  <context id="prefPageObserveJavaContextId">
+    <description>Observation Mode Preferences</description>
+    <topic label="Observation mode preferences" href="content/html/userManual/tasks/configurePrefs/observation-mode-preferences.html"/>
+  </context>
+  <context id="prefPageTestResultContextId">
+    <description>Test Result Preferences</description>
+    <topic label="Test result preferences" href="content/html/userManual/tasks/configurePrefs/test-result-preferences.html"/>
+  </context>
+  <context id="testResultSummaryViewContextId">
+    <description>Test Result Summary View</description>
+    <topic label="Test result preferences" href="content/html/userManual/tasks/configurePrefs/test-result-preferences.html"/>
+  </context>
+  <context id="databaseConnectionConfigurationDialogContextId">
+    <description>Database connection preferences</description>
+    <topic label="Importing and exporting database preferences" href="content/html/userManual/tasks/configurePrefs/importing-and-exporting-database-preferences.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for and opening the original specification of a Test Case or Test Suite" href="content/html/userManual/tasks/searching/searching-for-and-opening-the-original-specification-of-a-test-case-or-test-suite.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Searching for and opening the original specification of a Test Case or Test Suite" href="content/html/userManual/tasks/searching/searching-for-and-opening-the-original-specification-of-a-test-case-or-test-suite.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for and opening the original specification of a Test Case or Test Suite" href="content/html/userManual/tasks/searching/searching-for-and-opening-the-original-specification-of-a-test-case-or-test-suite.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Searching for and opening the original specification of a Test Case or Test Suite" href="content/html/userManual/tasks/searching/searching-for-and-opening-the-original-specification-of-a-test-case-or-test-suite.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Searching for places where a Test Case or Test Suite has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-test-case-or-test-suite-has-been-used.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for places where a Test Case or Test Suite has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-test-case-or-test-suite-has-been-used.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Searching for places where a Test Case or Test Suite has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-test-case-or-test-suite-has-been-used.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for places where a Test Case or Test Suite has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-test-case-or-test-suite-has-been-used.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Searching for places where a Test Case or Test Suite has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-test-case-or-test-suite-has-been-used.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Searching for places where a component name has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-component-name-has-been-used.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Searching for places where a component name has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-component-name-has-been-used.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Searching for places where a component name has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-component-name-has-been-used.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Searching for places where a central test data set has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-central-test-data-set-has-been-used.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Searching for places where a central test data set has been used" href="content/html/userManual/tasks/searching/searching-for-places-where-a-central-test-data-set-has-been-used.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for keywords throughout the Project" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for keywords throughout the Project" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="com.bredexsw.guidancer.doc.keywordSearchPageContextId">
+    <description>Keyword Search</description>
+    <topic label="Searching for keywords throughout the Project" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for test data" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for test data" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="com.bredexsw.guidancer.doc.testDataSearchPageContextId">
+    <description>Test Data Search</description>
+    <topic label="Searching for test data" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for files in the workspace" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for files in the workspace" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="com.bredexsw.guidancer.doc.keywordSearchPageContextId">
+    <description>Keyword Search</description>
+    <topic label="Limiting the search to the selected node" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="com.bredexsw.guidancer.doc.testDataSearchPageContextId">
+    <description>Test Data Search</description>
+    <topic label="Limiting the search to the selected node" href="content/html/userManual/tasks/searching/using-the-search-dialog.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Searching for tasks in ALM repositories" href="content/html/userManual/tasks/searching/searching-for-tasks.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Searching for tasks in ALM repositories" href="content/html/userManual/tasks/searching/searching-for-tasks.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="Using the search result view" href="content/html/userManual/tasks/searching/using-the-search-result-view.html"/>
+  </context>
+  <context id="findDialogContextId">
+    <description>Find Dialog</description>
+    <topic label="Searching for items in editors and browsers" href="content/html/userManual/tasks/searching/searching-for-items-in-editors-and-browsers.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Using filters in the ITE" href="content/html/userManual/tasks/searching/using-filters-in-the-ite.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Using filters in the ITE" href="content/html/userManual/tasks/searching/using-filters-in-the-ite.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Using filters in the ITE" href="content/html/userManual/tasks/searching/using-filters-in-the-ite.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="Using filters in the ITE" href="content/html/userManual/tasks/searching/using-filters-in-the-ite.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Observing Test Cases" href="content/html/userManual/tasks/observing/observing.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="Observing Test Cases" href="content/html/userManual/tasks/observing/observing.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="The Problems View" href="content/html/userManual/tasks/workWithProblemsView/the-problems-view.html"/>
+  </context>
+  <context id="testStylePropertyPageContextId">
+    <description>Teststyle</description>
+    <topic label="Activating Teststyle for a Project" href="content/html/userManual/tasks/workWithTeststyleGuidelines/activating-teststyle-for-a-project.html"/>
+  </context>
+  <context id="testStylePropertyPageContextId">
+    <description>Teststyle</description>
+    <topic label="Configuring Teststyle for a Project" href="content/html/userManual/tasks/workWithTeststyleGuidelines/configuring-teststyle-for-a-project.html"/>
+  </context>
+  <context id="testStylePropertyPageEditAttributeContextId">
+    <description>Teststyle</description>
+    <topic label="Configuring the attributes for guidelines" href="content/html/userManual/tasks/workWithTeststyleGuidelines/configuring-teststyle-for-a-project.html"/>
+  </context>
+  <context id="testStylePropertyPageEditContextContextId">
+    <description>Teststyle</description>
+    <topic label="Configuring the contexts for guidelines" href="content/html/userManual/tasks/workWithTeststyleGuidelines/configuring-teststyle-for-a-project.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Working with the Problems View to view and fix Teststyle problems" href="content/html/userManual/tasks/workWithTeststyleGuidelines/working-with-the-problems-view-to-view-and-fix-teststyle-problems.html"/>
+  </context>
+  <context id="testStylePropertyPageContextId">
+    <description>Teststyle</description>
+    <topic label="Working with the Problems View to view and fix Teststyle problems" href="content/html/userManual/tasks/workWithTeststyleGuidelines/working-with-the-problems-view-to-view-and-fix-teststyle-problems.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Adapting the user interface" href="content/html/userManual/tasks/adaptUI/adapting-the-user-interface.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Troubleshooting" href="content/html/userManual/tasks/troubleshooting/troubleshooting.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Troubleshooting" href="content/html/userManual/tasks/troubleshooting/troubleshooting.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Troubleshooting" href="content/html/userManual/tasks/troubleshooting/troubleshooting.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Troubleshooting" href="content/html/userManual/tasks/troubleshooting/troubleshooting.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Creating a support information package" href="content/html/userManual/tasks/troubleshooting/creating-a-support-information-package.html"/>
+  </context>
+  <context id="supportRequestDialogContextId">
+    <description>Support Information Package</description>
+    <topic label="Creating a support information package" href="content/html/userManual/tasks/troubleshooting/creating-a-support-information-package.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Special characters" href="content/html/userManual/tasks/specialCharacters/special-characters.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="Special characters" href="content/html/userManual/tasks/specialCharacters/special-characters.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="Using relative paths in AUT configurations and as test data" href="content/html/userManual/tasks/useRelativePaths/using-relative-paths-in-aut-configurations-and-as-test-data.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Using relative paths in AUT configurations and as test data" href="content/html/userManual/tasks/useRelativePaths/using-relative-paths-in-aut-configurations-and-as-test-data.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>AUT Configuration Settings</description>
+    <topic label="Using relative paths in AUT configurations and as test data" href="content/html/userManual/tasks/useRelativePaths/using-relative-paths-in-aut-configurations-and-as-test-data.html"/>
+  </context>
+  <context id="testExecViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="Stopping the AUT" href="content/html/userManual/tasks/finishUp/stopping-the-aut.html"/>
+  </context>
+  <context id="runningAUTsViewContextId">
+    <description>Running AUTs View</description>
+    <topic label="Stopping the AUT" href="content/html/userManual/tasks/finishUp/stopping-the-aut.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Disconnecting from the AUT Agent" href="content/html/userManual/tasks/finishUp/disconnecting-from-the-aut-agent.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Closing the ITE and stopping the AUT Agent" href="content/html/userManual/tasks/finishUp/closing-the-ite-and-stopping-the-aut-agent.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="Stopping the AUT Agent" href="content/html/userManual/tasks/finishUp/stopping-the-aut-agent.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Testing Swing AUTs" href="content/html/userManual/toolkit/swingAUT/testing-swing-auts.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Testing Swing AUTs" href="content/html/userManual/toolkit/swingAUT/testing-swing-auts.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Testing Swing AUTs" href="content/html/userManual/toolkit/swingAUT/testing-swing-auts.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Testing RCP AUTs" href="content/html/userManual/toolkit/rcpAUT/rcpaut.html"/>
+  </context>
+  <context id="autSettingWizardPagePageContextId">
+    <description>Defining an AUT</description>
+    <topic label="Testing RCP AUTs" href="content/html/userManual/toolkit/rcpAUT/rcpaut.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Testing RCP AUTs" href="content/html/userManual/toolkit/rcpAUT/rcpaut.html"/>
+  </context>
+  <context id="supportRCPAUTStartDelayContextId">
+    <description>Starting RCP AUTs</description>
+    <topic label="Testing RCP AUTs" href="content/html/userManual/toolkit/rcpAUT/rcpaut.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Testing RCP AUTs" href="content/html/userManual/toolkit/rcpAUT/rcpaut.html"/>
+  </context>
+  <context id="autSettingWizardPagePageContextId">
+    <description>Defining an AUT</description>
+    <topic label="Component name generation in RCP" href="content/html/userManual/toolkit/rcpAUT/rcp-component-name-generation.html"/>
+  </context>
+  <context id="autWizardPageGenerateNamesPageContextId">
+    <description>Name Generation in RCP</description>
+    <topic label="Component name generation in RCP" href="content/html/userManual/toolkit/rcpAUT/rcp-component-name-generation.html"/>
+  </context>
+  <context id="autSettingsPageContextId">
+    <description>Adding/editing AUT's</description>
+    <topic label="Component name generation in RCP" href="content/html/userManual/toolkit/rcpAUT/rcp-component-name-generation.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Testing GEF AUTs" href="content/html/userManual/toolkit/gefTest/geftest.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Testing GEF AUTs" href="content/html/userManual/toolkit/gefTest/geftest.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Testing GEF AUTs" href="content/html/userManual/toolkit/gefTest/geftest.html"/>
+  </context>
+  <context id="inspectorViewContextId">
+    <description>GEF Inspector View</description>
+    <topic label="Testing GEF components" href="content/html/userManual/toolkit/gefTest/testing-gef-components.html"/>
+  </context>
+  <context id="inspectorViewContextId">
+    <description>GEF Inspector View</description>
+    <topic label="Using the GEF inspector" href="content/html/userManual/toolkit/gefTest/using-the-gef-inspector.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Testing JavaFX AUTs" href="content/html/userManual/toolkit/javaFX/toolkit-javafx.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Testing JavaFX AUTs" href="content/html/userManual/toolkit/javaFX/toolkit-javafx.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Testing JavaFX AUTs" href="content/html/userManual/toolkit/javaFX/toolkit-javafx.html"/>
+  </context>
+  <context id="projectWizardContextId">
+    <description>Creating a Project</description>
+    <topic label="Testing HTML AUTs" href="content/html/userManual/toolkit/webAUT/webaut.html"/>
+  </context>
+  <context id="autConfigSettingWizardPagePageContextId">
+    <description>Configuring an AUT</description>
+    <topic label="Testing HTML AUTs" href="content/html/userManual/toolkit/webAUT/webaut.html"/>
+  </context>
+  <context id="autConfigPropDialogContextId">
+    <description>Adding/editing AUT configurations</description>
+    <topic label="Testing HTML AUTs" href="content/html/userManual/toolkit/webAUT/webaut.html"/>
+  </context>
+  <context id="testExecutionViewContextId">
+    <description>Test Suite Browser</description>
+    <topic label="The Test Suite Browser" href="content/html/userManual/userInterface/browsers/the-test-suite-browser.html"/>
+  </context>
+  <context id="testSpecificationViewContextId">
+    <description>Test Case Browser</description>
+    <topic label="The Test Case Browser" href="content/html/userManual/userInterface/browsers/the-test-case-browser.html"/>
+  </context>
+  <context id="guidancerComponentNameBrowserContextId">
+    <description>Component Name Browser</description>
+    <topic label="The Component Names Browser" href="content/html/userManual/userInterface/browsers/the-component-names-browser.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Test Case Editor" href="content/html/userManual/userInterface/editors/test-case-editor.html"/>
+  </context>
+  <context id="testSuiteEditorContextId">
+    <description>Test Suite Editor</description>
+    <topic label="Test Suite Editor" href="content/html/userManual/userInterface/editors/test-suite-editor.html"/>
+  </context>
+  <context id="objectMapEditorContextId">
+    <description>Object Mapping</description>
+    <topic label="Object Mapping Editor" href="content/html/userManual/userInterface/editors/object-mapping-editor-ui.html"/>
+  </context>
+  <context id="guidancerCentralTestDataEditorContextId">
+    <description>Central Test Data</description>
+    <topic label="Central Test Data Editor" href="content/html/userManual/userInterface/editors/central-test-data-editor.html"/>
+  </context>
+  <context id="guidancerPropertiesViewContextId">
+    <description>Properties View</description>
+    <topic label="The Properties View" href="content/html/userManual/userInterface/views/the-properties-view.html"/>
+  </context>
+  <context id="guidancerDataSetViewContextId">
+    <description>Data Sets View</description>
+    <topic label="The Data Sets View" href="content/html/userManual/userInterface/views/the-data-sets-view.html"/>
+  </context>
+  <context id="compNameViewContextId">
+    <description>Component Names</description>
+    <topic label="The Component Names View" href="content/html/userManual/userInterface/views/the-component-names-view.html"/>
+  </context>
+  <context id="testResultViewContextId">
+    <description>Test Results View</description>
+    <topic label="The Test Result View" href="content/html/userManual/userInterface/views/the-test-result-view-1.html"/>
+  </context>
+  <context id="problemViewContextId">
+    <description>Problem View</description>
+    <topic label="The Problem View" href="content/html/userManual/userInterface/views/the-problems-view-1.html"/>
+  </context>
+  <context id="searchResultViewContextId">
+    <description>Search Result View</description>
+    <topic label="The search result view" href="content/html/userManual/userInterface/views/the-search-result-view.html"/>
+  </context>
+  <context id="editDescriptionDialogContextId">
+    <description>The Description View</description>
+    <topic label="The Description View" href="content/html/userManual/userInterface/views/the-description-view.html"/>
+  </context>
+  <context id="org.eclipse.ui.resource_view_context">
+    <description>Navigator View</description>
+    <topic label="The Navigator View" href="content/html/userManual/userInterface/views/the-navigation-view.html"/>
+  </context>
+  <context id="eventHandlerAddContextId">
+    <description>Event Handlers</description>
+    <topic label="Event Handlers" href="content/html/userManual/concepts/eventHandlers/event-handlers.html"/>
+  </context>
+  <context id="guidancerSpecTestCaseEditorContextId">
+    <description>Test Case Editor</description>
+    <topic label="Event Handlers" href="content/html/userManual/concepts/eventHandlers/event-handlers.html"/>
+  </context>
+</contexts>

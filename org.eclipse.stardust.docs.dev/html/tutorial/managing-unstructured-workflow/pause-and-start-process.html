@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Pausing and Starting Processes</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("",
+      "abort-and-join-process.html","",
+		"../tut-preface.htm","Tutorials",
+		"derive-procs-preface.html","Managing Unstructured Workflows");
+-->
+</script>
+
+<h1>Pausing and Starting Processes</h1>
+<p>This tutorial describes how to pause the current process instance and start a new process instance.
+ Also, check whether the documents attached to the current process instance are copied in the new process instance.</p>
+<p>In an organization, the loan application process instances are started but the approval is pending for these loan processes. 
+This resulted into incorrect workflow of the processes. Hence, the organization has requested an enhancement to the existing
+functionality. For detail scenario, refer to the 
+<a href="../../concepts/executing-workflow/pause-n-start.html#usage">Common Usage Pattern</a>
+section of the 
+<a href="../../concepts/executing-workflow/pause-n-start.html">Pausing and Starting a new Process
+</a> 
+chapter of the 
+<a href="../../concepts/key-concepts.html">Concepts</a> handbook.</p>
+
+<p>For details on the pause and start functionality, refer to the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/detail-views/pause-process.html">
+Pausing a Process and Starting a new Process</a> chapter of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User Handbook</a>.</p>
+
+<p>This tutorial covers the following:</p>
+<ul>
+	<li><a href="#import">Importing the Example Model</a></li>
+	<li><a href="#deploy">Deploying and Running the Model</a></li>
+	<li><a href="#ps">Pausing and Starting the Activity and Process</a>
+	<ul><li><a href="#link">Viewing the Linking</a></li>
+		<li><a href="#prochis">Viewing the Process History</a></li>
+	</ul></li>
+	
+</ul>
+<h2 id="import">Importing the Example Model</h2>
+<p>The example model contains the following:
+<ul>
+	<ul>
+		<li><strong>Loan Application Process</strong> - This process contains three activities:
+		<ul>
+		<li><strong>Customer Application Activity</strong></li>
+		<li><strong>Customer Application Review</strong></li>
+		<li><strong>Approve Loan</strong></li>	
+		</ul>
+		
+		</li>
+		<li><strong>Approve Loan Application</strong> - This process contains two activities:
+		<ul>
+		<li><strong>Review Loan Application</strong></li>
+		<li><strong>Finalize the Loan Amount</strong></li>
+		
+		</ul>
+		</li>
+	</ul>
+	
+</ul>
+<p>These activities have the structured data named <strong>Customer Data</strong> and the document data 
+named <strong>CustomerDocument</strong> associated with it.</p>
+
+<p>Perform the following steps to download the example model named <strong>Loan Application</strong>.
+Note that this example model is created in the <strong>Modeling</strong> perspective.
+</p>
+<ol>
+	<li>Download the following ZIP file which contains the example model in the
+	folder <code>managing-unstructured-workflow</code>:
+	<p class="ind">
+   <a href="../../examples/tutorials/all-tutorials.zip">all-tutorials.zip</a>
+   <br></p></li>
+   
+ </ol>
+<h2 id="deploy">Deploying and Running the Model</h2>
+<p>Perform the following steps to deploy the model and run
+the project in the Stardust Portal:</p>
+<ol>
+	<li>Make sure that the server is up and running</li>
+	<li>Start the Stardust Portal as described in the chapter <a
+		href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/portal-login.html">
+	Logging in the Stardust Portal</a> of the <a
+		href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/toc.html">End User
+	Handbook</a>. Login as administrator (<tt>motu/motu</tt>). You can use the
+	Shift-F8 shortcut key.</li>
+	<li>Switch to the <strong>Modeling</strong> perspective</li>
+	<li>Import the <strong>Loan Application</strong> model in the <strong>Modeling</strong> perspective as 
+	described in the section <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/models/model-handling.html#imp">Importing a Model</a> of the chapter 
+	<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/models/model-handling.html">Model Operations</a> of 
+	the <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>.
+	</li>
+	<li>Deploy the model in the <strong>Modeling</strong> perspective as 
+	described in the section <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/models/model-handling.html#dpm">Deploying a Model</a> of the chapter 
+	<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/models/model-handling.html">Model Operations</a> of 
+	the <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>.</li>
+</ol>
+<h2 id="ps">Pausing and Starting the Activity and Process</h2>
+<p>Let's pause the Loan Application Process and start the Approve Loan Application process. After pausing, the Loan Application Process
+and its activities would achieve the Halted state. Once the Approve Loan Application process is completed, the Loan Application Process would become
+Active and the workflow would resume.</p>
+<ol>
+	<li>Switch to the <strong>Workflow Execution</strong> perspective</li>
+	<li>From the <strong>My Startable Processes</strong> panel, start the <strong>Loan Application Process</strong>
+	<p class="image"><img src="images/loan-app.png" alt="Loan Application Process"> <br>
+	<strong>Figure:</strong> Loan Application Process</p></li>
+	<li>Enter the loan details and upload a document to the <strong>Customer Application Activity</strong>
+	<p class="image"><img src="images/cust-app.png" alt="Customer Application Activity"> <br>
+	<strong>Figure:</strong> Customer Application Activity</p></li>
+	<li>Complete the <strong>Customer Application Activity</strong>. The <strong>Customer Application Review</strong> activity 
+	gets displayed along with the uploaded document in the new tab.</li>
+	<li>Review and close the uploaded document tab</li>
+	<li>In the toolbar, click the <strong>Suspend and Save</strong> icon to suspend the <strong>Customer Application Review</strong> activity
+	<p class="image"><img src="images/review-suspend.png" alt="Customer Application Review"> <br>
+	<strong>Figure:</strong> Customer Application Review - Suspend and Save</p>
+	</li>
+	<li>Switch to the <strong>Administration</strong> perspective and open the <strong>Activity Overview</strong> view
+	<p class="image"><img src="images/activity-overview.png" alt=""> <br>
+	<strong>Figure:</strong> Administration - Activity Overview</p>
+	</li>
+	<li>Select the suspended <strong>Customer Application Review</strong> activity from the Activities view</li>
+	<li>In the toolbar, click the down arrow displayed next to the <strong>Abort Menu</strong> icon and choose the <strong>Pause Process and Start</strong> option
+	<p class="image"><img src="images/pause.png" alt="Customer Application Review"> <br>
+	<strong>Figure:</strong> Pause Process and Start - Customer Application Review</p>
+	</li>
+	<li>In the <strong>Pause Process and Start</strong> dialog, select the <strong>Approve Loan Application</strong> from the 
+	<strong>Select Process</strong> drop-down list and click <strong>Ok</strong>.
+	<p class="image"><img src="images/pause-dialog.png" alt="Customer Application Review"> <br>
+	<strong>Figure:</strong> Pause Process and Start - Approve Loan Application</p>
+	</li>
+	<li>Click <strong>No</strong> in the Information dialog</li>
+	<li>In the <strong>Activity Overview</strong> table, note the status of the <strong>Customer Application Review</strong> activity is displayed as
+	<strong>Halted</strong>.
+	<p class="image"><img src="images/act-overview.png" alt="Customer Application Review"> <br>
+	<strong>Figure:</strong> Customer Application Review - Halted</p>
+	</li>
+	<li>Open the <strong>Process Overview</strong> table from the <strong>Workflow Administration</strong> panel and note 
+	the status of the <strong>Loan Application Process</strong> is displayed as <strong>Halted</strong>.
+	
+	<p class="image"><img src="images/proc-overview.png" alt="Worklist - My Assignments"> <br>
+	<strong>Figure:</strong> Process Overview - Loan Application Process - Halted</p>
+	</li>
+	<li>Switch to the <strong>Workflow Execution</strong> perspective</li>
+	<li>Open the worklist from the <strong>My Assignments</strong> panel
+	<p class="image"><img src="images/worklist-my.png" alt="Worklist - My Assignments"> <br>
+	<strong>Figure:</strong> Worklist - My Assignments</p></li>
+	<li>Note the status of the <strong>Review Loan Application</strong> activity is displayed as <strong>Suspended</strong>
+	<p class="image"><img src="images/review-sus.png" alt="Review Loan Application - Suspended"> <br>
+	<strong>Figure:</strong> Review Loan Application - Suspended</p>
+	</li>
+	<li>Activate the <strong>Review Loan Application</strong> activity</li>
+	<lI>Review and close the document copied to this activity</lI>
+	<li>In the toolbar, click the <strong>Complete</strong> icon to complete the <strong>Review Loan Application</strong> activity
+	<p class="image"><img src="images/complete-review-loan.png" alt="Complete - Review Loan Application"> <br>
+	<strong>Figure:</strong> Complete - Review Loan Application</p>
+	</li>
+	<li>Similarly, complete <strong>Finalize the Loan Amount</strong> activity
+	<p class="image"><img src="images/final-loan.png" alt="Complete - Finalize the Loan Amount"> <br>
+	<strong>Figure:</strong> Complete - Finalize the Loan Amount</p>
+	 </li>
+	 <li>Switch to the <strong>Process Overview</strong> and note that the <strong>Loan Application Process</strong>
+	 has achieved the status <strong>Active</strong> as soon as <strong>Finalize the Loan Amount</strong> activity is completed.
+	 <p class="image"><img src="images/halt-active.png" alt="Halted to Active"> <br>
+	<strong>Figure:</strong> Process Overview - Loan Application Process - Active</p>
+	</li>
+	
+	<li>Switch to the <strong>Workflow Execution</strong> perspective and open the worklist</li>
+	<li>Activate and complete the <strong>Customer Application Review</strong> activity</li>
+	<li>Complete the <strong>Approve Loan</strong> activity</li>
+	<li>Switch to the <strong>Process Overview</strong> and note the status of the 
+	<strong>Loan Application Process</strong> and <strong>Approve Loan Application</strong> processes.
+	 <p class="image"><img src="images/processes.png" alt="Halted to Active"> <br>
+	<strong>Figure:</strong> Processes - Completed</p>	
+	</li>
+</ol>
+<h3 id="link">Viewing the Linking</h3>
+<p>In this case, the current process is
+<strong>Loan Application Process</strong> and the newly started process is <strong>Approve Loan Application</strong>. 
+The link type would be displayed for these processes:</p>
+<ol>
+	<li>In the <strong>Process Overview</strong>, click on the <strong>Loan Application Process</strong>
+	<p class="image"><img src="images/lap.png" alt="Halted to Active"> <br>
+	<strong>Figure:</strong> Process Overview - Loan Application Process</p>	
+	</li>
+	<li>Open the <strong>Linked Processes</strong> panel and note the <strong>Link Type</strong>
+	is displayed as <strong>Inserted</strong>
+	<p class="image"><img src="images/inserted.png" alt="Halted to Active"> <br>
+	<strong>Figure:</strong> Link Type - Inserted</p></li>
+	<li>In the <strong>Linked Processes</strong> panel, click on the <strong>Approve Loan Application</strong> process.
+	The process details of the <strong>Approve Loan Application</strong> process gets displayed.
+	</li>
+	<li>Open the <strong>Linked Processes</strong> panel and note the <strong>Link Type</strong> is displayed as <strong>Inserted Into</strong>
+	<p class="image"><img src="images/inserted-into.png" alt="Halted to Active"> <br>
+	<strong>Figure:</strong> Link Type - Inserted Into</p></li>
+</ol>
+<h3 id="prochis">Viewing the Process History</h3>
+<p>Open the <strong>Process Details</strong> view of the <strong>Loan Application Process</strong> to view the process history.</p>
+<p class="image"><a href="images/proc-history-hal_orgSize.png" target="_blank">
+<p class="image"><img src="images/proc-history-halt.png" alt="Halted to Active"></a> <br>
+	<strong>Figure:</strong> Process History - Loan Application Process</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<toc label="Jubula Developer Manual" topic="content/html/developerManual/index.html">
+  <topic label="Introduction" href="content/html/developerManual/introduction/introduction.html"/>
+  <topic label="Writing UI tests via client API" href="content/html/developerManual/clientAPI/clientAPI.html">
+    <topic label="The general idea" href="content/html/developerManual/clientAPI/ch02s01.html"/>
+    <topic label="General steps to take and class overview" href="content/html/developerManual/clientAPI/ch02s02.html"/>
+    <topic label="Exporting the Object Map in the ITE" href="content/html/developerManual/clientAPI/ch02s03.html"/>
+    <topic label="Creating CAP instances" href="content/html/developerManual/clientAPI/creating-cap-instances.html"/>
+    <topic label="General setup information" href="content/html/developerManual/clientAPI/ch02s05.html"/>
+    <topic label="Sample setup of the API usage" href="content/html/developerManual/clientAPI/ch02s06.html"/>
+    <topic label="Converting a project into API (experimental)" href="content/html/developerManual/clientAPI/converter.html">
+      <topic label="Installing the converter plugin" href="content/html/developerManual/clientAPI/ch02s07s01.html"/>
+      <topic label="Converting the project and other things to do" href="content/html/developerManual/clientAPI/ch02s07s02.html"/>
+      <topic label="Limitations of the converter" href="content/html/developerManual/clientAPI/ch02s07s03.html"/>
+    </topic>
+  </topic>
+  <topic label="Creating toolkit extensions for custom UI widgets" href="content/html/developerManual/toolkitExtension/toolkitExtension.html">
+    <topic label="Requirements" href="content/html/developerManual/toolkitExtension/requirements.html"/>
+    <topic label="ITE extension" href="content/html/developerManual/toolkitExtension/iteExtension.html">
+      <topic label="Creating the toolkit plug-in" href="content/html/developerManual/toolkitExtension/creating-the-toolkit-plug-in.html"/>
+      <topic label="Deploying the toolkit plug-in" href="content/html/developerManual/toolkitExtension/deploying-the-toolkit-plug-in.html">
+        <topic label="Create an update site for the toolkit feature" href="content/html/developerManual/toolkitExtension/deploying-the-toolkit-plug-in.html#create-an-update-site-for-the-toolkit-feature"/>
+        <topic label="Install the toolkit feature from the update site" href="content/html/developerManual/toolkitExtension/deploying-the-toolkit-plug-in.html#install-the-toolkit-feature-from-the-update-site"/>
+      </topic>
+    </topic>
+    <topic label="Remote control extension" href="content/html/developerManual/toolkitExtension/remoteControlExtension.html">
+      <topic label="Creating the fragment" href="content/html/developerManual/toolkitExtension/creating-the-fragment.html">
+        <topic label="Creating an adapter" href="content/html/developerManual/toolkitExtension/creating-the-fragment.html#creating-an-adapter"/>
+        <topic label="Creating a Tester Class" href="content/html/developerManual/toolkitExtension/creating-the-fragment.html#creating-a-tester-class"/>
+        <topic label="Creating an container adapter" href="content/html/developerManual/toolkitExtension/creating-the-fragment.html#creating-an-container-adapter"/>
+      </topic>
+      <topic label="Deploying the fragment" href="content/html/developerManual/toolkitExtension/deploying-the-fragment.html"/>
+    </topic>
+    <topic label="Addressing custom controls via the client API" href="content/html/developerManual/toolkitExtension/apiExtension.html"/>
+    <topic label="ITE, client API and remote control extension examples" href="content/html/developerManual/toolkitExtension/extensionExamples.html"/>
+  </topic>
+  <topic label="Creating GEF toolkit extensions" href="content/html/developerManual/gefToolkitExtension/creating-gef-toolkit-extensions.html">
+    <topic label="Creating an accessibility plug-in" href="content/html/developerManual/gefToolkitExtension/creating-an-accessibility-plug-in.html">
+      <topic label="Setting up your Workspace" href="content/html/developerManual/gefToolkitExtension/setting-up-your-workspace.html"/>
+      <topic label="Walkthrough" href="content/html/developerManual/gefToolkitExtension/walkthrough.html"/>
+    </topic>
+    <topic label="Accessibility plug-in example" href="content/html/developerManual/gefToolkitExtension/gefreference.html"/>
+  </topic>
+  <topic label="Creating ITE functions" href="content/html/developerManual/functions/functions.html"/>
+  <topic label="Adding keyboard layout files" href="content/html/developerManual/keyboardLayout/keyboardLayout.html"/>
+</toc>

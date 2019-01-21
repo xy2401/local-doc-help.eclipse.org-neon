@@ -1,0 +1,766 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>GEF4 Zest Developer Documentation</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../book.css"/>
+	</head>
+	<body>
+		<p>
+			<i>Note to non-wiki readers: This documentation is generated from the Eclipse wiki - if you have corrections or additions it would be awesome if you added them in 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" target="doc_external">the original wiki page</a>
+			</i>.
+		</p>
+		<h2 id="Introduction">Introduction</h2>
+		<p>The <span style="color:#206FAD">
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a></span> component provides support for visualizing 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a>-based graph models, applying automatic layout as provided by 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout" title="GEF/GEF4/Layout" target="doc_external">GEF4 Layout</a>. It is internally decomposed into the 
+			<a href="#Zest.FX">Zest.FX</a>, 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a>, and 
+			<a href="#Zest.FX.UI">Zest.FX.UI</a> modules. In addition, there is a deployed 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#Graph_Example_.28Standalone.2C_Eclipse_UI.29" title="GEF/GEF4/Zest/Examples#Graph Example (Standalone, Eclipse UI)" target="doc_external">Zest Graph Example</a> as well as some undeployed [[GEF/GEF4/Zest/Examples#Examples (undeployed)|<span style="color:#206FAD">Zest Examples</span>]] and 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#Examples.JFace_.28undeployed.29" title="GEF/GEF4/Zest/Examples#Examples.JFace (undeployed)" target="doc_external">Zest JFace Examples</a>.
+		</p>
+		<p>
+			<img width="600" border="0" src="images/GEF4-Components-Zest.png"/>
+		</p>
+		<h2 id="Zest.FX">Zest.FX</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.zest.fx</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.zest.fx</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX">Zest.FX</a> module of 
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a> provides a graph viewer and implements all functionality therefore. It uses JavaFX and 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/FX" title="GEF/GEF4/FX" target="doc_external">GEF4 FX</a> for visualization purposes and is internally based on 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, and can thus also be used standalone. Integrating with the Eclipse UI is realized by the 
+			<a href="#Zest.FX.UI">Zest.FX.UI</a> module.
+		</p>
+		<p>Being based on 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, the 
+			<a href="#Zest.FX">Zest.FX</a> module specifies a content model and provides a related controller hierarchy and corresponding JavaFX-based visualizations. Zest.FX is capable of rendering a graph with nodes, (binary) edges, and related labels. A node can contain a (nested) graph. A node visualization is composed of a shape, an icon, a label, and a compartment for nodes and edges of a nested graph (if any). It may also have an external label that can be freely placed. An edge visualization is composed of a curve and source/target decorations. It may have freely placable source label, target label, (center) label, and external (center) label.
+		</p>
+		<p>The content model is a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> model of which specific attributes are recognized and utilized by 
+			<a href="#Zest.FX">Zest.FX</a> for visualization and layout purposes. A utility class (
+			<a href="#ZestProperties">ZestProperties</a>) is provided that can be used to access the visualization-related attributes. Similarly, 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout" title="GEF/GEF4/Layout" target="doc_external">GEF4 Layout</a> provides a utility class (
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout#LayoutProperties" title="GEF/GEF4/Layout#LayoutProperties" target="doc_external">org.eclipse.gef4.layout.LayoutProperties</a>) that can be used to access the layout-related attributes.
+		</p>
+		<p>Visualization-related attributes specify the to be visualized contents. The appearance is controlled via JavaFX CSS. For this purpose, CSS classes are assigned to the visuals so that an external stylesheet can be used. Additionally, a CSS class, ID, and style can be specified for a graph content element using dedicated 
+			<a href="#ZestProperties">ZestProperties</a>.
+		</p>
+		<p>
+			<a href="#Zest.FX">Zest.FX</a> provides content part implementations for the individual graph abstractions, i.e. 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">GraphPart</a>, 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a>, and 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgePart</a>. Additionally, 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodeLabelPart</a> and 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgeLabelPart</a> are provided as controllers for external node/edge labels. The label parts are anchored to their respective controllers.
+		</p>
+		<p>In order to implement automatic layout, every content part is accompanied by an 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">AbstractLayoutBehavior</a> implementation that is responsible for transferring visualization-related attributes to layout-related attributes (and vice versa) within the content 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> model: 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">GraphLayoutBehavior</a>, 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">NodeLayoutBehavior</a>, and 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">EdgeLayoutBehavior</a>.
+		</p>
+		<p>Furthermore, 
+			<a href="#Zest.FX">Zest.FX</a> provides a 
+			<a href="#HidingModel">HidingModel</a> that maintains a set of currently hidden nodes. The hidden nodes are neither shown, nor taken into account when performing automatic layout. 
+			<a href="#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">AbstractHidingBehavior</a> implementations are used to hide/show nodes in response to 
+			<a href="#HidingModel">HidingModel</a> changes. The behaviors also generate 
+			<a href="#HiddenNeighborsFeedbackPart">HiddenNeighborsFeedbackParts</a> that indicate the number of hidden neighbor nodes. Per default, the user can hide/show nodes using dedicated 
+			<a href="#HideHoverHandlePart.2C_ShowHiddenNeighborsHoverHandlePart.2C_ZestFxHoverHandlePartFactory">hover handles</a>, or 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">interaction policies</a>.
+		</p>
+		<p>In order to navigate nested/nesting graphs, interaction policies are registered that open a nested/parent graph on double-click (
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">OpenNestedGraphOnDoubleClickPolicy</a>, 
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">OpenParentGraphOnDoubleClickPolicy</a>), and a 
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">SemanticZoomPolicy</a> is registered that carries out zooming and scrolling interactions, so that the user can zoom into and out of (nested) graphs. The viewport of a previously opened graph is stored in the 
+			<a href="#NavigationModel">NavigationModel</a> and restored when that graph is opened again.
+		</p>
+		<p>Besides, a 
+			<a href="#TransformLabelPolicy.2C_TranslateSelectedAndRelocateLabelsOnDragPolicy">TranslateSelectedAndRelocateLabelsOnDragPolicy</a> is registered so that nodes and labels can be relocated via mouse drag interaction.
+		</p>
+		<p><div id="Zest.FX:Root"></div></p>
+		<h3 id=".7BRoot.7D">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX:Root">{Root}</a> package provides a 
+			<a href="http://google.github.io/guice/api-docs/3.0/javadoc/com/google/inject/Module.html" target="doc_external">com.google.inject.Module</a> (
+			<a href="#ZestFxModule">ZestFxModule</a>) with bindings, as well as a utility class (
+			<a href="#ZestProperties">ZestProperties</a>) to work with the visualization and layout attributes/properties recognized by 
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a>. 
+		</p>
+		<p>
+			<img width="527" border="0" src="images/GEF4-Zest-FX-root.jpg"/>
+		</p>
+		<h4 id="ZestFxModule">ZestFxModule</h4>
+		<p>The <code>ZestFxModule</code> defines various (default) bindings, concerning parts, policies, etc. needed to realize the graph visualization.</p>
+		<h4 id="ZestProperties">ZestProperties</h4>
+		<p><code>ZestProperties</code> defines attributes that are associated to graphs, nodes, and edges (of 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a>), to control the visualization as well as the layout.
+		</p>
+		<p>The 
+			<b>visualization</b> is based on the following attribute, which are associated with graphs (g), nodes (n), or edges (e):
+		</p>
+		<ul>
+			<li><code>SHAPE__N</code>, 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/Node.html" target="doc_external">javafx.scene.Node</a> (n): Stores the node that is used to display the border and background of the node.
+			</li>
+			<li><code>LABEL__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n, e): Stores the label for the element.
+			</li>
+			<li><code>EXTERNAL_LABEL__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n, e): Stores the external label for the element, which can be freely placed.
+			</li>
+			<li><code>ICON__N</code>, 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/image/Image.html" target="doc_external">javafx.scene.image.Image</a> (n): The image that is displayed next to the node's label.
+			</li>
+			<li><code>TOOLTIP__N</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n): Text, which is shown as a tooltip, i.e. when the mouse hover the node and does not move for a short time.
+			</li>
+			<li><code>CURVE__E</code>, 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/Node.html" target="doc_external">javafx.scene.Node</a> (n): Stores the node that is used to render the stroke of the edge.
+			</li>
+			<li><code>SOURCE_LABEL__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the source label for the edge.
+			</li>
+			<li><code>TARGET_LABEL__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the target label for the edge.
+			</li>
+			<li><code>SOURCE_DECORATION__E</code>, 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/Node.html" target="doc_external">javafx.scene.Node</a> (n): Stores the node that is used to render the source decoration of the edge.
+			</li>
+			<li><code>TARGET_DECORATION__E</code>, 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/Node.html" target="doc_external">javafx.scene.Node</a> (n): Stores the node that is used to render the target decoration of the edge.
+			</li>
+			<li><code>CSS_CLASS__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n, e): Stores the CSS class that is assigned to the element.
+			</li>
+			<li><code>CSS_ID__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n, e): Stores the CSS id that is assigned to the element.
+			</li>
+			<li><code>SHAPE_CSS_STYLE__N</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n): Stores the CSS style that is assigned to the shape of this node.
+			</li>
+			<li><code>LABEL_CSS_STYLE__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (n, e): Stores the CSS style that is assigned to the 
+				<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/text/Text.html" target="doc_external">javafx.scene.text.Text</a> which displays the label of the element.
+			</li>
+			<li><code>CURVE_CSS_STYLE__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the CSS style that is assigned to the curve of the edge.
+			</li>
+			<li><code>SOURCE_LABEL_CSS_STYLE__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the CSS style that is assigned to the source label of this edge.
+			</li>
+			<li><code>TARGET_LABEL_CSS_STYLE__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the CSS style that is assigned to the target label of this edge.
+			</li>
+			<li><code>SOURCE_DECORATION_CSS_STYLE__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the CSS style that is assigned to the source decoration of this edge.
+			</li>
+			<li><code>TARGET_DECORATION_CSS_STYLE__E</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/String.html" target="doc_external">java.lang.String</a> (e): Stores the CSS style that is assigned to the target decoration of this edge.
+			</li>
+			<li><code>ROUTER__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/FX#IConnectionRouter.2C_StraightRouter.2C_OrthogonalRouter" title="GEF/GEF4/FX#IConnectionRouter, StraightRouter, OrthogonalRouter" target="doc_external">org.eclipse.gef4.fx.nodes.IConnectionRouter</a> (e): Stores the router that is used to manipulate the waypoints of the edge
+			</li>
+			<li><code>INTERPOLATOR__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/FX#IConnectionInterpolator.2C_PolylineInterpolator.2C_PolyBezierInterpolator" title="GEF/GEF4/FX#IConnectionInterpolator, PolylineInterpolator, PolyBezierInterpolator" target="doc_external">org.eclipse.gef4.fx.nodes.IConnectionInterpolator</a> (e): Stores the interpolator that is used to manipulate the appearance of the edge.
+			</li>
+			<li><code>INVISIBLE__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/Boolean.html" target="doc_external">java.lang.Boolean</a> (n,e): Stores whether this element is to be visual or not.
+			</li>
+		</ul>
+		<p>The 
+			<b>layout</b> is based on the following attributes, which are associated with graphs (g), nodes (n), or edges (e):
+		</p>
+		<ul>
+			<li><code>LAYOUT_ALGORITHM__G</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Layout#ILayoutAlgorithm" title="GEF/GEF4/Layout#ILayoutAlgorithm" target="doc_external">org.eclipse.gef4.layout.ILayoutAlgorithm</a> (g): Stores the algorithm that will be used to layout the nodes and edges of this graph.
+			</li>
+			<li><code>LAYOUT_IRRELEVANT__NE</code>, 
+				<a href="http://docs.oracle.com/javase/7/docs/api/index.html?java/lang/Boolean.html" target="doc_external">java.lang.Boolean</a> (n, e): If set to <code>true</code>, this element will not get layed out.
+			</li>
+			<li><code>POSITION__N</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (n) : Stores the position of the node.
+			</li>
+			<li><code>SIZE__N</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Dimension" title="GEF/GEF4/Geometry#Dimension" target="doc_external">org.eclipse.gef4.geometry.planar.Dimension</a> (n): Stores the size of the node.
+			</li>
+			<li><code>START_POINT__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (e): Stores the start point of the edge.
+			</li>
+			<li><code>END_POINT__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (e): Stores the end point of the edge.
+			</li>
+			<li><code>CONTROL_POINTS__E</code>, List of 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a>s (e): Stores the control/way-points of the edge.
+			</li>
+			<li><code>LABEL_POSITION__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (e): Stores the position of the label of the edge.
+			</li>
+			<li><code>SOURCE_LABEL_POSITION__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (e): Stores the position of the source label of the edge.
+			</li>
+			<li><code>TARGET_LABEL_POSITION__E</code>, 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Geometry#Point" title="GEF/GEF4/Geometry#Point" target="doc_external">org.eclipse.gef4.geometry.planar.Point</a> (e): Stores the position of the target label of the edge.
+			</li>
+		</ul>
+		<p><hr/></p>
+		<h3 id="Behaviors">Behaviors</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.behaviors</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Behaviors">Behaviors</a> package contains specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IBehavior.2C_AbstractBehavior" title="GEF/GEF4/MVC#IBehavior, AbstractBehavior" target="doc_external">IBehavior</a> implementations for exchanging layout information (
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">AbstractLayoutBehavior</a>, 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">NodeLayoutBehavior</a>, 
+			<a href="#AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">EdgeLayoutBehavior</a>) and the hiding/showing of nodes and related edges (
+			<a href="#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">AbstractHidingBehavior</a>, 
+			<a href="#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">NodeHidingBehavior</a>, 
+			<a href="#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">EdgeHidingBehavior</a>, 
+			<a href="#AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">EdgeLabelHidingBehavior</a>).
+		</p>
+		<p>
+			<img width="1213" border="0" src="images/GEF4-Zest-FX-behaviors.png"/>
+		</p>
+		<h4 id="AbstractLayoutBehavior.2C_GraphLayoutBehavior.2C_NodeLayoutBehavior.2C_EdgeLayoutBehavior">AbstractLayoutBehavior, GraphLayoutBehavior, NodeLayoutBehavior, EdgeLayoutBehavior</h4>
+		<p>The <code>GraphLayoutBehavior</code> maintains a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout#LayoutContext" title="GEF/GEF4/Layout#LayoutContext" target="doc_external">org.eclipse.gef4.layout.LayoutContext</a>, i.e. it is responsible for the creation of such a layout context, updating the layout bounds (based on the corresponding 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">GraphPart</a>), and initiating layout passes (based on content or bounds changes). It also registers pre- and post-layout-passes at the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout#LayoutContext" title="GEF/GEF4/Layout#LayoutContext" target="doc_external">org.eclipse.gef4.layout.LayoutContext</a>, including those of related <code>NodeLayoutBehavior</code>s and <code>EdgeLayoutBehavior</code>s. The <code>NodeLayoutBehavior</code> provides location and size of its corresponding 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a> before a layout pass is applied, and, accordingly, copies the location and size from the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout#LayoutContext" title="GEF/GEF4/Layout#LayoutContext" target="doc_external">org.eclipse.gef4.layout.LayoutContext</a> to its corresponding 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a> afterwards. Afterwards it initiates a refresh of the visualization and updates the external label position, which is ignored by the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout" title="GEF/GEF4/Layout" target="doc_external">GEF4 Layout</a> algorithms. The <code>EdgeLayoutBehavior</code> does not need to provide layout information, but only refreshes the visualization of its corresponding 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgePart</a> after a layout pass, as well updating the positions of external labels. The <code> AbstractLayoutBehavior </code> provides common functionality for all layout related behaviors.
+		</p>
+		<h4 id="AbstractHidingBehavior.2C_NodeHidingBehavior.2C_EdgeHidingBehavior.2C_EdgeLabelHidingBehavior">AbstractHidingBehavior, NodeHidingBehavior, EdgeHidingBehavior, EdgeLabelHidingBehavior</h4>
+		<p>The <code>NodeHidingBehavior</code>, <code>EdgeHidingBehavior</code>, and <code>EdgeLabelHidingBehavior</code> react to changes in the 
+			<a href="#HidingModel">HidingModel</a> by hiding/showing the corresponding visuals. In addition, for nodes, a 
+			<a href="#HiddenNeighborsFeedbackPart">HiddenNeighborsFeedbackPart</a> is created when any neighboring nodes are currently hidden. The <code>AbstractHidingBehavior</code> provides common functionality for all hiding related behaviors.
+		</p>
+		<p><hr/></p>
+		<h3 id="Models">Models</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.models</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Models">Models</a> package provides viewer models to support hiding of nodes (
+			<a href="#HidingModel">HidingModel</a>) as well as semantic zooming (
+			<a href="#NavigationModel">NavigationModel</a>).
+		</p>
+		<p>
+			<img width="635" border="0" src="images/GEF4-Zest-FX-models.png"/>
+		</p>
+		<h4 id="HidingModel">HidingModel</h4>
+		<p>The <code>HidingModel</code> is a viewer model that stores which nodes are currently hidden. Every visible node shows a small marker indicating how many of its neighbors are hidden. You can hide/show nodes using the hover handles, respectively. The visualization is automatically synchronized with the <code>HidingModel</code>.</p>
+		<h4 id="NavigationModel">NavigationModel</h4>
+		<p>The <code>NavigationModel</code> is a viewer model needed to persist viewport configurations. It is used to keep track of all viewports that are passed during nested graph navigation when zooming in and can be used to restore viewports when zooming out again.</p>
+		<p><hr/></p>
+		<h3 id="Operations">Operations</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.operations</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Operations">Operations</a> package currently provides operations for the hiding (visible) and showing (invisible) nodes, as well as for navigating and manipulating of attributes.
+		</p>
+		<p>
+			<img width="380" border="0" src="images/GEF4-Zest-FX-operations.png"/>
+		</p>
+		<h4 id="HideOperation.2C_ShowHiddenNeighboursOperation">HideOperation, ShowHiddenNeighboursOperation</h4>
+		<p>The <code>HideOperation</code> and <code>ShowHiddenNeighboursOperation</code> are used by 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">HidePolicy</a> to hide or show nodes. It adds/removes a respective content part to/from the 
+			<a href="#HidingModel">HidingModel</a>.
+		</p>
+		<h4 id="NavigateOperation">NavigateOperation</h4>
+		<p>The <code>NavigateOperation</code> is used by the 
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">SemanticZoomPolicy</a> to realize navigation into and out of nested graphs.
+		</p>
+		<h4 id="ChangeAttributesOperation">ChangeAttributesOperation</h4>
+		<p>The <code>ChangeAttributesOperation</code> is a general operation used to change values of attributes of an 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Common#IAttributeStore" title="GEF/GEF4/Common#IAttributeStore" target="doc_external">org.eclipse.gef4.common.attributes.IAttributeStore</a>, i.e for a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph#Graph" title="GEF/GEF4/Graph#Graph" target="doc_external">Graph</a> model element.
+		</p>
+		<p><hr/></p>
+		<h3 id="Parts">Parts</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.parts</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Parts">Parts</a> package provides a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#FXRootPart" title="GEF/GEF4/MVC#FXRootPart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.FXRootPart</a> which adds support for CSS styling.
+		</p>
+		<p>
+			<img width="331" border="0" src="images/GEF4-Zest-FX-parts-root.png"/>
+		</p>
+		<p>It furthermore provides specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#AbstractFXContentPart" title="GEF/GEF4/MVC#AbstractFXContentPart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.AbstractFXContentPart</a> implementations (
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">GraphPart</a>, 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a>, 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodeLabelPart</a>, 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgePart</a>, and 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgeLabelPart</a>) to control the visualizations of graphs, nodes, and edges.
+		</p>
+		<p>
+			<img width="910" border="0" src="images/GEF4-Zest-FX-parts-contents.png"/>
+		</p>
+		<p>In addition, it provides specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#AbstractFXHandlePart.2C_AbstractFXSegmentHandlePart.2C_FXCircleSegmentHandlePart.2C_FXRectangleSegmentHandlePart.2C_FXSquareSegmentHandlePart" title="GEF/GEF4/MVC#AbstractFXHandlePart, AbstractFXSegmentHandlePart, FXCircleSegmentHandlePart, FXRectangleSegmentHandlePart, FXSquareSegmentHandlePart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.AbstractFXHandlePart</a> implementations (
+			<a href="#HideHoverHandlePart.2C_ShowHiddenNeighborsHoverHandlePart.2C_ZestFxHoverHandlePartFactory">HideHoverHandlePart</a> and 
+			<a href="#HideHoverHandlePart.2C_ShowHiddenNeighborsHoverHandlePart.2C_ZestFxHoverHandlePartFactory">ShowHiddenNeighborsHoverHandlePart</a>) to realize hiding and showing of nodes via hover handles.
+		</p>
+		<p>
+			<img width="964" border="0" src="images/GEF4-Zest-FX-parts-handles.png"/>
+		</p>
+		<p>There is also specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#AbstractFXFeedbackPart.2C_FXHoverFeedbackPart.2C_FXSelectionFeedbackPart.2C_FXSelectionLinkFeedbackPart" title="GEF/GEF4/MVC#AbstractFXFeedbackPart, FXHoverFeedbackPart, FXSelectionFeedbackPart, FXSelectionLinkFeedbackPart" target="doc_external">AbstractFXFeedbackPart</a> implementation (
+			<a href="#HiddenNeighborsFeedbackPart">HiddenNeighborsFeedbackPart</a>) to indicate feedback for hidden nodes.
+		</p>
+		<p>
+			<img width="419" border="0" src="images/GEF4-Zest-FX-parts-feedback.png"/>
+		</p>
+		<h4 id="ZestFxRootPart">ZestFxRootPart</h4>
+		<p>The <code>ZestFxRootPart</code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#FXRootPart" title="GEF/GEF4/MVC#FXRootPart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.FXRootPart</a> that adds support for CSS styling. In detail, it loads a file with default CSS styles (<code>STYLES_CSS_FILE</code>) and applies it as stylesheet to the 
+			<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/Scene.html" target="doc_external">javafx.scene.Scene</a>.
+		</p>
+		<h4 id="GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">GraphPart, NodePart, NodeLabelPart, EdgePart, EdgeLabelPart, ZestFxContentPartFactory</h4>
+		<p>The <code>GraphPart</code>, <code>NodePart</code>, and <code>EdgePart</code> implementations control the visualization of the underlying 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> model elements, i.e. graphs, nodes, and edges. The default visualization for nodes (contributed by <code>NodePart</code>) consists of a shape Node for background and border, a 
+			<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/text/Text.html" target="doc_external">javafx.scene.text.Text</a> for the label, and an 
+			<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/image/ImageView.html" target="doc_external">javafx.scene.image.ImageView</a> for the icon. The default visualization for edges (contributed by <code>EdgePart</code> consists of a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/FX#Connection" title="GEF/GEF4/FX#Connection" target="doc_external">org.eclipse.gef4.fx.nodes.Connection</a>, whose curve node can be exchanged. The external labels of nodes and edges are visualized by 
+			<a href="http://docs.oracle.com/javafx/2/api/index.html?javafx/scene/text/Text.html" target="doc_external">javafx.scene.text.Text</a>s, which are controlled by <code>NodeLabelPart</code> and <code>EdgeLabelPart</code> respectively.
+		</p>
+		<p>The <code>NodePart</code> and <code>EdgePart</code> assign the following JavaFX CSS classes to its visuals:</p>
+		<ul>
+			<li><code>"node"</code> is assigned to the visual of the <code>NodePart</code>.</li>
+			<li><code>"shape"</code> is assigned to the shape sub-visual of the <code>NodePart</code>.</li>
+			<li><code>"label"</code> is assigned to the label sub-visual of the <code>NodePart</code>.</li>
+			<li><code>"icon"</code> is assigned to the icon sub-visual of the <code>NodePart</code>.</li>
+			<li><code>"edge"</code> is assigned to the visual of the <code>EdgePart</code>.</li>
+			<li><code>"curve"</code> is assigned to the curve sub-visual of the <code>EdgePart</code>.</li>
+			<li><code>"decoration"</code> is assigned to the decoration sub-visuals of the <code>EdgePart</code>.</li>
+		</ul>
+		<h4 id="HideHoverHandlePart.2C_ShowHiddenNeighborsHoverHandlePart.2C_ZestFxHoverHandlePartFactory">HideHoverHandlePart, ShowHiddenNeighborsHoverHandlePart, ZestFxHoverHandlePartFactory</h4>
+		<p>The <code> HideHoverHandlePart </code> and <code> ShowHiddenNeighborsHoverHandlePart </code> are complementary 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#AbstractFXHandlePart.2C_AbstractFXSegmentHandlePart.2C_FXCircleSegmentHandlePart.2C_FXRectangleSegmentHandlePart.2C_FXSquareSegmentHandlePart" title="GEF/GEF4/MVC#AbstractFXHandlePart, AbstractFXSegmentHandlePart, FXCircleSegmentHandlePart, FXRectangleSegmentHandlePart, FXSquareSegmentHandlePart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.AbstractFXSegmentHandlePart</a> implementations that are used as hover handles. Being anchored on a respective 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a>s, they react to mouse clicks to perform hiding or showing of nodes.
+		</p>
+		<p>
+			<img title="Hover handles for hide/show" alt="Hover handles for hide/show" border="0" src="images/GEF4Zest-HidingHoverHandles.png"/>
+		</p>
+		<h4 id="HiddenNeighborsFeedbackPart">HiddenNeighborsFeedbackPart</h4>
+		<p>The <code> HiddenNeighborsFeedbackPart </code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#AbstractFXFeedbackPart.2C_FXHoverFeedbackPart.2C_FXSelectionFeedbackPart.2C_FXSelectionLinkFeedbackPart" title="GEF/GEF4/MVC#AbstractFXFeedbackPart, FXHoverFeedbackPart, FXSelectionFeedbackPart, FXSelectionLinkFeedbackPart" target="doc_external">org.eclipse.gef4.mvc.fx.parts.AbstractFXFeedbackPart</a> that indicates the number of hidden neighbor nodes via a circle decoration (with a number label).
+		</p>
+		<p>
+			<img width="38" title="Feedback for hidden neighbor nodes" alt="Feedback for hidden neighbor nodes" border="0" src="images/GEF4Zest-HiddenNeighborsFeedback.png"/>
+		</p>
+		<h4 id="ZestFxSelectionHandlePartFactory">ZestFxSelectionHandlePartFactory</h4>
+		<p>The <code> ZestFxSelectionHandlePartFactory</code> is a specific handle part factory that does prevent creation of multi selection handles.</p>
+		<p><hr/></p>
+		<h3 id="Policies">Policies</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.policies</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Policies">Policies</a> package contains specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IPolicy.2C_AbstractPolicy" title="GEF/GEF4/MVC#IPolicy, AbstractPolicy" target="doc_external">IPolicy</a> implementations for hiding/showing of nodes (
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">HideNodePolicy</a>, 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">HideOnTypePolicy</a>, 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">ShowHiddenNeighborsOnTypePolicy</a>, 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">HideFirstAnchorageOnClickPolicy</a>, and 
+			<a href="#HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy</a>), dragging external labels (
+			<a href="#TransformLabelPolicy.2C_TranslateSelectedAndRelocateLabelsOnDragPolicy">TransformLabelPolicy</a>, 
+			<a href="#TransformLabelPolicy.2C_TranslateSelectedAndRelocateLabelsOnDragPolicy">TranslateSelectedAndRelocateLabelsOnDragPolicy</a>), and navigating nested graphs via double click (
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">SemanticZoomPolicy</a>, 
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">OpenNestedGraphOnDoubleClickPolicy</a>, 
+			<a href="#SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">OpenParentGraphOnDoubleClickPolicy</a>).
+		</p>
+		<p>
+			<img width="682" border="0" src="images/GEF4-Zest-FX-policies.png"/>
+		</p>
+		<h4 id="HidePolicy.2C_ShowHiddenNeighborsPolicy.2C_HideOnTypePolicy.2C_ShowHiddenNeighborsOnTypePolicy.2C_HideFirstAnchorageOnClickPolicy.2C_ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy">HidePolicy, ShowHiddenNeighborsPolicy, HideOnTypePolicy, ShowHiddenNeighborsOnTypePolicy, HideFirstAnchorageOnClickPolicy, ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy</h4>
+		<p>The <code> HidePolicy </code> and <code> ShowHiddenNeighborsPolicy</code> are transaction policies that are registered as an adapter on 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodeParts</a>. They are used by the <code> HideOnTypePolicy</code>, <code> ShowHiddenNeighborsOnTypePolicy</code>, <code> HideFirstAnchorageOnClickPolicy</code>, and <code> ShowHiddenNeighborsOfFirstAnchorageOnClickPolicy</code> interaction policies to realize the hiding and showing of nodes.
+		</p>
+		<h4 id="TransformLabelPolicy.2C_TranslateSelectedAndRelocateLabelsOnDragPolicy">TransformLabelPolicy, TranslateSelectedAndRelocateLabelsOnDragPolicy</h4>
+		<p>The <code> TranslateSelectedAndRelocateLabelsOnDragPolicy </code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IFXOnDragPolicy" title="GEF/GEF4/MVC#IFXOnDragPolicy" target="doc_external">IFXOnDragPolicy</a> that enables the positioning of node and edge labels (i.e. 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodeLabelPart</a> and 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">EdgeLabelPart</a>) during mouse drag. It uses the underlying <code>TransformLabelPolicy</code> to realize the translate operation.
+		</p>
+		<h4 id="SemanticZoomPolicy.2C_OpenNestedGraphOnDoubleClickPolicy.2C_OpenParentGraphOnDoubleClickPolicy">SemanticZoomPolicy, OpenNestedGraphOnDoubleClickPolicy, OpenParentGraphOnDoubleClickPolicy</h4>
+		<p>The <code>OpenNestedGraphOnDoubleClickPolicy</code> and <code>OpenParentGraphOnDoubleClickPolicy</code> policies implement nested graph navigation via double clicking with the mouse. They both rely on the underlying <code>SemanticZoomPolicy</code>, which manipulates the 
+			<a href="#NavigationModel">NavigationModel</a> via a 
+			<a href="#NavigateOperation">NavigateOperation</a>. The graph of the node where the current graph is nested is opened when the user double clicks in the background (i.e. in a 
+			<a href="#ZestFxRootPart">ZestFxRootPart</a>), and the nested graph is opened when the user double clicks in a 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a> that contains a nested graph.
+		</p>
+		<p><hr/></p>
+		<p><div id="Zest.FX:Providers"></div></p>
+		<h3 id="Providers">Providers</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.providers</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Providers">Providers</a> package contains a specific anchor provider for 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a>s.
+		</p>
+		<p>
+			<img width="371" border="0" src="images/GEF4-Zest-FX-providers.png"/>
+		</p>
+		<h4 id="NodePartAnchorProvider">NodePartAnchorProvider</h4>
+		<p>The <code>NodePartAnchorProvider</code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#DefaultAnchorProvider" title="GEF/GEF4/MVC#DefaultAnchorProvider" target="doc_external">org.eclipse.gef4.mvc.fx.providers.DefaultAnchorProvider</a> that uses the 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">NodePart</a>'s shape outline.
+		</p>
+		<p><hr/></p>
+		<h2 id="Zest.FX.JFace">Zest.FX.JFace</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.zest.fx.jface</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.zest.fx.jface</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> module of 
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a> provides a JFace-based API to populate a Zest viewer (i.e. an 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#FXViewer" title="GEF/GEF4/MVC#FXViewer" target="doc_external">FXViewer</a>).
+		</p>
+		<p><hr/></p>
+		<p><div id="Zest.FX.JFace:Root"></div></p>
+		<h3 id=".7BRoot.7D_2">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.jface</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX.JFace:Root">Root</a> package provides a specific 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ContentViewer.html" target="doc_external">org.eclipse.jface.viewers.ContentViewer</a>  (
+			<a href="#ZestContentViewer">ZestContentViewer</a>), related content (
+			<a href="#IGraphContentProvider">IGraphContentProvider</a>, and attribute (
+			<a href="#IGraphAttributesProvider">IGraphAttributesProvider</a>) providers.
+		</p>
+		<p>
+			<img width="671" border="0" src="images/GEF4-Zest-FX-JFace-root.png"/>
+		</p>
+		<h4 id="ZestContentViewer">ZestContentViewer</h4>
+		<p>A <code>ZestContentViewer</code> is a specific 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ContentViewer.html" target="doc_external">org.eclipse.jface.viewers.ContentViewer</a> that renders an input model as a directed graph, using 
+			<a href="#Zest.FX">Zest.FX</a>. 
+		</p>
+		<p>The to be rendered graph is inferred from the input model by means of a 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IContentProvider.html" target="doc_external">org.eclipse.jface.viewers.IContentProvider</a>. In the context of a <code>ZestContentViewer</code>, the content provider has to implement 
+			<a href="#IGraphContentProvider">IGraphContentProvider</a>. The content provider is node-based, i.e. edges are not represented as first level entities, but are only inferred from input objects via <code>getAdjacentNodes(Object)</code>.
+		</p>
+		<p>The visualization of the graph (i.e. of its nodes and edges) can be controlled via a 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ILabelProvider.html" target="doc_external">org.eclipse.jface.viewers.ILabelProvider</a>. The <code>getText(Object)</code> and <code>getImage(Object)</code> of the label provider will be used to infer labels and icons for nodes. In case the label provider implements 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IColorProvider.html" target="doc_external">org.eclipse.jface.viewers.IColorProvider</a>, its <code>getForeground(Object)</code> will be used to infer the color of the node outline and its label, and <code>getBackground(Object)</code> will be used as the node's fill color. In case the label provider implements 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IFontProvider.html" target="doc_external">org.eclipse.jface.viewers.IFontProvider</a>, <code>getFont(Object)</code> will be used to infer the name, size, and style (bold or italic) of the font, used by the node label. The label provider may furthermore implement 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IToolTipProvider.html" target="doc_external">org.eclipse.jface.viewers.IToolTipProvider</a> in case a tooltip should be shown on hovering the node. 
+		</p>
+		<p>Further, the label provider may implement 
+			<a href="#IGraphAttributesProvider">IGraphAttributesProvider</a>, which allows to provide values for all specified 
+			<a href="#ZestProperties">ZestProperties</a> for graphs, nodes and edges, via which the visualization can be controlled even more fine-grained. It will overwrite the values returned via the standard label and dedicated provider methods. For edges, this can for instance be used to provide label texts (using the 
+			<i>label</i>, 
+			<i>external-label</i>, 
+			<i>source-label</i>, or 
+			<i>target-label</i> attribute).
+		</p>
+		<h4 id="IGraphContentProvider">IGraphContentProvider</h4>
+		<p>The <code>IGraphContentProvider</code> is responsible of returning those input elements (<code>getNodes()</code>) that are to be visualized as nodes, and to provide information about which nodes are connected via edges to other nodes. The <code>IGraphContentProvider</code> is node-based, i.e. the to be visualized edges are only represented implicitly, by providing the connection target nodes of a node via <code>getAdjacentNodes(Object)</code>, and are not explicitly mapped to underlying input elements. It further provides information about nested graphs via <code>getNestedGraphNodes(Object)</code>.</p>
+		<h4 id="IGraphAttributesProvider">IGraphAttributesProvider</h4>
+		<p>The <code> IGraphAttributesProvider </code>can be implemented by a label provider to return attributes, i.e. 
+			<a href="#ZestProperties">ZestProperties</a> for a root graph, as well as for nodes and edges.
+		</p>
+		<p><hr/></p>
+		<h2 id="Zest.FX.UI">Zest.FX.UI</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.zest.fx.ui</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.zest.fx.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX.UI">Zest.FX.UI</a> module of 
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a> contains Eclipse Workbench UI related graph visualization support. This includes a 
+			<a href="http://google.github.io/guice/api-docs/3.0/javadoc/com/google/inject/Module.html" target="doc_external">com.google.inject.Module</a>] (
+			<a href="#ZestFxUiModule">ZestFxUiModule</a>), which augments the bindings of 
+			<a href="#ZestFxModule">ZestFxModule</a> to realize the Eclipse Workbench UI integration and an Eclipse view (
+			<a href="#ZestFxUiView">ZestFxUiView</a>) to render graphs based on 
+			<a href="#Zest.FX">Zest.FX</a>.
+		</p>
+		<p><hr/></p>
+		<p><div id="Zest.FX.UI:Root"></div></p>
+		<h3 id=".7BRoot.7D_3">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX.UI:Root">{Root}</a> package provides a 
+			<a href="http://google.github.io/guice/api-docs/3.0/javadoc/com/google/inject/Module.html" target="doc_external">com.google.inject.Module</a> (
+			<a href="#ZestFxUiModule">ZestFxUiModule</a>) with bindings related to the Eclipse UI Workbench integration of 
+			<a href="#Zest.FX">Zest.FX</a>.
+		</p>
+		<p>
+			<img width="110" border="0" src="images/GEF4-Zest-FX-UI-root.png"/>
+		</p>
+		<h4 id="ZestFxUiModule">ZestFxUiModule</h4>
+		<p>The <code>ZestFxUiModule</code> extends 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#MvcUiModule" title="GEF/GEF4/MVC#MvcUiModule" target="doc_external">org.eclipse.gef4.mvc.ui.MvcUiModule</a> and thus delivers specific bindings related to the integration of 
+			<a href="#Zest.FX">Zest.FX</a> with the Eclipse Workbench UI.
+		</p>
+		<p><div id="Zest.FX.UI:Parts"></div></p>
+		<h3 id="Parts_2">Parts</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.zest.fx.ui.parts</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#Zest.FX.UI:Parts">Parts</a> package provides an Eclipse 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/ui/part/ViewPart.html" target="doc_external">org.eclipse.ui.part.ViewPart</a> (
+			<a href="#ZestFxUiView">ZestFxUiView</a>) for visualizing graph models.
+		</p>
+		<p>
+			<img width="177" border="0" src="images/GEF4-Zest-FX-UI-parts.png"/>
+		</p>
+		<h4 id="ZestFxUiView">ZestFxUiView</h4>
+		<p><code>ZestFxUiView</code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#FXView" title="GEF/GEF4/MVC#FXView" target="doc_external">FXView</a> that can render graphs. It uses the bindings provided by 
+			<a href="#ZestFxModule">ZestFxModule</a> and 
+			<a href="#ZestFxUiModule">ZestFxUiModule</a>. 
+		</p>
+		<p><hr/></p>
+		<h2 id="Migration_from_Zest_1.x_to_GEF4_Zest">Migration from Zest 1.x to GEF4 Zest</h2>
+		<p>
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a> was mostly written from scratch, replacing the 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> API as well as the provisional Zest 2.x API (
+			<a href="http://wiki.eclipse.org/Tree_Views_for_Zest" title="Tree_Views_for_Zest" target="doc_external">Zest 2.0 Layout API</a>) that was developed as an intermediate step.
+		</p>
+		<p>The 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> API consists of two parts: 
+		</p>
+		<ol>
+			<li>a Core API for the visualization of graphs, and</li>
+			<li>a JFace API with specific content and label providers and a viewer dedicated to displaying Zest graphs. </li>
+		</ol>
+		<p>The former has been replaced by 
+			<a href="#Zest.FX" title="GEF/GEF4/Zest#Zest.FX">Zest.FX</a> and the latter by 
+			<a href="#Zest.FX.UI" title="GEF/GEF4/Zest#Zest.FX.UI">Zest.FX.UI</a>.
+		</p>
+		<p><hr/></p>
+		<h3 id="Migration_from_Zest_1.x_Core_to_GEF4_Zest.FX">Migration from Zest 1.x Core to GEF4 Zest.FX</h3>
+		<p>In comparison to the 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> Core API, which is based on SWT/Draw2d visualization and interweaves graph data, layout data, and visuals, 
+			<a href="#Zest.FX">Zest.FX</a> is based on 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a> and maintains distinct object hierarchies for the graph data (content model), the layout data (layout model), and the visuals. As a result, in order to perform structural changes to the visualized graph, you cannot directly affect the visualization as in 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> Core, but instead modify the underlying graph model which will effect a content synchronization, i.e. update the visualization based on the content changes. Therefore, to transition from 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> Core to 
+			<a href="#Zest.FX">Zest.FX</a>, you have to create/modify a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph#Graph.2C_Node.2C_Edge" title="GEF/GEF4/Graph#Graph, Node, Edge" target="doc_external">org.eclipse.gef4.graph.Graph</a> where previously 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/widgets/Graph.html" target="doc_external">org.eclipse.zest.core.widgets.Graph</a>, 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/widgets/GraphNode.html" target="doc_external">org.eclipse.zest.core.widgets.GraphNode</a>, and 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/widgets/GraphConnection.html" target="doc_external">org.eclipse.zest.core.widgets.GraphConnection</a> were created/modified.
+		</p>
+		<p>Since 
+			<a href="#Zest.FX">Zest.FX</a> is based on 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, you should be familiar with the mechanisms and concepts of 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, which are employed as follows:
+		</p>
+		<ul>
+			<li>A 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#ContentModel" title="GEF/GEF4/MVC#ContentModel" target="doc_external">org.eclipse.gef4.mvc.models.ContentModel</a> stores the Graph that is currently rendered.
+			</li>
+			<li>A 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IContentPartFactory" title="GEF/GEF4/MVC#IContentPartFactory" target="doc_external">org.eclipse.gef4.mvc.parts.IContentPartFactory</a> (
+				<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">ZestFxContentPartFactory</a>) constructs controller objects (content parts) for graphs, nodes, and edges. These are responsible for updating the visualization, synchronizing visualizations with contents, and layout integration.
+			</li>
+			<li>All content parts support an adapter mechanism where you can set/query adapters for distinct keys. Functionality can be added to a content part by setting a corresponding adapter on it. For example, you can enable different interactions (moving nodes via drag, etc.) by setting the corresponding policies as adapters on the content parts.</li>
+			<li>A 
+				<a href="http://google.github.io/guice/api-docs/3.0/javadoc/com/google/inject/Module.html" target="doc_external">com.google.inject.Module</a> (
+				<a href="#ZestFxModule">ZestFxModule</a>) defines bindings for the context of an application. Using this mechanism, you can specify which adapters should be set on the different content parts. For example, the adapter mechanism is used to integrate 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Layout" title="GEF/GEF4/Layout" target="doc_external">GEF4 Layout</a> into 
+				<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a>.
+			</li>
+		</ul>
+		<p>The 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#Graph_Example_.28Standalone.2C_Eclipse_UI.29" title="GEF/GEF4/Zest/Examples#Graph Example (Standalone, Eclipse UI)" target="doc_external">Zest Graph Example</a> demonstrates best how to use the new API. The example is very simple as the rendered graph is not modified later on. However, it contains everything that is needed for a fully functional example. As you can see when taking a look into the source code, attributes are set on the graph model to specify certain visualization features such as label, tooltip, CSS id, etc. Actually, the whole visualization results from those attributes (
+			<a href="#ZestProperties" title="GEF/GEF4/Zest#ZestProperties">Visualization Properties</a>).
+		</p>
+		<p>Some specific 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> core functionalities are implemented differently within 
+			<a href="#Zest.FX">Zest.FX</a>. The corresponding use case scenerios are as follows.
+		</p>
+		<h4 id="Customizing_Styles">Customizing Styles</h4>
+		<p>Many visual features can be specified via JavaFX CSS within 
+			<a href="#" title="GEF/GEF4/Zest">GEF4 Zest</a>, which would have required either a style provider or a custom figure in previous versions. The CSS styles can be applied to individual elements, or entire classes of elements. There are eight parts of the visualization which can be styled individually (defined by 
+			<a href="#ZestProperties">ZestProperties</a>):
+		</p>
+		<ul>
+			<li>"shape-css-style"</li>
+			<li>"label-css-style"</li>
+			<li>"external-label-css-style"</li>
+			<li>"curve-css-style"</li>
+			<li>"source-label-css-style"</li>
+			<li>"target-label-css-style"</li>
+			<li>"source-decoration-css-style"</li>
+			<li>"target-decoration-css-style"</li>
+		</ul>
+		<h4 id="Customizing_Visualizations">Customizing Visualizations</h4>
+		<p>Within 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, on which 
+			<a href="#Zest.FX">Zest.FX</a> is based, an 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IContentPart.2C_AbstractContentPart" title="GEF/GEF4/MVC#IContentPart, AbstractContentPart" target="doc_external">org.eclipse.gef4.mvc.parts.IContentPart</a> is responsible of contributing a respective visualization. You can exchange the 
+			<a href="#Parts">parts</a> provided by 
+			<a href="#Zest.FX">Zest.FX</a> to control nodes and edges, and thereby replace their visualizations. To do so, you have to create a custom 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#IContentPartFactory" title="GEF/GEF4/MVC#IContentPartFactory" target="doc_external">org.eclipse.gef4.mvc.parts.IContentPartFactory</a> (e.g. by subclassing 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">ZestFxContentPartFactory</a>) to create different content parts. 
+		</p>
+		<p>To exchange the original 
+			<a href="#GraphPart.2C_NodePart.2C_NodeLabelPart.2C_EdgePart.2C_EdgeLabelPart.2C_ZestFxContentPartFactory">ZestFxContentPartFactory</a> with your custom implementation, you have to overwrite the respective binding defined within 
+			<a href="#ZestFxModule">ZestFxModule</a>. This can easily be achieved by subclassing 
+			<a href="#ZestFxModule">ZestFxModule</a> and overriding  <code>bindIContentPartFactory()</code>. Your custom module has to be handed into the constructor of the 
+			<a href="#ZestContentViewer">ZestContentViewer</a>, so the specified bindings are evaluated.
+		</p>
+		<p>The 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#JFaceCustomNodeExample" title="GEF/GEF4/Zest/Examples#JFaceCustomNodeExample" target="doc_external">JFaceCustomNodeExample</a> demonstrates this scenario. However, be aware that colors, fonts, borders, and sizes can already be configured via JavaFX CSS and do not require a custom visualization, as outlined in 
+			<a href="#Customizing_Styles">Customizing Styles</a>.
+		</p>
+		<h4 id="Modifying_graphs">Modifying graphs</h4>
+		<p>Since you cannot modify the visualization directly, you have to adjust the underlying graph model instead. The 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout/Examples#FullyMeshedLayoutExample" title="GEF/GEF4/Layout/Examples#FullyMeshedLayoutExample" target="doc_external">FullyMeshedLayoutExample</a> demonstrates this scenario.
+		</p>
+		<h4 id="Layout_filter">Layout filter</h4>
+		<p>Nodes and edges can be marked as layout-irrelevant, meaning they will not get reported to layout algorithms. The 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Layout/Examples#FilterLayoutExample" title="GEF/GEF4/Layout/Examples#FilterLayoutExample" target="doc_external">FilterLayoutExample</a>  demonstrates this scenario.
+		</p>
+		<p><hr/></p>
+		<h3 id="Migration_from_Zest_1.x_JFace_to_GEF4_Zest.FX.JFace">Migration from Zest 1.x JFace to GEF4 Zest.FX.JFace</h3>
+		<p>
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> consists of a 
+			<a href="#ZestContentViewer">ZestContentViewer</a> and related specializations of 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IContentProvider.html" target="doc_external">org.eclipse.jface.viewers.IContentProvider</a> and 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ILabelProvider.html" target="doc_external">org.eclipse.jface.viewers.ILabelProvider</a>. 
+		</p>
+		<p>In comparison to the 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/GraphViewer.html" target="doc_external">org.eclipse.zest.core.viewers.GraphViewer</a> provided by 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a>, the 
+			<a href="#ZestContentViewer">ZestContentViewer</a> is not a 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/StructuredViewer.html" target="doc_external">org.eclipse.jface.viewers.StructuredViewer</a>, but a 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ContentViewer.html" target="doc_external">org.eclipse.jface.viewers.ContentViewer</a>, which seems to be the more adequate abstraction (as a structured viewer imposes a tree-, list-, or table-based structure, which does not naturally resemble a graph). 
+		</p>
+		<h4 id="Content_Providers">Content Providers</h4>
+		<p>Probably, the biggest difference between 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> and 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> is related to content providers. 
+			<a href="#Zest.FX">Zest.FX</a> defines the following ones:
+		</p>
+		<ul>
+			<li>The 
+				<a href="#IGraphContentProvider">IGraphContentProvider</a> provides all content elements that represent nodes for a flat graph. The edges are inferred via a <code>getAdjacentNodes(Object)</code> method. This is the equivalent of the 
+				<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IGraphEntityContentProvider.html" target="doc_external">org.eclipse.zest.core.viewers.IGraphEntityContentProvider</a>. It also covers the functionality of the 
+				<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/INestedContentProvider.html" target="doc_external">org.eclipse.zest.core.viewers.INestedContentProvider</a> through its <code>getNestedGraphNodes(Object)</code> method.
+			</li>
+		</ul>
+		<p>Both new content providers are node-oriented, i.e. they provide content elements which represent nodes, not edges. The 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> API additionally defines an 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IGraphEntityRelationshipContentProvider.html" target="doc_external">org.eclipse.zest.core.viewers.IGraphEntityRelationshipContentProvider</a> which provides content elements that represent edges. This is not yet covered by 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a>.
+		</p>
+		<h4 id="Label_Providers">Label Providers</h4>
+		<p>Similar to 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a>, 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> is based on the default 
+			<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/ILabelProvider.html" target="doc_external">org.eclipse.jface.viewers.ILabelProvider</a>.
+		</p>
+		<h4 id="Dedicated_Providers_for_Styles.2C_Tooltip.2C_Colors.2C_Fonts">Dedicated Providers for Styles, Tooltip, Colors, Fonts</h4>
+		<p>Most of the custom 
+			<a href="https://www.eclipse.org/gef/zest/index.php" target="doc_external">Zest 1.x</a> JFace providers have been replaced with the respective standard JFace providers:
+		</p>
+		<ul>
+			<li>The 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IEntityStyleProvider.html" target="doc_external">org.eclipse.zest.core.viewers.IEntityStyleProvider</a> provides tooltip, fisheye, border, and color information. These are now provided via 
+				<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IToolTipProvider.html" target="doc_external">org.eclipse.jface.viewers.IToolTipProvider</a>, 
+				<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IColorProvider.html" target="doc_external">org.eclipse.jface.viewers.IColorProvider</a>, and the 
+				<a href="#IGraphAttributesProvider">attribute provide</a> (which provides arbitrary attributes for nodes, edges, and graphs). Additionally, the 
+				<a href="PLUGINS_ROOT/org.eclipse.platform.doc.isv/reference/api/org/eclipse/jface/viewers/IFontProvider.html" target="doc_external">org.eclipse.jface.viewers.IFontProvider</a> is now supported, which allows to exchange the label font for a node.
+			</li>
+			<li>The old 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IConnectionStyleProvider.html" target="doc_external">org.eclipse.zest.core.viewers. IConnectionStyleProvider</a> (and 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IEntityStyleProvider.html" target="doc_external">org.eclipse.zest.core.viewers.IEntityStyleProvider</a>) provide style, color, tooltip, connection router, and connection decorator. These are now provided via the 
+				<a href="#IGraphAttributesProvider">IGraphAttributeProvider</a>. It can also be used to overwrite the values returned by a provider for the font, foreground, and background color, which are transferred into equivalent CSS styles.
+			</li>
+		</ul>
+		<p>The following providers have not been migrated, because their corresponding functionality is implemented by means of default 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a> mechanisms, on which 
+			<a href="#Zest.FX">Zest.FX</a> and thus 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> are based:
+		</p>
+		<ul>
+			<li>The 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/ISelfStyleProvider.html" target="doc_external">org.eclipse.zest.core.viewers. ISelfStyleProvider</a> provides a custom styling for a node or an edge. This can now be achieved by applying CSS styles as outlined in 
+				<a href="#Customizing_Styles">Customizing Styles</a>.
+			</li>
+			<li>The 
+				<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/IFigureProvider.html" target="doc_external">org.eclipse.zest.core.viewers.IFigureProvider</a> provides support for using a custom visualization for a node. This can now be achieved by means of 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a> mechanisms, i.e. via providing a custom content part, as outlined in 
+				<a href="#Customizing_Visualizations">Customizing Visualizations</a>. Therefore, you can create your own content parts instead of the content parts provided by 
+				<a href="#Zest.FX">Zest.FX</a>. The 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#JFaceCustomNodeExample" title="GEF/GEF4/Zest/Examples#JFaceCustomNodeExample" target="doc_external">JFaceCustomNodeExample</a> demonstrates this scenario.
+			</li>
+		</ul>
+		<p>You can find examples on how to use the different providers in the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest/Examples#Examples.JFace_.28undeployed.29" title="GEF/GEF4/Zest/Examples#Examples.JFace (undeployed)" target="doc_external">JFace-API examples</a>.
+		</p>
+		<h4 id="Zooming">Zooming</h4>
+		<p>Basic support for zooming, which is specifically implemented within 
+			<a href="http://help.eclipse.org/topic/org.eclipse.zest.doc.isv/reference/api/org/eclipse/zest/core/viewers/GraphViewer.html" target="doc_external">org.eclipse.zest.core.viewers.GraphViewer</a>, is already provided as a base feature of 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC#MVC.FX" title="GEF/GEF4/MVC#MVC.FX" target="doc_external">GEF4 MVC.FX</a>, on which 
+			<a href="#Zest.FX">Zest.FX</a> and thus also 
+			<a href="#Zest.FX.JFace">Zest.FX.JFace</a> are based. Within 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/MVC" title="GEF/GEF4/MVC" target="doc_external">GEF4 MVC</a>, a ViewportModel maintains a content transformation which can be modified to zoom in/out of a visualization. 
+			<a href="#Zest.FX">Zest.FX</a> adds a semantic zoom that allows to zoom into nested graphs. That is, when zooming into a nesting node, it will - from a certain zoom level onwards - show the nested contents and will eventually replace the viewer contents with the nested graph.
+		</p>
+		<p>
+			<a href="http://wiki.eclipse.org/Category:_GEF" title="Category: GEF" target="doc_external">Category: GEF</a>
+		</p>
+	</body>
+</html>

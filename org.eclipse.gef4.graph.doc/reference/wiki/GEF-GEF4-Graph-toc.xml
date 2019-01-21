@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<toc topic="reference/wiki/GEF/GEF4/Graph/Graph.html" label="GEF4 Graph Developer Documentation">
+	<topic href="reference/wiki/GEF/GEF4/Graph/Graph.html" label="Introduction"></topic>
+	<topic href="reference/wiki/GEF/GEF4/Graph/Graph.html#Graph" label="Graph">
+		<topic href="reference/wiki/GEF/GEF4/Graph/Graph.html#.7BRoot.7D" label="{Root}">
+			<topic href="reference/wiki/GEF/GEF4/Graph/Graph.html#Graph.2C_Node.2C_Edge" label="Graph, Node, Edge"></topic>
+			<topic href="reference/wiki/GEF/GEF4/Graph/Graph.html#GraphCopier" label="GraphCopier"></topic>
+		</topic>
+	</topic>
+</toc>

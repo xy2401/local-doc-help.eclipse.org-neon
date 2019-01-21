@@ -1,0 +1,189 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: org.eclipse.eef.documentation;singleton:=true
+Archiver-Version: Plexus Archiver
+Built-By: genie.eef
+Require-Bundle: org.eclipse.help;bundle-version="[3.0.0,4.0.0)"
+Bundle-ManifestVersion: 2
+Eclipse-SourceReferences: scm:git:http://git.eclipse.org/gitroot/eef/o
+ rg.eclipse.eef.git;path="doc/org.eclipse.eef.documentation";commitId=
+ 102fc7b8d586063db726774e693df38a49cb7b40
+Bundle-Vendor: %providerName
+Bundle-Name: %pluginName
+Bundle-Version: 1.9.0.201701271010
+Bundle-Localization: plugin
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_102
+
+Name: pages/language/group.html
+SHA-256-Digest: tqe/yUAlUo/+d45xm4SC1WmjdL1gRUVAgywXgpXKdVU=
+
+Name: plugin.xml
+SHA-256-Digest: XpeLEPhYdpv4zCRwDsfotjmfT4Hi5s4W5FXzvJN02wA=
+
+Name: pages/language/validation.png
+SHA-256-Digest: 7DfVNBe6b6q5ShND827XBBUk3USItbEPCfIlwFWENB8=
+
+Name: pages/language/widgets/button.html
+SHA-256-Digest: ZWeDL9W0aKVJtoZnMyEsFoAyvUpN0J4rHbNTAKkMjQE=
+
+Name: pages/index.html
+SHA-256-Digest: lS19uoIDXdKqb2xqWCsrgHE+egDRkwjQNA1QQLsJv5s=
+
+Name: pages/language/widgets/text.textile
+SHA-256-Digest: RoC85c8ZFQNSY3olMOesCE+YZzai6iqAx6znyDwCBeM=
+
+Name: pages/language/widgets/list.html
+SHA-256-Digest: IAqwedY7pUvk300kwot+gkEy5FKNEQhJR6LX143Qlvw=
+
+Name: pages/developerguide/eeflifecyclemanagerprovider.html
+SHA-256-Digest: xLXEIji2HGw+mnKuO2Y3P92doFd21nkMOuy+AkBtuqY=
+
+Name: pages/language/dynamicmappings.textile
+SHA-256-Digest: ONLapqLDIQ49zjmAcOr6M+KYwZkMvs+q7ew3bQAN9cg=
+
+Name: pages/language/view-page-group.png
+SHA-256-Digest: iwvn4bsBuREnHV9z0exYwz53GPgwVh8itm/iqIYiK1E=
+
+Name: pages/language/widgets/label.html
+SHA-256-Digest: UIbcgWCzVz3DrRECEuIqIy/AHHOLGyrvvdBADvw+Qq0=
+
+Name: plugin.properties
+SHA-256-Digest: zJh4b71/49+nuE3xuel/iwtD+Zv3TiMiya0Cyf0yLKk=
+
+Name: pages/developerguide/overview.textile
+SHA-256-Digest: Xtewg8jT4D/bOcKJEN1+rP+GadpuWB5xeWD4/LgtOJ8=
+
+Name: META-INF/maven/org.eclipse.eef/org.eclipse.eef.documentation/pom
+ .properties
+SHA-256-Digest: BMRs8P6kt9uEycHvQEn1EAAuglWTjEjVep4ekgxKJrE=
+
+Name: pages/language/widgets/hyperlink.textile
+SHA-256-Digest: X4sWbV5agXah/cuArtg/blHtif6lMx+NNLycXPoYprk=
+
+Name: pages/assets/css/stylesheet.css
+SHA-256-Digest: C7C15C4+A6BuUtbIevmaRXo4iNufPfrJ+3vUcDFiAzA=
+
+Name: pages/language/overview.html
+SHA-256-Digest: BQlES3K+NLdk2NM2MqWGZiXYdyErjGADLMw5+F8i8uo=
+
+Name: pages/language/language.png
+SHA-256-Digest: 6tgwxZczQc3vFg+GurUHmCZ2OGfOtYhD+2ULKkWFjtA=
+
+Name: pages/glossary.textile
+SHA-256-Digest: CiyIXUzHPPGnOB8sJbOd04OmbzMPsoAUjMnVdKIniOU=
+
+Name: pages/developerguide/eeftabdescriptorfilter.textile
+SHA-256-Digest: h7ZMosCJsKgz4n4p1AVF2jquhbeKCyj0X1PwZhPAuRY=
+
+Name: pages/developerguide/eeflifecyclemanagerprovider.textile
+SHA-256-Digest: plkk2OKk/iTYbFaQ23Gh++RNKnb7ginYU48QS5HE79k=
+
+Name: pages/language/view.html
+SHA-256-Digest: NKCl3guifxOyFqTpHjSDoaH0ITeq6BqiA57sTTnAfvE=
+
+Name: pages/language/widgets/label.textile
+SHA-256-Digest: ckuW+rAi7EfATZ05LT2uNxjQcmXmai0vDR5oZXluU9g=
+
+Name: pages/developerguide/eeftabdescriptorprovider.html
+SHA-256-Digest: egZfYhK1R6T647rh6WA3FTXhEFYaB94OqZO8m42zJC8=
+
+Name: pages/language/widgets.html
+SHA-256-Digest: jj1lv0GQjvGvZ1ZBQgbTrg/jEqoKlp+8wCmZbXwgO0g=
+
+Name: pages/language/validation.textile
+SHA-256-Digest: lj9nrtYoUuW/m79uNcHhDU6PEy43T1x3JXrkTz+NApY=
+
+Name: pages/language/validation.html
+SHA-256-Digest: nAN/SKNF5/I6T8P9snn0mCEokhcBJvIZKkrVzPDUpk0=
+
+Name: pages/language/widgets/select.html
+SHA-256-Digest: bzS4mU2Zfm17+6wcxXAJ5hlWK7I5T513f93uxqi0l/w=
+
+Name: pages/language/view.textile
+SHA-256-Digest: ZJzfKVF5bSMs3gM8JT4RgqQkbfAOFly/nbShHLwffFM=
+
+Name: pages/language/container.html
+SHA-256-Digest: 4nspISMSnRrv5jgtqZunnPmcWArMVQbxMnTbJdu7ukQ=
+
+Name: pages/language/widgets/radio.html
+SHA-256-Digest: b5DIHfQUX5REXjLktNfWF8Ugew5NJSjkFAcE/QjFQAw=
+
+Name: pages/language/widgets/select.textile
+SHA-256-Digest: ghjJzMFtYCrhwAnsM/PheXQqXfEVIVYlmkohhxqgSRg=
+
+Name: pages/language/page.textile
+SHA-256-Digest: T+Z69eWXLIGxWdebfEvpeJrBPSOcljD2gtf/uiVkVJA=
+
+Name: pages/developerguide/extensionpoints.html
+SHA-256-Digest: H43qigS/VQQI4ccI9R7vkgxuRjtl5Pj6BN2UJboniY8=
+
+Name: pages/language/widgets/radio.textile
+SHA-256-Digest: dgnRKsY9AZkfLAwLJIH2XmapKv8A3cmCscStgBeaWms=
+
+Name: pages/language/container.textile
+SHA-256-Digest: eO2THUhQoJbsJATKn6HgRWewntiyIQD3ZLwJzuHbLu8=
+
+Name: pages/language/widgets/button.textile
+SHA-256-Digest: PgOkHwWOjkFFvxSUj3bhsT0l1xmz/ih98Jh27d4lry4=
+
+Name: pages/language/widgets/list.textile
+SHA-256-Digest: aFPWcmCX93p9zt/VUlpNPaeEW6nuPCnb1lo5LwIyXiQ=
+
+Name: pages/language/widgets/text.html
+SHA-256-Digest: Xavq/v+kklwe06xBosErUQEpuDE5Wx2ySi5nydn44Pk=
+
+Name: pages/language/overview.textile
+SHA-256-Digest: BAbKIZ+/t/P89oH+9Gy4YUxWLUKHX5kG53baub+yhcs=
+
+Name: pages/toc.xml
+SHA-256-Digest: hdgU4siJfCSugc6MTWtJ11g06Wwv/9b740/aOrRt96A=
+
+Name: pages/releasenotes.html
+SHA-256-Digest: YUJnxHGOLprzNxg3Px9BRarzSHj1cptlRuK6J/H5Tnw=
+
+Name: about.html
+SHA-256-Digest: 85MjsgSVBa3+UUzmRlFgoXFhowQsZdNNimvMoy+8wE8=
+
+Name: pages/language/widgets.textile
+SHA-256-Digest: fdkkkn6txQ9CESkNPax8D+GvznPsWJ3q/W/KX8TESrE=
+
+Name: pages/releasenotes.textile
+SHA-256-Digest: qHqJ/rmM9jhcw8qGdT2B/0F6MiijvhDzz2Wu61Mg85k=
+
+Name: pages/glossary.html
+SHA-256-Digest: GsGDd4yfBEWm8z3lInFYMONVY2XF554lF8+08C9b6rc=
+
+Name: pages/developerguide/overview.html
+SHA-256-Digest: rLmL9KdoAT722SfCMKjeuvADP7bWH3IxYl+x0Zt+v8E=
+
+Name: pages/developerguide/eeftabdescriptorprovider.textile
+SHA-256-Digest: Q3osBejgWsLc9FmuXnaJXdNFhXhZgBNplPhHIBnlFN4=
+
+Name: pages/developerguide/extensionpoints.textile
+SHA-256-Digest: FJx14PiGrQQhsHmVbJ/Av0j11QagY/LKdIWpN4GwCIA=
+
+Name: pages/language/widgets/checkbox.textile
+SHA-256-Digest: yotp2g8KW0vjaMwGv6qzv3ZUV/Cxifpj3mi2FmWZ8B4=
+
+Name: pages/language/widgets/checkbox.html
+SHA-256-Digest: 1aw2nD5NTOwJ+KaqZwBiLES7WcLdaxbv0FxQu8hK3dc=
+
+Name: pages/language/widgets/hyperlink.html
+SHA-256-Digest: R5UTGYflK4tKdBx67V21u+8OFsyItD3uV7tjYPPMBCM=
+
+Name: META-INF/maven/org.eclipse.eef/org.eclipse.eef.documentation/pom
+ .xml
+SHA-256-Digest: pHuBA8hvsEPc1vFmOZR9lWDvbvA+WKfiF5EIReEF/g4=
+
+Name: pages/developerguide/eeftabdescriptorfilter.html
+SHA-256-Digest: 5ErrdK+CGwn9Bc8gRUk3xTDmurPq9UrwTP9HffOUWag=
+
+Name: pages/language/group.textile
+SHA-256-Digest: EVex+uqXWMILv55rofv93REASpM+JOuRuoyjAYwzkw4=
+
+Name: pages/language/page.html
+SHA-256-Digest: k88IK0rY/3IeWpB8GE3+xeAhsFgiiaOXFYki3JAdw9o=
+
+Name: pages/language/dynamicmappings.html
+SHA-256-Digest: UcOn70V9D/gq3zjtQliUXPsjZfl9mOR4db7XnLfL/cM=
+

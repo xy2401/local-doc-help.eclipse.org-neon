@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" type="text/css">
+<title>Searching for Deployed Runtime Artifacts</title>
+<script src="../../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+   writeNavigation("Filtering Documents",
+      "pg-bo-query.html","query-documents.html",
+      "../../handbooks.htm","Developer Handbook",
+      "../pg-preface.htm","Programming Guide",
+      "../pg-query-1.htm","Querying Workflow");
+ -->
+</script>
+<h1>Searching for Deployed Runtime Artifacts</h1>
+<p>To search for Runtime Artifacts applying to specific criteria, you can use the
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/query/DeployedRuntimeArtifactQuery.html">
+DeployedRuntimeArtifactQuery</a> on the 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">
+QueryService</a>.</p>
+<ul>
+   <li><a href="#attr">Creating Queries for Deployed Runtime Artifacts matching specific Attributes</a></li>
+   <li><a href="#quservice">Retrieving all deployed Runtime Artifacts applying to specific Criteria</a></li>
+</ul>
+<h2 id="attr">Creating Queries for Deployed Runtime Artifacts matching specific Attributes</h2>
+<p>With the Stardust 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/query/DeployedRuntimeArtifactQuery.html">
+DeployedRuntimeArtifactQuery</a> you can create queries to search for 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DeployedRuntimeArtifact.html">DeployedRuntimeArtifacts</a>
+matching specified attributes.</p>
+<p>To restrict the query to currently active artifacts use the <code>findActive</code>
+factory methods described below.</p>
+<ul>
+   <li><a href="#all">Finding all Runtime Artifacts</a></li>
+   <li><a href="#order">Finding all currently active Runtime Artifacts ordered descending by a given Date</a></li>
+   <li><a href="#type">Finding active Runtime Artifacts of a specified type ordered descending by a given Date</a></li>
+   <li><a href="#id">Finding the active Runtime Artifact specified by artifact id and of the specified Type</a></li>
+</ul>
+<h3 id="all">Finding all Runtime Artifacts</h3>
+<p>Use method <code>findAll</code> to create a query for finding all runtime artifacts.</p>
+<pre>
+public static DeployedRuntimeArtifactQuery findAll()
+{
+   DeployedRuntimeArtifactQuery query = new DeployedRuntimeArtifactQuery();
+
+   return query;
+}</pre>
+<h3 id="order">Finding all currently active Runtime Artifacts ordered descending by a given Date</h3>
+<p>Method <code>findAllActive(Date activeAt)</code> creates a query for finding all 
+currently active runtime artifacts ordered descending by a given date.</p>
+<pre>
+public static DeployedRuntimeArtifactQuery findAllActive(Date activeAt)
+{
+   DeployedRuntimeArtifactQuery query = new DeployedRuntimeArtifactQuery(true);
+
+   query.where(VALID_FROM.lessOrEqual(activeAt.getTime()));
+
+   return query;
+}
+</pre>
+<h3 id="type">Finding active Runtime Artifacts of a specified type ordered descending by a given Date</h3>
+<p>Use method <code>findActive(String artifactType, Date activeAt)</code> to create a 
+query for finding active runtime artifacts of a specified type ordered descending by a 
+given date.</p>
+<pre>
+public static DeployedRuntimeArtifactQuery findActive(String artifactType, Date activeAt)
+{
+   DeployedRuntimeArtifactQuery query = findAllActive(activeAt);
+
+   query.where(ARTIFACT_TYPE_ID.isEqual(artifactType));
+
+   return query;
+}
+</pre>
+<h3 id="id">Finding the active Runtime Artifact specified by artifact id and of the specified Type</h3>
+<p>Method <code>findActive(String artifactId, String artifactType, Date activeAt)</code>
+creates a query for finding the active runtime artifact specified by artifact id and of 
+the specified type.</p>
+<pre>
+public static DeployedRuntimeArtifactQuery findActive(String artifactId, String artifactType, Date activeAt)
+{
+   DeployedRuntimeArtifactQuery query = findActive(artifactType, activeAt);
+
+   query.where(ARTIFACT_ID.isEqual(artifactId));
+
+   return query;
+}
+</pre>
+<h2 id="quservice">Retrieving all deployed Runtime Artifacts applying to specific Criteria</h2>
+<p>The queries created with the 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/query/DeployedRuntimeArtifactQuery.html">
+DeployedRuntimeArtifactQuery</a> can be used on the
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">
+QueryService</a> to find all deployed runtime artifacts matching a specified criteria.</p>
+<p><a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">
+QueryService</a> method <code>getRuntimeArtifacts</code> retrieves all 
+DeployedRuntimeArtifacts satisfying the criteria specified in the provided query.</p>
+<pre>
+   @ExecutionPermission(id=ExecutionPermission.Id.readRuntimeArtifact)
+   public DeployedRuntimeArtifacts getRuntimeArtifacts(DeployedRuntimeArtifactQuery query);
+</pre>
+<p>It returns the deployed runtime artifacts matching the specified criteria.</p>
+<h3>Example Usage</h3>
+<pre>
+   QueryService qs = serviceFactory.getQueryService();
+
+   DeployedRuntimeArtifacts runtimeArtifacts = 
+      qs.getRuntimeArtifacts(DeployedRuntimeArtifactQuery.findAll());
+   
+   DeployedRuntimeArtifacts runtimeArtifacts = 
+      qs.getRuntimeArtifacts(DeployedRuntimeArtifactQuery.findAllActive(new Date()));
+
+   DeployedRuntimeArtifacts runtimeArtifacts = 
+      qs.getRuntimeArtifacts(DeployedRuntimeArtifactQuery.findActive(BENCHMARK_ARTIFACT_TYPE_ID, new Date()));
+      
+   DeployedRuntimeArtifacts runtimeArtifacts = 
+      qs.getRuntimeArtifacts(DeployedRuntimeArtifactQuery.findActive(BENCHMARK_REF, BenchmarkDefinitionArtifactType.TYPE_ID, new Date()));
+</pre>
+
+<script type="text/javascript">
+<!--
+   writeFooter();
+-->
+</script>
+</body>
+</html>

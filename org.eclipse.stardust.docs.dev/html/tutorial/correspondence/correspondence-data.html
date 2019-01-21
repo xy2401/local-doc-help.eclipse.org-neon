@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+  <title>Preparing the Workflow for Correspondence</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	writeNavigation("Creating a simple Correspondence Model",
+		"","correspondence-simple.html",
+		"../tut-preface.htm","Tutorials",
+		"correspondence.html","Creating Correspondence");
+ -->
+</script>
+
+<h1 id="workflow">Preparing the Workflow for Correspondence</h1>
+<p>To prepare our workflow for correspondence, we have to import the predefined
+correspondence structured data type and create a UI Mashup application for Correspondence.
+The UI Mashup application is created in the same way for both example models.</p>
+<ul>
+   <li><a href="#config">Required Jar Files</a></li>
+   <li><a href="#prefmod">Creating the Correspondence Data</a></li>
+   <li><a href="#uimash">Creating the Correspondence UI Mashup</a></li>
+</ul>
+<h2 id="config">Required Jar Files</h2>
+<p>Note that you require additional jar files to use the templating feature
+with substitution functionality in a Correspondence. Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html#config">Configuration</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/correspondence/corr-templates.html">Using Correspondence Templates</a>
+for details.</p>
+<h2 id="prefmod">Creating the Correspondence Data</h2>
+<p>The predefined <strong>CORRESPONDENCE.xsd</strong> file defines document request data 
+required for correspondence. You find it in the <code>correspondence/dat</code> folder of the
+<a href="../../examples/tutorials/all-tutorials.zip">
+all-tutorials.zip</a> file.</p>
+<p>This data type will be used in a UI Mashup for creating correspondence. Add this XSD file
+to the classpath of your Web project, e.g. to the <code>ipp-resources</code> folder in a RAD environment.</p>
+<h3>Importing the XSD Type</h3>
+<p>In our example model, we create a structured data type <strong>CORRESPONDENCE</strong>:</p>
+<ol>
+   <li>In the example model, right-click <strong>Structured Types</strong> and select
+   <strong>Import Type Declarations</strong>.
+   <p><img src="images/sel-import.png" alt="Import Type Declarations"></p></li>
+   <li>In the <strong>XSD Data Structure Import</strong> dialog, enter 
+   <strong>CORRESPONDENCE.xsd</strong> in the URL field and click <strong>Load</strong>.
+   <p><img src="images/enter-xsd-url.png" alt="Enter URL"></p></li>
+   <li>The type declarations from the imported CORRESPONDENCE schema are displayed. 
+   Select the <strong>Select/Deselect All</strong> checkbox and click 
+   <strong>Import</strong>.
+   <p><img src="images/import-xsd.png" alt="Import XSD"></p></li>
+</ol>
+<p>Now you can see the imported structured type in the model tree.</p>
+<p class="image"><a href="images/corr-sdt-type-orgsize.png" target="_blank">
+<img src="images/corr-sdt-type.png" alt="CORRESPONDENCE SDT Type"></a><br>
+<strong>Figure:</strong> CORRESPONDENCE SDT Type</p>
+<h3>Creating the Structured Data</h3>
+<p>Now create a structure data <strong>CORRESPONDENCE</strong> of type 
+<strong>CORRESPONDENCE</strong>.</p>
+<p class="image"><img src="images/corr-struct-data.png" alt="Structured Data"><br>
+<strong>Figure:</strong> Structured Data to be used as in- out-data for UI Mashup</p>
+<h2 id="uimash">Creating the Correspondence UI Mashup</h2>
+<p>To prepare a process to create correspondence, we need to set up a UI Mashup 
+application. This UI Mashup application will be complimented with correspondence request 
+data.</p>
+<p>In the UI Mashup application, create a parameter with name 
+<strong>CORRESPONDENCE</strong> with in and out direction and of structured data type
+<strong>CORRESPONDENCE</strong>. Note that it is important to
+name the parameter <strong>CORRESPONDENCE</strong>!</p>
+<p class="image"><img src="images/corr-ui-appl-param.png" alt="UI Mashup Parameter"><br>
+<strong>Figure:</strong> Correspondence UI Mashup Parameter</p>
+<p>In the <strong>Configuration</strong> tab select <strong>Via URI</strong> and enter the 
+following URL:</p>
+<pre>http://&lt;<i>hostname</i>&gt;:&lt;<i>portnumber</i>&gt;/&lt;<i>context-root</i>&gt;/plugins/html5-views-common/views/correspondenceContainer.html</pre>
+<p>For example:</p>
+<pre>http://localhost:8080/tut-proj/plugins/html5-views-common/views/correspondenceContainer.html</pre>
+<p class="image"><img src="images/corr-ui-url.png" alt="UI Mashup configuration URL"><br>
+<strong>Figure:</strong> Example UI Mashup configuration URL</p>
+<p>Add structured data <strong>CORRESPONDENCE</strong> as in- and out-data for the
+UI Mashup parameter.</p>
+
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

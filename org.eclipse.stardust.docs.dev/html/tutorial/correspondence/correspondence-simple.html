@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <link rel="STYLESHEET" href="../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+  <title>Creating a simple Correspondence Model</title>
+<script language="JavaScript" src="../../styles/naviLine.js" type="text/javascript"></script>  
+</head>
+<body>
+<script language="JavaScript">
+<!--
+	writeNavigation("Creating Correspondence with Templates and Image Substitution",
+		"correspondence-data.html","correspondence-templ.html",
+		"../tut-preface.htm","Tutorials",
+	   "correspondence.html","Creating Correspondence");
+ -->
+</script>
+
+<h1>Creating a simple Correspondence Model</h1>
+<p>In this example, we create a simple Correspondence model for Email correspondence.
+The correspondence uses process data and user data, which will be replaced directly in the
+message editor. The complete example model <strong>CorrespondenceExample</strong> can be 
+found in the example ZIP file in folder <code>correspondence</code>:<br>
+<a href="../../examples/tutorials/all-tutorials.zip">
+all-tutorials.zip</a>.</p>
+<ul>
+   <li><a href="#process">Viewing the simple Correspondence Model</a></li>
+   <li><a href="#uienter">Preparing the Correspondence in the Correspondence UI Mashup</a></li>
+   <li><a href="#viewcorr">Viewing the Correspondence in the Document Folder</a></li>
+</ul>
+<h2 id="process">Viewing the simple Correspondence Model</h2>
+<p>In this section we have a look at the <strong>CorrespondenceExample</strong>.
+It contains the primitive data <strong>CustomerId</strong>, <strong>UserEmail</strong>
+and <strong>Fax</strong>. The correspondence process <strong>startCorrespondence</strong>
+consists of the following elements:</p>
+<ol>
+   <li>A manual activity to enter data for <strong>CustomerId</strong>, 
+   <strong>UserEmail</strong> and <strong>Fax</strong>.</li>
+   <li>A UI Mashup activity implementing our UI Mashup correspondence application.</li>
+   <li>An in- and out-data path from structured data 
+   <strong>CORRESPONDENCE</strong> to the UI Mashup activity.</li>
+   <li>A <strong>Show Data</strong> activity to view the email data.</li>
+</ol>
+<p>The process supports process attachments and contains in-data paths for all three
+primitive data.</p>
+<p class="image"><img src="images/corr-proc-data-path.png" alt="Correspondence Process Data Paths"><br>
+<strong>Figure:</strong> Correspondence Process Data Paths</p>
+<p>The process diagram looks as in the following screenshot:</p>
+<p class="image"><img src="images/process-diagram.png" alt="Correspondence Process"><br>
+<strong>Figure:</strong> Correspondence Process</p>
+<h2 id="uienter">Preparing the Correspondence in the Correspondence UI Mashup</h2>
+<p>To create our correspondence, deploy the example model and perform the steps described
+in this section.</p>
+<ul>
+   <li><a href="#user">Creating a User with User Details</a></li>
+   <li><a href="#proc">Starting the Correspondence Process</a></li>
+   <li><a href="#addr">Adding Recipient and Subject</a></li>
+   <li><a href="#editor">Adding Content in the Message Content Editor</a></li>
+</ul>
+<h3 id="user">Creating a User with User Details</h3>
+<p>In the <strong>Participant Manager</strong> view create a user with user details 
+providing a description and validity dates.</p>
+<p class="image"><img src="images/create-user.png" alt="Create User"><br>
+<strong>Figure:</strong> Create a User with Details</p>
+<p>Assign this user to the Administrator role.</p>
+<h3 id="proc">Starting the Correspondence Process</h3>
+<ol>
+   <li>Login with the created user and start the correspondence  process in the 
+   <strong>Workflow Execution</strong> perspective.</li>
+   <li>In the first activity, enter data for name, email and fax number and complete.
+   Note that the fax must be addressed in the specified default format to
+   be recognized in the address picker. If you have not set it otherwise in the
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/components/config/config-correspondence.html">Configuration Panel</a>,
+   the default format is <code>^\(?[0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$</code>.
+   For example: <code>111 222 4711</code>.
+   <p><img src="images/enter-data.png" alt=""></p></li>
+   <li>The Correspondence UI Mashup opens.</li>
+</ol>
+<h3 id="addr">Adding Recipient and Subject</h3>
+<ol>
+   <li>In the correspondence UI Mashup, select <strong>Email</strong> as default type.
+   <p><img src="images/sel-type.png" alt="Type"></p></li>
+   <li>Click on the <strong>To</strong> entry to open the address picker.
+   <p><img src="images/click-to.png" alt=""></p></li>
+   <li>In the address picker select the <strong>Fax</strong> checkbox.
+   <p><img src="images/address-picker-fax.png" alt=""></p></li>
+   <li>Select the fax and email address, which you have entered as data.
+   <p><img src="images/address-picker-sel.png" alt=""></p></li>
+   <li>See the fax and email address added in the upper part of the dialog and click 
+   <strong>OK</strong>.</li>
+   <li>The fax and email are added as recipients in the <strong>To</strong> entry field.
+   <p><img src="images/sel-rec-result.png" alt=""></p></li>
+   <li>Add a subject for the email and fax.
+   <p><img src="images/subject.png" alt=""></p></li>
+</ol>   
+<h3 id="editor">Adding Content in the Message Content Editor</h3>
+<p>In the message content area, click the <strong>Source</strong> button.</p>
+<p class="image"><img src="images/source-button.png" alt="Source Button"><br>
+<strong>Figure:</strong> Click the Source Button</p>
+<p>Enter the following text for the correspondence in the content editor:</p>
+<pre>
+&lt;p&gt;Dear $user.firstName $user.lastName,&lt;/p&gt;
+
+&lt;p&gt;Your account &lt;b&gt;$user.account&lt;/b&gt; has been created with Customer Id &lt;b&gt;$CustomerId&lt;/b&gt;.&lt;br&gt;
+It is valid from $user.validFrom until $user.validTo.&lt;/p&gt;
+&lt;p&gt;Your work description is the following: &quot;$user.description&quot;&lt;/p&gt;
+
+&lt;p&gt;You have the following grants: &lt;b&gt;$user.allGrants&lt;/b&gt;&lt;/p&gt;
+
+&lt;p&gt;Welcome on board!!!&lt;/p&gt;
+
+&lt;p&gt;Sincerely, Team ABC&lt;/p&gt;</pre>
+<p class="image"><img src="images/add-content.png" alt="Content"><br>
+<strong>Figure:</strong> Adding email content</p>
+<p>In this content we use user attributes as well as process data. These will be 
+substituted with their values once we click the <strong>Source</strong> button again.</p>
+<p class="image"><img src="images/content-result.png" alt="Content"><br>
+<strong>Figure:</strong> Adding email content</p>
+<p>Complete the UI Mashup activity. The <strong>Show Data</strong> activity displays
+correspondence meta data.</p>
+<p class="image"><img src="images/show-data.png" alt="Show Data"><br>
+<strong>Figure:</strong> Displayed Correspondence data</p>
+<h2 id="viewcorr">Viewing the Correspondence in the Document Folder</h2>
+<p>In the <strong>Document Repository</strong> view or the <strong>Process Documents</strong>
+section in the process history view of the <strong>startCorrespondence</strong> process,
+expand the <code>correspondence</code> folder.</p>
+<p>You see the created correspondence, named as <code>correspondence-out-<i>x</i></code>.</p>
+<p>To view the correspondence in read-only mode, click the created correspondence node
+<code>correspondence-out-<i>x</i></code>.</p>
+<p class="image"><img src="images/click-corr-node-simple.png" alt="Click Correspondence"><br>
+<strong>Figure:</strong> Click Correspondence</p>
+<p>The correspondence opens in a read-only viewer. You see the placeholders substituted
+with our entered workflow data and user details.</p>
+<p class="image"><img src="images/viewing-corr-simple.png" alt="Viewing the Correspondence"><br>
+<strong>Figure:</strong> Viewing the Correspondence in read-only mode</p>
+
+<script language="JavaScript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

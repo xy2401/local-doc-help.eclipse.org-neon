@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../../../styles/carnot.css"
+   charset="ISO-8859-1" type="text/css">
+<title>Managing Runtime Artifacts</title>
+<script language="JavaScript" src="../../../../styles/naviLine.js"
+   type="text/javascript"></script>
+</head>
+<body>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+    writeNavigation("Logging Custom Log Entries",
+       "list-partitions.html","pg-embed-logging.html",
+       "../../../handbooks.htm","Developer Handbook",
+       "../../pg-preface.htm","Programming Guide",
+       "../pg-embedded-preface.htm","Embedded Usage","admin-preface.html","Administration");
+ -->
+</script>
+<h1>Managing Runtime Artifacts</h1>
+<p>This chapter describes the usage of Runtime Artifacts and how to manage them via API.</p>
+<ul>
+   <li><a href="#rtart">Working with Runtime Artifacts</a>
+   <li><a href="#admin">Managing Runtime Artifacts via AdministrationService</a></li>
+</ul>
+<h2 id="rtart">Working with Runtime Artifacts</h2>
+<p>A 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/RuntimeArtifact.html">
+RuntimeArtifact</a> describes an artifact which can be deployed and is valid from a 
+specified date at runtime.</p>
+<p>Each runtime artifact consists of:</p>
+<ul>
+   <li><strong>artifactTypeId</strong> - identifies the 
+   <a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/ArtifactType.html">ArtifactType</a>.</li>
+   <li><strong>artifactId</strong>- identifies the runtime artifact.</li>
+   <li><strong>artifactName</strong> - a human readable name or description</li>
+   <li><strong>validFrom</strong> - specifies the point in time the artifact should start to be valid and therefore become active.</li>
+   <li><strong>content</strong> - the binary content of the runtime artifact</li>
+</ul>
+<h3>DeployedRuntimeArtifacts</h3>
+<p>Class
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/DeployedRuntimeArtifact.html">
+DeployedRuntimeArtifact</a> describes a deployed runtime 
+artifact. It does not contain binary content like the 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/RuntimeArtifact.html">
+RuntimeArtifact</a>.
+The <a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/RuntimeArtifact.html">
+RuntimeArtifact</a> including the content can be retrieved by OID using other 
+service methods like 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/AdministrationService.html">
+AdministrationService</a> and 
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">
+QueryService</a>.</p>
+<h3>Querying Runtime Artifacts</h3>
+<p>For searching Runtime Artifacts applying to specific criteria, e.g. to find out which
+runtime artifact is active at a certain date, refer to chapter
+<a href="../../queries/pg-artifact-query.html">Searching for Deployed Runtime Artifacts</a>
+in the <a href="../../pg-query-1.htm">Querying Workflow</a> section.</p>
+<h3>Implementing custom Artifact Types</h3>
+<p>Stardust provides SPI to implement a custom Artifact Type. Please refer to
+chapter <a href="../../spi/spi-artifact.html">Implementing a Custom Artifact Type Handler</a> for details.</p>
+<h2 id="admin">Managing Runtime Artifacts via AdministrationService</h2>
+<p>The <a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/AdministrationService.html">
+AdministrationService</a> provides the following functionality to manage runtime artifacts:</p>
+<ul>
+   <li><a href="#deploid">Deploying a new Artifact with a new OID</a></li>
+   <li><a href="#overwrite">Overwriting the Content of a specified already deployed Artifact</a></li>
+   <li><a href="#delete">Deleting a deployed Artifact by OID</a></li>
+   <li><a href="#get">Retrieving an Artifact by its unique OID</a></li>
+   <li><a href="#getlist">Retrieving a List of supported Artifact Types</a></li>
+</ul>
+<h3 id="deploid">Deploying a new Artifact with a new OID</h3>
+<p>Method <code>deployRuntimeArtifact</code> deploys a new artifact with a new OID.
+If an artifact with the same validFrom date already exists,
+the newly deployed artifact takes priority when querying for active artifacts.</p>
+<pre>
+   @ExecutionPermission(id = ExecutionPermission.Id.deployRuntimeArtifact)
+   public DeployedRuntimeArtifact deployRuntimeArtifact(RuntimeArtifact runtimeArtifact);
+</pre>
+<p>The method returns the deployed artifact including an assigned OID.</p>
+<h4>Example usage</h4>
+<pre>
+   ServiceFactory sf = getServiceFactory(null, null, null, &quot;motu&quot;, &quot;motu&quot;);
+
+   AdministrationService as = sf.getAdministrationService();
+
+   RuntimeArtifact ra = new RuntimeArtifact(BENCHMARK_ARTIFACT_TYPE_ID, artifactId, ARTIFACT_NAME,
+            ARTIFACT_CONTENT.getBytes(), new Date(1));
+
+   DeployedRuntimeArtifact deployedRuntimeArtifact = as.deployRuntimeArtifact(ra);
+</pre>
+<h3 id="overwrite">Overwriting the Content of a specified already deployed Artifact</h3>
+<p>Method <code>overwriteRuntimeArtifact</code> overwrites only content of a specified 
+already deployed artifact. Note that other fields cannot be changed.</p>
+<pre>
+   @ExecutionPermission(id = ExecutionPermission.Id.deployRuntimeArtifact)
+   public DeployedRuntimeArtifact overwriteRuntimeArtifact(long oid, RuntimeArtifact runtimeArtifact) throws ObjectNotFoundException;
+</pre>
+<p>The method returns the updated artifact.</p>
+<h4>Example usage</h4>
+<pre>
+   AdministrationService as = sf.getAdministrationService();
+   
+   RuntimeArtifact runtimeArtifact = as.getRuntimeArtifact(1);
+   
+   runtimeArtifact.setContent(ARTIFACT_NEW_CONTENT.getBytes());
+   
+   DeployedRuntimeArtifact deployedRuntimeArtifact = as.overwriteRuntimeArtifact(1,runtimeArtifact);
+</pre>
+<h3 id="delete">Deleting a deployed Artifact by OID</h3>
+<p>Method <code>deleteRuntimeArtifact</code> deletes a deployed artifact specified by 
+its OID.</p>
+<pre>
+   @ExecutionPermission(id = ExecutionPermission.Id.deployRuntimeArtifact)
+   public void deleteRuntimeArtifact(long oid) throws ObjectNotFoundException;
+</pre>
+<p>If no runtime artifact with the specified OID exists, an ObjectNotFoundException is
+thrown.</p>
+<h4>Example usage</h4>
+<pre>
+   AdministrationService as = sf.getAdministrationService();
+   
+   as.deleteRuntimeArtifact(1);
+</pre>
+<h3 id="get">Retrieving an Artifact by its unique OID</h3>
+<p>Method <code>getRuntimeArtifact</code> retrieves the artifact specified by its unique 
+OID.</p>
+<pre>
+   @ExecutionPermission(id = ExecutionPermission.Id.readRuntimeArtifact)
+   public RuntimeArtifact getRuntimeArtifact(long oid);
+</pre>
+<p>The method returns the artifact or <code>null</code> if it does not exist.</p>
+<h4>Example usage</h4>
+<pre>
+   AdministrationService as = sf.getAdministrationService();
+   
+   RuntimeArtifact runtimeArtifact = as.getRuntimeArtifact(1);
+</pre>
+<h3 id="getlist">Retrieving a List of supported Artifact Types</h3>
+<p>Method <code>getSupportedRuntimeArtifactTypes</code> returns a list of supported 
+artifact types.</p>
+<pre>
+   @ExecutionPermission(id = ExecutionPermission.Id.readRuntimeArtifact)
+   public List&lt;ArtifactType&gt; getSupportedRuntimeArtifactTypes();
+</pre>
+<h4>Example usage</h4>
+<pre>
+   public java.util.List&lt;org.eclipse.stardust.engine.api.runtime.ArtifactType&gt;
+         getSupportedRuntimeArtifactTypes()
+   {
+      return ((org.eclipse.stardust.engine.api.runtime.AdministrationService)
+            serviceProxy).getSupportedRuntimeArtifactTypes();
+   }
+</pre>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+<p></p>
+</body>
+</html>

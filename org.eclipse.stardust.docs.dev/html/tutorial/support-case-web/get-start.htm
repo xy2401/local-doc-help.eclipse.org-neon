@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Getting Started</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Creating a Model",
+	      "set-scene.htm","tut-chap-1.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Getting Started</h1>
+<p>If not already done, download the Stardust features as described in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-toc.html">Installation Guide</a>.</p>
+<p>Apart from the Stardust installation, you only need a Tomcat installation 
+to go through this tutorial. Refer to the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/releasenotes/releasenotes_4.1.0.html">
+Stardust Release Notes</a> for details on the Tomcat version supported with the current release.</p>
+<h2>Naming</h2>
+<p>As a start some names of the product are described here.
+For an overview on the provided packages provided by Stardust, refer 
+to the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-toc.html">Installation Guide</a>.</p>
+<h3>Stardust</h3>
+<p>This is the general product name.</p>
+<h3>Stardust Process Engine</h3>
+<p>This name is used for the runtime component of Stardust.</p>
+
+<h2>Starting the Modeling</h2>
+<p>Before your business process can be executed, you must model its elements
+(activities to be performed, variable definitions, applications and resources)
+as well as the relationships between these elements. For this purpose, your web server
+for example, Apache Tomcat should be up and running on the Stardust.
+ 
+<p>
+To log on to the 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a>.</p>
+
+<p>The start URL for the Support-Case Stardust Portal is:</p>
+<pre>http://hostname:port/Support-Case</pre>
+<p>and leads you to the <strong>Stardust Portal</strong> login
+screen, whereby</p>
+
+<ul>
+  <li><tt><i>hostname</i></tt> is the
+name of the host running your application server (in this case <tt>localhost</tt>)
+and</li>
+
+  <li><tt><i>port</i> </tt>is the HTTP
+port of your application server (in this case <tt>8080</tt>)</li>
+
+  <li>Support-Case is the name of the Stardust Eclipse project in
+this tutorial. This name is case sensitive and must match the Eclipse
+project name exactly.</li>
+</ul>
+
+<p>So if the Tomcat settings are configured properly, the browser URL to enter is 
+<a href="http://localhost:8080/Support-Case">http://localhost:8080/Support-Case</a>.</p>
+
+<p>In our ACME example, we will use applications and data implemented in
+Java, which have to be integrated in the business model. We have prepared the
+applications and data classes so that you can proceed with this tutorial without
+having to implement the model-specific components yourself. 
+To get the example resources, download the following ZIP file:</p>
+<p class="ind"><a href="../../examples/tutorials/all-tutorials.zip">all-tutorials.zip</a></p>
+<p>You find the resources in folder <code>support-case</code>.</p>
+<p>In the following figure you see a screenshot of the complete ACME
+Workflow example model:</p>
+<p class="image"><a href="images/final-model_Orgsize.png"><img src="images/final-model.png"
+    alt="The ACME Workflow Model"></a> <br>
+<strong>Figure:</strong> The Support Case Workflow Model</p>
+<p> Log on with the default administrator's user ID and password:
+  <strong>motu/motu</strong> (master of the
+universe). You can use Shift-F8 to rapid type these credentials:</p>
+
+<p class="image"><img src="images/tut-main-login-pp.png" alt="Login Screen">
+<br><strong>Figure:</strong> Login Screen</p>
+
+<!-- <h3 id="setUpTomcat">Setting up Embedded Tomcat in Eclipse</h3>
+<p>Eclipse provides integration for the Apache Tomcat Web environment and
+this can be used for rapid Stardust deployments&nbsp;within
+Eclipse.</p>
+<p>To establish Tomcat integration in Eclipse (this only needs to be done
+once for all successive deployments. It is not required for each Stardust
+deployment):</p>
+<ol>
+    <li>From the Eclipse main menu choose <strong>File &gt; New
+    &gt; Other...</strong><br>
+    <p><strong><span class="tip">! </span>Tip:</strong> If your Eclipse
+    installation does not have Server in the list of available objects to
+    create, you will need to update your environment with the necessary plug ins
+    of the Eclipse Web Tools Project, or use the Eclipse installation which
+    comes with the normal Stardust distribution.</p>
+    <p class="image"><img alt="Eclipse Server dialog"
+        src="images/new-server.png"></p>
+    </li>
+    <li>Select <strong>Server &gt; Server</strong>.</li>
+    <li>Click <strong>Next</strong>.
+    <p class="image"><img alt="Tomcat"
+        src="images/tut-choose-server.png"></p>
+    </li>
+    <li>Select <strong>Tomcat vx.x Server</strong></li>
+    <li>Click <strong>Finish</strong> if you previously configured a Tomcat
+    Server with your Eclipse Workbench.</li>
+    <li>Otherwise select <strong>Next</strong>.</li>
+    <li>Browse to the folder of your Tomcat installation.
+    <p class="image"><img alt="Browse to Installation Folder"
+        src="images/tut-server-browse.png"></p>
+    </li>
+    <li>Select <strong>Finish</strong>.</li>
+</ol>
+<p>If your Eclipse desktop does not yet have a view for Servers as shown
+below, select <strong>Window &gt; Show View</strong> in the main menu (or select
+the Show View button in the left lower corner of your Eclipse window) and choose
+<strong>Other... &gt; Server &gt; Servers</strong> to open it.</p>
+<!--  <p><strong><span class="tip">! </span>Tip:</strong> Eclipse views are
+dockable windows on the Eclipse work area, so you may want to drag-drop the
+Servers View into a set of stacked views as shown below.</p>
+<p class="image"><img alt="Eclipse server view"
+    src="images/tut-main-show-view-tip.png"></p>
+<h3 id="createProj">Creating an Eclipse Project with Process Manager Facets</h3>
+<p>For this tutorial we will use a Dynamic Web Project (from the Eclipse Web
+Tools Project). To create a new Dynamic Web Project, follow these steps in
+Eclipse:</p>
+<ol>
+	<li>On the main menu select <strong>File &gt; New &gt; Project...</strong>.</li>
+	<li>In the upcoming wizard choose <strong>Web &gt; Dynamic Web Project</strong>.
+    <li>Click <strong>Next</strong>
+        <p class="image"><img src="images/tut-main-1a.png"
+        alt="Creating a Dynamic Web Project - Step 1"> <br>
+        <strong>Figure:</strong> Creating a Dynamic Web Project - Step 1</p>
+    </li>
+    <li>Name your project <strong>Support-Case</strong><br>
+    <strong>Tip:</strong> Give the project a name that does not contain spaces
+    to make Web references easier. The project name will become part of a case
+    sensitive URL in a later part of this tutorial.</li>
+    <li>Make sure that the target runtime is set to the supported Apache Tomcat
+    version. If not, please set up the Apache Tomcat server as described in the
+    preceding section <a href="#setUpTomcat">Setting up Embedded Tomcat in
+    Eclipse</a>.</li>
+    <li>Select <strong>Dynamic web module_version</strong> <tt>2.5</tt>, 
+    as <tt>3.0</tt> is currently not supported by Stardust.
+    <p class="image"><img src="images/select-web-module-version.png" 
+    alt="dynamic web module version"> <br>
+    <strong>Figure:</strong> Set the dynamic web module version</p></li>
+    <li>In the <strong>Configurations</strong> entry, select 
+    <strong>Stardust Portal for Dynamic web module 2.5</strong>
+    in the drop down list.
+    The facets provided with this configuration contain among others the Stardust 
+    Portal facet, which enables you to run the <a
+        href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+    Stardust Portal</a> as Web application of your dynamic Web project. 
+    The provided facets can be added or removed later as desired. 
+    Please refer to the section described in section 
+    <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.wst/html/wst-integration/dynamic-web-proj.html#facets">Process Manager Facets</a>
+    of the <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.wst/html/wst-integration/toc.html">Rapid Application Development</a>
+    guide for detailed information on the Process Manager facets.
+    <p class="image"><img src="images/project-settings.png"
+        alt="Select the Stardust Portal"> <br>
+    <strong>Figure:</strong> Select the Stardust Portal</p>
+    </li>
+    <li>Click <strong>Next</strong>.</li>
+    <li>Leave the default values for source and build path 
+	 and select <strong>Next</strong>.
+	<p class="image"><img src="images/set-build-path.png" alt="Set Build Path">
+	<br><strong>Figure:</strong> Set Build Path.</p></li>
+    
+    <li>Leave the entries in the <strong>Web Module</strong> dialog and
+    click <strong>Next</strong>.
+    <p class="image"><img src="images/create-proj-web-module.png"
+        alt="Web Module Dialog"></p>
+    </li>
+    <li>In the <strong>JSF Capabilities</strong> dialog enter the following
+    values:
+  <ul>
+    <li><strong>JSF Implementation Library</strong>: Disable Library Configuration</li>
+    <li><strong>JSF Configuration File</strong>: /WEB-INF/faces-config.xml (or a custom configuration file)</li>
+    <li><strong>JSF Servlet Name</strong>: Faces Servlet</li>
+    <li><strong>JSF Servlet Classname</strong>: javax.faces.webapp.FacesServlet</li>
+    <li><strong>URL Mapping Patterns</strong>: /faces/*</li>
+  </ul>
+    <p class="image"><img src="images/java-server-faces.png"
+        alt="JSF Capabilities Dialog"></p>
+    </li>
+    <li>Click <strong>Finish</strong>.</li>
+    <li>A dialog asking if you like to switch to the J2EE perspective
+    opens. The J2EE perspective is optional. It will not be needed so for this
+    tutorial, so click <strong>No</strong>.
+    <p class="image"><img src="images/tut-main-1d.png"
+        alt="Changing the Perspective"> <br>
+    <strong>Figure:</strong> Change the perspective</p>
+    </li>
+</ol>
+<p>A dialog opens to
+inform you to set a location for the repository path:</p>
+<p class="image"><img src="images/repository-home-warning.png"
+    alt="Repository Path Warning"><br>
+<strong>Figure:</strong> Repository Path Warning</p>
+
+<p>Please set a repository path as described in the section 
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dms/html/dms/dms-deployment.html#repository">
+Setting the Repository Path</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.dms/html/dms/toc.html">
+Document Service Integration Guide</a>.</p>
+
+<p>After Eclipse created the project, you see a new project folder in the
+Package Explorer view:</p>
+<p class="image"><img src="images/tut-navigator-project.png"
+    alt="New Dynamic Web Project in Package Explorer"> <br>
+<strong>Figure:</strong> New Dynamic Web Project in the Package Explorer</p>
+<p align="left"><strong><span class="tip">! </span>Tip:</strong> You can use
+different explorer in eclipse. If you like to see all files under your project
+open the Navigator view.</p>
+ -->
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Business Objects</title>
+<link rel="stylesheet" type="text/css" href="../styles/carnot.css"
+    title="Style">
+<script language="JavaScript" src="../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Activity Criticality",
+		"multi-instance.html","activity-criticality.html",
+		"key-concepts.html","Concepts");
+ -->
+</script>
+<h1>Business Objects</h1>
+<p>Stardust provides the usage of Business Objects to support a business 
+object-centric view on Process Data.
+Functionality is available to search for Business Objects, find 
+corresponding Process Instances and update or create Business Objects independently of 
+processes creating Process Data.</p>
+<ul>
+    <li><a href="#mot">Common Use Cases</a></li>
+    <li><a href="#why">Why using Business Objects</a></li>
+    <li><a href="#prod">Business Objects in Stardust</a></li>
+    <li><a href="#portal">Using Business Objects in the Stardust Portal</a></li>
+    <li><a href="#access">Read and Write Access of Business Object Instances</a></li>
+    <li><a href="#usec">Example Use Case</a></li>
+</ul>
+<!--  It represents business entities such as an invoice, a transaction or a person -->
+<h2 id="mot">Common Use Cases</h2>
+<p>In many cases you might intend to access process information via the business objects 
+the processes are working on, for example:</p>
+<ul>
+   <li>List all processes on an insured person during document indexing</li>
+   <li>List the status of the daily processing on a fund</li>
+</ul>
+<p>In Stardust these objects are mostly Process Data 
+(e.g. named <strong>Claim, Order, Trade, Fund, Fund Group</strong>) of a specific structured data type
+(e.g. <strong>Claim, Order, Trade, Fund</strong>) whose values or instances are stored in 
+the <a href="../handbooks/operation/audit-trail/ag-appendix-audittrail-1.htm#struct_data_val">structured_data_value</a>
+table of the audit trail.</p>
+<p>Using Stardust Business Objects simplifies the management of this data 
+by encapsulating it.</p>
+<h2 id="why">Why using Business Objects</h2>
+<p>Using business objects to manage data has the following advantages:</p>
+<ul>
+   <li>simplifies the management of your data</li>
+   <li>reduces the quantity of process data objects used</li>
+   <li>re-usability</li>
+   <li>can be created independently of a process</li>
+</ul>
+<h2 id="prod">Business Objects in Stardust</h2>
+<p>A Stardust Business Object serves as virtual database pointing to data. 
+It is defined via a structured data with a 
+specified primary key and optionally a relationship to other business objects.</p>
+<p>One Business Object per model version is supported via a particular ID.</p>
+<h3>Business Object Instances</h3>
+<p>A Business Object Instance represents the runtime of a Business Object.</p>
+<h3>Business Object Data Versions</h3>
+<p>Different processes store independent process data, referring to the same business object 
+via a Primary Key, e.g. <strong>Member Id, Fund Name</strong>. Thus, an implicit version history 
+of the Business Object is created. The latest version could be considered the "current state 
+of a Business Object as known to Stardust".</p>
+<h3>Relationships</h3>
+<p>You can define relationships between the in-scope Business Object and another Business
+Object. These Business Objects then have a bidirectional connection.
+Arbitrary Business Objects can be connected to arbitrary other Business Objects.</p>
+<p>For a relationship you enter fields to serve as foreign keys 
+to other Business Objects. You have to option to name such a relationship.</p>
+<p>The following relationship rules apply:</p>
+<ul>
+   <li>multiple relationships may be defined</li>
+   <li>relationships generally refer to a different Business Object, but a Business Object
+   may refer to itself in a recursive relationship.</li>
+   <li>the key reference fields must match type (e.g. String and String)</li>
+   <li>none of the fields can be empty</li>
+</ul>
+
+<h3>Business Object Management</h3>
+<p>Stardust Business Objects Management allows you to search for Business Objects, 
+find corresponding Process Instances and even update and/or create Business Objects 
+independently of Processes creating Process Data.</p>
+
+<h2 id="portal">Using Business Objects in the Stardust Portal</h2>
+<p>Business Objects an be created and managed in the Stardust Portal.</p>
+<ul>
+   <li><a href="#mark">Marking Process Data as Business Objects</a></li>
+   <li><a href="#deploy">Restrictions for modifying Business Object Structures in new Model Versions</a></li>
+   <li><a href="#mngmt">Managing Business Objects in the Stardust Portal</a></li>
+</ul>
+<p>Business Object data can be used in several components in the Stardust Portal, e.g. for:</p>
+<ul>
+
+   <li>Document Triage - please refer to chapter
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/documents/document-triage.html">
+   Triaging Documents</a> in the 
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">Stardust Portal</a>
+   for details.</li>
+   <li class="ipp">Model &amp; Go! Perspective - please refer to the
+   <a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/modeler/toc.html">Model &amp; Go! Handbook</a>
+   for details.</li>
+   <li class="ipp">Business Calendar - please refer to chapter
+   <a href="PLUGINS_ROOT/com.infinity.bpm.docs.modeler/html/business-calendar/introduction.html">Working with Calendars</a>
+   in the
+   <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">Stardust Portal</a>
+   documentation for details.</li>
+</ul>
+<h3 id="mark">Marking Process Data as Business Objects</h3>
+<p>You can mark process data of structured type as Business Objects.
+A primary key out of the top-level data of the structured data type can be defined, which 
+allows to identify the Business Object in the Modeling perspective.</p>
+<p>The Primary Key should be the data that makes the Business Object unique.</p>
+<p>For details on marking process data as Business Object, please refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-bo.html">
+Specifying Structured Data as Business Object</a> of the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">
+Business Process Modeling Handbook</a>.</p>
+<h3 id="deploy">Restrictions for modifying Business Object Structures in new Model Versions</h3>
+<p>If you like to change the structured data type fields referenced by already existing Business Objects, you have to 
+take in account which operations are supported to avoid data loss. The following table displays which operations are
+supported, not supported or are supported for specific scenarios:</p>
+<table>
+   <tr>
+      <th>Use Case</th>
+      <th>Supported</th>
+      <th>Comment</th>
+   </tr>
+   <tr>
+      <td>Changing the Primary Key</td>
+      <td>No</td>
+      <td>Changing the name of the Primary Key field is not supported.</td>
+   </tr>
+   <tr>
+      <td>Changing a Foreign Key (Referenced Object field)</td>
+      <td>No</td>
+      <td>Changing the name of the Referenced Object(s) field is not supported.</td>
+   </tr>
+   <tr>
+      <td>Renaming a field</td>
+      <td>No</td>
+      <td>Renaming a field is equivalent with deleting the field and creating a new one. All the data in the field will
+      be lost! <br>As a workaround for changing field names you could do the following:
+      <ol>
+         <li>Export the Business Object instances</li>
+         <li>Change the name of the field(s) in the CSV file</li>
+         <li>Rename the field(s) in the model</li>
+         <li>Re-deploy the model</li>
+         <li>Re-import the CSV file</li>
+      </ol></td>
+   </tr>
+   <tr>
+      <td>Adding a field</td>
+      <td>Yes</td>
+      <td></td>
+   </tr> 
+   <tr>
+      <td>Deleting a field</td>
+      <td>Yes</td>
+      <td></td>
+   </tr>
+   <tr>
+      <td>Re-ordering fields in the Business Object (Structured Type)</td>
+      <td>Yes</td>
+      <td></td>
+   </tr>        
+   <tr>
+      <td>Changing the field type</td>
+      <td>Partly</td>
+      <td>Supported in scenarios where type conversion is possible</td>
+   </tr>
+   <tr>
+      <td>Changing the cardinality of a field</td>
+      <td>Partly</td>
+      <td>You can change a single object field to a list</td>
+   </tr>
+   <tr>
+      <td>Changing properties of a field</td>
+      <td>Yes</td>
+      <td></td>
+   </tr>    
+</table>
+<h3 id="mngmt">Managing Business Objects in the Stardust Portal</h3>
+<p>The Stardust Portal provides a view in the Control Center perspective to manage Business Objects. It allows
+to:</p>
+<ul>
+   <li>search for Business Object Instances</li>
+   <li>find corresponding Process Instances</li>
+   <li>update Business Object Instances</li>
+   <li>add Business Object Instances independently of Processes</li>
+   <li>manage references to other Business Object Instances</li> 
+</ul>
+<p>For details on this view, please refer to chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/businessObjectManagement.html">
+Managing Business Objects</a> in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/carnot-clients.html">
+Stardust Portal</a> documentation.</p>
+
+<h2 id="access">Read and Write Access of Business Object Instances</h2>
+<p>Visibility to Business Objects is controlled by Authorizations on the according Structured Data.</p>
+<h3 id="limit">Visibility Restrictions of Business Object Instances depending on Department Grants</h3>
+<p>Users cannot see information about Business Object Instances for which they do not have
+a Department grant. Business Objects that a user does not have a department grant for,
+are not visible to him in the following Portal Views:</p>
+<ul>
+   <li>Business Object Management View</li>
+   <li>Process Start for Business Object</li>
+   <li>Calendar Perspective</li>
+   <li>Traffic Light View</li>
+   <li>Document Triage View (Business Object Instance Search)</li>
+</ul>
+<p>When setting up a Business Object relationship, you can determine if department grants for <code>Read Data Values</code>
+and <code>Modify Data Values</code> permissions should be transferred to the related Business Object instances.
+If this option is selected, department grants are propagated over Business Object relationship hierarchies, as for 
+example in the following use case:</p>
+<ul>
+   <li>A Business Object <strong>Fund</strong> and a Business Object <strong>FundGroup</strong>
+   with an N:M Relationship are created.</li>
+   <li>Automatic Department creation is enabled for <strong>Fund</strong>, but not for <strong>FundGroup</strong>.</li>
+   <li>Read access will be checked for all <strong>FundGroups</strong> associated with a <strong>Fund</strong> based on 
+   the <strong>Fund</strong> department assignments.</li>
+</ul>
+<h4>Example visibility restrictions</h4>
+<p>Consider two Business Objects, <strong>Fund</strong> and <strong>Fund Group</strong>
+that are related to each other.</p>
+<p>The following table shows the visibility based on scoped and unscoped roles:</p>
+<table>
+   <tr>
+      <th>Fund-to-Fund Group Propagate Access</th>
+      <th>Fund Group-to-Fund Propagate Access</th>
+      <th>BOI Visibility for user 
+      having Permission only on Fund via unscoped participant</th>
+      <th>BOI Visibility for user having Permission only on Fund Group via unscoped
+      participant</th>
+      <th>BOI Visibility for user having Permission only on Fund via scoped participant</th>
+      <th>BOI Visibility for user having Permission only on Fund Group via scoped 
+      participant</th>
+   </tr>
+   <tr>
+      <td>No</td>
+      <td>No</td>
+      <td><ul>
+         <li>All Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>All Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Dept Granted Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>No Funds</li>
+         <li>Dept Granted Fund Groups</li>
+      </ul></td>
+   </tr>
+   <tr>
+      <td>No</td>
+      <td>Yes</td>
+      <td><ul>
+         <li>All Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Related Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Dept Granted Funds</li>
+         <li>No Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Related Funds</li>
+         <li>Dept Granted Fund Groups</li>
+      </ul></td>
+   </tr>
+   <tr>
+      <td>Yes</td>
+      <td>No</td>
+      <td><ul>
+         <li>All Funds</li>
+         <li>Related Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>No Funds</li>
+         <li>All Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Dept Granted Funds</li>
+         <li>Related Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>No Funds</li>
+         <li>Dept Granted Fund Groups</li>
+      </ul></td>
+   </tr>
+   <tr>
+      <td>Yes</td>
+      <td>Yes</td>
+      <td><ul>
+         <li>All Funds</li>
+         <li>Related Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Related Funds</li>
+         <li>All Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Dept Granted Funds</li>
+         <li>Related Fund Groups</li>
+      </ul></td>
+      <td><ul>
+         <li>Related Funds</li>
+         <li>Dept Granted Fund Groups</li>
+      </ul></td>
+   </tr>
+</table>
+<p>Please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/businessObjectManagement.html#perm">
+Visibility Restrictions of Business Object Instances depending on Department Grants</a> of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.enduser/html/handbooks/execution-clients/businessObjectManagement.html">
+Managing Business Objects</a> for end user examples.</p>
+<h2 id="usec">Example Use Cases</h2>
+<p>This sections provides examples for using Business Objects in Stardust.</p>
+<ul>
+   <li><a href="#relex">Establishing Relationships between Business Objects</a></li>
+</ul>
+<!-- TODO: more examples -->
+<h3 id="relex">Establishing Relationships between Business Objects</h3>
+<p>The following examples describe how to establish different kinds of relationships
+between Business Objects. For a more detailed description on how to set up these
+relationship examples in the Stardust Portal, please refer to section
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-bo.html#rel">Defining Business Object Relationships</a>
+of chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/handbooks/modelling_analyst/pep-data-bo.html">Specifying Structured Data as Business Object</a>
+in the
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">Business Process Modeling Handbook</a>.</p>
+<ul>
+   <li><a href="#def">Standard Business Object Relationship Example</a></li>
+   <li><a href="#rec">Recursive Business Object Relationship Example</a></li>
+</ul>
+<h4 id="def">Standard Business Object Relationship Example</h4>
+<p>In this example, a relationship is established between two Business Objects
+<strong>VENDOR</strong> and <strong>PRODUCT</strong>. These Business Objects have the
+following settings:</p>
+<ul>
+   <li><strong>VENDOR</strong>:<br>
+   <ul>
+      <li>Structured type:
+      <ul>
+         <li><strong>VendorId</strong></li>
+         <li><strong>VendorName</strong></li>
+         <li><strong>ProductIds</strong> (with cardinality <code>Zero ore more</code>)</li>
+      </ul></li>
+   </ul></li>
+   <li><strong>PRODUCT</strong>:<br>
+   <ul>
+      <li>Structured type:
+      <ul>
+         <li><strong>ProductId</strong></li>
+         <li><strong>ProductDescription</strong></li>
+         <li><strong>VendorId</strong></li>
+      </ul></li>
+   </ul></li>
+</ul>
+<p>To set up a relationship between the two Business Objects, we create the following
+references for the <strong>VENDOR</strong> Business Object:</p>
+<ul>
+   <li>The <strong>ProductIds</strong> field in the <strong>VENDOR</strong> Business Object 
+   references the <strong>ProductId</strong> field (primary key) in the 
+   <strong>PRODUCT</strong> Business Object. The label for this reference is 
+   <strong>Products</strong>.</li>
+   <li>The <strong>VendorID</strong> field in the <strong>PRODUCT</strong> Business Object 
+   references the <strong>VendorId</strong> field (primary key) in the 
+   <strong>VENDOR</strong> Business Object. The label for this reference is 
+   <strong>Vendor</strong>.</li>
+</ul>
+<p>The following graphic shows the setup of references from the <strong>VENDOR</strong>
+Business Object.</p>  
+<p class="image"><img src="images/bo-relation-ex1.png" alt="Example"><br>
+<strong>Figure:</strong> Standard Example for Business Object Relationship</p>
+<p>A reciprocal relationship is automatically created for the <strong>PRODUCT</strong> 
+Business Object, which can be seen from the <strong>PRODUCT</strong> 
+Structured Data &gt; Business Object Management tab.</p>
+<p class="image"><a href="images/bo-relation-ex-prod_orgsize.png" target="_blank">
+<img src="images/bo-relation-ex-prod.png" alt="Example"></a><br>
+<strong>Figure:</strong> Reciprocal Relationship</p>
+<h4 id="rec">Recursive Business Object Relationship Example</h4>
+<p>In this example, a recursive relationship is established for the 
+<strong>EMPLOYEE</strong> relationship where:</p>
+<ul>
+   <li>In one direction, the <strong>ManagerId</strong> field of this <strong>EMPLOYEE</strong>
+   Business Object references the <strong>EmployeeId</strong> field (primary key) of the 
+   other <strong>EMPLOYEE</strong> Business Object. 
+   The label for this reference is <strong>Manager</strong>.</li>
+   <li>In the other direction, the <strong>ManagerId</strong> field of the other 
+   <strong>EMPLOYEE</strong> Business Object references the 
+   <strong>EmployeeId</strong> field (primary key) of this <strong>EMPLOYEE</strong> 
+   Business Object. The label for this reference is <strong>Reports</strong>.</li>
+</ul>
+<p>The following graphic shows the recursive relationship for the <strong>VENDOR</strong>
+Business Object.</p>  
+<p class="image"><img src="images/bo-relation-ex2.png" alt="Recursive Example"><br>
+<strong>Figure:</strong> Recursive Relationship Example</p>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

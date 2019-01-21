@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Creating Participants</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Creating Structured Data Types",
+	      "tut-chap-3.htm","tut-chap-5.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Creating Participants</h1>
+<p>Once the swim lanes are added, we need to create participants. Creating participants involves creating organization and adding
+roles to it. Once the roles are created, you can create users at runtime and assign these roles to them.
+</p>
+<p>For the tutorial, we need to create an organization called <strong>ACME Headquarters</strong> and create roles called
+<strong>Callcenter Agent and Engineer</strong> under the organization.</p>
+<ol>
+	<li>In the <strong>My Process Models</strong> panel, expand the model</li>
+	<li>Right-click the <strong>Participants</strong> node and select the <strong>Create Organization</strong> option.
+	<p class="image"><img src="images/cr-org.png" alt="Create Organization"> <br>
+<strong>Figure:</strong> Create Organization</p>
+	An Organization 1 is created.
+	
+	</li>
+	<li>Rename it as <strong>ACME Headquarters</strong></li>
+	<li>Right-click on the ACME Headquarters and select the option <strong>Create Role</strong>
+	<p class="image"><img src="images/cr-role.png" alt="Create Role"> <br>
+<strong>Figure:</strong> Create Role</p>
+	</li>
+	<li>Rename the role as <strong>Callcenter Agent</strong></li>
+	<li>Similarly, create a role called <strong>Engineer</strong> under the organization <strong>ACME Headquarters</strong>
+	</li>
+</ol>
+<p>The organization structure looks like as shown in the following screenshot:</p>
+<p class="image"><img src="images/org-struct.png" alt="Organization Structure"> <br>
+<strong>Figure:</strong> Organization Structure</p>
+<h2>Assigning Participants to Swim Lanes</h2>
+<p>Once the participants are created, you need to assign them to swim lanes. The assigned participant becomes the performer of
+activities that are added to the specific lane.</p>
+<p>To assign participants to the swim lane:</p>
+<ol>
+	<li>Select the <strong>Default Lane</strong> in the Process Diagram canvas. The General Properties of the lane are displayed.</li>
+	<li>In the <strong>General Properties</strong> panel, select <strong>Administrator</strong> from the <strong>Participant</strong> drop-down list
+	
+	<p class="image"><img src="images/def-lane-part.png" alt="Organization Structure"> <br>
+<strong>Figure:</strong> Start Process - Participant - Administrator</p>
+	</li>
+	<li>In the <strong>My Process Models</strong> toolbar, click the <strong>Save All Model</strong> icon to save the changes</li>
+</ol>
+<p>Assign following participants to lanes in similar manner:</p>
+<table>
+	<tr>
+		<th>Swim Lane</th>
+		<th>Participant</th>
+	</tr>
+	<tr>
+		<td>Collect Details</td>
+		<td>Callcenter Agent</td>
+	</tr>
+	<tr>
+		<td>Analyze Issues</td>
+		<td>Engineer</td>
+	</tr>
+	<tr>
+		<td>Deliver Results</td>
+		<td>ACME Headquarters</td>
+	</tr>
+</table>
+
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

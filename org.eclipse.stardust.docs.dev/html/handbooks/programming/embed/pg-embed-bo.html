@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<link rel="STYLESHEET" href="../../../styles/carnot.css" charset="ISO-8859-1" type="text/css">
+<title>Managing Business Objects</title>
+<script language="JavaScript" src="../../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+	writeNavigation("Using Cross-Model Type Declarations with custom Clients",
+        "proc-act-inst/procs-preface.html","pg-embed-cross-sdts.html",
+      "../../handbooks.htm","Developer Handbook",
+      "../pg-preface.htm","Programming Guide",
+      "pg-embedded-preface.htm","Embedded Usage");
+ -->
+</script>
+<h1>Managing Business Objects</h1>
+<p>The 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/WorkflowService.html">WorkflowService</a>
+provides methods to create, update and delete business object instances.</p>
+<ul>
+   <li><a href="#create">Creating a new Business Object Instance</a></li>
+   <li><a href="#update">Updating the Value of a Business Object Instance</a></li>
+   <li><a href="#del">Deleting a Business Object Instance</a></li>
+</ul>
+<h2 id="create">Creating a new Business Object Instance</h2>
+<p>The following method creates a new business object instance in case it does not exist:</p>
+<pre>BusinessObject createBusinessObjectInstance(String qualifiedBusinessObjectId, Object initialValue);</pre>
+<p>The business object is created for the specified qualified Id of the business object
+with a given initial value. The initial value can also be <code>null</code>.</p>
+<p>Usage:</p>
+<pre>org.eclipse.stardust.engine.api.runtime.WorkflowService service;
+
+org.eclipse.stardust.engine.api.runtime.BusinessObject bo=service.createBusinessObjectInstance(qualifiedBusinessObjectId, initialValue)</pre>
+<p>This method requires execution permission <code>modifyDataValues</code>.</p>
+<h2 id="update">Updating the Value of a Business Object Instance</h2>
+<p>The following method updates the value of an existing business object instance having a
+specific qualified Id with a new given value.</p>
+<pre>BusinessObject updateBusinessObjectInstance(String qualifiedBusinessObjectId, Object newValue);</pre>
+<p>This method requires execution permission <code>modifyDataValues</code>.</p>
+<p>Usage:</p>
+<pre>org.eclipse.stardust.engine.api.runtime.WorkflowService service;
+
+org.eclipse.stardust.engine.api.runtime.BusinessObject bo=service.updateBusinessObjectInstance(qualifiedBusinessObjectId, newValue);
+</pre>
+<h2 id="del">Deleting a Business Object Instance</h2>
+<p>To delete a business object instance with a specific qualified business object Id and
+the primary key identifying the instance, use the following method:</p>
+<pre>void deleteBusinessObjectInstance(String qualifiedBusinessObjectId, Object primaryKey);</pre>
+<p>This method also requires execution permission <code>modifyDataValues</code>.</p>
+<p>Usage:</p>
+<pre>org.eclipse.stardust.engine.api.runtime.WorkflowService service;
+
+service.deleteBusinessObjectInstance(qualifiedBusinessObjectId, primaryKey);
+</pre>
+<h2 id="rest">REST Endpoints exposed by the Business Object Management Service</h2>
+<p>The following endpoints are exposed by the Business Object Management Service:</p>
+<pre>
+/language
+/{bundleName}/{locale}
+
+/businessObject.json (GET)
+/businessObject/{businessObjectQualifiedId}.json (GET)
+/businessObject/{businessObjectQualifiedId}/instances.json (GET)
+
+/businessObject/{businessObjectQualifiedId}/relationships.json (GET)
+/businessObject/{businessObjectQualifiedId}/instance/{primaryKey}.json (PUT, POST and DELETE)
+/businessObject/{businessObjectQualifiedId}/{primaryKey}/processInstances.json (GET)
+/businessObject/{businessObjectQualifiedId}/relatedInstances.json (POST)
+/businessObject/{businessObjectQualifiedId}.form-data (POST)
+</pre>
+<p>The invocation pattern is the following:</p>
+<pre>http://&lt;<i>serverName</i>&gt;:&lt;<i>port</i>&gt;/&lt;<i>context-root</i>&gt;/services/rest/business-object-management/&lt;<i>endpoint</i>&gt;</pre>
+<p>The following example invocation pattern invokes the json source for a Business Object 
+<strong>FundData</strong> in a model with id <strong>NewSimpleModel1</strong>:</p>
+<pre>http://localhost:8080/DemoProject/services/rest/business-object-management/businessObject/{NewSimpleModel1}FundData.json</pre>
+<h3 id="inst">Business Object Instances Endpoints</h3>
+<p>To retrieve Business Object instances of a Business Object, you can use query parameters to
+filter the query result. Example usage in a class:</p>
+<pre>
+   url = this.rootUrl
+      + "/services/rest/business-object-management/businessObject/"
+      + businessObject.businessObjectQualifiedId + "/instances.json" + queryString;
+   
+   $http({
+      url : url,
+      method : "GET"
+   })
+</pre>
+<p>The following URL returns all Business Object instances with ID <code>123</code>
+of Business Object <strong>FundData</strong> in model <strong>NewSimpleModel1</strong>:</p>
+<pre>http://localhost:8080/DemoProject/services/rest/business-object-management/businessObject/{NewSimpleModel1}FundData/instances.json?ID=123&amp;</pre>
+
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

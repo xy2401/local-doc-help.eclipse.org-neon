@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="STYLESHEET" href="../../../styles/carnot.css" type="text/css">
+<title>Searching for Business Objects</title>
+<script src="../../../styles/naviLine.js" type="text/javascript"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+   writeNavigation("Searching for Deployed Runtime Artifacts",
+      "pg-data-query.htm","pg-artifact-query.html",
+      "../../handbooks.htm","Developer Handbook",
+      "../pg-preface.htm","Programming Guide",
+      "../pg-query-1.htm","Querying Workflow");
+ -->
+</script>
+<h1>Searching for Business Objects</h1>
+<p>The Stardust 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">QueryService</a>
+provides a business object search method to get specific Business Objects.</p>
+<pre>BusinessObjects getAllBusinessObjects(BusinessObjectQuery query);</pre>
+<p>The business objects can be created via the
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/query/BusinessObjectQuery.html">
+BusinessObjectQuery</a> class.</p>
+<ul>
+   <li><a href="#getbos">Retrieving Business Objects for a specific Business Object Query</a></li>
+   <li><a href="#qob">Creating Query Object for Searching Business Objects</a></li>
+   <li><a href="#filter">Filtering for Business Objects</a></li>
+</ul>
+<h2 id="getbos">Retrieving Business Objects for a specific Business Object Query</h2>
+<p>The following Stardust 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">QueryService</a>
+method returns a list of business objects for a specific business object query:</p>
+<pre>BusinessObjects getAllBusinessObjects(BusinessObjectQuery query);</pre>
+<h3>Example Implementation</h3>
+<pre>
+    /**
+     * Returns the business objects satisfying the query.
+     *
+     * @param query the business objects query.
+     *
+     * @return a list of business objects, possibly empty.
+     *
+     * @throws org.eclipse.stardust.common.error.WorkflowException as a wrapper for
+     *         org.eclipse.stardust.common.error.PublicExceptions and org.eclipse.stardust.common.error.ResourceExceptions
+     *
+     * @see org.eclipse.stardust.engine.api.runtime.QueryService#getAllBusinessObjects(
+     *     org.eclipse.stardust.engine.api.query.BusinessObjectQuery query)
+     */
+    public org.eclipse.stardust.engine.api.query.BusinessObjects
+         getAllBusinessObjects(
+         org.eclipse.stardust.engine.api.query.BusinessObjectQuery query)
+         throws org.eclipse.stardust.common.error.WorkflowException
+    {
+      try
+      {
+         return ((org.eclipse.stardust.engine.api.runtime.QueryService)
+            service).getAllBusinessObjects(query);
+      }
+      catch(org.eclipse.stardust.common.error.PublicException e)
+      {
+         throw new org.eclipse.stardust.common.error.WorkflowException(e);
+      }
+      catch(org.eclipse.stardust.common.error.ResourceException e)
+      {
+         throw new org.eclipse.stardust.common.error.WorkflowException(e);
+      }
+    }
+</pre>
+
+<h2 id="qob">Creating Query Object for Searching Business Objects</h2>
+<p>The
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/query/BusinessObjectQuery.html">
+BusinessObjectQuery</a> class provides the following options to create specific Query objects for
+a business object search:</p>
+<ul>
+   <li><a href="#all">Finding all Business Objects</a></li>
+   <li><a href="#inmod">Finding all Business Objects in a Model</a></li>
+   <li><a href="#qbo">Finding Business Objects with a specific qualified Id</a></li>
+   <li><a href="#pk">Finding Business Objects with a specific qualified Id and Primary Key</a></li>
+   <li><a href="#inmodoid">Finding all Business Objects in a Model with a specific OID</a></li>
+   <li><a href="#idmod">Finding Business Objects with a specific Id in a Model</a></li>
+   <li><a href="#boidpkmod">Finding Business Objects with a specific Id and Primary Key in a specific Model</a></li>
+</ul>
+<h3 id="all">Finding all Business Objects</h3>
+<p>To create a query for finding all business objects, use <code>findAll()</code>:</p>
+<pre>
+   public static BusinessObjectQuery findAll()
+   {
+      return new BusinessObjectQuery();
+   }
+</pre>
+<p>The method returns the configured BusinessObjectQuery.</p>
+<h3 id="inmod">Finding all Business Objects in a Model</h3>
+<p>To create a query to find all business objects in a model with a specified model Id,
+use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findInModel(String modelId)
+   {
+      BusinessObjectQuery query = findAll();
+      query.where(MODEL_ID.isEqual(modelId));
+      return query;
+   }
+</pre>
+<h3 id="qbo">Finding Business Objects with a specific qualified Id</h3>
+<p>To create a query to find business objects with a specific qualified business object Id,
+use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findForBusinessObject(String qualifiedBusinessObjectId)
+   {
+      QName qname = QName.valueOf(qualifiedBusinessObjectId);
+      BusinessObjectQuery query = BusinessObjectQuery.findInModel(qname.getNamespaceURI());
+      query.where(BUSINESS_OBJECT_ID.isEqual(qname.getLocalPart()));
+      return query;
+   }
+</pre>
+<h3 id="pk">Finding Business Objects with a specific qualified Id and Primary Key</h3>
+<p>To create a query to find business objects with a specific qualified business object Id
+and primary key, use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findWithPrimaryKey(String qualifiedBusinessObjectId, Object pk)
+   {
+      BusinessObjectQuery query = BusinessObjectQuery.findForBusinessObject(qualifiedBusinessObjectId);
+      query.where(pk instanceof Number
+            ? PRIMARY_KEY.isEqual(((Number) pk).longValue())
+            : PRIMARY_KEY.isEqual(pk.toString()));
+      return query;
+   }
+</pre>
+<h3 id="inmodoid">Finding all Business Objects in a Model with a specific OID</h3>
+<p>To create a query to find all business objects in a model with a specified model OID,
+use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findInModel(long modelOid)
+   {
+      BusinessObjectQuery query = findAll();
+      query.where(MODEL_OID.isEqual(modelOid));
+      return query;
+   }
+</pre>
+<h3 id="idmod">Finding Business Objects with a specific Id in a Model</h3>
+<p>To create a query to find business objects with a specific business object Id in a model 
+with a specified model OID, use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findForBusinessObject(long modelOid, String businessObjectId)
+   {
+      QName qname = QName.valueOf(businessObjectId);
+      BusinessObjectQuery query = BusinessObjectQuery.findInModel(modelOid);
+      if (!StringUtils.isEmpty(qname.getNamespaceURI()))
+      {
+         query.where(MODEL_ID.isEqual(qname.getNamespaceURI()));
+      }
+      query.where(BUSINESS_OBJECT_ID.isEqual(qname.getLocalPart()));
+      return query;
+   }
+</pre>
+<h3 id="boidpkmod">Finding Business Objects with a specific Id and Primary Key in a specific Model</h3>
+<p>To create a query to find business objects with a specific business object Id and a 
+specific primary key, use the following method:</p>
+<pre>
+   public static BusinessObjectQuery findWithPrimaryKey(long modelOid, String businessObjectId, Object pk)
+   {
+      BusinessObjectQuery query = BusinessObjectQuery.findForBusinessObject(modelOid, businessObjectId);
+      query.where(pk instanceof Number
+            ? PRIMARY_KEY.isEqual(((Number) pk).longValue())
+            : PRIMARY_KEY.isEqual(pk.toString()));
+      return query;
+   }
+</pre>
+<h2 id="filter">Filtering for Business Objects</h2>
+<p>Filtering for business object attributes is possible through several filterable 
+attributes in the 
+<a href="../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/QueryService.html">QueryService</a>.</p>
+<ul>
+   <li><a href="#fboid">Filtering for Business Object ID</a></li>
+   <li><a href="#fbopk">Filtering on Business Object Primary Key</a></li>
+   <li><a href="#fsm">Filtering for a specific Model ID</a></li>
+   <li><a href="#fsmoid">Filtering for a specific Model OID</a></li>
+</ul>
+<h3 id="fboid">Filtering for Business Object ID</h3>
+<p>To define a filter on the Business Object ID (ID) use:</p>
+<pre>private static final FilterableAttribute BUSINESS_OBJECT_ID = new FilterableAttributeImpl(
+         BusinessObjectQuery.class, ID_ATTRIBUTE);</pre>
+<h3 id="fbopk">Filtering on Business Object Primary Key</h3>
+<p>To define a filter on the Business Object Primary Key use:</p>
+<pre>private static final FilterableAttribute PRIMARY_KEY = new FilterableAttributeImpl(
+         BusinessObjectQuery.class, PK_ATTRIBUTE);</pre>
+<h3 id="fsm">Filtering for a specific Model ID</h3>
+<p>To define a filter for a specific model use:</p>
+<pre>private static final FilterableAttribute MODEL_ID = new FilterableAttributeImpl(
+         BusinessObjectQuery.class, MODEL_ID_ATTRIBUTE);</pre>
+<p>Note that currently only one single <code>Operator.isEqual(modelId)</code> term is 
+supported to filter for exactly one modelId.</p>
+<h3 id="fsmoid">Filtering for a specific Model OID</h3>
+<p>To define a filter for a specific model use:</p>
+<pre>private static final FilterableAttribute MODEL_OID = new FilterableAttributeImpl(
+         BusinessObjectQuery.class, ModelAwareQueryPredicate.INTERNAL_MODEL_OID_ATTRIBUTE);</pre>
+<p>Note that currently only one single <code>Operator.isEqual(modelOid)</code> term is 
+supported to filter for exactly one modelOid.</p>
+
+<script type="text/javascript">
+<!--
+   writeFooter();
+-->
+</script>
+</body>
+</html>

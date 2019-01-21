@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="STYLESHEET" href="../../../../styles/carnot.css" type="text/css">
+<title>Retrieving Information on Transition Steps and Targets</title>
+<script src="../../../../styles/naviLine.js"
+    type="text/javascript">
+</script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+	writeNavigation("Retrieving the Gateway Type of an Activity",
+      "pg-embed-transitions.html","pg-embed-gateways.html",
+		"../../../handbooks.htm","Developer Handbook",
+		"../../pg-preface.htm","Programming Guide",
+		"../pg-embedded-preface.htm","Embedded Usage","procs-preface.html","Managing Processes and Activities");
+ -->
+</script>
+<h1>Retrieving Information on Transition Steps and Targets</h1>
+<p>Class
+<a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/TransitionInfo.html">
+TransitionInfo</a> serves as base class to provide functionality to retrieve information 
+on transition steps and targets.</p>
+<ul>
+   <li><a href="#source">Retrieving the Source Activity Instance OID</a></li>
+   <li><a href="#modtarg">Retrieving the OID of the Model containing the Activity that represents the Target</a></li>
+   <li><a href="#rtoid">Retrieving the Runtime OID of the Activity that represents the Target</a></li>
+   <li><a href="#actid">Retrieving the Id of the Activity that represents the Target</a></li>
+   <li><a href="#actname">Retrieving the Name of the Activity that represents the Target</a></li>
+   <li><a href="#procid">Retrieving the Id of the process definition containing the Activity that represents the Target</a></li>
+   <li><a href="#procname">Retrieving the Name of the process definition containing the Activity that represents the Target</a></li>
+   <li><a href="#modid">Retrieving the Id of the Model containing the Activity that represents the Target</a></li>
+   <li><a href="#modname">Retrieving the Name of the Model containing the Activity that represents the Target</a></li>
+</ul>
+<h2 id="source">Retrieving the Source Activity Instance OID</h2>
+<p>The value, which the method <code>getActivityInstanceOid()</code> retrieves, is
+required to perform the actual transition. It is different for transition target and 
+transition step in the following way:</p>
+<ul>
+   <li><a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/TransitionTarget.html">
+   TransitionTarget</a>: the activity instance from where the ad-hoc
+   transition is performed</li>
+   <li><a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/TransitionStep.html">
+   TransitionStep</a>: the OID of the activity instance that started the subprocess</li>
+   <li><a href="../../../../reference/api/engine/org/eclipse/stardust/engine/api/runtime/TransitionStep.html">
+   TransitionStep</a> and there is no corresponding activity instance (no subprocess has 
+   started yet): <code>-1</code></li>
+</ul>
+<pre>
+   public long getActivityInstanceOid()
+   {
+      return activityInstanceOid;
+   }
+</pre>
+<h2 id="modtarg">Retrieving the OID of the Model containing the Activity that represents the Target</h2>
+<p>Method <code>getModelOid()</code> retrieves the OID of the model containing the
+activity that represents the target of the current operation.
+This value of the OID is necessary to perform the actual transition.</p>
+<pre>
+   public long getModelOid()
+   {
+      return modelOid;
+   }
+</pre>
+<h2 id="rtoid">Retrieving the Runtime OID of the Activity that represents the Target</h2>
+<p>Method <code>getActivityRuntimeOid()</code> retrieves the runtime OID of the activity 
+that represents the target of the current operation. This value is necessary to perform 
+the actual transition.
+Together with the model OID is used to uniquely identify a specific activity in the 
+model repository.</p>
+<pre>
+   public long getActivityRuntimeOid()
+   {
+      return activityRuntimeOid;
+   }
+</pre>
+<h2 id="actid">Retrieving the Id of the Activity that represents the Target</h2>
+<p>The following method is used to retrieve the Id of the activity that represents the 
+target of the current operation. It returns a String containing the Id of the activity.</p>
+<pre>
+   public String getActivityId()
+   {
+      return activityId;
+   }
+</pre>
+<h2 id="actname">Retrieving the Name of the Activity that represents the Target</h2>
+<p>Method <code>getActivityName()</code> retrieves the name of the activity that 
+represents the target of the current operation. It returns a String containing the name 
+of the activity.</p>
+<pre>
+   public String getActivityName()
+   {
+      return activityName;
+   }
+</pre>
+<h2 id="procid">Retrieving the Id of the process definition containing the Activity that represents the Target</h2>
+<p>The following method is used to retrieve the Id of the process definition containing 
+the activity that represents the target of the current operation. It returns a String 
+containing the Id of the process definition.</p>
+<pre>
+   public String getProcessId()
+   {
+      return processId;
+   }
+</pre>
+<h2 id="procname">Retrieving the Name of the process definition containing the Activity that represents the Target</h2>
+<p>Method <code>getProcessName()</code> retrieves the name of the process definition 
+containing the activity that represents the target of the current operation. It returns a
+String containing the name of the process definition.</p>
+<pre>
+   public String getProcessName()
+   {
+      return processName;
+   }
+</pre>
+<h2 id="modid">Retrieving the Id of the Model containing the Activity that represents the Target</h2>
+<p>To retrieve the Id of the model containing the activity that represents the target of 
+the current operation, the following method is used:</p>
+<pre>
+   public String getModelId()
+   {
+      return modelId;
+   }
+</pre>
+<p>It returns a string containing the Id of the model.</p>
+<h2 id="modname">Retrieving the Name of the Model containing the Activity that represents the Target</h2>
+<p>The following method retrieves the name of the model containing the activity that
+represents the target of the transition operation.</p>
+<pre>
+   public String getModelName()
+   {
+      return modelName;
+   }
+</pre>
+<p>The method returns a string containing the name of the model.</p>
+
+<script type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

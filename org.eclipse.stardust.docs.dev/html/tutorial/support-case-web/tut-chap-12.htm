@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../styles/carnot.css"
+	charset="ISO-8859-1" type="text/css">
+<title>Adding a Start Event</title>
+<script language="JavaScript" src="../../styles/naviLine.js"
+	type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Deploying a Workflow Model",
+	      "tut-chap-11.htm","tut-chap-13.htm",
+			"../tut-preface.htm","Tutorials",
+			"preface.htm", "The Support Case Example - Web Modeler");
+ -->
+</script>
+<h1>Adding a Start Event</h1>
+<p>Events cause a process to start. To initiate a process, a start event can be defined of different types: a performer, 
+at specific time, an incoming mail or a JMS message can serve as a start event.
+The swim lane and its participant defined in the previous section would be able to initiate the support case management process.
+So, the <strong>CallCenter Agent</strong> role is assigned to the swim lane in which <strong>Init Data</strong>
+activity is defined.
+</p>
+<ol>
+	<li>In the toolbar, click the <strong>Create Start Event</strong> icon and drop it to the <strong>Start Process</strong> swim lane.
+	<p class="image"><img src="images/con-icon.png" alt=""> <br>
+<strong>Figure:</strong> Create Start Event</p>	
+	</li>
+	<li>Specify the name as <strong>Support Call</strong>.</li>
+	<li>Hover the mouse over the Support Call start event and click the <strong>Connect</strong> icon.</li>
+	<li>Connect the start event with the <strong>Init Data</strong> activity.
+	<p class="image"><img src="images/con-eve.png" alt=""> <br>
+<strong>Figure:</strong> Start Event</p>
+	
+	</li>
+</ol>
+	
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

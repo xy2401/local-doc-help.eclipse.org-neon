@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="STYLESHEET" href="../../../styles/carnot.css"
+    charset="ISO-8859-1" type="text/css">
+<title>Internationalizing the Process Portal</title>
+<script language="JavaScript" src="../../../styles/naviLine.js"
+    type="text/javascript"></script>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+<!--
+writeNavigation("Internationalization of the Predefined Model",
+    "i18n-modeler.html","i18n-prefmodel.html",
+	"../../handbooks.htm","Developer Handbook",
+	"../ag-preface.htm","Operation Guide",
+	"PLUGINS_ROOT/org.eclipse.stardust.docs.misc/html/i18n/inter-preface.html","Internationalization");
+ -->
+</script>
+
+<h1>Internationalizing the Process Portal</h1>
+<p>Internationalization can be achieved by providing translations of
+the following text elements:</p>
+<ul>
+    <li>labels</li>
+    <li>content of combo boxes</li>
+    <li>messages</li>
+</ul>
+<p>Elements of the Stardust Portal views are identified via entries
+in their according resource bundles. The resource bundle which is used
+depends on the preferred language set for your browser.</p>
+<h2 id="bundles">Resource Bundles</h2>
+<p>Resource bundles for languages are supplied for the Stardust
+Portal. They reside in the <!-- <code><nobr>ipp-resources</nobr></code>
+folder of your dynamic Web project or the <code><nobr>WEB-INF/classes</nobr></code>
+folder in the Stardust Portal WAR file accordingly, named <code>CommonMessages_locale.properties</code>.-->
+according portal JAR files, <span class="ipp">either in the <code>add-ons/ipp-portal/lib</code>
+folder of your Stardust installation, in case you set up your 
+working environment as described in chapter
+<a href="PLUGINS_ROOT/org.eclipse.stardust.docs.installation/html/installation/ig-installer.htm">
+Installing Stardust Features</a>,
+or </span>in the <code>lib</code> folder of the <code>org.eclipse.stardust.ide.wst.facet.portal_xxx</code>
+plugin:</p>
+<ul>
+    <li><code>ipp-administration-perpective.jar</code> - Administration Perspective</li>
+    <li><code>ipp-business-control-center.jar</code> - Business Control Center Perspective</li>
+    <li><code>ipp-graphics-common.jar</code> - common graphic Portal messages</li>
+    <li><code>ipp-portal-common.jar</code> - common Portal messages</li>
+    <li><code>ipp-workflow-perspective.jar</code> - Workflow Perspective</li>
+    <li><code>ipp-views-common.jar</code> - common views messages</li>
+    <li><code>stardust-benchmarks.jar</code> - Benchmark related messages</li>
+    <li><code>stardust-html5-admin-portal.jar</code> - HTML5 Administration Perspective messages</li>
+    <li><code>stardust-html5-business-control-center.jar</code> - HTML5 Business Control Center Perspective messages</li>
+    <li><code>stardust-html5-common.jar</code> - HTML5 common Portal messages</li>
+    <li><code>stardust-html5-process-portal.jar</code> - HTML5 Portal messages</li>
+    <li><code>stardust-html5-views-common.jar</code> - HTML5 common views messages</li>
+    <li><code>stardust-mobile-workflow.jar</code> - Mobile workflow</li>
+    <li><code>stardust-portal-rest-common.jar</code> - common Portal Rest messages</li>
+    <li><code>stardust-reporting-rt.jar</code> - Reporting runtime messages</li>
+    <li><code>stardust-rules-manager.jar</code> - Rules Manager</li>
+    <li><code>stardust-ui-form-jsf.jar</code> - UI JSF form messages</li>
+    <li><code>stardust-web-camel.jar</code> - Camel related messages</li>
+    <li><code>stardust-web-modeler.jar</code> - <a href="PLUGINS_ROOT/org.eclipse.stardust.docs.analyst/html/toc.html">
+    Modeling</a> perspective</li>
+    <li><code>stardust-web-reporting.jar</code> - Reporting view</li>
+</ul>
+<div class="ipp">
+<p>Likewise you find the following specific resource bundles in the <code>lib</code> folder of the 
+<code>com.infinity.bpm.ide.wst.facet.portal_xxx</code> plugin:</p>
+<ul>
+    <li><code>ipp-business-calendar.jar</code> - Business Calendar</li>
+    <li><code>ipp-business-object-management.jar</code> - Business Object Management</li>
+    <li><code>ipp-document-triage.jar</code> - Document Triage</li>
+    <li><code>ipp-simple-modeler.jar</code> - Model &amp; Go perspective</li>
+</ul>
+</div>
+<p>Unzip the according portal JAR file, copy the existing resource
+bundles and add the according language locale to the name (e.g. "_de").
+E.g. for adapting messages displayed in the Control Center perspective, do the following:</p>
+<ol>
+    <li>Unzip the <code>ipp-business-control-center.jar</code> file.</li>
+    <li>Copy the <code>business-control-center-messages.properties</code>
+    file and rename the copy to <code>business-control-center-messages_<i>locale</i>.properties</code>,
+    whereby <i>locale</i> is the locale for the language you like to
+    use. (Translated resource bundles are already provided for Chinese
+    and German.)</li>
+    <li>Edit the <code>business-control-center-messages_<i>locale</i>.properties</code>
+    and translate the entries accordingly.</li>
+    <li>Save the resource bundle and add it to the <code>ipp-business-control-center.jar</code>
+    file.</li>
+</ol>
+<p>Determine the locale to use for your Stardust Portal by setting
+the preferred language used for your browser.</p>
+<h3>Retrieving predefined Resource Bundles as JAR from the Artifactory</h3>
+<p>The Stardust artifactory provides a <code>stardust-product-nls.jar</code> file, which 
+contains all available specific languages bundles for the different components. You can 
+download this file from the following location:</p>
+<pre>https://infinity.sungard.com/repository/ipp-releases/org/eclipse/stardust/product/stardust-product-nls/</pre>
+<div class="ipp"><p>To retrieve Japanese translations, download file <code>ipp-product-nls.jar</code>
+from the following location:</p>
+<pre>https://infinity.sungard.com/repository/ipp-releases/com/infinity/bpm/ipp-product-nls/</pre>
+</div>
+<p>You can modify all containing property files and add these either as a new 
+JAR file to the <code>WEB-INF/lib</code> folder of your Web project if you like to overwrite an existing language. 
+To make sure the edited jar file takes precedence over other Portal jars, rename it to start with an 
+<code>"a"</code>, e.g. <code>a-stardust-product-nls.jar</code>.</p>
+<h2>Using Languages with Multibyte Character Sets</h2>
+<p>In case you like to display your Stardust Portal in a language
+using multibyte character sets, like Chinese or Japanese, you have to
+perform some additional steps.</p>
+<p>For example in case you like the Portal to be displayed in
+Chinese language code, perform the following steps:</p>
+<ol>
+    <li>Unzip the files from your according portal JAR file.</li>
+    <li>Translate the properties from the <code><i>xxx</i>.properties</code>
+    file to Chinese and add them to a new properties file called <code><i>xxx</i>_cn_source.properties</code>.</li>
+    <li>Execute the following command: <pre>native2ascii -encoding gb2312 
+    <i>xxx</i>_cn_source.properties BusinessControlCenterMessages_cn.properties</pre></li>
+    <!-- TODO: clarify
+    <li>In the <code>faces-config.xml</code> file of your Web application,
+    set the <code>default-locale</code> to <code>cn</code>: <pre>
+&lt;application&gt;
+    &lt;message-bundle&gt;CommonMessages&lt;/message-bundle&gt;
+    &lt;locale-config&gt;
+        &lt;default-locale&gt;cn&lt;/default-locale&gt;
+        &lt;supported-locale&gt;en&lt;/supported-locale&gt;
+    &lt;/locale-config&gt;
+    ...
+&lt;/application&gt;</pre></li>
+    <li>In the xml header of all <code>*.jspx</code> files, residing in
+    the <code>ipp</code> folder of your Web application, replace the encoding <code>iso-8859-1</code>
+    with <code>utf-8</code>. Thus change the following line: <pre>&lt;?xml version="1.0" encoding="iso-8859-1" standalone="yes" ?&gt;</pre>
+    to: <pre>&lt;?xml version="1.0" encoding="utf-8" standalone="yes" ?&gt;</pre></li>-->
+</ol>
+<script language="JavaScript" type="text/javascript">
+<!-- 
+writeFooter(); 
+-->
+</script>
+</body>
+</html>

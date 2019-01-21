@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8' ?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>GEF4 DOT Developer Documentation</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../book.css"/>
+	</head>
+	<body>
+		<p>
+			<i>Note to non-wiki readers: This documentation is generated from the Eclipse wiki - if you have corrections or additions it would be awesome if you added them in 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/User_Guide" target="doc_external">the original wiki page</a>
+			</i>.
+		</p>
+		<h2 id="Introduction">Introduction</h2>
+		<p>The <span style="color:#561D8E">
+			<a href="#" title="GEF/GEF4/DOT">GEF4 DOT</a></span> component provides support for 
+			<a href="http://www.graphviz.org/" target="doc_external">Graphviz</a> 
+			<a href="http://www.graphviz.org/doc/info/lang.html" target="doc_external">DOT</a>, in terms of
+		</p>
+		<ul>
+			<li>an Xtext-based .dot file editor</li>
+			<li>support for Graphviz-based generation of PDF-output for .dot files</li>
+			<li>a 
+				<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">GEF4 Zest</a>-based DOT Graph Viewer 
+			</li>
+		</ul>
+		<p>It is internally decomposed into two modules, namely 
+			<a href="#DOT">DOT</a> and 
+			<a href="#DOT.UI">DOT.UI</a>. There are also a couple of undeployed 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/Examples#Examples_.28undeployed.29" title="GEF/GEF4/DOT/Examples#Examples (undeployed)" target="doc_external">DOT Examples</a> that demonstrate usage of the (still internal) API. The user documentation is provided in terms of the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/User_Guide" title="GEF/GEF4/DOT/User Guide" target="doc_external">GEF4 DOT User Guide</a>.
+		</p>
+		<p>
+			<img width="600" border="0" src="images/GEF4-Components-DOT.png"/>
+		</p>
+		<p><hr/></p>
+		<h2 id="DOT">DOT</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.dot</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.dot</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#DOT">DOT</a> module of 
+			<a href="#" title="GEF/GEF4/DOT">GEF4 DOT</a> realizes the serializer and parser for the 'DOT Editor' as well as import/export functionality used by the 'DOT Graph View' and the 'Sync Graphviz Export' end-user features, as outlined in the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/User_Guide" title="GEF/GEF4/DOT/User Guide" target="doc_external">GEF4 DOT User Guide</a>. It does not provide any public API (yet), but exposes its internal API (guarded by an x-friends directive).
+		</p>
+		<p><div id="DOT:Root"></div></p>
+		<h3 id=".7BRoot.7D">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.dot.internal</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#DOT:Root">{Root}</a> package provides an importer (
+			<a href="#DotImport">DotImport</a>) and exporter (
+			<a href="#DotExport">DotExport</a>) between a Graphviz DOT and a related 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> representation. The imported or to be exported graph has to make use of the attributes defined in 
+			<a href="#DotAttributes">DotAttributes</a>.
+		</p>
+		<h4 id="DotImport">DotImport</h4>
+		<p><code>DotImport</code> provides support for importing a Graphviz DOT into a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> data model, using the attributes defined in 
+			<a href="#DotAttributes">DotAttributes</a>.
+		</p>
+		<pre class="source-java">/* We can create Graphs based on Graphviz Dot files and strings */
+DotImport dotImport = new DotImport();
+Graph graph = dotImport.importDot("graph { 1--2 ; 1--3 }");
+Graph digraph = dotImport.importDot("digraph { 1-&gt;2 ; 1-&gt;3 }");
+
+</pre>
+		<p>Internally, <code>DotImport</code> is based on an 
+			<a href="http://wiki.eclipse.org/Xtext" target="doc_external">Xtext</a>-based parser. It uses the generated Xtext switch API to dynamically create 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a> graphs from the DOT abstract syntax tree (represented as an EMF model).
+		</p>
+		<h4 id="DotExport">DotExport</h4>
+		<p><code>DotExport</code> can be used to serialize a 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Graph" title="GEF/GEF4/Graph" target="doc_external">GEF4 Graph</a>-model, which uses the attributes defined in 
+			<a href="#DotAttributes">DotAttributes</a> to a Graphviz DOT as follows:
+		</p>
+		<pre class="source-java">/* Set up a directed graph with a single connection: */
+Graph graph = new Graph.Builder()
+.attr(DotAttributes._TYPE__G, DotAttributes._TYPE__G__GRAPH)
+.node("n1")
+.attr(DotAttributes._NAME__GNE, "1")
+.attr(DotAttributes.LABEL__GNE, "Node 1")
+.node("n2")
+.attr(DotAttributes._NAME__GNE, "2")
+.attr(DotAttributes.LABEL__GNE, "Node 2")
+.edge("n1", "n2")
+.attr(DotAttributes.LABEL__GNE, "A dotted edge")
+.attr(DotAttributes.STYLE__GNE, EdgeStyle.DOTTED.toString())
+.build();
+
+/* Export the graph to a DOT string or a DOT file: */
+System.out.println(new DotExport().exportDot(graph));
+
+</pre>
+		<p>Internally, <code>DotExport</code> is based on 
+			<a href="https://www.eclipse.org/xtend/" target="doc_external">Xtend</a> to keep its runtime dependencies minimal. 
+		</p>
+		<h4 id="DotAttributes">DotAttributes</h4>
+		<p><code>DotAttributes</code> defines the (currently) supported 
+			<a href="http://www.graphviz.org/doc/info/attrs.html" target="doc_external">Graphviz attributes</a>. It supports validation and parsing of all attribute values, using a dedicated attribute parser and validator where the attributes follow a specific grammar.
+		</p>
+		<h4 id="DotExecutableUtils">DotExecutableUtils</h4>
+		<p><code>DotExecutableUtils</code> is a utility class that can be used to execute the native Graphviz DOT executable, which is internally used by the 'DOT Graph View'.</p>
+		<p>In combination with 
+			<a href="#DotAttributes">DotAttributes</a>, <code>DotExecutableUtils</code> can e.g. be used to use the native Graphviz DOT executable for layout, as depicted in the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/Examples#DotLayoutExample" title="GEF/GEF4/DOT/Examples#DotLayoutExample" target="doc_external">DotLayoutExample</a>:
+		</p>
+		<pre class="source-java">@Override
+public void applyLayout(boolean clean) {
+  // convert a Graph with LayoutAttributes (input model to ILayoutAlgorithm) into one with DotAttributes, which can be
+  // exported to a DOT string; keep track of converted nodes (as a side-effect)
+  final Map&lt;Node, String&gt; nodesToNameMap = new HashMap&lt;&gt;();
+  IAttributeCopier layout2DotAttributesConverter = new IAttributeCopier() {
+    int nodeIndex = 0;
+
+    @Override
+    public void copy(IAttributeStore source, IAttributeStore target) {
+      if (source instanceof Node &amp;&amp; target instanceof Node) {
+        // convert LayoutProperties#location to DotAttributes#pos (both refer to center locations)
+        Point location = LayoutProperties.getLocation((Node) source);
+        org.eclipse.gef4.dot.internal.parser.point.Point posParsed = PointFactory.eINSTANCE.createPoint();
+        posParsed.setX(location.x);
+        posParsed.setY(location.y);
+        DotAttributes.setPosParsed((Node) target, posParsed);
+        // provide unique names and keep track of the mapped nodes
+        DotAttributes._setName((Node) target, Integer.toString(++nodeIndex));
+        nodesToNameMap.put((Node) source, DotAttributes._getName((Node) target));
+      }
+    }			
+  };			 
+  Graph dotGraph = new GraphCopier(layout2DotAttributesConverter).copy(context.getGraph());
+
+  // set graph type
+  DotAttributes._setType(dotGraph, DotAttributes._TYPE__G__DIGRAPH);
+
+  // specify layout algorithm
+  DotAttributes.setLayout(dotGraph, Layout.CIRCO.toString());
+
+  // export the dot string and call the dot executable to add layout info to it.
+  DotExport dotExport = new DotExport();
+  String dot = dotExport.exportDot(dotGraph);
+  File tmpFile = DotFileUtils.write(dot);
+  String[] dotResult = DotExecutableUtils.executeDot(new File(dotExecutablePath), true, tmpFile, null, null);
+  if (!dotResult[1].isEmpty()) {
+    System.err.println(dotResult[1]);
+  }
+  tmpFile.delete();
+  Graph layoutedDotGraph = new DotImport().importDot(dotResult[0]);
+
+  // transfer the DOT provided position information back to the input Graph
+  for (Node target : context.getGraph().getNodes()) {
+    String nodeName = nodesToNameMap.get(target);
+    for (Node source : layoutedDotGraph.getNodes()) {
+      if (nodeName.equals(DotAttributes._getName(source))) {
+        // convert back DotAttributes#pos to LayoutProperties#location
+        org.eclipse.gef4.dot.internal.parser.point.Point posParsed = DotAttributes.getPosParsed(source);
+        LayoutProperties.setLocation(target, new Point(posParsed.getX(), posParsed.getY()));
+	break;
+      }
+    }
+  }
+}
+
+</pre>
+		<p><hr/></p>
+		<h2 id="DOT.UI">DOT.UI</h2>
+		<ul>
+			<li>
+				<b>feature: org.eclipse.gef4.dot.internal.ui</b>
+			</li>
+			<li>
+				<b>bundle: org.eclipse.gef4.dot.internal.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#DOT.UI">DOT.UI</a> module of 
+			<a href="#" title="GEF/GEF4/DOT">GEF4 DOT</a> realizes the DOT editor as well as the DOT Graph View as end-user features, as outlined in the 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/DOT/User_Guide" title="GEF/GEF4/DOT/User Guide" target="doc_external">GEF4 DOT User Guide</a>. It does not provide any public API (yet), but exposes its internal API (guarded by an x-friends directive).
+		</p>
+		<p><div id="DOT.UI:Root"></div></p>
+		<h3 id=".7BRoot.7D_2">{Root}</h3>
+		<ul>
+			<li>
+				<b>package: org.eclipse.gef4.dot.internal.ui</b>
+			</li>
+		</ul>
+		<p>The 
+			<a href="#DOT.UI:Root">{Root}</a> package provides 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Common#IAttributeCopier" title="GEF/GEF4/Common#IAttributeCopier" target="doc_external">org.eclipse.gef4.common.attributes.IAttributeCopier</a> implementations that can be used to transfer attributes defined by 
+			<a href="#DotAttributes">DotAttributes</a> into those defined by 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest#ZestProperties" title="GEF/GEF4/Zest#ZestProperties" target="doc_external">org.eclipse.gef4.zest.fx.ZestProperties</a>.
+		</p>
+		<h4 id="Dot2ZestAttributesConverter.2C_Zest2DotAttributesConverter">Dot2ZestAttributesConverter, Zest2DotAttributesConverter</h4>
+		<p><code>Dot2ZestAttributesConverter</code> and <code>Zest2DotAttributesConverter</code> are 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Common#IAttributeCopier" title="GEF/GEF4/Common#IAttributeCopier" target="doc_external">org.eclipse.gef4.common.attributes.IAttributeCopier</a> implementations that allow to convert between attributes defined by 
+			<a href="#DotAttributes">DotAttributes</a> and 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest#ZestProperties" title="GEF/GEF4/Zest#ZestProperties" target="doc_external">org.eclipse.gef4.zest.fx.ZestProperties</a>. This is internally used by the 'DOT Graph View' to render a DOT input based on 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/Zest" title="GEF/GEF4/Zest" target="doc_external">Zest</a>.
+		</p>
+		<h4 id="DotBSplineInterpolator">DotBSplineInterpolator</h4>
+		<p>The <code>DotBSplineInterpolator</code> is a specific 
+			<a href="http://wiki.eclipse.org/GEF/GEF4/FX#IConnectionInterpolator" title="GEF/GEF4/FX#IConnectionInterpolator" target="doc_external">IConnectionInterpolator</a> that can be used to properly render B-Splines as DOT specifies them for edge positions.
+		</p>
+		<h4 id="DotArrowShapeDecorations">DotArrowShapeDecorations</h4>
+		<p>The <code>DotArrowShapeDecorations</code> utility class provides implementations for the different arrow shape edge decorations supported by DOT.</p>
+		<p>
+			<a href="http://wiki.eclipse.org/Category:GEF" title="Category:GEF" target="doc_external">Category:GEF</a>
+		</p>
+	</body>
+</html>

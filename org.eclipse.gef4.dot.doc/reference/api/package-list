@@ -1,0 +1,14 @@
+org.eclipse.gef4.dot.internal
+org.eclipse.gef4.dot.internal.parser
+org.eclipse.gef4.dot.internal.parser.conversion
+org.eclipse.gef4.dot.internal.parser.formatting
+org.eclipse.gef4.dot.internal.parser.scoping
+org.eclipse.gef4.dot.internal.parser.ui
+org.eclipse.gef4.dot.internal.parser.ui.contentassist
+org.eclipse.gef4.dot.internal.parser.ui.labeling
+org.eclipse.gef4.dot.internal.parser.ui.outline
+org.eclipse.gef4.dot.internal.parser.ui.quickfix
+org.eclipse.gef4.dot.internal.parser.ui.syntaxcoloring
+org.eclipse.gef4.dot.internal.parser.validation
+org.eclipse.gef4.dot.internal.ui
+org.eclipse.gef4.dot.internal.ui.handlers

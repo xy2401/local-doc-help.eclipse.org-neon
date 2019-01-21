@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><?NLS TYPE="org.eclipse.help.toc"?><toc label="Spring API" link_to="toc.xml#tocapi">
+  <topic href="html/reference/api/spring/index.html" label="Spring API">
+    <topic label="org.eclipse.stardust.engine.api.spring Package" href="html/reference/api/spring/org/eclipse/stardust/engine/api/spring/package-summary.html"/>
+  </topic>
+</toc>
